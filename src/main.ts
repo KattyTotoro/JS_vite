@@ -90,3 +90,29 @@ console.log(4545)
 
       /*10. Запросите у пользователя целое число и выведите в ответ, четное число или нет. 
             В задании используйте логические операторы. В задании не надо использовать if или switch.*/
+
+
+            let num = -5
+            let result
+
+            if (num > 0) {
+              console.log ('1')
+              result = 1
+            } else if (num < 0) {
+              console.log ('-1')
+              result = -1
+            } else {
+              console.log ('0')
+              result = 0
+            }
+            
+            console.log(result)
+
+
+
+
+            // let result
+
+            // (a + b < 4) ? 
+
+
