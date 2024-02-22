@@ -15,7 +15,7 @@ console.log(4545)
 
           // const THIS_YEAR = 2024
           // console.log('Текущий год:', THIS_YEAR)
-          // let userYearOfBirth = parseInt(prompt('Введите год своего рождения.'))
+          // let userYearOfBirth = parseInt(prompt('Введите год своего рождения.', '1')  as string)
           // console.log('Год рождения пользователя:', userYearOfBirth)
           // let userAge = THIS_YEAR - userYearOfBirth
           // console.log('Возраст пользователя:', userAge)
@@ -34,7 +34,7 @@ console.log(4545)
      // 4. Запросите у пользователя радиус окружности и выведите площадь такой окружности.
       
           // const PI = 3.14
-          // let r = prompt('Введите радиус окружности.')
+          // let r = parseInt(prompt('Введите радиус окружности.', '1')  as string)
           // console.log('Радиус окружности:', r)
           // let S = PI * r**2
           // console.log('Площадь окружности с радиусом', r, 'равна', S)
@@ -44,9 +44,9 @@ console.log(4545)
           он хочет добраться. Посчитайте скорость, с которой необходимо двигаться, 
           чтобы успеть вовремя.*/
 
-          // let S = parseInt(prompt('Введите расстояние в км между двумя городами.', 1))
+          // let S = parseInt(prompt('Введите расстояние в км между двумя городами.', '1') as string)
           // console.log('Расстояние:', S, 'км')
-          // let t = parseInt(prompt('Введите за сколько часов Вы хотите добраться.', 1))
+          // let t = parseInt(prompt('Введите за сколько часов Вы хотите добраться.', '1') as string)
           // console.log('Время:', t, 'ч')
           // let v = S / t
           // console.log('Скорость, с которой необходимо двигаться, чтобы успеть вовремя:', v, 'км/ч')
@@ -57,10 +57,9 @@ console.log(4545)
            Курс валюты храните в константе.*/
 
             // const evroToDollarExchange = 1.08
-            // let amountInDollars = parseInt(prompt('Введите сумму в долларах', 1))
+            // let amountInDollars = parseInt(prompt('Введите сумму в долларах', '1') as string)
             // let amountInEuros = amountInDollars * evroToDollarExchange
             // console.log('Сумма в евро:', amountInEuros)
-
 
 
 
@@ -69,7 +68,7 @@ console.log(4545)
 
           //  const oneGigabyteToMegabytes = 1024
           //  let fileSize = 820
-          //  let volumeInGigabytes = parseInt(prompt('Укажите объём флешки в Гб', 1))
+          //  let volumeInGigabytes = parseInt(prompt('Укажите объём флешки в Гб', '1') as string)
           //  let numberOfFiles = parseInt((volumeInGigabytes * oneGigabyteToMegabytes) / fileSize)
           //  console.log('Количество файлов размером по 820 Мб, которое помещается на флешку:', numberOfFiles, 'файлов')
 
