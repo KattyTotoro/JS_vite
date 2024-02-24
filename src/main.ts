@@ -92,23 +92,25 @@ console.log(4545)
             В задании используйте логические операторы. В задании не надо использовать if или switch.*/
 
 
-            let num = -5
-            let result
 
-            if (num > 0) {
-              console.log ('1')
-              result = 1
-            } else if (num < 0) {
-              console.log ('-1')
-              result = -1
-            } else {
-              console.log ('0')
-              result = 0
-            }
+
+          // Какое-то практическое задание на уроке.
+             
+            // let num = -5
+            // let result
+
+            // if (num > 0) {
+            //   console.log ('1')
+            //   result = 1
+            // } else if (num < 0) {
+            //   console.log ('-1')
+            //   result = -1
+            // } else {
+            //   console.log ('0')
+            //   result = 0
+            // }
             
-            console.log(result)
-
-
+            // console.log(result)
 
 
             // let result
