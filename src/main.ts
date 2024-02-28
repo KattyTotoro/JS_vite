@@ -151,23 +151,23 @@ console.log(4545)
                 Подсказка: передача пустого ввода в приглашение prompt возвращает пустую строку ''. Нажатие клавиши Esc во время запроса возвращает null.*/ 
 
 
-                    let userLogin = ''
-                    let userPassword = ''
+                    // let userLogin = ''
+                    // let userPassword = ''
 
-                    userLogin = prompt ('Ввведите логин') as string
+                    // userLogin = prompt ('Ввведите логин') as string
 
-                    if (userLogin == '' || userLogin == null) {
-                      console.log('Отменено')
-                    } else if (userLogin == 'Админ') {
-                      userPassword = prompt ('Ввведите пароль') as string
+                    // if (userLogin == '' || userLogin == null) {
+                    //   console.log('Отменено')
+                    // } else if (userLogin == 'Админ') {
+                    //   userPassword = prompt ('Ввведите пароль') as string
 
-                        if (userPassword == 'Я главный') {
-                            console.log('Здравствуйте!')
-                        } else if (userPassword == '' || userPassword == null) {
-                            console.log('Отменено')
-                        } else console.log('Неверный пароль')
+                    //     if (userPassword == 'Я главный') {
+                    //         console.log('Здравствуйте!')
+                    //     } else if (userPassword == '' || userPassword == null) {
+                    //         console.log('Отменено')
+                    //     } else console.log('Неверный пароль')
 
-                    } else console.log('Я Вас не знаю!')
+                    // } else console.log('Я Вас не знаю!')
 
 
 
