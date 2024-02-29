@@ -154,17 +154,49 @@ import './style.scss'
           // let s = squareLength**2
           // console.log('Площадь квадрата со стороной', squareLength, 'равна:', s)
 
+
+
        /*4. Реализуйте конвертор из километров в мили (пользователь 
           вводит километры, программа выводит мили). 1 км = 0,621371 
-          миль. Это значение укажите в коде как константу.
+          миль. Это значение укажите в коде как константу. kilometers in one mile*/
+
+          // const KILOMETERS_IN_ONE_MILE = 1.609344
+
+          // let distanceInKm = 2
+
+          // let mileage = distanceInKm / KILOMETERS_IN_ONE_MILE
+
+          // console.log(distanceInKm, 'км равно ', mileage, 'миль')
 
 
-      5. Реализуйте калькулятор. Пользователь вводит два числа, 
-      а программа выводит результаты действий + - * / между 
-      этими числами.
 
 
-      6. Пользователь вводит значения a и b для формулы a * x + b = 0, 
+        /*5. Реализуйте калькулятор. Пользователь вводит два числа, 
+        а программа выводит результаты действий + - * / между 
+        этими числами.*/
+
+            // let num1 = 9
+            // let num2 = 3
+
+            // let additionResult = num1 + num2
+            // console.log(num1, 'плюс', num2, 'равно:', additionResult)
+
+            // let subtractionResult = num1 - num2
+            // console.log(num1, 'минус', num2, 'равно:', subtractionResult)
+
+            // let multiplicationResult = num1 * num2
+            // console.log(num1, 'умножить на', num2, 'равно:', multiplicationResult)
+
+            // let divisionResult = num1 / num2
+            // console.log(num1, 'разделить на', num2, 'равно:', divisionResult)
+
+
+
+
+
+
+
+      /*6. Пользователь вводит значения a и b для формулы a * x + b = 0, 
       а программа считает и выводит значение x.
 
 
