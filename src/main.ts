@@ -847,37 +847,52 @@ import './style.scss'
 // 4. Написать функцию, которая проверяет, является ли переданное ей число простым   
 
 
-// function getNum(a:number) {
+function getNum(a:number){
+  for (let i = 2; i <= a !/ 2; i++) {
+  if (a % i !==0)
+  return a
+}
+}
 
-
-
-// }
+let num = 5
+console.log(getNum(num))
 
 
 //  5. Написать функцию, которая принимает число и выводит таблицу умножения для этого числа. 
 //     Вызовите функцию для всех чисел от 2 до 9.
 
 
-function showMultiplTable(a: number) {
-  let result = ''
-  for (let i = 1; i < 10; i++) {
+// function showMultiplTable(a: number) {
+//   let result = ''
+//   for (let i = 1; i < 10; i++) {
 
-    result += i + ' * ' + a + '=' + i * a + '\n'
+//     result += i + ' * ' + a + '=' + i * a + '\n'
 
-  }
-  return result
-}
+//   }
+//   return result
+// }
 
 
 
-console.log(showMultiplTable(2))
-console.log(showMultiplTable(3))
-console.log(showMultiplTable(4))
-console.log(showMultiplTable(5))
-console.log(showMultiplTable(6))
-console.log(showMultiplTable(7))
-console.log(showMultiplTable(8))
-console.log(showMultiplTable(9))
+// console.log(showMultiplTable(2))
+// console.log(showMultiplTable(3))
+// console.log(showMultiplTable(4))
+// console.log(showMultiplTable(5))
+// console.log(showMultiplTable(6))
+// console.log(showMultiplTable(7))
+// console.log(showMultiplTable(8))
+// console.log(showMultiplTable(9))
+
+
+
+// 6. Написать функцию, которая реализует работу оператора %. 
+//    Функция принимает 2 параметра и возвращает остаток от деления первого параметра на второй. 
+//    В функции использовать только + - * /, оператор % не использовать.
+
+
+// function remainderDivision(a:number, b:number) {
+  
+// }
 
 
 
