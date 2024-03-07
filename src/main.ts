@@ -898,8 +898,101 @@ console.log(getNum(num))
 
 
 
+// ___________________________________________________________________________________________________________
 
 
+// PZ_Modul_1_Week_5
+
+// 1. Написать функцию, которая вычисляет факториал заданного числа.
+
+
+
+
+
+// 2. Написать функцию, которая выводит все числа из заданного 
+// пользователем диапазона в прямом порядке. И еще одну 
+// функцию – для вывода в обратном порядке.
+
+
+function showNumbers(n1:number, n2:number):void {
+   
+   // let buff = 0
+   // if (n1 > n2) { 
+   //    buff = n1 
+   //    n1 = n2
+   //    n2 = buff
+   // }
+
+   if (n1 > n2) {
+      return 
+   } 
+   console.log(n1)
+      showNumbers(n1 + 1, n2)
+}
+
+console.log(showNumbers(2, 5))
+
+function showNumbers2(n1:number, n2:number):void {
+   
+   // let buff = 0
+   // if (n1 > n2) { 
+   //    buff = n1 
+   //    n1 = n2
+   //    n2 = buff
+   // }
+
+   if (n1 > n2) {
+      return 
+   } 
+   console.log(n1)
+      showNumbers2(n1, n2-1)
+}
+
+console.log(showNumbers2(2, 5))
+
+// 3. Написать функцию, которая выводит переданное ей число 
+// задом наперед. 
+// Например: число 1234 вывести как 4321.
+
+
+      // function gerReverseNumber (n:number):number {
+      //       if(n < 10) {
+      //          return n
+      //       } else {
+      //          return +(n%10 + '' + gerReverseNumber(Math.floor(n/10)))
+      //       }
+      // }
+
+      // console.log(gerReverseNumber(1234))
+
+// 4. Написать функцию, которая считает сумму цифр числа.
+// Например: число 1357, сумма 1 + 3 + 5 + 7 = 16.
+
+// function getSumOfDigits (n:number):number {
+//    if(n < 10) {
+//       return n
+//    } else {
+//       return n%10 + getSumOfDigits(Math.floor(n/10))
+//    }
+// }
+
+// console.log(getSumOfDigits(1234))
+
+
+
+// 5. Написать функцию, которая принимает число и выводит 
+// соответствующее количество вложенных пар круглых скобок. 
+// Например: число 4 – (((())))
+
+// function getBracketsPairsByNum (n:number) {
+//    if (!n) {
+//       return ''
+//    } else {
+//    return '(' + getBracketsPairsByNum(n-1) + ')'
+// }
+// }
+
+// console.log(getBracketsPairsByNum(4))
 
 
 
