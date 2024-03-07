@@ -914,41 +914,41 @@ console.log(getNum(num))
 // функцию – для вывода в обратном порядке.
 
 
-function showNumbers(n1:number, n2:number):void {
+// function showNumbers(n1:number, n2:number):void {
    
-   // let buff = 0
-   // if (n1 > n2) { 
-   //    buff = n1 
-   //    n1 = n2
-   //    n2 = buff
-   // }
+//    // let buff = 0
+//    // if (n1 > n2) { 
+//    //    buff = n1 
+//    //    n1 = n2
+//    //    n2 = buff
+//    // }
 
-   if (n1 > n2) {
-      return 
-   } 
-   console.log(n1)
-      showNumbers(n1 + 1, n2)
-}
+//    if (n1 > n2) {
+//       return 
+//    } 
+//    console.log(n1)
+//       showNumbers(n1 + 1, n2)
+// }
 
-console.log(showNumbers(2, 5))
+// console.log(showNumbers(2, 5))
 
-function showNumbers2(n1:number, n2:number):void {
+// function showNumbers2(n1:number, n2:number):void {
    
-   // let buff = 0
-   // if (n1 > n2) { 
-   //    buff = n1 
-   //    n1 = n2
-   //    n2 = buff
-   // }
+//    // let buff = 0
+//    // if (n1 > n2) { 
+//    //    buff = n1 
+//    //    n1 = n2
+//    //    n2 = buff
+//    // }
 
-   if (n1 > n2) {
-      return 
-   } 
-   console.log(n1)
-      showNumbers2(n1, n2-1)
-}
+//    if (n1 > n2) {
+//       return 
+//    } 
+//    console.log(n1)
+//       showNumbers2(n1, n2-1)
+// }
 
-console.log(showNumbers2(2, 5))
+// console.log(showNumbers2(2, 5))
 
 // 3. Написать функцию, которая выводит переданное ей число 
 // задом наперед. 
