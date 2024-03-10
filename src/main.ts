@@ -847,15 +847,15 @@ import './style.scss'
 // 4. Написать функцию, которая проверяет, является ли переданное ей число простым   
 
 
-function getNum(a:number){
-  for (let i = 2; i <= a !/ 2; i++) {
-  if (a % i !==0)
-  return a
-}
-}
+// function getNum(a:number){
+//   for (let i = 2; i <= a !/ 2; i++) {
+//   if (a % i !==0)
+//   return a
+// }
+// }
 
-let num = 5
-console.log(getNum(num))
+// let num = 5
+// console.log(getNum(num))
 
 
 
