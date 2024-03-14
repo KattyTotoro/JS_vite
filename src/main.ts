@@ -1071,15 +1071,28 @@ import './style.scss'
 // модель, год выпуска, средняя скорость), и следующие функции 
 // для работы с этим объектом.
 
-// const automobile = {
-//    manufacturer: 'Japan',
-//    model: 'f2x',
-//    year: 1996
-//    averSpeed: 98,
-// }
+type Car = {
+   manufacturer: string,
+   model: string,
+   year: number,
+   averSpeed: number,
+}
+
+const automobile = {
+   manufacturer: 'Japan',
+   model: 'f2x',
+   year: 1996,
+   averSpeed: 98,
+}
 
 
 // 1. Функция для вывода на экран информации об автомобиле.
+
+function showAutomobile (auto) {
+
+}
+
+
 // 2. Функция для подсчета необходимого времени для преодоления переданного расстояния со средней скоростью. 
 // Учтите, что через каждые 4 часа дороги водителю необходимо делать перерыв на 1 час.
 // Задание 2
