@@ -1071,26 +1071,26 @@ import './style.scss'
 // модель, год выпуска, средняя скорость), и следующие функции 
 // для работы с этим объектом.
 
-type Car = {
-   manufacturer: string,
-   model: string,
-   year: number,
-   averSpeed: number,
-}
+// type Car = {
+//    manufacturer: string,
+//    model: string,
+//    year: number,
+//    averSpeed: number,
+// }
 
-const automobile = {
-   manufacturer: 'Japan',
-   model: 'f2x',
-   year: 1996,
-   averSpeed: 98,
-}
+// const automobile = {
+//    manufacturer: 'Japan',
+//    model: 'f2x',
+//    year: 1996,
+//    averSpeed: 98,
+// }
 
 
 // 1. Функция для вывода на экран информации об автомобиле.
 
-function showAutomobile (auto) {
+// function showAutomobile (auto: Car) {
 
-}
+// }
 
 
 // 2. Функция для подсчета необходимого времени для преодоления переданного расстояния со средней скоростью. 
