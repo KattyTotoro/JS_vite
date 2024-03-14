@@ -1124,7 +1124,13 @@ import './style.scss'
 // его ширину.
 
 // function widthRectangle (pr:number) {
-//       return pr.B.x - pr.A.x
+
+//    let max_x = 0
+//    let min_x = 0
+
+//    for (let )
+//   max_x > pr.[Object].x ? max_x = pr.[Object].x
+   
 // }
 
 
