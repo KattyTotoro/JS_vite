@@ -1075,7 +1075,11 @@ import './style.scss'
 
 // type Fraction = {
 //       x: number,
-//       y: number
+//       y: number,
+      // A: string,
+      // B: string,
+      // C: string,
+      // D: string
 // }
 
 // Объект - прямоугольник, известны только две точки
@@ -1108,7 +1112,7 @@ import './style.scss'
 // 1. Функция принимает объект-прямоугольник и выводит 
 // информацию о нем (где какая точка расположена).
 
-// function printRectangle(pr: string) {
+// function printRectangle(pr: Fraction) {
 //       for (let key in pr) {
 
 //             console.log(key)
@@ -1123,7 +1127,7 @@ import './style.scss'
 // 2. Функция принимает объект-прямоугольник и возвращает
 // его ширину.
 
-// function widthRectangle (pr:number) {
+// function widthRectangle (pr:Fraction) {
 
 //    let max_x = 0
 //    let min_x = 0
