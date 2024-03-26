@@ -377,7 +377,7 @@ import './style.scss'
 
 
 
-// DZ_Modul_1_Week_2  - В работе/ Выполнено 1, 2
+// DZ_Modul_1_Week_2  - В работе/ Выполнено 1, 2, 3
 
 
 /* Вам необходимо самостоятельно решить, для какого задания какой оператор ветвления 
@@ -457,6 +457,14 @@ import './style.scss'
 
 //  3. Запросить у пользователя трехзначное и число и проверить, 
 //       есть ли в нем одинаковые цифры.
+
+// let userNum = 345
+// console.log(parseInt(userNum/100%10))
+// if (parseInt(userNum/100%10) == parseInt(userNum/10%10) || 
+// parseInt(userNum/100%10) == userNum%10 ||
+// parseInt(userNum/10%10) == userNum%10)
+// console.log('есть одинаковые цифры')
+
 
 
 
