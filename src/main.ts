@@ -391,6 +391,49 @@ import './style.scss'
 // alert(str)
 
 
+// 3.
+
+// пользователь вводит число «х». Считаем, что пользовательский ввод 
+// ограничен значениями от 1 до 10. Программа выводит 
+// числа от «х» до 5, если х≤5, иначе — числа от «х» до 10. 
+
+// let x = +prompt ('Введите число от 1 до 10.') as number
+// let str = ''
+
+// if (x <= 5 && x > 0) {
+//       switch (x) {
+//             case 1: str += '1 '
+//                   console.log(str)
+//             case 2: str += '2 '
+//                   console.log(str)
+//             case 3: str += '3 '
+//                   console.log(str)
+//             case 4: str += '4 '      
+//                   console.log(str) 
+//             case 5: str += '5 '      
+//                   console.log(str)
+//       }
+// } else if (x > 5 && x <= 10) {
+//       switch (x) {
+//             case 6: str += '6 '
+//                   console.log(str)
+//             case 7: str += '7 '
+//                   console.log(str)
+//             case 8: str += '8 '
+//                   console.log(str)
+//             case 9: str += '9 '      
+//                   console.log(str) 
+//             case 10: str += '10 '      
+//                   console.log(str)
+//       }
+// } else { 
+//       console.log('Введите число из диапазона от 1 до 10.')
+//       alert('Введите число из диапазона от 1 до 10.')
+// }
+// alert(str)
+
+
+
 
 
 // ___________________________________________________________________________________________________________
