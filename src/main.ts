@@ -362,12 +362,35 @@ import './style.scss'
 
 // ___________________________________________________________________________________________________________
 
-
+// 1.
 // let x=5
 // if(x%2)
 // console.log("odd")
 // else
 // console.log("even")
+
+
+// 2.
+
+// let x = +prompt ('Введите число от 1 до 5') as number
+// let str = ''
+
+// switch (x) {
+//       case 1: str += '1'
+//       console.log(str)
+//       case 2: str += '2'
+//       console.log(str)
+//       case 3: str += '3'
+//       console.log(str)
+//       case 4: str += '4'      
+//       console.log(str)    
+      
+//       default: str += '5'    
+//       console.log(str)
+// }
+// alert(str)
+
+
 
 
 // ___________________________________________________________________________________________________________
