@@ -104,13 +104,20 @@ import './style.scss'
 /*10. Запросите у пользователя целое число и выведите в ответ, четное число или нет. 
         В задании используйте логические операторы. В задании не надо использовать if или switch.*/
 
+
+      //   let num = 11
+      //   let parity = num % 2 == 0 ? console.log('even') : console.log('odd')
+
+
+      //   Вариант 2
+
 // let num = 12
 
 // if (num % 2 == 0) {
 //   console.log('Число', num, 'чётное')
 // } else console.log('Число', num, 'не чётное')
 
-// Вариант 2
+// Вариант 3
 
 // let num = 13
 
@@ -450,7 +457,7 @@ import './style.scss'
 
 
 
-// DZ_Modul_1_Week_2  - В работе/ Выполнено 1, 2, 3, 4
+// DZ_Modul_1_Week_2  - В работе/ Выполнено 1, 2, 3, 4, 5, 6, 7
 
 
 /* Вам необходимо самостоятельно решить, для какого задания какой оператор ветвления 
@@ -575,6 +582,17 @@ import './style.scss'
 
 //  5. Запросить у пользователя пятиразрядное число и определить, является ли оно палиндромом.
 
+// let num1 = 121
+
+// let num2 = parseInt((num1 % 10) * 100) + parseInt(((num1/10) % 10)) * 10 + parseInt(((num1/100) % 10))
+
+// console.log(num2)
+
+// num1 == num2 ? console.log('Число является палиндромом') : console.log('Число НЕ является палиндромом')
+
+
+
+
 //  6. Написать конвертор валют. Пользователь вводит количество USD, выбирает, в какую валюту хочет перевести: EUR, 
 //  UAN или AZN, и получает в ответ соответствующую сумму.
 
@@ -583,22 +601,51 @@ import './style.scss'
 // const dollarsToAZN = 0.59
 
 // let userUSD = 10
-// let userSelection = 'EUR'
+// let userSelection = 'AZN'
 // let result = 0
 
-// switch (userUSD) {
+// switch (userSelection) {
 //    case 'EUR':
 //       result = userUSD * dollarsToEUR
+//       break;
+//    case 'UAN':
+//       result = userUSD * dollarsToUAN
+//       break;
+//    case 'AZN':
+//       result = userUSD * dollarsToAZN
 //       break;
 
 //    default:
 //       break;
 // }
 
+// console.log(result)
+
 
 
 //  7. Запросить у пользователя сумму покупки и вывести сумму к оплате со скидкой: от 200 до 300 – скидка будет 3%, 
 //     от 300 до 500 – 5%, от 500 и выше – 7%. 
+
+// Сумма покупки пользователя
+// let userAmountOfCost = 400
+
+// Сумма к оплате
+// let amountToBePaid = 0
+
+// if (userAmountOfCost >= 200 && userAmountOfCost < 300) {
+//       amountToBePaid = userAmountOfCost - (userAmountOfCost * 0.03)
+// } else if (userAmountOfCost >= 300 && userAmountOfCost < 500) {
+//       amountToBePaid = userAmountOfCost - (userAmountOfCost * 0.05)
+// } else if (userAmountOfCost >= 500) {
+//       amountToBePaid = userAmountOfCost - (userAmountOfCost * 0.07)
+// } else {
+//       amountToBePaid = userAmountOfCost
+// }
+
+// console.log(amountToBePaid)
+
+
+
 
 
  /*8. Запросить у пользователя длину окружности и периметр квадрата. 
