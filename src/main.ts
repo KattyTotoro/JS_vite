@@ -1817,6 +1817,9 @@ import './style.scss'
 
 // 1.1.  Написать функцию возвращающую массив целых чисел от 0 до 10
 
+
+// Функция возвращает массив от одного числа до второго, заданных пользователем
+
 // function getArrayOfIintegers(num1: number, num2: number) {
 //       let arr = []
 
@@ -1831,9 +1834,73 @@ import './style.scss'
 // console.log(getArrayOfIintegers(0, 10))
 
 
+// Функция возвращает массив случайных целых чисел от 0 до 10, размер массива задан пользователем
+
+// function getArrayOfIintegers2(num:number) {
+//       let arr = []
+
+//       for (let i = 0; i < num; i++) {
+//              arr[i] = parseInt(Math.random() * 11)
+//       }
+
+//       return arr
+// }
+
+// console.log(getArrayOfIintegers2(7))
+
+
 // 1.2.  Добавить в функцию опциональные параметры начального и конечного значения массива
-//     (если конечный элемент массива не передат, то он больше нечального на 10) . Вызвать функцию несколько раз
+//     (если конечный элемент массива не передан, то он больше начального на 10) . Вызвать функцию несколько раз
+
+// Заполняет числами от start до end 
+// function getArrayOfIintegers3(start=0, end=start+10) {
+//       let arr = []
+
+//       for (let i = 0; start <= end; i++) {
+//             arr[i] = start
+//             start++
+//       }
+
+//       return arr
+// }
+
+// console.log(getArrayOfIintegers3(2))
+
+
+// Заполняет случайными числами
+// function getArrayOfIintegers4(start=0, end=start+10) {
+//       let arr = []
+
+//       for (let i = 0; i < end; i++) {
+//             arr[i] = parseInt(Math.random() * 11)
+//       }
+
+//       return arr
+// }
+
+// console.log(getArrayOfIintegers4(2))
+
+
+
+
 // 1.3*. Написать функцию возвращающюю массив случайных целых чисел. Функция принимает 1 параметр, количество элементов в будущем массиве
+
+// Функция возвращает массив случайных целых чисел от 0 до 10, размер массива задан пользователем
+
+// function getArrayOfIintegers2(num:number) {
+//       let arr = []
+
+//       for (let i = 0; i < num; i++) {
+//             //  arr[i] = parseInt(Math.random() * 11)
+//             arr.push(Math.floor(Math.random() * 11))
+//       }
+
+//       return arr
+// }
+
+// console.log(getArrayOfIintegers2(5))
+
+
 
 // function funcName (start=0, end=start+10) {
 //       return console.log(start, end)
