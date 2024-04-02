@@ -102,6 +102,18 @@ import './style.scss'
 // console.log('Остаток денег:', residualAmount)
 
 
+// // Вариант 2.
+
+// let sum2 = 160
+// let price2 = 30
+
+// let numberOfChocolates2 = parseInt(sum2 / price2)
+// console.log('Количество шоколдано, которое Вы можете купить', numberOfChocolates2)
+
+// let residualAmount2 = parseInt(sum2 % price2)
+// console.log('Остаток денег:', residualAmount2)
+
+
 
 /*9. Запросите у пользователя трехзначное число и выведите его задом наперед. 
       Для решения задачи вам понадобится оператор % (остаток от деления).*/
