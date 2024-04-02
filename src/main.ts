@@ -80,6 +80,13 @@ import './style.scss'
 //  let numberOfFiles = parseInt((volumeInGigabytes * oneGigabyteToMegabytes) / fileSize)
 //  console.log('Количество файлов размером по 820 Мб, которое помещается на флешку:', numberOfFiles, 'файлов')
 
+// Вариант 2
+//  const oneGigabyteToMegabytes2 = 1024
+//  let fileSize2 = 820
+//  let volumeInGigabytes2 = parseInt(prompt('Укажите объём флешки в Гб', '1') as string)
+//  let numberOfFiles2 = parseInt(((volumeInGigabytes2 * oneGigabyteToMegabytes2) - ((volumeInGigabytes2 * oneGigabyteToMegabytes2) % fileSize2)) / fileSize2)
+//  console.log('Количество файлов размером по 820 Мб, которое помещается на флешку:', numberOfFiles2, 'файлов')
+
 
 
 /*8. Пользователь вводит сумму денег в кошельке и цену одной шоколадки. 
