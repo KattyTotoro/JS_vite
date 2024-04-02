@@ -64,7 +64,7 @@ import './style.scss'
 /*6. Реализуйте конвертор валют. Пользователь вводит доллары, программа переводит в евро. 
    Курс валюты храните в константе.*/
 
-// const evroToDollarExchange = 1.08
+// const evroToDollarExchange = .93
 // let amountInDollars = parseInt(prompt('Введите сумму в долларах', '1') as string)
 // let amountInEuros = amountInDollars * evroToDollarExchange
 // console.log('Сумма в евро:', amountInEuros)
