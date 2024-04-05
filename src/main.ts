@@ -500,7 +500,25 @@ import './style.scss'
 // console.log(parseInt(x) < parseInt(y))
 
 
+// 6.
+// console.log(typeof '1')
+// console.log(typeof 1)
+// console.log(typeof (1))
+// console.log(typeof typeof 1)
+// console.log(typeof typeof '1')
+// console.log(typeof 1 == 'number')
+// console.log(typeof 1 == 'string')
+// console.log(typeof true)
+// console.log(typeof null)
+// console.log(typeof(1+'true'))
+// console.log(typeof('1'+2))
+// console.log(typeof('1'+false))
 
+// let y
+// console.log(typeof y == 'undefined')
+// let x = null
+// console.log(typeof x)
+// console.log(x === null)
 
 
 // ___________________________________________________________________________________________________________
@@ -541,6 +559,11 @@ import './style.scss'
 // }  else if (userAge < 0) {
 //    console.log('Введены некорректные данные')
 // } else console.log('Пользователь - пенсионер')
+
+// console.log(typeof userAge)
+// console.log(typeof userAge == 'undefined')
+// console.log(typeof userAge == 'number')
+// console.log(typeof userAge == 'string')
 
 
 
