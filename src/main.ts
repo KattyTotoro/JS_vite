@@ -536,6 +536,25 @@ import './style.scss'
 // if (typeof z == 'undefined') z = 0;
 // console.log(z)
 
+// 8.
+// let x = confirm('Подтвердите своё согласие на отбор Вашего печенья.')
+// let result = ''
+// switch (x) {
+//       case true:
+//             result = 'Подтверждено'
+//             console.log('Подтверждено')  
+//             break;
+//       case false:
+//             result = 'Отменено'          
+//             console.log('Отменено')  
+//             break;
+
+//       default:
+//             break;
+// }
+// alert(result)
+// console.log(result)
+
 
 
 // ___________________________________________________________________________________________________________
