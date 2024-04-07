@@ -131,7 +131,13 @@ import './style.scss'
 
 
 //   let num = 11
-//   let parity = num % 2 == 0 ? console.log('even') : console.log('odd')
+//   let parity = num % 2 == 0 ? 'even' : 'odd'
+//   console.log(parity)
+
+
+//   let num = 11
+//   let parity = (num % 2 == 0) ? 'even' : 'odd'
+//   console.log(parity)
 
 
 //   Вариант 2
@@ -702,13 +708,13 @@ import './style.scss'
 
 // switch (userSelection) {
 //    case 'EUR':
-//       result = userUSD * dollarsToEUR
+//       result = userUSD / dollarsToEUR
 //       break;
 //    case 'UAN':
-//       result = userUSD * dollarsToUAN
+//       result = userUSD / dollarsToUAN
 //       break;
 //    case 'AZN':
-//       result = userUSD * dollarsToAZN
+//       result = userUSD / dollarsToAZN
 //       break;
 
 //    default:
