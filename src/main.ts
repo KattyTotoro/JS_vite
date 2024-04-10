@@ -804,12 +804,93 @@ import './style.scss'
 // 10. Запросить дату (день, месяц, год) и вывести следующую за ней дату. 
 //     Учтите возможность перехода на следующий месяц, год, а также високосный год. 
 
-let userDay = 28
-let userMonth = 2
+let userDay = 32
+let userMonth = 12
 let userYear = 2024
+let days_in_year = 0
+
+console.log(userDay, userMonth, userYear)
+
+// Определение високосный год или нет
+if ((userYear % 4 == 0 && userYear % 100 == 0 && userYear % 400 == 0) || 
+    (userYear % 4 == 0 && userYear % 100 != 0 && userYear % 400 != 0)) { 
+      days_in_year = 366
+      console.log('Год является високосным.')
+} else { 
+      days_in_year = 365
+      console.log('Год не является високосным.')
+}
 
 
-console.log(userDay + 1, userMonth, userYear)
+if(userMonth == 4 || userMonth == 6 || userMonth == 9 || userMonth == 11) {
+
+      if(userDay >= 1 && userDay <= 29) {  
+            userDay ++
+      } else if(userDay == 30) {
+            userDay = 1
+            userMonth++
+      } else {
+            console.log("Некорректная дата")
+      }
+
+} else if(userMonth == 2) {
+      
+      if(days_in_year == 366) {
+
+            if(userDay >= 1 && userDay <= 28) {
+                  userDay++
+            } else if(userDay == 29) {
+                  userDay = 1
+                  userMonth++
+            } else {
+                  console.log("Некорректная дата")
+            }
+
+      } else {
+
+            if(userDay >= 1 && userDay <= 27) {
+                  userDay++
+            } else if(userDay == 28) {
+                  userDay = 1
+                  userMonth++
+            } else {
+                  console.log("Некорректная дата")
+            }
+      }
+
+} else {
+      
+      if(userMonth == 12) {
+
+            if(userDay >= 1 && userDay <= 30) {  
+                  userDay ++
+            } else if(userDay == 31) {
+                  userDay = 1
+                  userMonth = 1
+                  userYear++
+            } else {
+                  console.log("Некорректная дата")
+            }
+            
+      } else if(userMonth < 1 || userMonth > 12) {
+
+            console.log("Некорректная дата")
+
+      } else {
+
+            if(userDay >= 1 && userDay <= 30) {  
+                  userDay ++
+            } else if(userDay == 31) {
+                  userDay = 1
+                  userMonth++
+            } else {
+                  console.log("Некорректная дата")
+            }
+      }
+}
+ 
+
+console.log(userDay, userMonth, userYear)
 
 
 
