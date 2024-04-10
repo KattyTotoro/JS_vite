@@ -555,8 +555,11 @@ import './style.scss'
 // alert(result)
 // console.log(result)
 
-
-
+// 9.
+// let x = Math.random()
+// console.log(x)
+// let z = Date()
+// console.log(z)
 // ___________________________________________________________________________________________________________
 
 
@@ -782,15 +785,15 @@ import './style.scss'
 
 // question = prompt('Вопрос 1. Сколько звёзд в Солнечной системе. \n a. Сотни миллиардов \n b. Одна \n c. Примерно один миллион') as string
 
-// points = question == 'b' ? points += 1 : points
+// if(question == 'b') points += 1
 
 // question = prompt('Вопрос 2. Как называется наша галактика. \n a. Млечный Путь \n b. Андромеда \n c. Сириус') as string
 
-// points = question == 'a' ? points += 1 : points
+// if(question == 'a') points += 1
 
 // question = prompt('Вопрос 3. Земля - какая по счёту от Солнца? \n a. Вторая \n b. Четвёртая \n c. Третья') as string
 
-// points = question == 'c' ? points += 1 : points
+// if(question == 'c') points += 1
 
 // alert('Сумма набранных баллов: ' + points)
 
@@ -800,6 +803,13 @@ import './style.scss'
 
 // 10. Запросить дату (день, месяц, год) и вывести следующую за ней дату. 
 //     Учтите возможность перехода на следующий месяц, год, а также високосный год. 
+
+let userDay = 28
+let userMonth = 2
+let userYear = 2024
+
+
+console.log(userDay + 1, userMonth, userYear)
 
 
 
