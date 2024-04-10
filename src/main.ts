@@ -804,12 +804,14 @@ import './style.scss'
 // 10. Запросить дату (день, месяц, год) и вывести следующую за ней дату. 
 //     Учтите возможность перехода на следующий месяц, год, а также високосный год. 
 
-let userDay = 32
-let userMonth = 12
+let userDay = 31
+let userMonth = 2
 let userYear = 2024
 let days_in_year = 0
 
 console.log(userDay, userMonth, userYear)
+
+
 
 // Определение високосный год или нет
 if ((userYear % 4 == 0 && userYear % 100 == 0 && userYear % 400 == 0) || 
@@ -821,6 +823,9 @@ if ((userYear % 4 == 0 && userYear % 100 == 0 && userYear % 400 == 0) ||
       console.log('Год не является високосным.')
 }
 
+
+if(userMonth >= 1 && userMonth <= 12) {
+      
 
 if(userMonth == 4 || userMonth == 6 || userMonth == 9 || userMonth == 11) {
 
@@ -858,9 +863,7 @@ if(userMonth == 4 || userMonth == 6 || userMonth == 9 || userMonth == 11) {
             }
       }
 
-} else {
-      
-      if(userMonth == 12) {
+} else if(userMonth == 12) {
 
             if(userDay >= 1 && userDay <= 30) {  
                   userDay ++
@@ -869,14 +872,11 @@ if(userMonth == 4 || userMonth == 6 || userMonth == 9 || userMonth == 11) {
                   userMonth = 1
                   userYear++
             } else {
+                  userDay
                   console.log("Некорректная дата")
             }
-            
-      } else if(userMonth < 1 || userMonth > 12) {
 
-            console.log("Некорректная дата")
-
-      } else {
+} else {
 
             if(userDay >= 1 && userDay <= 30) {  
                   userDay ++
@@ -887,8 +887,8 @@ if(userMonth == 4 || userMonth == 6 || userMonth == 9 || userMonth == 11) {
                   console.log("Некорректная дата")
             }
       }
-}
- 
+      
+} else console.log("Некорректная дата")
 
 console.log(userDay, userMonth, userYear)
 
