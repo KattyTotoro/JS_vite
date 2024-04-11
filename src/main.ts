@@ -808,17 +808,6 @@ import './style.scss'
 let userDay = +prompt('Введите день') as number
 let userMonth = +prompt('Введите месяц') as number
 let userYear = +prompt('Введите год') as number
-let days_in_year = +1 as number
-
-// Определение високосный год или нет
-if ((userYear % 4 == 0 && userYear % 100 == 0 && userYear % 400 == 0) || 
-    (userYear % 4 == 0 && userYear % 100 != 0 && userYear % 400 != 0)) { 
-      days_in_year = 366
-      console.log('Год является високосным.')
-} else { 
-      days_in_year = 365
-      console.log('Год не является високосным.')
-}
 
 
 if(userMonth >= 1 && userMonth <= 12) {
@@ -838,7 +827,8 @@ if(userMonth >= 1 && userMonth <= 12) {
 
       } else if(userMonth == 2) {
             
-            if(days_in_year == 366) {
+            if((userYear % 4 == 0 && userYear % 100 == 0 && userYear % 400 == 0) || 
+            (userYear % 4 == 0 && userYear % 100 != 0 && userYear % 400 != 0)) {
 
                   if(userDay >= 1 && userDay <= 28) {
                         userDay++
