@@ -2167,6 +2167,6 @@ import './style.scss'
 
 // ucFirst("вася") == "Вася";
 
-let str = 'федот'
+// let str = 'федот'
 
-console.log('федот'[0].toUpperCase())
+// console.log('федот'[0].toUpperCase())
