@@ -804,88 +804,95 @@ import './style.scss'
 // 10. Запросить дату (день, месяц, год) и вывести следующую за ней дату. 
 //     Учтите возможность перехода на следующий месяц, год, а также високосный год. 
 
+// Переменные для пользовательского ввода: день, месяц, год
+// let userDay = +prompt('Введите день') as number
+// let userMonth = +prompt('Введите месяц') as number
+// let userYear = +prompt('Введите год') as number
 
-let userDay = +prompt('Введите день') as number
-let userMonth = +prompt('Введите месяц') as number
-let userYear = +prompt('Введите год') as number
-
-
-if(userMonth >= 1 && userMonth <= 12) {
+// // Условие, если пользователь введёт существующий месяц
+// if(userMonth >= 1 && userMonth <= 12) {
       
+//       // Условие для месяцев с количеством дней: 30
+//       if(userMonth == 4 || userMonth == 6 || userMonth == 9 || userMonth == 11) {
 
-      if(userMonth == 4 || userMonth == 6 || userMonth == 9 || userMonth == 11) {
+//             if(userDay >= 1 && userDay <= 29) {  
+//                   userDay ++
+//             } else if(userDay == 30) {
+//                   userDay = 1
+//                   userMonth++
+//             } else {   // Условие, если пользователь введёт несуществующую дату
+//                   console.log("Некорректная дата")
+//                   alert("Некорректная дата")                  
+//             }
 
-            if(userDay >= 1 && userDay <= 29) {  
-                  userDay ++
-            } else if(userDay == 30) {
-                  userDay = 1
-                  userMonth++
-            } else {
-                  console.log("Некорректная дата")
-                  alert("Некорректная дата")                  
-            }
-
-      } else if(userMonth == 2) {
+//       // Условие для февраля
+//       } else if(userMonth == 2) {
             
-            if((userYear % 4 == 0 && userYear % 100 == 0 && userYear % 400 == 0) || 
-            (userYear % 4 == 0 && userYear % 100 != 0 && userYear % 400 != 0)) {
+//             // Условие для февраля, если год является високосным
+//             if((userYear % 4 == 0 && userYear % 100 == 0 && userYear % 400 == 0) || 
+//             (userYear % 4 == 0 && userYear % 100 != 0 && userYear % 400 != 0)) {
 
-                  if(userDay >= 1 && userDay <= 28) {
-                        userDay++
-                  } else if(userDay == 29) {
-                        userDay = 1
-                        userMonth++
-                  } else {
-                        console.log("Некорректная дата")
-                        alert("Некорректная дата")                       
-                  }
+//                   if(userDay >= 1 && userDay <= 28) {
+//                         userDay++
+//                   } else if(userDay == 29) {
+//                         userDay = 1
+//                         userMonth++
+//                   } else { // Условие, если пользователь введёт несуществующую дату
+//                         console.log("Некорректная дата")
+//                         alert("Некорректная дата")                       
+//                   }
 
-            } else {
+//             // Условие для февраля, если год НЕ является високосным
+//             } else {
 
-                  if(userDay >= 1 && userDay <= 27) {
-                        userDay++
-                  } else if(userDay == 28) {
-                        userDay = 1
-                        userMonth++
-                  } else {
-                        console.log("Некорректная дата")
-                        alert("Некорректная дата")                        
-                  }
-            }
+//                   if(userDay >= 1 && userDay <= 27) {
+//                         userDay++
+//                   } else if(userDay == 28) {
+//                         userDay = 1
+//                         userMonth++
+//                   } else { // Условие, если пользователь введёт несуществующую дату
+//                         console.log("Некорректная дата")
+//                         alert("Некорректная дата")                        
+//                   }
+//             }
 
-      } else if(userMonth == 12) {
+//       // Условие для декабря, переход на следующий год
+//       } else if(userMonth == 12) {
 
-                  if(userDay >= 1 && userDay <= 30) {  
-                        userDay ++
-                  } else if(userDay == 31) {
-                        userDay = 1
-                        userMonth = 1
-                        userYear++
-                  } else {
-                        console.log("Некорректная дата")
-                        alert("Некорректная дата")                       
-                  }
+//                   if(userDay >= 1 && userDay <= 30) {  
+//                         userDay ++
+//                   } else if(userDay == 31) {
+//                         userDay = 1
+//                         userMonth = 1
+//                         userYear++
+//                   } else { // Условие, если пользователь введёт несуществующую дату
+//                         console.log("Некорректная дата")
+//                         alert("Некорректная дата")                       
+//                   }
 
-      } else {
+//       // Условие для месяцев с количеством дней: 31
+//       } else {
 
-                  if(userDay >= 1 && userDay <= 30) {  
-                        userDay ++
-                  } else if(userDay == 31) {
-                        userDay = 1
-                        userMonth++
-                  } else {
-                        console.log("Некорректная дата")
-                        alert("Некорректная дата")
-                  }
-            }
+//                   if(userDay >= 1 && userDay <= 30) {  
+//                         userDay ++
+//                   } else if(userDay == 31) {
+//                         userDay = 1
+//                         userMonth++
+//                   } else { // Условие, если пользователь введёт несуществующую дату
+//                         console.log("Некорректная дата")
+//                         alert("Некорректная дата")
+//                   }
+//             }
       
-} else {
-      console.log("Некорректная дата")
-      alert("Некорректная дата")
-}
+// // Условие, если пользователь введёт НЕсуществующий месяц
+// } else {
+//       console.log("Некорректная дата")
+//       alert("Некорректная дата")
+// }
 
-console.log(userDay, userMonth, userYear)
-alert(userDay + ' ' + userMonth + ' ' + userYear)
+// console.log(userDay, userMonth, userYear)
+// // Вывод результата
+// alert(userDay + ' ' + userMonth + ' ' + userYear)
 
 
 
