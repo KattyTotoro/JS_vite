@@ -504,6 +504,41 @@ import './style.scss'
 // console.log(+x < +y)
 // console.log(parseInt(x) > parseInt(y))
 // console.log(parseInt(x) < parseInt(y))
+// console.log(+false)
+// console.log(+true)
+// console.log(true == 1)
+// console.log(false == 0)
+// console.log(+'')
+// // Все значения, которы станут false при преобразовании в булев тип
+// console.log(Boolean(''))
+// console.log(Boolean(0))
+// console.log(Boolean(undefined))
+// console.log(Boolean(null))
+// console.log(Boolean(NaN))
+// console.log(Boolean(false))
+
+// console.log(Boolean(5))
+// console.log(Boolean(-5))
+
+// console.log(isNaN(NaN))
+// console.log(isNaN(1))
+
+
+// let rezult = x > y
+// console.log(rezult)
+// rezult = x < y
+// console.log(rezult)
+// rezult = 5 < 7
+// console.log(rezult)
+// rezult = 15 < 7
+// console.log(rezult)
+// console.log('Я' > 'А')
+// console.log('я' > 'Я')
+// console.log('z' > 'Z')
+
+// console.log(null === undefined)
+// console.log(null == undefined)
+// console.log(null == null)
 
 
 // 6.
