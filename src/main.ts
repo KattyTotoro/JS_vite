@@ -805,9 +805,9 @@ import './style.scss'
 //     Учтите возможность перехода на следующий месяц, год, а также високосный год. 
 
 // Переменные для пользовательского ввода: день, месяц, год
-// let userDay = +prompt('Введите день') as number
-// let userMonth = +prompt('Введите месяц') as number
-// let userYear = +prompt('Введите год') as number
+// let userDay = +prompt('Введите день')
+// let userMonth = +prompt('Введите месяц')
+// let userYear = +prompt('Введите год')
 
 // // Условие, если пользователь введёт существующий месяц
 // if(userMonth >= 1 && userMonth <= 12) {
@@ -892,7 +892,7 @@ import './style.scss'
 
 // console.log(userDay, userMonth, userYear)
 // // Вывод результата
-// alert(userDay + ' ' + userMonth + ' ' + userYear)
+// alert(`${userDay >= 10 ? userDay : '0' + userDay}.${userMonth >= 10 ? userMonth : '0' + userMonth}.${userYear}`)
 
 
 
