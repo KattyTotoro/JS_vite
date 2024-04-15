@@ -539,6 +539,7 @@ import './style.scss'
 // console.log(null === undefined)
 // console.log(null == undefined)
 // console.log(null == null)
+// console.log(undefined == undefined)
 
 
 // 6.
@@ -1164,7 +1165,7 @@ import './style.scss'
 
 // Циклы
 
-// DZ_Modul_1_Week_3  - В работе.   Выполнено: 1, 2, 3, 
+// DZ_Modul_1_Week_3  - В работе.   Выполнено: 1, 2, 3, 4
 
 // *********************************************************************************************************
 
@@ -1241,6 +1242,17 @@ import './style.scss'
 
 
 //     4. Определить количество цифр в введенном числе.
+
+// let num = 364
+// let quantity = 0
+
+// while (num > 0) {
+//       num = parseInt(num / 10)
+//       quantity++
+// }
+
+// console.log(quantity)
+
 
 
 
