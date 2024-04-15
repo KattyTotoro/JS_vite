@@ -1165,7 +1165,7 @@ import './style.scss'
 
 // Циклы
 
-// DZ_Modul_1_Week_3  - В работе.   Выполнено: 1, 2, 3, 4, 5
+// DZ_Modul_1_Week_3  - В работе.   Выполнено: 1, 2, 3, 4, 5, 6
 
 // *********************************************************************************************************
 
@@ -1198,7 +1198,7 @@ import './style.scss'
 
 // do {
 
-//       if (num1%i == 0 && num2%i == 0) {
+//       if (num1 % i == 0 && num2 % i == 0) {
 //             greatestCommonDivisor = i
 //             break
 //       }
@@ -1288,6 +1288,47 @@ import './style.scss'
 //     6. Зациклить калькулятор. Запросить у пользователя 2 числа 
 //     и знак, решить пример, вывести результат и спросить, хочет ли он решить еще один пример. И так до тех пор, пока 
 //     пользователь не откажется.
+
+// let num1 = 9
+// let num2 = 3
+// let userOperator = '-'
+// let result = 0
+// let userAnswer = true
+
+// do {
+//       num1 = parseInt(+prompt('Введите первое число'))
+//       num2 = parseInt(+prompt('Введите второе число'))
+//       userOperator = prompt('Введите знак')
+
+//       switch (userOperator) {
+//             case '+':
+//                result = num1 + num2
+//                break;
+         
+//             case '-':
+//                result = num1 - num2
+//                break;
+         
+//             case '*':
+//                result = num1 * num2
+//                break;
+         
+//             case '/':
+//                result = num1 / num2
+//                break;
+         
+//             default:
+//                break;
+//          }
+         
+//          console.log(num1, userOperator, num2, '=', result)
+//          alert(`${num1} ${userOperator} ${num2} = ${result}`)
+
+//          userAnswer = confirm('Хотите решить еще один пример?')
+      
+// } while (userAnswer != false);
+
+
 
 //     7. Запросить у пользователя число и на сколько цифр его 
 //     сдвинуть. Сдвинуть цифры числа и вывести результат (если 
