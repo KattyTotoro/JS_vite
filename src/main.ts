@@ -1603,7 +1603,7 @@ import './style.scss'
 //       5. Запросить число и проверить, простое ли оно. Простое 
 //       число делится без остатка только на себя и на единицу.
  
-let num = 5
+// let num = 5
 
 
 
@@ -1621,7 +1621,7 @@ let num = 5
 
 // Функции
 
-// PZ_Modul_1_Week_4   В работе.
+// PZ_Modul_1_Week_4   В работе. Выполнено: 1, 2, 3, ... , 5, 6
 
 // *********************************************************************************************************
 
@@ -1696,9 +1696,10 @@ let num = 5
 // console.log(calcNumbers(num1, num2, '+'))
 
 
-// 4. Написать функцию, которая проверяет, является ли переданное ей число простым   
+// 4. Написать функцию, которая проверяет, является ли переданное ей число простым.
+// Простое число делится без остатка только на себя и на единицу.   
 
-// ??? ПРОВЕРИТЬ!!!
+//  ПРОВЕРИТЬ!!!
 
 
 // function getNum(a:number){
@@ -1721,13 +1722,11 @@ let num = 5
 //   let result = ''
 //   for (let i = 1; i < 10; i++) {
 
-//     result += i + ' * ' + a + '=' + i * a + '\n'
+//     result += i + ' * ' + a + ' = ' + i * a + '\n'
 
 //   }
 //   return result
 // }
-
-
 
 // console.log(showMultiplTable(2))
 // console.log(showMultiplTable(3))
@@ -1746,8 +1745,21 @@ let num = 5
 
 
 // function remainderDivision(a:number, b:number) {
+//       let i = 0
+//       let remainderOfDivision = 0
 
+//       for (let j = a; j >= b; j -= b) {            
+//             i++
+//       }
+ 
+//       return remainderOfDivision = a - (b * i)
 // }
+
+// let num1 = 157
+// let num2 = 3
+
+// console.log(remainderDivision(num1, num2))
+// console.log(157%3)
 
 
 // 7. Написать функцию, которая принимает от 1 до 5 чисел и 
