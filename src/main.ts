@@ -742,9 +742,9 @@ import './style.scss'
 
 //  5. Запросить у пользователя пятиразрядное число и определить, является ли оно палиндромом.
 
-// let num1 = 121
+// let num1 = 12321
 
-// let num2 = parseInt((num1 % 10) * 100) + parseInt(((num1/10) % 10)) * 10 + parseInt(((num1/100) % 10))
+// let num2 = parseInt((num1 % 10) * 10000) + parseInt(((num1/10) % 10)) * 1000 + parseInt(((num1/100) % 10)) * 100 + parseInt(((num1/1000) % 10)) * 10 + parseInt(((num1/10000) % 10))
 
 // console.log(num2)
 
@@ -1245,7 +1245,7 @@ import './style.scss'
 
 //     4. Определить количество цифр в введенном числе.
 
-// let num = 364
+// let num = 3642
 // let quantity = 0
 
 // while (num > 0) {
@@ -1332,14 +1332,47 @@ import './style.scss'
 
 
 
-//     7. Запросить у пользователя число и на сколько цифр его 
-//     сдвинуть. Сдвинуть цифры числа и вывести результат (если 
-//     число 123456 сдвинуть на 2 цифры, то получится 345612).
+//     7. Запросить у пользователя число и на сколько цифр его сдвинуть. Сдвинуть цифры числа и вывести результат 
+//        (если число 123456 сдвинуть на 2 цифры, то получится 345612).
+
 //  let num1 = 78908
+//  let i = num1
+//  let num2 = 2
+//  let quantity = 0
 
-//  let num2 = parseInt((num1 % 10)) * 10000 + parseInt(num1/10 % 10000)
+// while (i > 0) {
+//       i = parseInt(i / 10)
+//       quantity++
+// }
 
-//  console.log(num2)
+// console.log(quantity)
+// console.log(i)
+
+//  console.log(num1 % 10)
+//  console.log(num1 / 10)
+//  console.log(parseInt(num1 / 10))
+
+// for(; num2 > 0; num2--) {
+//       num1 = parseInt(num1 / 10)
+// }
+
+// console.log(num1)
+
+//  let result = parseInt((num1 % 10)) * 10000 + parseInt(num1/10 % 10000)
+
+//  console.log(result)
+
+//  5. Запросить у пользователя пятиразрядное число и определить, является ли оно палиндромом.
+
+// let num1 = 12321
+
+// let num2 = parseInt((num1 % 10) * 10000) + parseInt(((num1/10) % 10)) * 1000 + parseInt(((num1/100) % 10)) * 100 + parseInt(((num1/1000) % 10)) * 10 + parseInt(((num1/10000) % 10))
+
+// console.log(num2)
+
+// num1 == num2 ? console.log('Число является палиндромом') : console.log('Число НЕ является палиндромом')
+
+
 
 
 //       8. Зациклить вывод дней недели таким образом: «День недели. 
