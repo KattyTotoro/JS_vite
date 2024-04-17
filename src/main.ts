@@ -842,8 +842,16 @@ import './style.scss'
 
 // Переменные для пользовательского ввода: день, месяц, год
 // let userDay = +prompt('Введите день')
+
+// // Если пользователь не введёт дату, присвоится текущая дата.
+// if (userDay == null || userDay == '') {userDay = new Date().getDate()}
+
 // let userMonth = +prompt('Введите месяц')
+// if (userMonth == null || userMonth == '') {userMonth = new Date().getMonth() + 1}
+
 // let userYear = +prompt('Введите год')
+// if (userYear == null || userYear == '') {userYear = new Date().getFullYear()}
+
 
 // // Условие, если пользователь введёт существующий месяц
 // if(userMonth >= 1 && userMonth <= 12) {
