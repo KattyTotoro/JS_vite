@@ -596,6 +596,42 @@ import './style.scss'
 // console.log(x)
 // let z = Date()
 // console.log(z)
+
+// 10.
+// let aStr = ''
+// let bStr = 'Default'
+
+// aStr ||= bStr
+// console.log(aStr)
+// aStr = aStr ? aStr : bStr
+// console.log(aStr)
+
+// aStr = 'Hello'
+
+// aStr &&= aStr + ' user'
+// aStr = aStr ? aStr + '!' : aStr
+// console.log(aStr)
+
+// console.log(true || true)   
+// console.log(false || true)  
+// console.log(true || false)  
+// console.log(false || false)
+
+// console.log(true && true)
+// console.log(false && true)
+// console.log(true && false)
+// console.log(false && false)
+
+// console.log(!false)
+// console.log(!true)
+// console.log(!0)
+// console.log(!1)
+// console.log(!!0)
+// console.log(!!1)
+
+
+
+
 // ___________________________________________________________________________________________________________
 
 
