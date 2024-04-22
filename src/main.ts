@@ -1399,42 +1399,60 @@ import './style.scss'
 //     7. Запросить у пользователя число и на сколько цифр его сдвинуть. Сдвинуть цифры числа и вывести результат 
 //        (если число 123456 сдвинуть на 2 цифры, то получится 345612).
 
-//  let num1 = 78908
-//  let i = num1
-//  let num2 = 2
-//  let quantity = 0
+//Переменная для исходного числа
+ let num1 = 12345678
 
-// while (i > 0) {
-//       i = parseInt(i / 10)
-//       quantity++
-// }
+ // Переменная для числа на сколько сдвинуть цифры
+ let num2 = 3
 
-// console.log(quantity)
-// console.log(i)
+ //Вспомогательные переменные для подсчёта разряда числа
+ let i = num1
+ let quantity = 0
+ let quantity2 = 1
 
-//  console.log(num1 % 10)
-//  console.log(num1 / 10)
-//  console.log(parseInt(num1 / 10))
+// Узнаём разрядность всего числа
+while (i > 0) {
+      i = parseInt(i / 10)
+      quantity++
+}
 
-// for(; num2 > 0; num2--) {
-//       num1 = parseInt(num1 / 10)
-// }
+console.log(quantity)
 
-// console.log(num1)
+//Узнаём разрядность второй части числа
+ i = quantity - num2
 
-//  let result = parseInt((num1 % 10)) * 10000 + parseInt(num1/10 % 10000)
+ //Переменные для хранения первой и второй частей числа
+ let part1 = num1
+ let part2 = num1
 
-//  console.log(result)
+console.log(i)
 
-//  5. Запросить у пользователя пятиразрядное число и определить, является ли оно палиндромом.
+for(; i > 0; i--) {
+      //Выковыриваем те цифры, на которые надо сдвинуть число
+      part1 = parseInt(part1 / 10)
 
-// let num1 = 12321
+      //Подсчёт для остатка от деления для выковыривания второй части числа
+      quantity2 *= 10
+}
 
-// let num2 = parseInt((num1 % 10) * 10000) + parseInt(((num1/10) % 10)) * 1000 + parseInt(((num1/100) % 10)) * 100 + parseInt(((num1/1000) % 10)) * 10 + parseInt(((num1/10000) % 10))
+console.log(quantity2)
 
-// console.log(num2)
+//Выковыриваем вторую часть числа
+part2 = parseInt(part2 % quantity2)
 
-// num1 == num2 ? console.log('Число является палиндромом') : console.log('Число НЕ является палиндромом')
+console.log(part1)
+console.log(part2)
+
+//Возврат к исходной разраядности
+for(; num2 > 0; num2--) {
+      part2 *= 10
+}
+
+console.log(part2)
+
+ let result = part2 + part1
+
+ console.log(result)
 
 
 
