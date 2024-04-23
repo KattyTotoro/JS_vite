@@ -1718,7 +1718,7 @@ import './style.scss'
 
 // Функции
 
-// PZ_Modul_1_Week_4   В работе. Выполнено: 1, 2, 3, 4, 5, 6, 7 ...
+// PZ_Modul_1_Week_4   В работе. Выполнено: 1, 2, 3, 4, 5, 6, ... ...
 
 // *********************************************************************************************************
 
@@ -1902,21 +1902,21 @@ import './style.scss'
 
 // 8. Написать функцию, которая принимает от 1 до 5 чисел и возвращает большее из них.
 
-let num = 1
-let max = 1
+// let num = 1
+// let max = 1
 
 
-for(let i = 0; (i < 1 && (num != '' && num != undefined)); i++) {
-      num = +prompt('Введите число')
-      max = num
+// for(let i = 0; (i < 1 && (num != '' && num != undefined)); i++) {
+//       num = +prompt('Введите число')
+//       max = num
 
-      for(let j = 0; (j < 4 && (num != '' && num != undefined)); j++) {
-            num = +prompt('Введите число')
-            if(max < num && (num != '' && num != undefined)) {max = num}
-      }
-}
+//       for(let j = 0; (j < 4 && (num != '' && num != undefined)); j++) {
+//             num = +prompt('Введите число')
+//             if(max < num && (num != '' && num != undefined)) {max = num}
+//       }
+// }
 
-console.log(max)
+// console.log(max)
 
 
 
@@ -1947,6 +1947,44 @@ console.log(max)
 // * Во всех заданиях обязательно использовать рекурсию.
 
 // 1. Написать функцию возведения числа в степень.
+
+// let num = 3
+// let degree = 4
+// let result = 1
+
+// while (degree > 0) {
+//       result *= num
+//       degree--
+// }
+// console.log(result)
+
+//   function pow (x:number, n:number) {
+//         return x**n
+//   }
+
+//   let num = 2
+//   let degree = 4
+
+// console.log(pow(num, degree))
+
+
+
+//   function pow2 (n:number, d:number) {
+        
+
+//   }
+
+//   let num2 = 2
+//   let degree2 = 4
+
+// console.log(pow(num2, degree2))
+
+
+
+
+//Ненавижу рекурсию!!!!!!!!!! Рекурсия! Иди в жопу!!!
+
+
 
 // 2. Написать функцию поиска наибольшего общего делителя.
 
