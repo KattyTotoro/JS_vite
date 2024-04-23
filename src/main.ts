@@ -1902,18 +1902,21 @@ import './style.scss'
 
 // 8. Написать функцию, которая принимает от 1 до 5 чисел и возвращает большее из них.
 
-// let num = 0
-// let i = 0
-// let max= 0
+let num = 1
+let max = 1
 
 
-// do {
-//       num = +prompt('Введите число', 0)
-//       if(num > max) max = num
-// i++
-// } while ((i < 5) && (num != '' && num != undefined));
+for(let i = 0; (i < 1 && (num != '' && num != undefined)); i++) {
+      num = +prompt('Введите число')
+      max = num
 
-// console.log(max)
+      for(let j = 0; (j < 4 && (num != '' && num != undefined)); j++) {
+            num = +prompt('Введите число')
+            if(max < num && (num != '' && num != undefined)) {max = num}
+      }
+}
+
+console.log(max)
 
 
 
