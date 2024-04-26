@@ -1250,6 +1250,19 @@ import './style.scss'
 // }
 // console.log(years)
 
+// 3.
+
+// let i = 0
+// let limit = 3
+// let num = 0
+
+// while (i < limit) {
+//       num = +prompt('Введите число')
+//       console.log(num)
+//       i++
+// }
+
+
 
 
 
