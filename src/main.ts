@@ -1220,7 +1220,35 @@ import './style.scss'
 
 // ___________________________________________________________________________________________________________
 
+//  1. Кредитный калькулятор
 
+// let monthlyPayment = 5000
+// let creditAmount = 15000
+// let creditRate = .02
+// let month = 0;
+
+// while(creditAmount > 0){
+
+//       creditAmount += creditAmount * creditRate    
+//       creditAmount -= monthlyPayment
+//       month++
+      
+// }
+
+// console.log(month)
+
+// 2. Через сколько лет вклад увеличится до 1 млн
+
+// let fund = 1e5
+// let rate = .10
+// let years = 0
+
+// while (fund <= 1e6) {
+
+//       fund += fund * rate
+//       years++
+// }
+// console.log(years)
 
 
 
