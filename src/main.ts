@@ -1262,6 +1262,30 @@ import './style.scss'
 //       i++
 // }
 
+// 4. Получить два случайных числа, но не равных между собой.
+
+// let num1 = parseInt(Math.random() * 10 + 1)
+// let num2 = 0
+
+// do {
+//       num2 = parseInt(Math.random() * 10 + 1)
+// } while(num1 == num2)
+
+// console.log(num1)
+// console.log(num2)
+
+// 5. У пользователя нужно получить подтверждение некоторого действия.
+
+// let userAnswer = ''
+// do {
+//       userAnswer = prompt('Confirm: yes or no') as string
+// } while(userAnswer != 'yes' && userAnswer != 'no')
+
+// console.log(userAnswer)      
+
+
+// ___________________________________________________________________________________________________________
+
 
 
 
