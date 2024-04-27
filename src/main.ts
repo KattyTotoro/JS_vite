@@ -1283,7 +1283,29 @@ import './style.scss'
 
 // console.log(userAnswer)      
 
+// for(let i = 0; i < 5; i++)
+//       console.log(i)
 
+// let i = 0
+// for( ; i < 5; i++)
+//       console.log(i)
+
+// let i = 0
+// for( ; i < 5; ) {
+//       console.log(i)
+//       i++
+// }
+
+// let i = 0
+// for( ; ; ) {
+//       console.log(i)
+//       i++
+//       if(i>4)
+//             break           
+// }
+ 
+
+     
 // ___________________________________________________________________________________________________________
 
 
