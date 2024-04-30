@@ -1283,6 +1283,8 @@ import './style.scss'
 
 // console.log(userAnswer)      
 
+// 6.
+
 // for(let i = 0; i < 5; i++)
 //       console.log(i)
 
@@ -1304,6 +1306,23 @@ import './style.scss'
 //             break           
 // }
  
+// for(let i = 0, j = 10; i != j; i++, j--)
+//       console.log(i, j)
+
+
+// 7. Пример. Кредитный калькулятор. Выводит ежемесячные платежи. 
+// Задаётся сумма кредита, срок погашения в месяцах, годовая ставка.
+
+// let creditAmount = 15000
+// let month = 24
+// let creditRate = .02
+// let creditBody = creditAmount + ((creditAmount * creditRate) * (month / 12))
+// console.log(creditBody)
+// let monthlyPayment = creditBody / month
+// console.log(monthlyPayment)
+
+// for(let i = 1; i <= month; i++)
+//       console.log(`month: ${i} payment: ${monthlyPayment}`)
 
      
 // ___________________________________________________________________________________________________________
