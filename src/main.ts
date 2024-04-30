@@ -1314,7 +1314,7 @@ import './style.scss'
 // Задаётся сумма кредита, срок погашения в месяцах, годовая ставка.
 
 // let creditAmount = 15000
-// let month = 24
+// let month = 6
 // let creditRate = .02
 // let creditBody = creditAmount + ((creditAmount * creditRate) * (month / 12))
 // console.log(creditBody)
