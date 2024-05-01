@@ -1324,7 +1324,50 @@ import './style.scss'
 // for(let i = 1; i <= month; i++)
 //       console.log(`month: ${i} payment: ${monthlyPayment}`)
 
+// 8. 
+
+// let arr = [-7, 5, 3, -1, 110, 1, 8]
+
+// for(let i in arr) console.log(i)
+
+// for(let i of arr) console.log(i)
+
+
+// 9. Задача: нужно сгенерировать не больше десяти случайных чисел из диапазона 1–7. 
+// В случае если выпадает четверка, генерация прекращается.
+
+// let num1 = parseInt(Math.random() * 7 + 1)
+// console.log(num1)
+
+// for(let i = 0; i < 10; i++) {
+//       num1 = parseInt(Math.random() * 7 + 1)
+//       console.log(num1)
+//       if(num1 == 4) break
+//       console.log(num1)      
+// }
      
+
+// 10. Нужно сгенерировать ровно 10 случайных чисел, но без четверок.
+
+// let num1 = parseInt(Math.random() * 7 + 1)
+// console.log(num1)
+
+// for(let i = 0; i < 10; ) {
+//       num1 = parseInt(Math.random() * 7 + 1)
+//       if(num1 == 4) continue
+//       console.log(num1)  
+//       i++          
+// }
+
+// let j = 0
+
+// while (j < 10) {
+//       num1 = parseInt(Math.random() * 7 + 1)
+//       if(num1 == 4) continue
+//       console.log(num1)  
+//       j++    
+// }
+
 // ___________________________________________________________________________________________________________
 
 
