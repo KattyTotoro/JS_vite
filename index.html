@@ -10,24 +10,33 @@
 
 <body>
 
-  <!-- <h2>Новый проект</h2>
+  <h2>Новый проект</h2>
   <div id="app">
    <p>Что это?</p>
   </div>
-  <p id="p1">Альпака</p> -->
+  <p id="p1">Альпака</p>
 
   <img src="vite.svg" alt="">
 
   <script type="module" src="/src/main.ts"></script>
 
-  <!-- <script>
+  <script>
     document.write('<p>Печеньки</p>')
-  </script> -->
+  </script>
 
-  <div id="Primer"><p>Привет, пользователь.</p></div>
-  <div id="Primer2"><p>Привет, пользователь.</p></div>
+  <div id="Primer"><p>1. Привет, пользователь.</p></div>
+  <div id="Primer2"><p>2. Привет, пользователь.</p></div>
 
-  <script></script>
+  <div style="background: url(images/bg1.jpg) center/cover no-repeat; height: 800px; color: white;">
+  <script>
+    function show5Blocks() {
+      for(let i = 1; i <= 5; i++) {
+        document.write('<h2> Header ' + i + '</h2>')
+      }
+    }
+    show5Blocks()
+  </script>
+</div>
 
 </body>
 
