@@ -1462,20 +1462,36 @@ import './style.scss'
 // объем воды и рассчитывает, на сколько дней работы 
 // этого хватит.
 
-// let water = 15
-// let x = .50
+// let water = 100
+// let x = .10
 // let danger = 10
 // let days = 0
 
-// while(water >= danger) {
-
+// // При условии, что выливается 10% от остатка воды
+// do {
 //       water = water - (water * x)
-//       days ++
-// }
+//       if(water >= danger) days++
+
+// } while(water >= danger)
 
 // console.log(days)
 
 
+
+// При условии, что выливается 10% от первоначально налитой воды
+
+// let water = 100
+// let x = 10
+// let danger = 10
+// let days = 0
+
+// do {
+//       water -= x
+//       if(water >= danger) days++
+
+// } while(water >= danger)
+
+// console.log(days)
 
 
 
