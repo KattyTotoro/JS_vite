@@ -1220,6 +1220,26 @@ import './style.scss'
 
 // ___________________________________________________________________________________________________________
 
+// let i = 1
+// while (i <= 10) { 
+//       console.log(i)
+//       i++
+// }
+
+// let i = 1
+// do { 
+//       console.log(i)
+//       i++
+// } while (i <= 10)
+
+// let i = 3
+// while (i) { // когда i будет равно 0, условие станет ложным, и цикл остановится
+//       console.log( i )
+//       i--
+// }
+      
+
+
 //  1. Кредитный калькулятор. Сколько месяцев понадобится, чтобы выплатить.
 
 // let monthlyPayment = 5000
@@ -1439,21 +1459,24 @@ import './style.scss'
 // }
 
 
-// for(let i = 0; i < 10; i++) {
+// let num1 = 0
+// let num2 = 0
 
-//       let num1 = parseInt(Math.random() * 10 + 1)
-//       console.log(num1)
-      
-//       for(let j = 0; j < 10; j ++ ) {
-//             let num2 = parseInt(Math.random() * 10 + 1)
-//             if(num1 == num2) {
-//                   continue
-//             } else {
-//                   num1 == num2
-//             console.log(num2)  
-//              }
-//       }          
+// for(let i = 0; i < 10; ) {
+
+//       num2 = num1
+
+//       num1 = parseInt(Math.random() * 10 + 1)
+
+//       // чтобы не генерировались подряд одинаковые числа
+//       if(num1 == num2) {
+//             continue
+//       } else {
+//             console.log(num1) 
+//             i++
+//       }
 // }
+
 
 // 17. Из-за утечки из бака охлаждения ежедневно вытекает 
 // 10% налитой воды. При объеме воды менее 10 литров 
@@ -1494,7 +1517,18 @@ import './style.scss'
 // console.log(days)
 
 
+// let sum = 0
 
+// while (true) {
+
+//   let value = +prompt("Введите число", '')
+
+//   if (!value) break; 
+
+//   sum += value
+
+// }
+// console.log('Сумма: ' + sum)
 
 
 
@@ -1742,6 +1776,8 @@ import './style.scss'
 //      и так до тех пор, пока пользователь нажимает OK. 
 
 // while (userAnswer != false)
+
+
 
 // 9. Вывести таблицу умножения для всех чисел от 2 до 9. 
 // Каждое число необходимо умножить на числа от 1 до 10.
@@ -2183,10 +2219,12 @@ import './style.scss'
 
 // 8. Написать функцию, которая принимает от 1 до 5 чисел и возвращает большее из них.
 
+// !!!!!! ОШИБКА !!!! ЕСЛИ ВВЕСТИ НОЛЬ, ТО ЦИКЛ ПРЕРЫВАЕТСЯ СРАЗУ
+
 // let num = 1
 // let max = 1
 
-//Так сложно, потому что иначе не получалось, если вводить отрицательные числа
+// // Так сложно, потому что иначе не получалось, если вводить отрицательные числа
 
 // for(let i = 0; (i < 1 && (num != '' && num != undefined)); i++) {
 //       num = +prompt('Введите число')
@@ -2199,6 +2237,26 @@ import './style.scss'
 // }
 
 // console.log(max)
+
+
+// let max = 0
+// let sum = 0
+
+// while (true) {
+
+//   let value = +prompt("Введите число", '')
+
+//   if (!value) break; 
+
+//   if(max < value) {max = value}
+
+//   sum += value
+
+// }
+// console.log('Сумма: ' + sum)
+
+// console.log(max)
+
 
 
 
