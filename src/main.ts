@@ -1415,6 +1415,14 @@ import './style.scss'
 //       if(i % 2 != 0) console.log(i)
 // }
 
+
+// let num2 = 12
+
+// for(let i = num2; i > 0; i--) {
+//       if(i % 2) console.log(i)
+// }
+
+
 // 14. выводит все числа, на которые делится N, включая число 1 
 // (примеры: ввод N=10, вывод 1, 2, 5; ввод 11, вывод 1).
 
@@ -1517,16 +1525,14 @@ import './style.scss'
 // console.log(days)
 
 
+// Подсчитывает сумму вводимых чисел до тех пор, пока посетитель их вводит.
+
 // let sum = 0
 
 // while (true) {
-
 //   let value = +prompt("Введите число", '')
-
 //   if (!value) break; 
-
 //   sum += value
-
 // }
 // console.log('Сумма: ' + sum)
 
@@ -1544,7 +1550,7 @@ import './style.scss'
 
 // Циклы
 
-// DZ_Modul_1_Week_3  - В работе.   Выполнено: 1, 2, 3, 4, 5, 6, 7,   ... 9
+// DZ_Modul_1_Week_3  - В работе.   Выполнено: 1, 2, 3, 4, 5, 6, 7, 8, 9, ...
 
 // *********************************************************************************************************
 
@@ -1775,7 +1781,40 @@ import './style.scss'
 //   8. Зациклить вывод дней недели таким образом: «День недели. Хотите увидеть следующий день?» 
 //      и так до тех пор, пока пользователь нажимает OK. 
 
-// while (userAnswer != false)
+// const day1 = 'Понедельник'
+// const day2 = 'Вторник'
+// const day3 = 'Среда'
+// const day4 = 'Четверг'
+// const day5 = 'Пятница'
+// const day6 = 'Суббота'
+// const day7 = 'Воскресенье'
+// let userAnswer = true
+// let i = 0
+// let x = '0'
+
+// while (userAnswer != false) {
+//       i++
+//       console.log('day' + i)
+//       if(i == 1) {
+//             x = day1
+//       } else if (i == 2) {
+//             x = day2
+//       } else if (i == 3) {
+//             x = day3
+//       } else if (i == 4) {
+//             x = day4
+//       } else if (i == 5) {
+//             x = day5
+//       } else if (i == 6) {
+//             x = day6
+//       } else if (i == 7) {
+//             x = day7
+//       } else if (i == 8) {
+//             i = 1
+//             x = day1
+//       }
+//       userAnswer = confirm(`${x}. Хотите увидеть следующий день?`)
+// }
 
 
 
