@@ -1846,30 +1846,28 @@ import './style.scss'
 // Если пользователь указал, что его число > 50, то изменили диапазон на от 51 до 100. 
 // И так до тех пор, пока пользователь не выберет == N.
 
-// let userNum = 77
+// // let userNum = 77
 // let gameStart = 0
 // let gameEnd = 100
 // let userAnswer = '<'
 
-// let result = gameEnd / 2
+// let result = (gameEnd - gameStart) / 2
 
 // console.log(result) 
 
-// // do {
+// do {
 
 //       userAnswer = prompt('>, <, =' + result) as string
 
-//       if(userAnswer == '>') {
-//             gameStart = result + 1
-//             gameEnd = result + gameStart - 1
-//             result = parseInt((gameEnd - gameStart) / 2 + gameStart)
+//       if(userAnswer == '<') {
+//             gameEnd = result
+//             result =  parseInt((gameEnd - gameStart) / 2)
 //             console.log(gameStart) 
 //             console.log( gameEnd) 
 //             console.log(result) 
-//       } else if(userAnswer == '<') {
-//             gameStart = result - result
-//             gameEnd = result - 1
-//             result = parseInt(gameEnd / 2)
+//       } else if(userAnswer == '>') {
+//             gameStart = result             
+//             result = parseInt(gameStart + ((gameEnd - gameStart) / 2))
 //             console.log(gameStart) 
 //             console.log( gameEnd) 
 //             console.log(result) 
@@ -1877,32 +1875,44 @@ import './style.scss'
 //            console.log(result) 
 //       }
 
-// // } while(userAnswer != '=')
+// } while(userAnswer != '=')
 
 
 // console.log(result) 
 
-// userAnswer = prompt('>, <, =' + result) as string
 
-//       if(userAnswer == '>') {
-//             gameStart = result + 1
-//             gameEnd = parseInt((ameEnd - gameStart) / 2) + result
-//             result = parseInt((gameEnd - gameStart) / 2 + gameStart)
-//             console.log(gameStart) 
-//             console.log( gameEnd) 
-//             console.log(result) 
-//       } else if(userAnswer == '<') {
-//             gameStart = result - result
+// let gameStart = 0
+// let gameEnd = 100
+// let userAnswer = '<'
+
+// let result = (gameEnd - gameStart) / 2
+
+// console.log(result) 
+
+// do {
+
+//       userAnswer = prompt('>, <, =' + result) as string
+
+//       if(userAnswer == '<') {
 //             gameEnd = result - 1
-//             result = parseInt(gameEnd / 2)
+//             result =  parseInt((gameEnd - gameStart) / 2)
 //             console.log(gameStart) 
 //             console.log( gameEnd) 
 //             console.log(result) 
-//       } else if(userAnswer == '=') {
-//            console.log(result) 
+//       } else if(userAnswer == '>') {
+//             gameStart = result + 1             
+//             result = parseInt(gameStart + ((gameEnd - gameStart) / 2))
+//             console.log(gameStart) 
+//             console.log( gameEnd) 
+//             console.log(result) 
 //       }
 
-//       console.log(result) 
+// } while(userAnswer != '=')
+
+
+// console.log(result) 
+
+
 
 
 
