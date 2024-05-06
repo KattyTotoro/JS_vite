@@ -1838,19 +1838,71 @@ import './style.scss'
 
 
 
-// 10. Игра «Угадай число». Предложить пользователю загадать 
-// число от 0 до 100 и отгадать его следующим способом: 
-// каждую итерацию цикла делите диапазон чисел пополам, 
-// записываете результат в N и спрашиваете у пользователя 
-// «Ваше число > N, < N или == N?». В зависимости от того 
-// что указал пользователь, уменьшаете диапазон. Начальный 
-// диапазон от 0 до 100, поделили пополам и получили 50. 
-// Если пользователь указал, что его число > 50, то изменили 
-// диапазон на от 51 до 100. И так до тех пор, пока пользователь не выберет == N.
+// 10. Игра «Угадай число». Предложить пользователю загадать число от 0 до 100 
+// и отгадать его следующим способом: каждую итерацию цикла делите диапазон чисел пополам, 
+// записываете результат в N и спрашиваете у пользователя «Ваше число > N, < N или == N?». 
+// В зависимости от того что указал пользователь, уменьшаете диапазон. 
+// Начальный диапазон от 0 до 100, поделили пополам и получили 50. 
+// Если пользователь указал, что его число > 50, то изменили диапазон на от 51 до 100. 
+// И так до тех пор, пока пользователь не выберет == N.
+
+// let userNum = 77
+// let gameStart = 0
+// let gameEnd = 100
+// let userAnswer = '<'
+
+// let result = gameEnd / 2
+
+// console.log(result) 
+
+// // do {
+
+//       userAnswer = prompt('>, <, =' + result) as string
+
+//       if(userAnswer == '>') {
+//             gameStart = result + 1
+//             gameEnd = result + gameStart - 1
+//             result = parseInt((gameEnd - gameStart) / 2 + gameStart)
+//             console.log(gameStart) 
+//             console.log( gameEnd) 
+//             console.log(result) 
+//       } else if(userAnswer == '<') {
+//             gameStart = result - result
+//             gameEnd = result - 1
+//             result = parseInt(gameEnd / 2)
+//             console.log(gameStart) 
+//             console.log( gameEnd) 
+//             console.log(result) 
+//       } else if(userAnswer == '=') {
+//            console.log(result) 
+//       }
+
+// // } while(userAnswer != '=')
 
 
+// console.log(result) 
 
+// userAnswer = prompt('>, <, =' + result) as string
 
+//       if(userAnswer == '>') {
+//             gameStart = result + 1
+//             gameEnd = parseInt((ameEnd - gameStart) / 2) + result
+//             result = parseInt((gameEnd - gameStart) / 2 + gameStart)
+//             console.log(gameStart) 
+//             console.log( gameEnd) 
+//             console.log(result) 
+//       } else if(userAnswer == '<') {
+//             gameStart = result - result
+//             gameEnd = result - 1
+//             result = parseInt(gameEnd / 2)
+//             console.log(gameStart) 
+//             console.log( gameEnd) 
+//             console.log(result) 
+//       } else if(userAnswer == '=') {
+//            console.log(result) 
+//       }
+
+//       console.log(result) 
 
 
 
@@ -2068,6 +2120,58 @@ import './style.scss'
 
 
 
+// let i
+
+// let arr = [
+//       {i:1, name: '1asdasasd'},
+//       {i:2, name: '2asdasasd'},
+//       {i:3, name: '3asdasasd'},
+//       {i:4, name: '4asdasasd'},
+//       {i:5, name: '5asdasasd'},
+//     ]
+    
+//     for (let i=0; i<arr.length; i++) {
+//       document.body.insertAdjacentHTML('beforeend', `<p>${arr[i].i} <b>${arr[i].name}</b></p>`)
+//     }
+    
+//     let res = 1000
+//     i=0
+//     while(true) {
+//       res/=2
+//       i++
+//       if (res<50) break
+//     }
+//     console.log(res, `за ${i} итераций`)
+    
+//     res = 1000
+//     i = 0
+//     while (res>50) {
+//       res /= 2
+//       i++
+//     }
+//     console.log(res, `за ${i} итераций`)
+    
+//     res = 1000
+//     i = 0
+//     do {
+//       res /= 2
+//       i++
+//     } while (res > 50)
+//     console.log(res, `за ${i} итераций`)
+    
+//     res = 1000
+//     i = 0
+//     for (i = 0; res>50; i++) {
+//       res /= 2
+//     }
+//     console.log(res, `за ${i} итераций`)
+    
+    // x+=1  |  x = x + 1
+    // x-=1  |  x = x - 1
+    // x*=1  |  x = x * 1
+    // x**=1 |  x = x ** 1
+    // x/=1  |  x = x / 1
+    // x%=1  |  x = x % 1
 
 
 
