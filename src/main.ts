@@ -2188,14 +2188,15 @@ import './style.scss'
 //  1. Функция, которая будет увеличивать значение аргумента на 1 
 //     и выводить полученный результат на страницу.
 
-// function incPlusOne(digit: number) {
-//       digit = digit + 1
-//       return digit
-// }
+function incPlusOne(digit: number) {
+      digit = digit + 1
+      return digit
+}
 
-// let num = 1
-// num = incPlusOne(num)
-// console.log(num)
+let num = 1
+num = incPlusOne(num)
+console.log(num)
+
 
 
 

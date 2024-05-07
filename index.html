@@ -12,11 +12,22 @@
 
   <div>
     <p id="PlusOne"></p>
+    <script>
+      function incPlusOne(digit) {
+        digit = digit + 1
+        PlusOne.innerHTML += 'digit = ' + digit
+        return digit
+      }
+
+      let num = 1
+      num = incPlusOne(num)
+      console.log(num)
+    </script>
   </div>
 
   <h2>Новый проект</h2>
   <div id="app">
-   <p>Что это?</p>
+    <p>Что это?</p>
   </div>
   <p id="p1">Альпака</p>
 
@@ -28,25 +39,29 @@
     document.write('<p>Печеньки</p>')
   </script>
 
-  <div id="Primer"><p>1. Привет, пользователь.</p></div>
-  <div id="Primer2"><p>2. Привет, пользователь.</p></div>
+  <div id="Primer">
+    <p>1. Привет, пользователь.</p>
+  </div>
+  <div id="Primer2">
+    <p>2. Привет, пользователь.</p>
+  </div>
 
   <div style="background: url(images/bg1.jpg) center/cover no-repeat; height: 800px; color: white;">
-  <script>
-    function show5Blocks() {
-      for(let i = 1; i <= 5; i++) {
-        document.write('<h2> Header ' + i + '</h2>')
+    <script>
+      function show5Blocks() {
+        for (let i = 1; i <= 5; i++) {
+          document.write('<h2> Header ' + i + '</h2>')
+        }
       }
-    }
-    show5Blocks()
-  </script>
+      show5Blocks()
+    </script>
 
-</div>
+  </div>
 
   <script>
     function show5Blocks2() {
-      for(let i = 1; i <= 6; i++) {
-        document.write('<h'+i+'>' + 'Header ' + i + '</h2>')
+      for (let i = 1; i <= 6; i++) {
+        document.write('<h' + i + '>' + 'Header ' + i + '</h2>')
       }
     }
     show5Blocks2()
