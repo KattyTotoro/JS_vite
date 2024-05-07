@@ -2432,11 +2432,14 @@ import './style.scss'
 // 9. Написать функцию, которая выводит все четные или нечетные числа, в указанном пользователем диапазоне. Какие 
 // числа выводить, определяется третьим параметром типа bool (true – четные, false – нечетные).
 
-// let num1 = 5
-// let num2 = 25
+// let num1 = 15
+// let num2 = 5
 // let num3 = false
 
 // function showNumbers(n1:number, n2:number, x:boolean) {
+//       let buf = 0
+//       if(n1 > n2) {buf = n1; n1 = n2; n2 = buf}
+
 //       for( ; n1 <= n2; n1++) {
 //             if(n1 % 2 == 0 && x == true) {
 //             console.log(n1)
