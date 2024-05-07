@@ -2514,6 +2514,50 @@ import './style.scss'
 
 // 2. Написать функцию поиска наибольшего общего делителя.
 
+// let num1 = 28
+// let num2 = 35
+// let buf = 0
+// if (num1 > num2) { buf = num1; num1 = num2; num2 = buf; } 
+// let i = num1
+// let greatestCommonDivisor = 0
+
+// do {
+
+//       if (num1 % i == 0 && num2 % i == 0) {
+//             greatestCommonDivisor = i
+//             break
+//       }
+
+//       i--
+
+// } while (i > 0);
+
+// console.log(greatestCommonDivisor)
+
+
+// Вариант 2.
+
+// let num1 = 50
+// let num2 = 35
+// let buf = 0
+// if (num1 > num2) { buf = num1; num1 = num2; num2 = buf; } 
+// let i = 1
+// let greatestCommonDivisor = 0
+
+// do {
+
+//       if (num1 % i == 0 && num2 % i == 0) {
+//             greatestCommonDivisor = i
+//       }
+
+//       i++
+
+// } while (i <= num1);
+
+// console.log(greatestCommonDivisor)
+
+
+
 // 3. Написать функцию для поиска максимальной цифры в числе.
 
 // 4. Написать функцию, которая определяет простое ли переданное число.
