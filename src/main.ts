@@ -2188,15 +2188,43 @@ import './style.scss'
 //  1. Функция, которая будет увеличивать значение аргумента на 1 
 //     и выводить полученный результат на страницу.
 
-function incPlusOne(digit: number) {
-      digit = digit + 1
-      return digit
+// function incPlusOne(digit: number) {
+//       digit = digit + 1
+//       return digit
+// }
+
+// let num = 1
+// num = incPlusOne(num)
+// console.log(num)
+
+// 2. Создать функцию, вычисляющую куб переданного аргумента.
+
+// function cubedNumber(n:number) {
+//       return n * n * n
+// }
+// let num1 = 2
+// let num2 = 3
+// num1 = cubedNumber(num1)
+// console.log(num1)
+// num2 = num1 * cubedNumber(num2)
+// console.log(num2)
+// console.log(cubedNumber(num1))
+
+// 3. Банковское округление.
+
+function bankerRound(x:number) {
+      if(Math.round(x) % 2 == 0)
+            return Math.round(x) 
+      else{
+            if(x < Math.round(x))
+                  return Math.round(x) - 1
+            else 
+                  return Math.round(x) + 1
+      }
 }
 
-let num = 1
-num = incPlusOne(num)
-console.log(num)
-
+     let num1 = 3.2
+     console.log(bankerRound(num1))
 
 
 
