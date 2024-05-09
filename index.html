@@ -10,7 +10,7 @@
 
 <body>
 
-  <div>
+  <!-- <div>
     <p id="PlusOne"></p>
     <script>
       function incPlusOne(digit) {
@@ -23,7 +23,7 @@
       num = incPlusOne(num)
       console.log(num)
     </script>
-  </div>
+  </div> -->
 
   <h2>Новый проект</h2>
   <div id="app">
@@ -48,23 +48,23 @@
 
   <div style="background: url(images/bg1.jpg) center/cover no-repeat; height: 800px; color: white;">
     <script>
-      function show5Blocks() {
-        for (let i = 1; i <= 5; i++) {
+      function show5Blocks(n) {
+        for (let i = 1; i <= n; i++) {
           document.write('<h2> Header ' + i + '</h2>')
         }
       }
-      show5Blocks()
+      show5Blocks(5)
     </script>
 
   </div>
 
   <script>
-    function show5Blocks2() {
-      for (let i = 1; i <= 6; i++) {
+    function show5Blocks2(n) {
+      for (let i = 1; i <= n; i++) {
         document.write('<h' + i + '>' + 'Header ' + i + '</h2>')
       }
     }
-    show5Blocks2()
+    show5Blocks2(6)
   </script>
 
 </body>

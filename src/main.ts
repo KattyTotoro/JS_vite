@@ -2212,19 +2212,68 @@ import './style.scss'
 
 // 3. Банковское округление.
 
-function bankerRound(x:number) {
-      if(Math.round(x) % 2 == 0)
-            return Math.round(x) 
-      else{
-            if(x < Math.round(x))
-                  return Math.round(x) - 1
-            else 
-                  return Math.round(x) + 1
-      }
-}
+// function bankerRound(x:number) {
+//       if(Math.round(x) % 2 == 0)
+//             return Math.round(x) 
+//       else{
+//             if(x < Math.round(x))
+//                   return Math.round(x) - 1
+//             else 
+//                   return Math.round(x) + 1
+//       }
+// }
 
-     let num1 = 3.2
-     console.log(bankerRound(num1))
+//      let num1 = 3.2
+//      console.log(bankerRound(num1))
+
+// 4.  сообщение с текстом
+
+// function sayError() {
+//       alert('Some error occurred!')
+// }
+// sayError()
+
+// 5. Вывод текста
+// function showError(x:string) {
+//       alert('Error ' + x + ' occurred!')
+// }
+// showError('Out of memory')
+
+// 6. Проверка пароля
+
+// function checkPassword(x:string) {
+//       if(x == 'Step' || x == 'Web' || x == 'JavaScript')
+//             return true
+//       else 
+//             return false
+// }
+// console.log(checkPassword('JavaScript'))
+
+// 7. Знак
+
+// function  sign(x:number) {
+//       if(x < 0) return -1
+//       else if(x > 0) return 1
+//       else return 0
+// }
+
+// let num = 5
+// console.log(sign(num))
+
+// 8. возвращает названия дней недели по их номеру
+
+// function getDayOfTheWeek(n:string) {
+//       if(n == '0') return 'Sunday'
+//       if(n == '1') return 'Monday'
+//       if(n == '2') return 'Tuesday'
+//       if(n == '3') return 'Wednesday'
+//       if(n == '4') return 'Thursday'
+//       if(n == '5') return 'Friday'
+//       if(n == '6') return 'Saturday'
+// }
+// let userDay = '5' as string
+
+// console.log(getDayOfTheWeek(userDay))
 
 
 
