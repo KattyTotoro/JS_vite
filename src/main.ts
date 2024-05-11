@@ -2275,6 +2275,19 @@ import './style.scss'
 
 // console.log(getDayOfTheWeek(userDay))
 
+// 9. Неопределённое количество аргументов. Длина
+
+// function logArguments(x){
+//       console.log('x = ' + x)
+//       for(let i = 0; i < arguments.length; i++)
+//       console.log('argument' + (i + 1) + ' = ' + arguments[i])
+// }
+// logArguments(1, 2, 3)
+// logArguments('text')
+
+
+
+
 
 
 // *********************************************************************************************************
