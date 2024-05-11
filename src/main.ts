@@ -1220,6 +1220,10 @@ import './style.scss'
 
 // ___________________________________________________________________________________________________________
 
+// Домашняя практика
+
+
+
 // let i = 1
 // while (i <= 10) { 
 //       console.log(i)
@@ -1537,8 +1541,96 @@ import './style.scss'
 // console.log('Сумма: ' + sum)
 
 
+// цикл принимает от 1 до 5 чисел и возвращает их сумму
+// let num = 0
+// let sum = 0
+// let i = 0
+
+// do {
+//       num = +prompt('Введите число', 0)
+//       sum += num
+// i++
+// } while ((i < 5) && (num != '' && num != undefined));
+
+// console.log(sum)
 
 
+// !!!!!! ОШИБКА !!!! ЕСЛИ ВВЕСТИ НОЛЬ, ТО ЦИКЛ ПРЕРЫВАЕТСЯ СРАЗУ
+// Цикл принимает от 1 до 5 чисел и возвращает большее из них.
+// let num = 1
+// let max = 1
+
+// // Так сложно, потому что иначе не получалось, если вводить отрицательные числа
+
+// for(let i = 0; (i < 1 && (num != '' && num != undefined)); i++) {
+//       num = +prompt('Введите число')
+//       max = num
+
+//       for(let j = 0; (j < 4 && (num != '' && num != undefined)); j++) {
+//             num = +prompt('Введите число')
+//             if(max < num && (num != '' && num != undefined)) {max = num}
+//       }
+// }
+
+// console.log(max)
+
+
+// let max = 0
+// let sum = 0
+
+// while (true) {
+
+//   let value = +prompt("Введите число", '')
+
+//   if (!value) break; 
+
+//   if(max < value) {max = value}
+
+//   sum += value
+
+// }
+// console.log('Сумма: ' + sum)
+
+// console.log(max)
+
+
+// !!!!!! ОШИБКА !!!! ЕСЛИ ВВЕСТИ НОЛЬ, ТО ЦИКЛ ПРЕРЫВАЕТСЯ СРАЗУ
+// Цикл принимает от 1 до 5 чисел и возвращает большее из них.
+// let num = 1
+// let max = 1
+
+// // Так сложно, потому что иначе не получалось, если вводить отрицательные числа
+
+// for(let i = 0; (i < 1 && (num != '' && num != undefined)); i++) {
+//       num = +prompt('Введите число')
+//       max = num
+
+//       for(let j = 0; (j < 4 && (num != '' && num != undefined)); j++) {
+//             num = +prompt('Введите число')
+//             if(max < num && (num != '' && num != undefined)) {max = num}
+//       }
+// }
+
+// console.log(max)
+
+
+// let max = 0
+// let sum = 0
+
+// while (true) {
+
+//   let value = +prompt("Введите число", '')
+
+//   if (!value) break; 
+
+//   if(max < value) {max = value}
+
+//   sum += value
+
+// }
+// console.log('Сумма: ' + sum)
+
+// console.log(max)
 
 // ___________________________________________________________________________________________________________
 
@@ -2128,7 +2220,7 @@ import './style.scss'
 
 // ___________________________________________________________________________________________________________
 
-
+// Домашняя практика. Функции.
 
 // let i
 
@@ -2275,7 +2367,7 @@ import './style.scss'
 
 // console.log(getDayOfTheWeek(userDay))
 
-// 9. Неопределённое количество аргументов. Длина
+// 9. Функция принимает неопределённое количество аргументов. Длина
 
 // function logArguments(x){
 //       console.log('x = ' + x)
@@ -2285,7 +2377,20 @@ import './style.scss'
 // logArguments(1, 2, 3)
 // logArguments('text')
 
+// 10. Функция, определяющая максимальное значение из неопределённого 
+//     количества переданных аргументов
 
+// function getMax() {
+//       if(arguments.length == 0) return undefined
+//       let result = arguments[0]
+//       for(let i = 1; i < arguments.length; i++) {
+//             if(result < arguments[i])
+//                   result = arguments[i]
+//       }
+//       return result
+// }
+
+// console.log(getMax(-1, -4, -10))
 
 
 
@@ -2294,7 +2399,7 @@ import './style.scss'
 
 // Функции
 
-// PZ_Modul_1_Week_4   В работе. Выполнено: 1, 2, 3, 4, 5, 6, ... ... 9
+// PZ_Modul_1_Week_4   В работе. Выполнено: 1, 2, 3, 4, 5, 6, 7, 8, 9 .....
 
 // *********************************************************************************************************
 
@@ -2458,65 +2563,36 @@ import './style.scss'
 // let num2 = 3
 
 // console.log(remainderDivision(num1, num2))
-// console.log(157%3)
+// console.log(157 % 3)
 
 
 // 7. Написать функцию, которая принимает от 1 до 5 чисел и возвращает их сумму.
 
-// let num = 0
-// let sum = 0
-// let i = 0
+// function getSum() {
+//       let sum = 0
+//       for(let i = 0; i < arguments.length; i++) {
+//             sum += arguments[i]
+//       }
+//       return sum
+// }
 
-// do {
-//       num = +prompt('Введите число', 0)
-//       sum += num
-// i++
-// } while ((i < 5) && (num != '' && num != undefined));
+// console.log(getSum(1, 2, 10))
 
-// console.log(sum)
 
 
 // 8. Написать функцию, которая принимает от 1 до 5 чисел и возвращает большее из них.
 
-// !!!!!! ОШИБКА !!!! ЕСЛИ ВВЕСТИ НОЛЬ, ТО ЦИКЛ ПРЕРЫВАЕТСЯ СРАЗУ
-
-// let num = 1
-// let max = 1
-
-// // Так сложно, потому что иначе не получалось, если вводить отрицательные числа
-
-// for(let i = 0; (i < 1 && (num != '' && num != undefined)); i++) {
-//       num = +prompt('Введите число')
-//       max = num
-
-//       for(let j = 0; (j < 4 && (num != '' && num != undefined)); j++) {
-//             num = +prompt('Введите число')
-//             if(max < num && (num != '' && num != undefined)) {max = num}
+// function getMax() {
+//       if(arguments.length == 0) return undefined
+//       let result = arguments[0]
+//       for(let i = 1; i < arguments.length; i++) {
+//             if(result < arguments[i])
+//                   result = arguments[i]
 //       }
+//       return result
 // }
 
-// console.log(max)
-
-
-// let max = 0
-// let sum = 0
-
-// while (true) {
-
-//   let value = +prompt("Введите число", '')
-
-//   if (!value) break; 
-
-//   if(max < value) {max = value}
-
-//   sum += value
-
-// }
-// console.log('Сумма: ' + sum)
-
-// console.log(max)
-
-
+// console.log(getMax(-1, -4, -10))
 
 
 
