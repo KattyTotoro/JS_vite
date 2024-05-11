@@ -2405,6 +2405,15 @@ import './style.scss'
 // }
 // console.log(getArithmeticalMean(1, 4, 10))
 
+// 12. 
+
+// function showX() {
+//       console.log(x)
+// }
+// showX()
+// let x = 1
+// showX()
+
 
 
 // *********************************************************************************************************
@@ -2582,13 +2591,13 @@ import './style.scss'
 
 // function getSum() {
 //       let sum = 0
-//       for(let i = 0; i < arguments.length; i++) {
+//       for(let i = 0; i < 5; i++) {
 //             sum += arguments[i]
 //       }
 //       return sum
 // }
 
-// console.log(getSum(1, 2, 10))
+// console.log(getSum(1, 2, 10, 1, 1, 1))
 
 
 
@@ -2597,14 +2606,14 @@ import './style.scss'
 // function getMax() {
 //       if(arguments.length == 0) return undefined
 //       let result = arguments[0]
-//       for(let i = 1; i < arguments.length; i++) {
+//       for(let i = 1; i < 5; i++) {
 //             if(result < arguments[i])
 //                   result = arguments[i]
 //       }
 //       return result
 // }
 
-// console.log(getMax(-1, -4, -10))
+// console.log(getMax(-1, -4, -10, -11, -2, 1))
 
 
 
