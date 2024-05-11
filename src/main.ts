@@ -2393,6 +2393,18 @@ import './style.scss'
 // console.log(getMax(-1, -4, -10))
 
 
+// 11. Функция определяет среднее арифметическое от переданных аргументов.
+
+// function getArithmeticalMean() {
+//       if(arguments.length == 0) return undefined
+//       let sum = 0
+//       for(let i = 0; i < arguments.length; i++) {
+//             sum += arguments[i]
+//       }
+//       return sum / arguments.length
+// }
+// console.log(getArithmeticalMean(1, 4, 10))
+
 
 
 // *********************************************************************************************************
