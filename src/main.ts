@@ -1582,7 +1582,7 @@ import './style.scss'
 //       num = +prompt('Введите число', 0)
 //       sum += num
 // i++
-// } while ((i < 5) && (num != '' && num != undefined));
+// } while ((i < 5) && (num !== '' && num !== undefined));
 
 // console.log(sum)
 
@@ -2459,11 +2459,15 @@ import './style.scss'
 //     }    
 // console.log(max(101))
 
+
+
+
 // *********************************************************************************************************
 
 // Функции
 
 // PZ_Modul_1_Week_4  Выполнено полностью.
+
 
 // *********************************************************************************************************
 
@@ -2686,101 +2690,101 @@ import './style.scss'
 // 10. Написать функцию, которая принимает дату (день, месяц, год) и возвращает дату следующего дня в виде строки 
 // «дд.мм.гггг». Проверку на високосный год желательно написать отдельной функцией.
 
-function checkForLeapYear(check_y:number) {
-      if((check_y % 4 == 0 && check_y % 100 == 0 && check_y % 400 == 0) || (check_y % 4 == 0 && check_y % 100 != 0 && check_y % 400 != 0))
-            return true
-      else return false
-}
+// function checkForLeapYear(check_y:number) {
+//       if((check_y % 4 == 0 && check_y % 100 == 0 && check_y % 400 == 0) || (check_y % 4 == 0 && check_y % 100 != 0 && check_y % 400 != 0))
+//             return true
+//       else return false
+// }
 
-function getNextDay(d:number, m:number, y:number) {
-      let result = ''
-      console.log(checkForLeapYear(y))
-if(m >= 1 && m <= 12) {
+// function getNextDay(d = new Date().getDate(), m = new Date().getMonth() + 1, y = new Date().getFullYear()) {
+//       let result = ''
+//       console.log(checkForLeapYear(y))
+// if(m >= 1 && m <= 12) {
       
-      // Условие для месяцев с количеством дней: 30
-      if(m == 4 || m == 6 || m == 9 || m == 11) {
+//       // Условие для месяцев с количеством дней: 30
+//       if(m == 4 || m == 6 || m == 9 || m == 11) {
 
-            if(d >= 1 && d <= 29) {  
-                  d ++
-            } else if(d == 30) {
-                  d = 1
-                  m++
-            } else {   // Условие, если пользователь введёт несуществующую дату
-                  result = 'Некорректная дата'                  
-            }
+//             if(d >= 1 && d <= 29) {  
+//                   d ++
+//             } else if(d == 30) {
+//                   d = 1
+//                   m++
+//             } else {   // Условие, если пользователь введёт несуществующую дату
+//                   result = 'Некорректная дата'                  
+//             }
 
-      // Условие для февраля
-      } else if(m == 2) {
+//       // Условие для февраля
+//       } else if(m == 2) {
             
-            // Условие для февраля, если год является високосным
-            if(checkForLeapYear(y)) {
-                  if(d >= 1 && d <= 28) {
-                        d++
-                  } else if(d == 29) {
-                        d = 1
-                        m++
-                  } else { // Условие, если пользователь введёт несуществующую дату
-                        result = 'Некорректная дата'                                               
-                  }
+//             // Условие для февраля, если год является високосным
+//             if(checkForLeapYear(y)) {
+//                   if(d >= 1 && d <= 28) {
+//                         d++
+//                   } else if(d == 29) {
+//                         d = 1
+//                         m++
+//                   } else { // Условие, если пользователь введёт несуществующую дату
+//                         result = 'Некорректная дата'                                               
+//                   }
 
-            // Условие для февраля, если год НЕ является високосным
-            } else {
-                  if(d >= 1 && d <= 27) {
-                        d++
-                  } else if(d == 28) {
-                        d = 1
-                        m++
-                  } else { // Условие, если пользователь введёт несуществующую дату
-                        result = 'Некорректная дата'                                                
-                  }
-            }
+//             // Условие для февраля, если год НЕ является високосным
+//             } else {
+//                   if(d >= 1 && d <= 27) {
+//                         d++
+//                   } else if(d == 28) {
+//                         d = 1
+//                         m++
+//                   } else { // Условие, если пользователь введёт несуществующую дату
+//                         result = 'Некорректная дата'                                                
+//                   }
+//             }
 
-      // Условие для декабря, переход на следующий год
-      } else if(m == 12) {
-                  if(d >= 1 && d <= 30) {  
-                        d ++
-                  } else if(d == 31) {
-                        d = 1
-                        m = 1
-                        y++
-                  } else { // Условие, если пользователь введёт несуществующую дату
-                        result = 'Некорректная дата'                                              
-                  }
+//       // Условие для декабря, переход на следующий год
+//       } else if(m == 12) {
+//                   if(d >= 1 && d <= 30) {  
+//                         d ++
+//                   } else if(d == 31) {
+//                         d = 1
+//                         m = 1
+//                         y++
+//                   } else { // Условие, если пользователь введёт несуществующую дату
+//                         result = 'Некорректная дата'                                              
+//                   }
 
-      // Условие для месяцев с количеством дней: 31
-      } else {
-                  if(d >= 1 && d <= 30) {  
-                        d ++
-                  } else if(d == 31) {
-                        d = 1
-                        m++
-                  } else { // Условие, если пользователь введёт несуществующую дату
-                        result = 'Некорректная дата'                     
-                  }
-            }
+//       // Условие для месяцев с количеством дней: 31
+//       } else {
+//                   if(d >= 1 && d <= 30) {  
+//                         d ++
+//                   } else if(d == 31) {
+//                         d = 1
+//                         m++
+//                   } else { // Условие, если пользователь введёт несуществующую дату
+//                         result = 'Некорректная дата'                     
+//                   }
+//             }
       
-// Условие, если пользователь введёт НЕсуществующий месяц
-} else {
-      result = 'Некорректная дата'
-}
-console.log(`${d >= 10 ? d : '0' + d}.${m >= 10 ? m : '0' + m}.${y}`)
-if(result == 'Некорректная дата') 
-      result = 'Некорректная дата'
-else result = `${d >= 10 ? d : '0' + d}.${m >= 10 ? m : '0' + m}.${y}`
-return result
-}
+// // Условие, если пользователь введёт НЕсуществующий месяц
+// } else {
+//       result = 'Некорректная дата'
+// }
+// console.log(`${d >= 10 ? d : '0' + d}.${m >= 10 ? m : '0' + m}.${y}`)
+// if(result == 'Некорректная дата') 
+//       result = 'Некорректная дата'
+// else result = `${d >= 10 ? d : '0' + d}.${m >= 10 ? m : '0' + m}.${y}`
+// return result
+// }
 
-let userDay = 28
-let userMonth = 2
-let userYear = 2023
+// let userDay = 29
+// let userMonth = 2
+// let userYear = 2024
 
-if (userDay == null || userDay == '') {userDay = new Date().getDate()}
-if (userMonth == null || userMonth == '') {userMonth = new Date().getMonth() + 1}
-if (userYear == null || userYear == '') {userYear = new Date().getFullYear()}
+// // if (userDay == null || userDay == '') {userDay = new Date().getDate()}
+// // if (userMonth == null || userMonth == '') {userMonth = new Date().getMonth() + 1}
+// // if (userYear == null || userYear == '') {userYear = new Date().getFullYear()}
 
-console.log(`${userDay >= 10 ? userDay : '0' + userDay}.${userMonth >= 10 ? userMonth : '0' + userMonth}.${userYear}`)
+// console.log(`${userDay >= 10 ? userDay : '0' + userDay}.${userMonth >= 10 ? userMonth : '0' + userMonth}.${userYear}`)
 
-console.log(getNextDay(userDay, userMonth, userYear))
+// console.log(getNextDay(userDay, userMonth, userYear))
 
 
 
