@@ -2697,6 +2697,9 @@ import './style.scss'
 // }
 
 // function getNextDay(d = new Date().getDate(), m = new Date().getMonth() + 1, y = new Date().getFullYear()) {
+//       if (d == null || d == '') {d = new Date().getDate()}
+//       if (m == null || m == '') {m = new Date().getMonth() + 1}
+//       if (y === null || y === undefined) {y = new Date().getFullYear()}
 //       let result = ''
 //       console.log(checkForLeapYear(y))
 // if(m >= 1 && m <= 12) {
@@ -2774,9 +2777,9 @@ import './style.scss'
 // return result
 // }
 
-// let userDay = 29
+// let userDay = 28
 // let userMonth = 2
-// let userYear = 2024
+// let userYear = 2023
 
 // // if (userDay == null || userDay == '') {userDay = new Date().getDate()}
 // // if (userMonth == null || userMonth == '') {userMonth = new Date().getMonth() + 1}
