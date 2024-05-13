@@ -2523,6 +2523,23 @@ import './style.scss'
 // }
 
 
+// const obj = {
+//       a:1,
+//       b:2,
+//       c:3
+//     } as Record<string, number>
+//     for(let i=0; i<Object.keys(obj).length; i++) {
+//       const key = Object.keys(obj)[i]
+//       console.log(key, obj[key])
+//     }
+//     for(let key in obj) {
+//       console.log(key, obj[key])
+//     }
+
+
+
+
+
 // ___________________________________________________________________________________________________________
 
 
