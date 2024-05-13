@@ -2505,12 +2505,22 @@ import './style.scss'
 //   console.log(string[i])
 // }
 
+// for(let char of string) {
+//       console.log(char)
+//     }
+
 // let userDate = '15.12.2020'
 // for(let i=0; i<userDate.length; i++) {
 //       console.log(userDate[i])
 //     }
 
-
+// const array = [1,2,3]
+// for(let i=0; i<array.length; i++) {
+//   console.log(array[i])
+// }
+// for(let el of array) {
+//   console.log(el)
+// }
 
 
 // ___________________________________________________________________________________________________________
