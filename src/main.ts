@@ -2500,6 +2500,15 @@ import './style.scss'
 
 // console.log(getSumRest(12, 43, 13, 24, 50, 100, -7))
 
+// const string = 'ABC'
+// for(let i=0; i<string.length; i++) {
+//   console.log(string[i])
+// }
+
+// let userDate = '15.12.2020'
+// for(let i=0; i<userDate.length; i++) {
+//       console.log(userDate[i])
+//     }
 
 // *********************************************************************************************************
 
