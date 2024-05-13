@@ -2459,7 +2459,46 @@ import './style.scss'
 //     }    
 // console.log(max(101))
 
+// 15.
 
+// function getSum(a:number | string, b:number | string) {
+//       return a + b
+// }
+// console.log(getSum(2, 5))
+// console.log(getSum('Hello, ', 'people!'))
+
+// 16.
+
+// function showMessage(text:string) {      
+//      return text = text || 'Goodbye'      
+// }
+// console.log(showMessage('Hello, people!'))
+
+// 17.
+
+// function getSumRest(...rest:number[]) {
+//       let sum = 0
+//       console.log(rest)
+//       for(let i = 0; i < arguments.length; i++) {
+//             sum += arguments[i]
+//       }
+//       return sum
+// }
+
+// console.log(getSumRest(12, 43, 13, 24, 50, 100, -7))
+
+
+// function getSumRest(a:number, ...rest:number[]) {
+//       let sum = 0
+//       console.log(a)
+//       console.log(rest)
+//       for(let i = 0; i < arguments.length; i++) {
+//             sum += arguments[i]
+//       }
+//       return sum
+// }
+
+// console.log(getSumRest(12, 43, 13, 24, 50, 100, -7))
 
 
 // *********************************************************************************************************
@@ -2643,7 +2682,7 @@ import './style.scss'
 //       }
 //       return sum
 // }
-
+// // @ts-ignore
 // console.log(getSum(1, 2, 10, 1, 1, 1))
 
 
@@ -2659,7 +2698,7 @@ import './style.scss'
 //       }
 //       return result
 // }
-
+// // @ts-ignore
 // console.log(getMax(-1, -4, -10, -11, -2, 1))
 
 
