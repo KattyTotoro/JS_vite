@@ -2881,14 +2881,38 @@ import './style.scss'
 // ___________________________________________________________________________________________________________
 
 
+// Домашняя практика. Рекурсия.
 
+// 1. Факториал
+
+// let n = 4
+// let factorial = 1
+// for(let i = 2; i <= n; i++)
+//  factorial *= i
+
+// console.log(factorial)
+
+// let num = 4
+
+// function getFactorial(n:number):any {
+//       if(n == 1) return 1
+//       return n * getFactorial(n - 1)
+//      }
+
+// console.log(getFactorial(num))
+
+
+
+
+
+// ___________________________________________________________________________________________________________
 
 
 // *********************************************************************************************************
 
-// Рекурсия
+// Рекурсия.
 
-// DZ_Modul_1_Week_5  В работе.
+// DZ_Modul_1_Week_5  В работе. Выполнено: 1, ..........
 
 
 // *********************************************************************************************************
@@ -2896,43 +2920,21 @@ import './style.scss'
 
 // * Во всех заданиях обязательно использовать рекурсию.
 
+
 // 1. Написать функцию возведения числа в степень.
 
-// let num = 3
-// let degree = 4
-// let result = 1
-
-// while (degree > 0) {
-//       result *= num
-//       degree--
+// function calcPow(n:number, d:number):any {
+//       if(d == 1) return n
+//       return n * calcPow(n, d - 1)
 // }
+
+// let num = 3
+// let degree = 3
+// let result = 0
+
+// result = calcPow(num, degree)
+
 // console.log(result)
-
-//   function pow (x:number, n:number) {
-//         return x**n
-//   }
-
-//   let num = 2
-//   let degree = 4
-
-// console.log(pow(num, degree))
-
-
-
-//   function pow2 (n:number, d:number) {
-        
-
-//   }
-
-//   let num2 = 2
-//   let degree2 = 4
-
-// console.log(pow(num2, degree2))
-
-
-
-
-//Ненавижу рекурсию!!!!!!!!!! Рекурсия! Иди в жопу!!!
 
 
 
