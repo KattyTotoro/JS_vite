@@ -2901,11 +2901,21 @@ import './style.scss'
 
 // console.log(getFactorial(num))
 
+// 2. Вывести ряд чисел от единицы до введенного пользователем числа.
 
+// function showNumbers(n:number) {
+//       if(n < 1) return
+//       console.log(n)
+//       showNumbers(n - 1)
+// }
 
+// let num1 = 12
+// showNumbers(num1)
 
 
 // ___________________________________________________________________________________________________________
+
+
 
 
 // *********************************************************************************************************
@@ -2940,12 +2950,37 @@ import './style.scss'
 
 // 2. Написать функцию поиска наибольшего общего делителя.
 
+// {
+
 // let num1 = 28
 // let num2 = 35
+// let greatestCommonDivisor = 0
+
+// function findGreatestCommonDivisor(n1:number, n2:number) {
+
+//       let grDiv = n1
+
+//       if(n1 = 0) return
+
+//       findGreatestCommonDivisor(n1 - 1, n2)
+//       if (grDiv % n1 == 0 && n2 % n1 == 0) grDiv = n1
+
+//       return grDiv
+// }
+
+// console.log(findGreatestCommonDivisor(num1, num2))
+
+// }
+
+// {
+
+// let num1 = 28
+// let num2 = 35
+// let greatestCommonDivisor = 0
 // let buf = 0
 // if (num1 > num2) { buf = num1; num1 = num2; num2 = buf; } 
 // let i = num1
-// let greatestCommonDivisor = 0
+
 
 // do {
 
@@ -2956,10 +2991,11 @@ import './style.scss'
 
 //       i--
 
-// } while (i > 0);
+// } while (i > 0)
 
 // console.log(greatestCommonDivisor)
 
+// }
 
 // Вариант 2.
 
@@ -2978,7 +3014,7 @@ import './style.scss'
 
 //       i++
 
-// } while (i <= num1);
+// } while (i <= num1)
 
 // console.log(greatestCommonDivisor)
 
@@ -3058,6 +3094,8 @@ import './style.scss'
 // 2. Написать функцию, которая выводит все числа из заданного пользователем диапазона в прямом порядке.
 //  И еще одну функцию – для вывода в обратном порядке.
 
+// {
+
 // function showNumbers(n1:number, n2:number):void {
 
 //    if (n1 > n2) {
@@ -3069,6 +3107,7 @@ import './style.scss'
 
 // console.log(showNumbers(2, 5))
 
+// }
 
 // function showNumbers2(n1:number, n2:number):void {
 
