@@ -2904,13 +2904,38 @@ import './style.scss'
 // 2. Вывести ряд чисел от единицы до введенного пользователем числа.
 
 // function showNumbers(n:number) {
-//       if(n < 1) return
+//       if(n == 0) return
 //       console.log(n)
 //       showNumbers(n - 1)
 // }
 
 // let num1 = 12
 // showNumbers(num1)
+
+// Ваниант 2
+
+// function showNumbers(n:number) {
+//       if(n == 1) return 1
+//       return showNumbers(n - 1) + ', ' + n
+// }
+
+// let num1 = 12
+// console.log(showNumbers(num1))
+
+// В обратном порядке
+
+// {
+// function showNumbers(n1:number, n2:number) {
+//       if(n1 == n2) return n2
+//       return showNumbers(n1 + 1, n2) + ', ' + n1
+// }
+
+// let num1 = 1
+// let num2 = 12
+// console.log(showNumbers(num1, num2))
+// }
+
+
 
 
 // ___________________________________________________________________________________________________________
@@ -2922,7 +2947,7 @@ import './style.scss'
 
 // Рекурсия.
 
-// DZ_Modul_1_Week_5  В работе. Выполнено: 1, ..........
+// DZ_Modul_1_Week_5  В работе. Выполнено: 1, 2,  ..........
 
 
 // *********************************************************************************************************
@@ -2954,69 +2979,19 @@ import './style.scss'
 
 // let num1 = 28
 // let num2 = 35
+// let buf = 0
+// if (num1 > num2) { buf = num1; num1 = num2; num2 = buf; } 
 // let greatestCommonDivisor = 0
 
 // function findGreatestCommonDivisor(n1:number, n2:number) {
-
-//       let grDiv = n1
-
-//       if(n1 = 0) return
-
-//       findGreatestCommonDivisor(n1 - 1, n2)
-//       if (grDiv % n1 == 0 && n2 % n1 == 0) grDiv = n1
-
-//       return grDiv
-// }
-
-// console.log(findGreatestCommonDivisor(num1, num2))
+//      let x = num1
+//      return (x % n1 == 0 && n2 % n1 == 0)? n1 : findGreatestCommonDivisor(n1 - 1, n2)
 
 // }
-
-// {
-
-// let num1 = 28
-// let num2 = 35
-// let greatestCommonDivisor = 0
-// let buf = 0
-// if (num1 > num2) { buf = num1; num1 = num2; num2 = buf; } 
-// let i = num1
-
-
-// do {
-
-//       if (num1 % i == 0 && num2 % i == 0) {
-//             greatestCommonDivisor = i
-//             break
-//       }
-
-//       i--
-
-// } while (i > 0)
-
+// greatestCommonDivisor = findGreatestCommonDivisor(num1, num2)
 // console.log(greatestCommonDivisor)
 
 // }
-
-// Вариант 2.
-
-// let num1 = 50
-// let num2 = 35
-// let buf = 0
-// if (num1 > num2) { buf = num1; num1 = num2; num2 = buf; } 
-// let i = 1
-// let greatestCommonDivisor = 0
-
-// do {
-
-//       if (num1 % i == 0 && num2 % i == 0) {
-//             greatestCommonDivisor = i
-//       }
-
-//       i++
-
-// } while (i <= num1)
-
-// console.log(greatestCommonDivisor)
 
 
 
@@ -3096,30 +3071,26 @@ import './style.scss'
 
 // {
 
-// function showNumbers(n1:number, n2:number):void {
+// function showNumbers(n1:number, n2:number) {
 
-//    if (n1 > n2) {
-//       return 
-//    } 
-//    console.log(n1)
-//       showNumbers(n1 + 1, n2)
+//    if (n1 == n2) return n1
+//     return  showNumbers(n1, n2 - 1) + ', ' + n2
 // }
 
 // console.log(showNumbers(2, 5))
 
 // }
 
-// function showNumbers2(n1:number, n2:number):void {
+// {
+// function showNumbers2(n1:number, n2:number) {
 
-//    if (n2 < n1) {
-//       return 
-//    } 
-//    console.log(n2)
-//       showNumbers2(n1, n2 - 1)
+//    if (n2 == n1) return n2
+   
+//   return showNumbers2(n1 + 1, n2) + ', ' + n1
 // }
 
-// showNumbers2(2, 5)
-
+// console.log(showNumbers2(2, 5))
+// }
 
 
 // 3. Написать функцию, которая выводит переданное ей число задом наперед. 
