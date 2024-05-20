@@ -3015,7 +3015,7 @@ import './style.scss'
 
 // Рекурсия.
 
-// DZ_Modul_1_Week_5  В работе. Выполнено: 1, 2,  .......... , 6
+// DZ_Modul_1_Week_5  В работе. Выполнено: 1, 2, 3, .......... , 6
 
 
 // *********************************************************************************************************
@@ -3067,13 +3067,15 @@ import './style.scss'
 
 // function findMaxNumber(n:number) {
 //       let max = n % 10
-//       if(n < 10) return
-//       else return max = (max < parseInt(findMaxNumber((n/10) % 10)))? parseInt(findMaxNumber((n/10) % 10)): max
+//       if(n < 1) return
+//       else { if(max < parseInt(findMaxNumber(n/10)% 10))
+//             max = parseInt(findMaxNumber(n/10)% 10)
+//       return max
+//       }
      
 // }
 
-// console.log(parseInt(2345/10 % 10))
-// console.log(findMaxNumber(2453))
+// console.log(findMaxNumber(19245031609182))
 
 
 // 4. Написать функцию, которая определяет простое ли переданное число.
