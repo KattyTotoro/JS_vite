@@ -3075,7 +3075,7 @@ import './style.scss'
 // 4. Написать функцию, которая определяет простое ли переданное число.
 //    Простое число делится без остатка только на себя и на единицу. 
 
-// let num = 15
+// let num = 4
 // let result = true
 
 // for(let i = 2; i < num; i++) {
@@ -3092,16 +3092,10 @@ import './style.scss'
 //       console.log('Число НЕ является простым')
 // }
 
-// function checkPrimeNumber(n:number):any {
-//       let result = ''
-//       let x = n
-//       if(n == 2) return 
-//       else {
-//             return  result = ((x % checkPrimeNumber(n - 1)) == 0) ? 'Число НЕ является простым': 'Число является простым'
-//             // return  result = 'Число НЕ является простым'      
-//             // else return result = 'Число является простым'
-//      }
+// function checkPrimeNumber(n:number) {
+    
 // }
+// let num = 5
 // console.log(checkPrimeNumber(num))
 
 
