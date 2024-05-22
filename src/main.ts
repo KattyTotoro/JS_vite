@@ -2976,6 +2976,18 @@ import './style.scss'
 
 // 2. Создайте функцию, возвращающую значение минимального из всех переданных аргументов.
 
+// function findMinNumber() {
+
+//       let min = arguments[0]
+
+//       for(let i = 1; i < arguments.length; i++)
+//             if(min > arguments[i]) min = arguments[i]      
+
+//       return min
+// }
+
+// console.log(findMinNumber(-11, -12, 2, 5, 9, 1, 3, -123, -10, -1, 12))
+
 
 // 3. Создайте функцию numbers(), которая будет подсчитывать количество переданных числовых аргументов. 
 // Например, numbers(1, 2, “a”) вернет значение 2, numbers(true, 2, false) — 1, numbers() — 0.
@@ -3092,10 +3104,30 @@ import './style.scss'
 //       console.log('Число НЕ является простым')
 // }
 
-// function checkPrimeNumber(n:number) {
-    
+// function checkPrimeNumber(n:number):any {
+
+//       let result = true
+//       // let buf = n
+      
+
+//       console.log(n)
+//       // console.log(buf)
+
+//       if(n == 1) {
+//             return 
+//             // return (result == true) ? 'Число является простым' : 'Число НЕ является простым'
+//       } else {
+//                   if(n % n == 0 && n % 1 == 0 && (n % checkPrimeNumber(n-1)) == 0) {
+
+//                         result = false
+                        
+//                   } else result = true
+//                   return (result == true) ? 'Число является простым' : 'Число НЕ является простым'
+//             } 
+           
+
 // }
-// let num = 5
+// let num = 4
 // console.log(checkPrimeNumber(num))
 
 
@@ -3103,6 +3135,12 @@ import './style.scss'
 // 5. Написать функцию для вывода всех множителей переданного числа в возрастающем порядке. 
 // Например: число 18 – множители 2 * 3 * 3.
 
+// function showAllFactors(n:number) {
+
+//       return 
+// }
+
+// showAllFactors(18)
 
 
 // 6. Написать функцию, которая возвращает число Фибоначчи по переданному порядковому номеру. 
