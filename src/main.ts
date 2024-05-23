@@ -3009,6 +3009,43 @@ import './style.scss'
 // отделить, поделив «х» на 10 нацело (parseInt(х/10)).
 
 
+// {
+//       // Рекурсия. Возведение числа в степень.
+
+//       function powRecursive(x: number, n: number):number {
+//             // return n == 1 ? x : x * powRecursive(x, n - 1)
+//             if (n==1) {
+//               console.log('Условие выхода стработало')
+//               return x
+//             } else {
+//               console.log(n)
+//               let result
+//               console.log(result = x * powRecursive(x, n - 1))
+//               return result
+//             }
+//           }
+          
+//           console.log(powRecursive(2,4))
+
+
+// function maxDethPowRecursive(x: number, n: number):number {
+//   console.log(n)
+//   return n == 1 ? x : x * maxDethPowRecursive(x, n - 1)
+// }
+
+// maxDethPowRecursive(1,100000)
+// }
+
+// function powFor(x: bigint, n: number) {
+//       let result = 1n;
+//       for (let i = 0; i < n; i++) {
+//         result *= x;
+//       }
+//       return result;
+//     }
+    
+//     console.log(powFor(2n,100))
+
 
 
 // ___________________________________________________________________________________________________________
@@ -3087,7 +3124,7 @@ import './style.scss'
 // 4. Написать функцию, которая определяет простое ли переданное число.
 //    Простое число делится без остатка только на себя и на единицу. 
 
-// let num = 4
+// let num = 15
 // let result = true
 
 // for(let i = 2; i < num; i++) {
@@ -3104,27 +3141,7 @@ import './style.scss'
 //       console.log('Число НЕ является простым')
 // }
 
-// function checkPrimeNumber(n:number):any {
-
-//       let result = true
-//       // let buf = n
-      
-
-//       console.log(n)
-//       // console.log(buf)
-
-//       if(n == 1) {
-//             return 
-//             // return (result == true) ? 'Число является простым' : 'Число НЕ является простым'
-//       } else {
-//                   if(n % n == 0 && n % 1 == 0 && (n % checkPrimeNumber(n-1)) == 0) {
-
-//                         result = false
-                        
-//                   } else result = true
-//                   return (result == true) ? 'Число является простым' : 'Число НЕ является простым'
-//             } 
-           
+// function checkPrimeNumber(n:number):any {    
 
 // }
 // let num = 4
@@ -3219,7 +3236,7 @@ import './style.scss'
 //       if(n < 10) {
 //          return n
 //       } else {
-//          return +(n%10 + '' + gerReverseNumber(Math.floor(n/10)))
+//          return +(n % 10 + '' + gerReverseNumber(Math.floor(n / 10)))
 //       }
 // }
 
@@ -3229,11 +3246,11 @@ import './style.scss'
 // 4. Написать функцию, которая считает сумму цифр числа.
 // Например: число 1357, сумма 1 + 3 + 5 + 7 = 16.
 
-// function getSumOfDigits (n:number):number {
+// function getSumOfDigits(n:number):number {
 //    if(n < 10) {
 //       return n
 //    } else {
-//       return n%10 + getSumOfDigits(Math.floor(n/10))
+//       return n % 10 + getSumOfDigits(Math.floor(n / 10))
 //    }
 // }
 
@@ -3245,7 +3262,7 @@ import './style.scss'
 // соответствующее количество вложенных пар круглых скобок. 
 // Например: число 4 – (((())))
 
-// function getBracketsPairsByNum (n:number) {
+// function getBracketsPairsByNum(n:number) {
 //    if (!n) {
 //       return ''
 //    } else {
@@ -3254,6 +3271,11 @@ import './style.scss'
 // }
 
 // console.log(getBracketsPairsByNum(4))
+
+// getBracketsPairsByNum(4) = '(' + getBracketsPairsByNum(3)== '((()))' + ')'     = (((())))
+// getBracketsPairsByNum(3) = '(' + getBracketsPairsByNum(2)== '(())' + ')'       = ((()))
+// getBracketsPairsByNum(2) = '(' + getBracketsPairsByNum(1)== '()' + ')'         = (())
+// getBracketsPairsByNum(1) = '(' + getBracketsPairsByNum(0)== '' + ')'           = ()
 
 
 // ___________________________________________________________________________________________________________
