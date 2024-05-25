@@ -3124,27 +3124,27 @@ import './style.scss'
 // 4. Написать функцию, которая определяет простое ли переданное число.
 //    Простое число делится без остатка только на себя и на единицу. 
 
-// let num = 15
-// let result = true
-
-// for(let i = 2; i < num; i++) {
-      
-//       if(num % num == 0 && num % i == 0) {
-//             result = false
-//       } 
-// }
-// console.log(result)
-
-// if(result == true) {
-//       console.log('Число является простым')
-// } else {
-//       console.log('Число НЕ является простым')
-// }
 
 // function checkPrimeNumber(n:number):any {    
 
+//       let result = true
+
+//       for(let i = 2; i < num; i++) {
+      
+//             if(num % num == 0 && num % i == 0) {
+//                   result = false
+//             } 
+//       }
+//       console.log(result)
+      
+//       if(result == true) {
+//             return 'Число является простым'
+//       } else {
+//             return 'Число НЕ является простым'
+//       }
+      
 // }
-// let num = 4
+// let num = 15
 // console.log(checkPrimeNumber(num))
 
 
