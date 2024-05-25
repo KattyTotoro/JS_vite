@@ -3278,6 +3278,52 @@ import './style.scss'
 // getBracketsPairsByNum(1) = '(' + getBracketsPairsByNum(0)== '' + ')'           = ()
 
 
+
+
+
+
+// ___________________________________________________________________________________________________________
+
+
+// Домашняя практика. Объект.
+
+
+// Два варианта создания объекта. Создаём пустой объект.
+
+// let obj1 = new Object()
+
+// let obj2 = {}
+
+// 1.
+// let student = new Object()
+// student['Name'] = 'Иннокентий'
+// student['Age'] = 20
+// console.log(student)
+// console.log(student['Name'])
+// console.log(student['Age'])
+
+
+// 2.
+// let firm = {}
+// firm.Name = 'Star Inc'
+// firm.Adress = 'Grape street 8'
+// console.log(firm)
+// console.log(firm.Name)
+// console.log(firm.Adress)
+
+// 3.
+// let dog = {}
+// dog['Name of dog'] = 'Belyash'
+// console.log(dog)
+// console.log(dog['Name of dog'])
+// dog.Age_of_dog = 5
+// console.log(dog)
+// console.log(dog['Age_of_dog'])
+
+
+
+
+
 // ___________________________________________________________________________________________________________
 
 
