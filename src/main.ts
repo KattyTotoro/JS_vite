@@ -3151,14 +3151,21 @@ import './style.scss'
 
 
 // 5. Написать функцию для вывода всех множителей переданного числа в возрастающем порядке. 
-// Например: число 18 – множители 2 * 3 * 3.
+//    Например: число 18 – множители 2 * 3 * 3.
 
 // function showAllFactors(n:number) {
 
-//       return 
+//       let result = ''
+
+//       for(let i = 2; i < n; i++)
+//             if(n % i == 0) {
+//                   result += i + ', '
+//             }
+
+//       return result
 // }
 
-// showAllFactors(18)
+// console.log(showAllFactors(21))
 
 
 // 6. Написать функцию, которая возвращает число Фибоначчи по переданному порядковому номеру. 
@@ -3401,28 +3408,44 @@ import './style.scss'
 // Создать объект, описывающий автомобиль (производитель, модель, год выпуска, средняя скорость), 
 // и следующие функции для работы с этим объектом.
 
-// type Car = {
-//    manufacturer: string,
-//    model: string,
-//    year: number,
-//    averSpeed: number,
-// }
+type Car = {
+   manufacturer: string,
+   model: string,
+   year: number,
+   averSpeed: number,
+}
 
-// const automobile = {
-//    manufacturer: 'Japan',
-//    model: 'f2x',
-//    year: 1996,
-//    averSpeed: 98,
-// }
+const automobile = {
+   manufacturer: 'Japan',
+   model: 'f2x',
+   year: 1996,
+   averSpeed: 98,
+}
 
-// console.log(automobile)
+console.log(automobile)
 
 
 // 1. Функция для вывода на экран информации об автомобиле.
 
 // function showAutomobile(auto: Car) {
 
+//       for(let i in Car) {
+
+//       }
 // }
+
+// function showAutomobile(obj:object) {
+// let result = ''
+//       for(let i in obj) {
+//             console.log(i)
+//             console.log(obj[i])
+//             result += i + ': ' + obj[i] + ', \n '
+//       }
+//       return result
+// }
+// showAutomobile(automobile)
+// console.log(showAutomobile(automobile))
+
 
 
 // 2. Функция для подсчета необходимого времени для преодоления переданного расстояния со средней скоростью. 
