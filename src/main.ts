@@ -3408,21 +3408,21 @@ import './style.scss'
 // Создать объект, описывающий автомобиль (производитель, модель, год выпуска, средняя скорость), 
 // и следующие функции для работы с этим объектом.
 
-type Car = {
-   manufacturer: string,
-   model: string,
-   year: number,
-   averSpeed: number,
-}
+// type Car = {
+//    manufacturer: string,
+//    model: string,
+//    year: number,
+//    averSpeed: number,
+// }
 
-const automobile = {
-   manufacturer: 'Japan',
-   model: 'f2x',
-   year: 1996,
-   averSpeed: 98,
-}
+// const automobile = {
+//    manufacturer: 'Japan',
+//    model: 'f2x',
+//    year: 1996,
+//    averSpeed: 98,
+// }
 
-console.log(automobile)
+// console.log(automobile)
 
 
 // 1. Функция для вывода на экран информации об автомобиле.
