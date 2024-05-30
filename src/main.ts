@@ -3954,3 +3954,15 @@ import './style.scss'
 
 
 // Напишите функцию getWeekDay(date), показывающую день недели в коротком формате: «ПН», «ВТ», «СР», «ЧТ», «ПТ», «СБ», «ВС».
+
+
+
+
+
+// document.body.style.background = 'rgb(169, 193, 206)'; // сделать фон 
+
+// setTimeout(() => document.body.style.background = '', 3000); // вернуть назад
+
+// console.log(document.body)
+// console.log(document.body.constructor.name)
+// console.dir(document.body)
