@@ -3362,27 +3362,27 @@ import './style.scss'
 
 // 5. 
 
-// let student = {
-//       firstName: 'Eva',
-//       lastName: 'Robotova',
-//       age: 20,
-//       address: {
-//             strreet: 'Apricot 2',
-//             city: 'Sochi',
-//             country: 'Russia',
-//       }
-// }
-// console.log(student)
-// console.log(student.lastName)
-// console.log(student.address.city)
-// console.log(student.address)
+let student = {
+      firstName: 'Eva',
+      lastName: 'Robotova',
+      age: 20,
+      address: {
+            strreet: 'Apricot 2',
+            city: 'Sochi',
+            country: 'Russia',
+      }
+} as Record<string, any>
+console.log(student)
+console.log(student.lastName)
+console.log(student.address.city)
+console.log(student.address)
 
-// for(let i in student) {
-//       // отображаем название свойства
-//       console.log(i)
-//       // значение свойства
-//       console.log(student[i])
-// }
+for(let i in student) {
+      // отображаем название свойства
+      console.log(i)
+      // значение свойства
+      console.log(student[i])
+}
 
 // function getInfo() {
 
