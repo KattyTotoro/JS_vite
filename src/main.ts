@@ -3362,27 +3362,31 @@ import './style.scss'
 
 // 5. 
 
-// const student = {
-//       firstName: 'Eva',
-//       lastName: 'Robotova',
-//       age: 20,
-//       address: {
-//             strreet: 'Apricot 2',
-//             city: 'Sochi',
-//             country: 'Russia',
-//       }
-// } as Record<string, any>
-// console.log(student)
-// console.log(student.lastName)
-// console.log(student.address.city)
-// console.log(student.address)
+const student = {
+      firstName: 'Eva',
+      lastName: 'Robotova',
+      age: 20,
+      address: {
+            strreet: 'Apricot 2',
+            city: 'Sochi',
+            country: 'Russia',
+      }
+} as Record<string, any>
+console.log(student)
+console.log(student.lastName)
+console.log(student.address.city)
+console.log(student.address)
 
-// for(let i in student) {
-//       // отображаем название свойства
-//       console.log(i)
-//       // значение свойства
-//       console.log(student[i])
-// }
+for(let i in student) {
+      // отображаем название свойства
+      console.log(i)
+      // значение свойства
+      console.log(student[i])
+}
+
+let studentInfo = prompt('Что Вы хотите увидеть?', 'firstName') as string
+alert(student[studentInfo])
+console.log(student[studentInfo])
 
 // function getInfo() {
 
@@ -3420,7 +3424,7 @@ import './style.scss'
 //    model: 'f2x',
 //    year: 1996,
 //    averSpeed: 98,
-// }
+// } as Record<string, any>
 
 // console.log(automobile)
 
@@ -3429,12 +3433,17 @@ import './style.scss'
 
 // function showAutomobile(auto: Car) {
 
-//       for(let i in Car) {
+//       for(let key in automobile) {
 
+//             console.log(key)
+//             console.log(automobile[key])
 //       }
 // }
 
-// function showAutomobile(obj:object) {
+// showAutomobile()
+
+
+// function showAutomobile2(obj:object) {
 // let result = ''
 //       for(let i in obj) {
 //             console.log(i)
@@ -3443,8 +3452,8 @@ import './style.scss'
 //       }
 //       return result
 // }
-// showAutomobile(automobile)
-// console.log(showAutomobile(automobile))
+// showAutomobile2(automobile)
+// console.log(showAutomobile2(automobile))
 
 
 
