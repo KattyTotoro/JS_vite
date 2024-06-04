@@ -3981,12 +3981,12 @@ import './style.scss'
 // 04.06.2024
 // Напишите функцию showNotification(options), которая создаёт уведомление: <div class="notification"> с заданным содержимым. Уведомление должно автоматически исчезнуть через 1,5 секунды.
 
-type options = {
-top? :number,
-right?: number,
-html? : string,
-className? : string,
-}
+// type options = {
+// top? :number,
+// right?: number,
+// html? : string,
+// className? : string,
+// }
 
 function showNotification({top = 0, right = 0, className = '', html = ''}) {
 
