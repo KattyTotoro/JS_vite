@@ -3392,6 +3392,10 @@ import './style.scss'
 
 // }
 
+// const jsonObj = JSON.stringify(object)
+// console.log(jsonObj)
+// console.log(JSON.parse(jsonObj))
+
 
 // ___________________________________________________________________________________________________________
 
@@ -3464,6 +3468,7 @@ import './style.scss'
 
 
 // Задание 2
+
 // Создать объект, хранящий в себе отдельно числитель и знаменатель дроби, и следующие функции для работы с этим объектом.
 // 1. Функция сложения 2-х объектов-дробей.
 // 2. Функция вычитания 2-х объектов-дробей.
@@ -3988,30 +3993,30 @@ import './style.scss'
 // className? : string,
 // }
 
-function showNotification({top = 0, right = 0, className = '', html = ''}) {
+// function showNotification({top = 0, right = 0, className = '', html = ''}) {
 
-      let notification = document.createElement('div')
-      notification.className = "notification"
-      notification.classList.add('notification')
-      if (className) {
-        notification.classList.add(className)
-      }
+//       let notification = document.createElement('div')
+//       notification.className = "notification"
+//       notification.classList.add('notification')
+//       if (className) {
+//         notification.classList.add(className)
+//       }
 
-      notification.style.top = top + 'px'
-      notification.style.right = right + 'px'
+//       notification.style.top = top + 'px'
+//       notification.style.right = right + 'px'
 
-      notification.innerHTML = html
-      document.body.append(notification)
+//       notification.innerHTML = html
+//       document.body.append(notification)
 
-      setTimeout(() => notification.remove(), 1500)
-    }
+//       setTimeout(() => notification.remove(), 1500)
+//     }
 
-    let i = 1;
-    setInterval(() => {
-      showNotification({
-        top: 10,
-        right: 10,
-        html: 'Hello ' + i++,
-        className: "welcome"
-      });
-    }, 2000);
+//     let i = 1;
+//     setInterval(() => {
+//       showNotification({
+//         top: 10,
+//         right: 10,
+//         html: 'Hello ' + i++,
+//         className: "welcome"
+//       });
+//     }, 2000);
