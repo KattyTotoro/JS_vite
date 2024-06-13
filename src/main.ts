@@ -4020,3 +4020,10 @@ import './style.scss'
 //         className: "welcome"
 //       });
 //     }, 2000);
+
+
+
+// 13.06.2024
+// Добавьте JavaScript к кнопке button, чтобы при нажатии элемент <div id="text"> исчезал.
+
+// onclick
