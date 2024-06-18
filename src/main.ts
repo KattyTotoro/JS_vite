@@ -4033,3 +4033,8 @@ import './style.scss'
 // Добавьте JavaScript к кнопке button, чтобы при нажатии элемент <div id="text"> исчезал.
 
 // onclick
+
+
+// 18.06.24.
+
+

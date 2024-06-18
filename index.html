@@ -34,6 +34,21 @@
 
 <body>
 
+
+  <input type="button" id="hider" value="Нажмите, чтобы спрятать текст" />
+
+  <div id="text">Текст</div>
+
+  <script>
+    // Здесь не важно, как мы скрываем текст.
+    // Также можно использовать style.display:
+    document.getElementById('hider').onclick = function() {
+      document.getElementById('text').hidden = true;
+    }
+  </script>
+
+<div></div>
+
   <button id="button1">Нажмите, чтобы спрятать текст</button>
   <div id="text"><p>Текст под кнопкой</p></div>
 
