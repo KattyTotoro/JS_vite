@@ -3416,48 +3416,48 @@ import './style.scss'
 // Создать объект, описывающий автомобиль (производитель, модель, год выпуска, средняя скорость), 
 // и следующие функции для работы с этим объектом.
 
-// type Car = {
-//    manufacturer: string,
-//    model: string,
-//    year: number,
-//    averSpeed: number,
-// }
+type Car = {
+   manufacturer: string,
+   model: string,
+   year: number,
+   averSpeed: number,
+}
 
-// const automobile = {
-//    manufacturer: 'Japan',
-//    model: 'f2x',
-//    year: 1996,
-//    averSpeed: 98,
-// } as Record<string, any>
+const automobile = {
+   manufacturer: 'Japan',
+   model: 'f2x',
+   year: 1996,
+   averSpeed: 98,
+} as Record<string, any>
 
-// console.log(automobile)
+console.log(automobile)
 
 
 // 1. Функция для вывода на экран информации об автомобиле.
 
-// function showAutomobile(auto: Car) {
+function showAutomobile(auto: Car) {
 
-//       for(let key in automobile) {
+      for(let key in automobile) {
 
-//             console.log(key)
-//             console.log(automobile[key])
-//       }
-// }
+            console.log(key)
+            console.log(automobile[key])
+      }
+}
 
-// showAutomobile()
+showAutomobile()
 
 
-// function showAutomobile2(obj:object) {
-// let result = ''
-//       for(let i in obj) {
-//             console.log(i)
-//             console.log(obj[i])
-//             result += i + ': ' + obj[i] + ', \n '
-//       }
-//       return result
-// }
-// showAutomobile2(automobile)
-// console.log(showAutomobile2(automobile))
+function showAutomobile2(obj:object) {
+let result = ''
+      for(let i in obj) {
+            console.log(i)
+            console.log(obj[i])
+            result += i + ': ' + obj[i] + ', \n '
+      }
+      return result
+}
+showAutomobile2(automobile)
+console.log(showAutomobile2(automobile))
 
 
 
@@ -3465,28 +3465,30 @@ import './style.scss'
 // Учтите, что через каждые 4 часа дороги водителю необходимо делать перерыв на 1 час.
 // t = S / v
 
-// let S = 800
-// let t = S / automobile.averSpeed
+let userS = 100
 
-// console.log(t)
+function toFindTime(obj:object) {
+      let t = userS / automobile.averSpeed
+      let t2 = t
 
-// // t = t * 60
+while (t2 > 4) {
+      t += 1
+      t2 -= 4      
+}
+      return t
+}
 
-// console.log(t)
-
-// let t2 = t
-
-// while (t2 > 4) {
-
-//       t += 1
-//       t2 -= 4
-      
-// }
-
-// console.log(t)
+let travelTime = toFindTime(automobile)
 
 
+//  время в часах
+console.log(travelTime)
 
+travelTime = travelTime * 60
+
+
+//  время в минутах
+console.log(travelTime)
 
 
 
