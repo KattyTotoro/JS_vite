@@ -3531,10 +3531,11 @@ function transformToCommonDenominator(fr1: Fraction, fr2: Fraction) {
 function getSumOfFraction(fr1:Fraction, fr2:Fraction) {
       const commonFractions = transformToCommonDenominator(fr1, fr2)
       console.log(commonFractions)
-      return {
+      const result = {
             numerator: commonFractions.fr1.numerator + commonFractions.fr2.numerator,
             denominator: commonFractions.fr1.denominator
       }
+      return getReductedFraction(result)
 }
 
 console.log(getSumOfFraction(fraction1, fraction2))
@@ -3545,10 +3546,11 @@ console.log(getSumOfFraction(fraction1, fraction2))
 function getSubtrOfFraction(fr1:Fraction, fr2:Fraction) {
       const commonFractions = transformToCommonDenominator(fr1, fr2)
       console.log(commonFractions)
-      return {
+      const result = {
             numerator: commonFractions.fr1.numerator - commonFractions.fr2.numerator,
             denominator: commonFractions.fr1.denominator
       }
+      return getReductedFraction(result)
 }
 
 console.log(getSubtrOfFraction(fraction1, fraction2))
@@ -3557,9 +3559,45 @@ console.log(getSubtrOfFraction(fraction1, fraction2))
 
 // 3. Функция умножения 2-х объектов-дробей.
 
+function getMulOfFraction(fr1:Fraction, fr2:Fraction) {
+      
+      const result = {
+            numerator: fr1.numerator * fr2.numerator,
+            denominator: fr1.denominator * fr2.denominator
+      }
+      return getReductedFraction(result)
+}
+
+console.log(getMulOfFraction(fraction1, fraction2))
+
+
 // 4. Функция деления 2-х объектов-дробей.
 
+function getDivOfFraction(fr1:Fraction, fr2:Fraction) {
+      
+      const result = {
+            numerator: fr1.numerator * fr2.denominator,
+            denominator: fr1.denominator * fr2.numerator
+      }
+      return getReductedFraction(result)
+}
+
+console.log(getDivOfFraction(fraction1, fraction2))
+
+
 // 5. Функция сокращения объекта-дроби.
+
+function getReductedFraction(fr: Fraction) {
+      const min = fr.numerator < fr.denominator ? fr.numerator : fr.denominator
+      for(let i = min; i > 1; i--) {
+            if(fr.numerator % i == 0 && fr.denominator % i == 0) {
+                  fr.numerator /= i
+                  fr.denominator /= i
+                  return  getReductedFraction(fr)
+            }
+      }
+      return fr
+}
 
 
 
