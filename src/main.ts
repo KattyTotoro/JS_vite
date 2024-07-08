@@ -3530,14 +3530,30 @@ function transformToCommonDenominator(fr1: Fraction, fr2: Fraction) {
 
 function getSumOfFraction(fr1:Fraction, fr2:Fraction) {
       const commonFractions = transformToCommonDenominator(fr1, fr2)
+      console.log(commonFractions)
       return {
             numerator: commonFractions.fr1.numerator + commonFractions.fr2.numerator,
             denominator: commonFractions.fr1.denominator
       }
 }
 
+console.log(getSumOfFraction(fraction1, fraction2))
+
 
 // 2. Функция вычитания 2-х объектов-дробей.
+
+function getSubtrOfFraction(fr1:Fraction, fr2:Fraction) {
+      const commonFractions = transformToCommonDenominator(fr1, fr2)
+      console.log(commonFractions)
+      return {
+            numerator: commonFractions.fr1.numerator - commonFractions.fr2.numerator,
+            denominator: commonFractions.fr1.denominator
+      }
+}
+
+console.log(getSubtrOfFraction(fraction1, fraction2))
+
+
 
 // 3. Функция умножения 2-х объектов-дробей.
 
