@@ -3384,6 +3384,14 @@ import './style.scss'
 //       console.log(student[i])
 // }
 
+// for(let key in student) {
+//       // отображаем название свойства (ключа)
+//       console.log(key)
+//       // значение свойства
+//       console.log(student[key])
+// }
+
+
 // let studentInfo = prompt('Что Вы хотите увидеть?', 'firstName') as string
 // alert(student[studentInfo])
 // console.log(student[studentInfo])
@@ -3496,114 +3504,114 @@ import './style.scss'
 
 // Создать объект, хранящий в себе отдельно числитель и знаменатель дроби, и следующие функции для работы с этим объектом.
 
-type Fraction = {
-      numerator: number,
-      denominator: number
-}
+// type Fraction = {
+//       numerator: number,
+//       denominator: number
+// }
 
-const fraction1: Fraction = {
-      numerator: 1,
-      denominator: 2
-}
+// const fraction1: Fraction = {
+//       numerator: 1,
+//       denominator: 2
+// }
 
-const fraction2 = {
-      numerator: 3,
-      denominator: 10
-} as Fraction
+// const fraction2 = {
+//       numerator: 3,
+//       denominator: 10
+// } as Fraction
 
 
 
-function transformToCommonDenominator(fr1: Fraction, fr2: Fraction) {
-      return {
-            fr1: {
-                  numerator: fr1.numerator * fr2.denominator,
-                  denominator: fr1.denominator * fr2.denominator 
-            },
-            fr2: {
-                  numerator: fr2.numerator * fr1.denominator,
-                  denominator: fr1.denominator * fr2.denominator 
-            }
-      }
-}
+// function transformToCommonDenominator(fr1: Fraction, fr2: Fraction) {
+//       return {
+//             fr1: {
+//                   numerator: fr1.numerator * fr2.denominator,
+//                   denominator: fr1.denominator * fr2.denominator 
+//             },
+//             fr2: {
+//                   numerator: fr2.numerator * fr1.denominator,
+//                   denominator: fr1.denominator * fr2.denominator 
+//             }
+//       }
+// }
 
 // 1. Функция сложения 2-х объектов-дробей.
 
-function getSumOfFraction(fr1:Fraction, fr2:Fraction) {
-      const commonFractions = transformToCommonDenominator(fr1, fr2)
-      console.log(commonFractions)
-      return {
-            numerator: commonFractions.fr1.numerator + commonFractions.fr2.numerator,
-            denominator: commonFractions.fr1.denominator
-      }
-}
+// function getSumOfFraction(fr1:Fraction, fr2:Fraction) {
+//       const commonFractions = transformToCommonDenominator(fr1, fr2)
+//       console.log(commonFractions)
+//       return {
+//             numerator: commonFractions.fr1.numerator + commonFractions.fr2.numerator,
+//             denominator: commonFractions.fr1.denominator
+//       }
+// }
 
-console.log(getSumOfFraction(fraction1, fraction2))
+// console.log(getSumOfFraction(fraction1, fraction2))
 
-function getRedusedSumOfFraction(fr1:Fraction, fr2:Fraction) {
-      const result = getSumOfFraction(fr1, fr2)
-      return getReductedFraction(result)
-}
+// function getRedusedSumOfFraction(fr1:Fraction, fr2:Fraction) {
+//       const result = getSumOfFraction(fr1, fr2)
+//       return getReductedFraction(result)
+// }
 
-console.log(getRedusedSumOfFraction(fraction1, fraction2))
+// console.log(getRedusedSumOfFraction(fraction1, fraction2))
 
 
 // 2. Функция вычитания 2-х объектов-дробей.
 
-function getSubtrOfFraction(fr1:Fraction, fr2:Fraction) {
-      const commonFractions = transformToCommonDenominator(fr1, fr2)
-      console.log(commonFractions)
-      const result = {
-            numerator: commonFractions.fr1.numerator - commonFractions.fr2.numerator,
-            denominator: commonFractions.fr1.denominator
-      }
-      return getReductedFraction(result)
-}
+// function getSubtrOfFraction(fr1:Fraction, fr2:Fraction) {
+//       const commonFractions = transformToCommonDenominator(fr1, fr2)
+//       console.log(commonFractions)
+//       const result = {
+//             numerator: commonFractions.fr1.numerator - commonFractions.fr2.numerator,
+//             denominator: commonFractions.fr1.denominator
+//       }
+//       return getReductedFraction(result)
+// }
 
-console.log(getSubtrOfFraction(fraction1, fraction2))
+// console.log(getSubtrOfFraction(fraction1, fraction2))
 
 
 
 // 3. Функция умножения 2-х объектов-дробей.
 
-function getMulOfFraction(fr1:Fraction, fr2:Fraction) {
+// function getMulOfFraction(fr1:Fraction, fr2:Fraction) {
       
-      const result = {
-            numerator: fr1.numerator * fr2.numerator,
-            denominator: fr1.denominator * fr2.denominator
-      }
-      return getReductedFraction(result)
-}
+//       const result = {
+//             numerator: fr1.numerator * fr2.numerator,
+//             denominator: fr1.denominator * fr2.denominator
+//       }
+//       return getReductedFraction(result)
+// }
 
-console.log(getMulOfFraction(fraction1, fraction2))
+// console.log(getMulOfFraction(fraction1, fraction2))
 
 
 // 4. Функция деления 2-х объектов-дробей.
 
-function getDivOfFraction(fr1:Fraction, fr2:Fraction) {
+// function getDivOfFraction(fr1:Fraction, fr2:Fraction) {
       
-      const result = {
-            numerator: fr1.numerator * fr2.denominator,
-            denominator: fr1.denominator * fr2.numerator
-      }
-      return getReductedFraction(result)
-}
+//       const result = {
+//             numerator: fr1.numerator * fr2.denominator,
+//             denominator: fr1.denominator * fr2.numerator
+//       }
+//       return getReductedFraction(result)
+// }
 
-console.log(getDivOfFraction(fraction1, fraction2))
+// console.log(getDivOfFraction(fraction1, fraction2))
 
 
 // 5. Функция сокращения объекта-дроби.
 
-function getReductedFraction(fr: Fraction) {
-      const min = fr.numerator < fr.denominator ? fr.numerator : fr.denominator
-      for(let i = min; i > 1; i--) {
-            if(fr.numerator % i == 0 && fr.denominator % i == 0) {
-                  fr.numerator /= i
-                  fr.denominator /= i
-                  return  getReductedFraction(fr)
-            }
-      }
-      return fr
-}
+// function getReductedFraction(fr: Fraction) {
+//       const min = fr.numerator < fr.denominator ? fr.numerator : fr.denominator
+//       for(let i = min; i > 1; i--) {
+//             if(fr.numerator % i == 0 && fr.denominator % i == 0) {
+//                   fr.numerator /= i
+//                   fr.denominator /= i
+//                   return  getReductedFraction(fr)
+//             }
+//       }
+//       return fr
+// }
 
 
 
