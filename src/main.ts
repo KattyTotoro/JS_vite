@@ -3619,91 +3619,91 @@ import './style.scss'
 
 // Создать объект, описывающий время (часы, минуты, секунды), и следующие функции для работы с этим объектом.
 
-type Time = {
-      hours: number,
-      minutes: number,
-      seconds: number,
-}
+// type Time = {
+//       hours: number,
+//       minutes: number,
+//       seconds: number,
+// }
 
-const hwTime = {
-      hours: 10,
-      minutes: 4,
-      seconds: 3,
-}
+// const hwTime = {
+//       hours: 10,
+//       minutes: 4,
+//       seconds: 3,
+// }
 
-console.log(hwTime)
+// console.log(hwTime)
 
 // 1. Функция вывода времени на экран.
 
-function showTime(obj:Time) {
-      let result = (obj.hours >= 10 ? obj.hours : '0' + obj.hours) + ':' + 
-      (obj.minutes >= 10 ? obj.minutes : '0' + obj.minutes) + ':' + 
-      (obj.seconds >= 10 ? obj.seconds : '0' + obj.seconds)
-      return result
-}
+// function showTime(obj:Time) {
+//       let result = (obj.hours >= 10 ? obj.hours : '0' + obj.hours) + ':' + 
+//       (obj.minutes >= 10 ? obj.minutes : '0' + obj.minutes) + ':' + 
+//       (obj.seconds >= 10 ? obj.seconds : '0' + obj.seconds)
+//       return result
+// }
 
-console.log(showTime(hwTime))
+// console.log(showTime(hwTime))
 
-console.log(100 / 60)
-console.log(100 % 60)
+// console.log(100 / 60)
+// console.log(100 % 60)
 
 // 2. Функция изменения времени на переданное количество секунд.
 
-function changingSeconds(obj:Time, sec:number) {
-      if(sec <= 60)
-      obj.seconds = sec 
-      else {
-            obj.seconds = sec % 60
-            obj.minutes += parseInt(sec / 60)
-            if(obj.minutes > 60) {
-                  obj.hours += parseInt(obj.minutes / 60)
-                  obj.minutes = obj.minutes % 60
-            }
-      }
-      return showTime(obj)
-}
+// function changingSeconds(obj:Time, sec:number) {
+//       if(sec <= 60)
+//       obj.seconds = sec 
+//       else {
+//             obj.seconds = sec % 60
+//             obj.minutes += parseInt(sec / 60)
+//             if(obj.minutes > 60) {
+//                   obj.hours += parseInt(obj.minutes / 60)
+//                   obj.minutes = obj.minutes % 60
+//             }
+//       }
+//       return showTime(obj)
+// }
 
-let new_seconds = 3600
+// let new_seconds = 3600
 
-console.log(changingSeconds(hwTime, new_seconds))
+// console.log(changingSeconds(hwTime, new_seconds))
 
-console.log(showTime(hwTime))
+// console.log(showTime(hwTime))
 
 
 
 // 3. Функция изменения времени на переданное количество минут.
 
-function changingMinutes(obj:Time, min:number) {
-      if(min <= 60)
-      obj.minutes = min 
-      else {
-            obj.minutes = min % 60
-            obj.hours += parseInt(min / 60)
-      }
-      return showTime(obj)
-}
+// function changingMinutes(obj:Time, min:number) {
+//       if(min <= 60)
+//       obj.minutes = min 
+//       else {
+//             obj.minutes = min % 60
+//             obj.hours += parseInt(min / 60)
+//       }
+//       return showTime(obj)
+// }
 
-let new_minutes = 10000
+// let new_minutes = 10000
 
-console.log(changingMinutes(hwTime, new_minutes))
+// console.log(changingMinutes(hwTime, new_minutes))
 
-console.log(showTime(hwTime))
+// console.log(showTime(hwTime))
 
 
 // 4. Функция изменения времени на переданное количество часов.
 
-function changingHours(obj:Time, hour:number) {
+// function changingHours(obj:Time, hour:number) {
       
-      obj.hours = hour 
+//       obj.hours = hour 
       
-      return showTime(obj)
-}
+//       return showTime(obj)
+// }
 
-let new_hours = 100
+// let new_hours = 100
 
-console.log(changingHours(hwTime, new_hours))
+// console.log(changingHours(hwTime, new_hours))
 
-console.log(showTime(hwTime))
+// console.log(showTime(hwTime))
 
 
 
