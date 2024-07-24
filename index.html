@@ -57,6 +57,19 @@
     .numpad div div {
       width: 18px;
     }
+
+    .button {
+      border-radius: 10px;
+      border: 1px black solid;
+    }
+    .button:hover {
+      border-radius: 10px;
+      border: 1px rgb(46, 168, 93) solid;
+    }
+    .button:active {
+      border-radius: 10px;
+      border: 1px rgb(203, 209, 28) solid;
+    }
   </style>
 </head>
 
@@ -70,15 +83,15 @@
     </div>
 
     <div class="numpad">
-      <div><div style="transform: rotate(-135deg);">-&gt;</div></div>
-      <div><div style="transform: rotate(-90deg);">-&gt;</div></div>
-      <div><div style="transform: rotate(-45deg);">-&gt;</div></div>
-      <div>&lt;-</div>
+      <div class="button"><div style="transform: rotate(-135deg);">-&gt;</div></div>
+      <div class="button"><div style="transform: rotate(-90deg);">-&gt;</div></div>
+      <div class="button"><div style="transform: rotate(-45deg);">-&gt;</div></div>
+      <div class="button">&lt;-</div>
       <div></div>
-      <div>-&gt;</div>
-      <div><div style="transform: rotate(135deg);">-&gt;</div></div>
-      <div><div style="transform: rotate(90deg);">-&gt;</div></div>
-      <div><div style="transform: rotate(45deg);">-&gt;</div></div>
+      <div class="button">-&gt;</div>
+      <div class="button"><div style="transform: rotate(135deg);">-&gt;</div></div>
+      <div class="button"><div style="transform: rotate(90deg);">-&gt;</div></div>
+      <div class="button"><div style="transform: rotate(45deg);">-&gt;</div></div>
     </div>
   </div>
 
