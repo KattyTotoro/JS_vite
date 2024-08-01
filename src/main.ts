@@ -4411,40 +4411,40 @@ import axios from 'axios'
 // 04.06.2024
 // Напишите функцию showNotification(options), которая создаёт уведомление: <div class="notification"> с заданным содержимым. Уведомление должно автоматически исчезнуть через 1,5 секунды.
 
-// type options = {
-// top? :number,
-// right?: number,
-// html? : string,
-// className? : string,
-// }
+type options = {
+top? :number,
+right?: number,
+html? : string,
+className? : string,
+}
 
-// function showNotification({top = 0, right = 0, className = '', html = ''}) {
+function showNotification({top = 0, right = 0, className = '', html = ''}) {
 
-//       let notification = document.createElement('div')
-//       notification.className = "notification"
-//       notification.classList.add('notification')
-//       if (className) {
-//         notification.classList.add(className)
-//       }
+      let notification = document.createElement('div')
+      notification.className = "notification"
+      notification.classList.add('notification')
+      if (className) {
+        notification.classList.add(className)
+      }
 
-//       notification.style.top = top + 'px'
-//       notification.style.right = right + 'px'
+      notification.style.top = top + 'px'
+      notification.style.right = right + 'px'
 
-//       notification.innerHTML = html
-//       document.body.append(notification)
+      notification.innerHTML = html
+      document.body.append(notification)
 
-//       setTimeout(() => notification.remove(), 1500)
-//     }
+      setTimeout(() => notification.remove(), 5000)
+    }
 
-//     let i = 1;
-//     setInterval(() => {
-//       showNotification({
-//         top: 10,
-//         right: 10,
-//         html: 'Hello ' + i++,
-//         className: "welcome"
-//       });
-//     }, 2000);
+    let i = 1;
+    setInterval(() => {
+      showNotification({
+        top: 10,
+        right: 10,
+        html: 'Hello ' + i++,
+        className: "welcome"
+      });
+    }, 5000);
 
 
 
