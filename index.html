@@ -31,7 +31,7 @@
     } */
 
     #canvas {
-      height: 800px;
+      height: 400px;
       width: 800px;
       position: relative;
     }
@@ -39,14 +39,16 @@
     #rect {
       position: absolute;
       background-color: blueviolet;
+      transition: 1s;
     }
 
     .numpad {
       display: grid;
       grid-template-columns: 50px 50px 50px;
-      grid-template-rows: 50px 50px 50px;
+      grid-template-rows: 50px 50px 50px 50px 50px 50px;
       gap: 10px;
       user-select: none;
+      transition: background-color 1s;
     }
 
     .numpad div {
@@ -83,25 +85,35 @@
   <script type="module" src="/src/main.ts"></script>
   <div style="padding: 20px;"><a href="idbm.html"><b>page2 idbm</b></a></div>
 
-  <div style="display: flex;">
+  
+  <div style="display: flex;" hidden>
     <div id="canvas">
-      <div id="rect" style="top: 0; left: 0;">
+      <div id="rect" style="top: 0; left:0">
 
       </div>
     </div>
-
-    <div class="numpad">
-      <div class="button"><div style="transform: rotate(-135deg);">-&gt;</div></div>
-      <div class="button"><div style="transform: rotate(-90deg);">-&gt;</div></div>
-      <div class="button"><div style="transform: rotate(-45deg);">-&gt;</div></div>
-      <div class="button">&lt;-</div>
+    <div  data-draggable class="numpad">
+      <div class="button" id="topLeft"><div style="transform: rotate(-135deg); position: relative;">-&gt;</div></div>
+      <div class="button" id="top"><div style="transform: rotate(-90deg);">-&gt;</div></div>
+      <div class="button" id="topRight"><div style="transform: rotate(-45deg);">-&gt;</div></div>
+      <div class="button" id="left">&lt;-</div>
       <div></div>
-      <div class="button">-&gt;</div>
-      <div class="button"><div style="transform: rotate(135deg);">-&gt;</div></div>
-      <div class="button"><div style="transform: rotate(90deg);">-&gt;</div></div>
-      <div class="button"><div style="transform: rotate(45deg);">-&gt;</div></div>
+      <div class="button" id="right">-&gt;</div>
+      <div class="button" id="bottomLeft"><div style="transform: rotate(135deg); position: relative;">-&gt;</div></div>
+      <div class="button" id="bottom"><div style="transform: rotate(90deg);">-&gt;</div></div>
+      <div class="button" id="bottomRight"><div style="transform: rotate(45deg);">-&gt;</div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="button" id="addHeight"><div style="transform: rotate(-90deg); position: relative;">&lt;-&gt;</div></div>
+      <div></div>
+      <div class="button" id="addWidth">&lt;-&gt;</div>
+      <div class="button" id="reduceHeight"><div style="transform: rotate(-90deg); position: relative;">&gt;-&lt;</div></div>
+      <div></div>
+      <div class="button" id="reduceWidth">&gt;-&lt;</div>
     </div>
   </div>
+  <div id="app"></div>
 
 
   <input type="button" id="hider" value="Нажмите, чтобы спрятать текст" />
