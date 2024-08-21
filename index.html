@@ -56,7 +56,7 @@
       align-items: center;
       justify-content: center;
     }
-    
+
     .numpad div div {
       width: 18px;
     }
@@ -66,49 +66,90 @@
       border: 1px black solid;
       transition: 0.1s;
     }
+
     .button:hover {
       background: rgb(194, 231, 189);
       filter: grayscale(0.2);
       border: 1px rgb(46, 168, 93) solid;
       transition: 0.1s;
     }
+
     .button:active {
       background: rgb(110, 181, 92);
       filter: grayscale(0.6);
       border: 1px rgb(203, 209, 28) solid;
       transition: 0.1s;
     }
-    </style>
+
+    .div4 {
+      width: 300px;
+      height: 300px;
+      background: url(images/img.png) center/cover no-repeat;
+      transition: transform 20s, margin 15s;
+
+    }
+
+    /* .div4:hover {
+      transform: rotate(3600deg);
+      transform-origin: 50% 50%;
+      margin-left: 1000px;
+    } */
+  </style>
 </head>
 
 <body>
   <script type="module" src="/src/main.ts"></script>
   <div style="padding: 20px;"><a href="idbm.html"><b>page2 idbm</b></a></div>
 
-  
+  <div class="div4"></div>
+
+  <script>
+    const div4 = document.getElementsByTagName('div')[0]
+    div4.addEventListener('click', function () {
+      document.getElementsByClassName("div4").style.transform = "rotate(50deg)"
+})
+  </script>
+
+
   <div style="display: flex;" hidden>
     <div id="canvas">
       <div id="rect" style="top: 0; left:0">
 
       </div>
     </div>
-    <div  data-draggable class="numpad">
-      <div class="button" id="topLeft"><div style="transform: rotate(-135deg); position: relative;">-&gt;</div></div>
-      <div class="button" id="top"><div style="transform: rotate(-90deg);">-&gt;</div></div>
-      <div class="button" id="topRight"><div style="transform: rotate(-45deg);">-&gt;</div></div>
+    <div data-draggable class="numpad">
+      <div class="button" id="topLeft">
+        <div style="transform: rotate(-135deg); position: relative;">-&gt;</div>
+      </div>
+      <div class="button" id="top">
+        <div style="transform: rotate(-90deg);">-&gt;</div>
+      </div>
+      <div class="button" id="topRight">
+        <div style="transform: rotate(-45deg);">-&gt;</div>
+      </div>
       <div class="button" id="left">&lt;-</div>
       <div></div>
       <div class="button" id="right">-&gt;</div>
-      <div class="button" id="bottomLeft"><div style="transform: rotate(135deg); position: relative;">-&gt;</div></div>
-      <div class="button" id="bottom"><div style="transform: rotate(90deg);">-&gt;</div></div>
-      <div class="button" id="bottomRight"><div style="transform: rotate(45deg);">-&gt;</div></div>
+      <div class="button" id="bottomLeft">
+        <div style="transform: rotate(135deg); position: relative;">-&gt;</div>
+      </div>
+      <div class="button" id="bottom">
+        <div style="transform: rotate(90deg);">-&gt;</div>
+      </div>
+      <div class="button" id="bottomRight">
+        <div style="transform: rotate(45deg);">-&gt;</div>
+      </div>
       <div></div>
       <div></div>
       <div></div>
-      <div class="button" id="addHeight"><div style="transform: rotate(-90deg); position: relative;">&lt;-&gt;</div></div>
+      <div class="button" id="addHeight">
+        <div style="transform: rotate(-90deg); position: relative;">&lt;-&gt;</div>
+      </div>
       <div></div>
       <div class="button" id="addWidth">&lt;-&gt;</div>
-      <div class="button" id="reduceHeight"><div style="transform: rotate(-90deg); position: relative;">&gt;-&lt;</div></div>
+      <div class="button" id="reduceHeight">
+        <div style="transform: rotate(-90deg); position: relative;">&gt;-&lt;</div>
+      </div>
       <div></div>
       <div class="button" id="reduceWidth">&gt;-&lt;</div>
     </div>
@@ -123,17 +164,19 @@
   <script>
     // Здесь не важно, как мы скрываем текст.
     // Также можно использовать style.display:
-    document.getElementById('hider').onclick = function() {
+    document.getElementById('hider').onclick = function () {
       document.getElementById('text').hidden = true;
     }
   </script>
 
-<div></div>
+  <div></div>
 
   <button id="button1">Нажмите, чтобы спрятать текст</button>
-  <div id="text"><p>Текст под кнопкой</p></div>
+  <div id="text">
+    <p>Текст под кнопкой</p>
+  </div>
 
-  
+
 
   <!-- <div>
     <p id="PlusOne"></p>
