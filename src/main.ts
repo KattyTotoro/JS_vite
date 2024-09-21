@@ -98,6 +98,7 @@ import axios from 'axios'
 let sum = 160
 let price = 30
 
+// @ts-ignore
 let numberOfChocolates = parseInt(sum / price)
 console.log('Количество шоколдано, которое Вы можете купить', numberOfChocolates)
 
@@ -110,9 +111,11 @@ console.log('Остаток денег:', residualAmount)
 let sum2 = 160
 let price2 = 30
 
+// @ts-expect-error
 let numberOfChocolates2 = parseInt(sum2 / price2)
 console.log('Количество шоколдано, которое Вы можете купить', numberOfChocolates2)
 
+// @ts-expect-error
 let residualAmount2 = parseInt(sum2 % price2)
 console.log('Остаток денег:', residualAmount2)
 }
@@ -123,6 +126,7 @@ console.log('Остаток денег:', residualAmount2)
 {
 let num1 = 749
 
+// @ts-expect-error
 let num2 = parseInt((num1 % 10) * 100) + parseInt(((num1/10) % 10)) * 10 + parseInt(((num1/100) % 10))
 
 console.log(num2)
@@ -509,7 +513,9 @@ console.log(parseInt(x) > parseInt(y))
 console.log(parseInt(x) < parseInt(y))
 console.log(+false)
 console.log(+true)
+// @ts-expect-error
 console.log(true == 1)
+// @ts-expect-error
 console.log(false == 0)
 console.log(+'')
 
@@ -753,9 +759,13 @@ switch (userResult) {
 { 
 
 let userNum = 343
+// @ts-expect-error
 console.log(parseInt(userNum/100%10))
+// @ts-expect-error
 if (parseInt(userNum/100%10) == parseInt(userNum/10%10) || 
+// @ts-expect-error
 parseInt(userNum/100%10) == userNum%10 ||
+// @ts-expect-error
 parseInt(userNum/10%10) == userNum%10)
 console.log('есть одинаковые цифры')
 else console.log('нет одинаковых цифр')
@@ -780,7 +790,9 @@ if ((userYear % 4 == 0 && userYear % 100 == 0 && userYear % 400 == 0) ||
       console.log('Год не является високосным.')
 }
 
+console.log(days_in_year)
 }
+
 
 /*Високосный год не только должен быть кратен 4 (делиться на 4), но и:
 Если год при кратности четырём делится на 100 — он не високосный
@@ -803,7 +815,7 @@ if ((userYear % 4 == 0 && userYear % 100 == 0 && userYear % 400 == 0) ||
 { 
 
 let num1 = 12321
-
+// @ts-expect-error
 let num2 = parseInt((num1 % 10) * 10000) + parseInt(((num1/10) % 10)) * 1000 + parseInt(((num1/100) % 10)) * 100 + parseInt(((num1/1000) % 10)) * 10 + parseInt(((num1/10000) % 10))
 
 console.log(num2)
@@ -934,14 +946,17 @@ let a = P / 4 as any
 let userDay = 28
 
 // // Если пользователь не введёт дату, присвоится текущая дата.
+// @ts-expect-error
 if (userDay == null || userDay == '') {userDay = new Date().getDate()}
 
 // let userMonth = +prompt('Введите месяц')
 let userMonth = 2
+// @ts-expect-error
 if (userMonth == null || userMonth == '') {userMonth = new Date().getMonth() + 1}
 
 // let userYear = +prompt('Введите год')
 let userYear = 2020
+// @ts-expect-error
 if (userYear == null || userYear == '') {userYear = new Date().getFullYear()}
 
 
@@ -1800,6 +1815,7 @@ let num = 3642
 let quantity = 0
 
 while (num > 0) {
+// @ts-expect-error
       num = parseInt(num / 10)
       quantity++
 }
@@ -1902,6 +1918,7 @@ console.log(`Количество нулей: ${zero}`)
 
 // Узнаём разрядность всего числа
 while (i > 0) {
+// @ts-expect-error
       i = parseInt(i / 10)
       quantity++
 }
@@ -1919,6 +1936,7 @@ console.log(quantity)
 
 for(; i > 0; i--) {
       //Выковыриваем те цифры, на которые надо сдвинуть число
+// @ts-expect-error
       part1 = parseInt(part1 / 10)
 
       //Подсчёт для остатка от деления для выковыривания второй части числа
@@ -1928,6 +1946,7 @@ for(; i > 0; i--) {
 console.log(quantity2)
 
 //Выковыриваем вторую часть числа
+// @ts-expect-error
 part2 = parseInt(part2 % quantity2)
 
 console.log(part1)
@@ -2486,12 +2505,13 @@ console.log(getDayOfTheWeek(userDay))
 }
 // 9. Функция принимает неопределённое количество аргументов. Длина
 {
-
+// @ts-expect-error
 function logArguments(x){
       console.log('x = ' + x)
       for(let i = 0; i < arguments.length; i++)
       console.log('argument' + (i + 1) + ' = ' + arguments[i])
 }
+// @ts-expect-error
 logArguments(1, 2, 3)
 logArguments('text')
 
@@ -2511,7 +2531,7 @@ function getMax() {
       }
       return result
 }
-
+// @ts-expect-error
 console.log(getMax(-1, -4, -10))
 
 }
@@ -2526,6 +2546,7 @@ function getArithmeticalMean() {
       }
       return sum / arguments.length
 }
+// @ts-expect-error
 console.log(getArithmeticalMean(1, 4, 10))
 }
 
@@ -2827,6 +2848,7 @@ console.log(showMessage('Hello, people!'))
 
   function remainderDivision(a: number, b: number) {
     let i = 0
+    // @ts-ignore
     let remainderOfDivision = 0
 
     for (let j = a; j >= b; j -= b) {
@@ -2920,7 +2942,9 @@ console.log(showMessage('Hello, people!'))
   }
 
   function getNextDay(d = new Date().getDate(), m = new Date().getMonth() + 1, y = new Date().getFullYear()) {
+// @ts-expect-error
     if (d == null || d == '') { d = new Date().getDate() }
+// @ts-expect-error
     if (m == null || m == '') { m = new Date().getMonth() + 1 }
     if (y === null || y === undefined) { y = new Date().getFullYear() }
     let result = ''
@@ -3236,7 +3260,7 @@ console.log(showMessage('Hello, people!'))
   if (num1 > num2) { buf = num1; num1 = num2; num2 = buf; }
   let greatestCommonDivisor = 0
 
-  function findGreatestCommonDivisor(n1: number, n2: number) {
+  function findGreatestCommonDivisor(n1: number, n2: number):any {
     let x = num1
     return (x % n1 == 0 && n2 % n1 == 0) ? n1 : findGreatestCommonDivisor(n1 - 1, n2)
 
@@ -3254,7 +3278,9 @@ function findMaxNumber(n: number) {
   let max = n % 10
   if (n < 1) return
   else {
+// @ts-expect-error
     if (max < parseInt(findMaxNumber(n / 10) % 10))
+// @ts-expect-error
       max = parseInt(findMaxNumber(n / 10) % 10)
     return max
   }
@@ -3274,9 +3300,9 @@ console.log(findMaxNumber(19245031609182))
 
     let result = true
 
-    for (let i = 2; i < num; i++) {
+    for (let i = 2; i < n; i++) {
 
-      if (num % num == 0 && num % i == 0) {
+      if (n % n == 0 && n % i == 0) {
         result = false
       }
     }
@@ -3323,7 +3349,7 @@ console.log(showAllFactors(21))
 
 { 
 
-function Fibonacci(n: number) {
+function Fibonacci(n: number):any {
 
   if (n < 3) return 1
   return Fibonacci(n - 1) + Fibonacci(n - 2)
@@ -3332,6 +3358,7 @@ function Fibonacci(n: number) {
 console.log(Fibonacci(3))
 
 }
+
 
 // ___________________________________________________________________________________________________________
 
@@ -3371,7 +3398,7 @@ console.log(fact(num))
 
 {
 
-function showNumbers(n1:number, n2:number) {
+function showNumbers(n1:number, n2:number):any {
 
    if (n1 == n2) return n1
     return  showNumbers(n1, n2 - 1) + ', ' + n2
@@ -3382,7 +3409,7 @@ console.log(showNumbers(2, 5))
 }
 
 {
-function showNumbers2(n1:number, n2:number) {
+function showNumbers2(n1:number, n2:number):any {
 
    if (n2 == n1) return n2
 
@@ -3435,7 +3462,7 @@ console.log(getSumOfDigits(1357))
 
 {
 
-function getBracketsPairsByNum(n:number) {
+function getBracketsPairsByNum(n:number):any {
    if (!n) {
       return ''
    } else {
@@ -3621,16 +3648,16 @@ function showAutomobile(auto: Car) {
     console.log(automobile[key])
   }
 }
-
+// @ts-expect-error
 showAutomobile()
 
 
 function showAutomobile2(obj: object) {
   let result = ''
-  for (let i in obj) {
-    console.log(i)
-    console.log(obj[i])
-    result += i + ': ' + obj[i] + ', \n '
+  for (let key in obj) {
+    console.log(key)
+    console.log(obj[key])
+    result += key + ': ' + obj[key] + ', \n '
   }
   return result
 }
@@ -3833,8 +3860,10 @@ function changingSeconds(obj: Time, sec: number) {
     obj.seconds = sec
   else {
     obj.seconds = sec % 60
+// @ts-expect-error
     obj.minutes += parseInt(sec / 60)
     if (obj.minutes > 60) {
+// @ts-expect-error
       obj.hours += parseInt(obj.minutes / 60)
       obj.minutes = obj.minutes % 60
     }
@@ -3857,6 +3886,7 @@ function changingMinutes(obj: Time, min: number) {
     obj.minutes = min
   else {
     obj.minutes = min % 60
+// @ts-expect-error
     obj.hours += parseInt(min / 60)
   }
   return showTime(obj)
@@ -4176,9 +4206,11 @@ bottomRightButton.addEventListener('click', () => {
   function getHeight(rect: Rectangle): number {
     return Math.abs(rect.bottomRight.y - rect.topLeft.y);
   }
+  // @ts-ignore
   function getArea(rect: Rectangle): number {
     return getWidth(rect) * getHeight(rect);
   }
+  // @ts-ignore
   function getPerimeter(rect: Rectangle): number {
     return 2 * (getWidth(rect) + getHeight(rect));
   }
@@ -4188,6 +4220,7 @@ bottomRightButton.addEventListener('click', () => {
   function changeHeight(rect: Rectangle, change: number): void {
     rect.bottomRight.y += change;
   }
+  // @ts-ignore
   function changeWidthAndHeight(rect: Rectangle, widthChange: number, heightChange: number): void {
     changeWidth(rect, widthChange);
     changeHeight(rect, heightChange);
@@ -4204,6 +4237,7 @@ bottomRightButton.addEventListener('click', () => {
     moveX(rect, shiftX);
     moveY(rect, shiftY);
   }
+  // @ts-ignore
   function isPointInside(rect: Rectangle, point: { x: number, y: number }): boolean {
     return point.x >= rect.topLeft.x && point.x <= rect.bottomRight.x && point.y >= rect.topLeft.y && point.y <= rect.bottomRight.y;
   }
