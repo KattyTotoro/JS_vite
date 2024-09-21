@@ -30,56 +30,84 @@
       
     } */
 
+    #field {
+        overflow: hidden;
+        width: 200px;
+        height: 150px;
+        border-top: 10px solid black;
+        border-right: 10px solid gray;
+        border-bottom: 10px solid gray;
+        border-left: 10px solid black;
+        background-color: #00FF00;
+        font: 10px/1.2 monospace;
+      }
+
     #canvas {
-      height: 400px;
-      width: 800px;
-      position: relative;
-    }
+        height: 400px;
+        width: 800px;
+        position: relative;
+      }
 
-    #rect {
-      position: absolute;
-      background-color: blueviolet;
-      transition: 1s;
-    }
+      #rect {
+        position: absolute;
+        background-color: blueviolet;
+        transition: 1s;
+      }
 
-    .numpad {
-      display: grid;
-      grid-template-columns: 50px 50px 50px;
-      grid-template-rows: 50px 50px 50px 50px 50px 50px;
-      gap: 10px;
-      user-select: none;
-      transition: background-color 1s;
-    }
+      .ball[data-draggable] {
+        background-color: blueviolet;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
 
-    .numpad div {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+      .numpad {
+        display: grid;
+        grid-template-columns: 50px 50px 50px;
+        grid-template-rows: 50px 50px 50px 50px 50px 50px;
+        gap: 10px;
+        user-select: none;
+        transition: background-color 1s;
+      }
+      .numpad div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .numpad div div {
+        width: 18;
+      } 
 
-    .numpad div div {
-      width: 18px;
-    }
+      .button {
+        border-radius: 10px;
+        border: 1px black solid;
+        transition: 0.1s;
+      }
 
-    .button {
-      border-radius: 10px;
-      border: 1px black solid;
-      transition: 0.1s;
-    }
+      .button:hover {
+        background-color: rgb(187, 193, 193);
+        transition: 0.1s;
+      }
 
-    .button:hover {
-      background: rgb(194, 231, 189);
-      filter: grayscale(0.2);
-      border: 1px rgb(46, 168, 93) solid;
-      transition: 0.1s;
-    }
+      .button:active {
+        background-color: rgb(88, 105, 113);
+        transition: 0.1s;
+      }
 
-    .button:active {
-      background: rgb(110, 181, 92);
-      filter: grayscale(0.6);
-      border: 1px rgb(203, 209, 28) solid;
-      transition: 0.1s;
-    }
+     .circle {
+        transition-property: width, height;
+        /* transition-duration: .2s; */
+        position: fixed;
+        transform: translateX(-50%) translateY(-50%);
+        background-color: red;
+        border-radius: 50%;
+      }
+      .message-ball {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
 
     .div4 {
       width: 300px;
@@ -97,6 +125,9 @@
   </style>
 </head>
 
+
+
+
 <body>
   <script type="module" src="/src/main.ts"></script>
   <div style="padding: 20px;"><a href="idbm.html"><b>page2 idbm</b></a></div>
@@ -111,50 +142,36 @@
   </script>
 
 
-  <div style="display: flex;" hidden>
-    <div id="canvas">
-      <div id="rect" style="top: 0; left:0">
+<div style="display: flex;" hidden>
+  <div id="canvas">
+    <div id="rect" style="top: 0; left:0">
 
-      </div>
-    </div>
-    <div data-draggable class="numpad">
-      <div class="button" id="topLeft">
-        <div style="transform: rotate(-135deg); position: relative;">-&gt;</div>
-      </div>
-      <div class="button" id="top">
-        <div style="transform: rotate(-90deg);">-&gt;</div>
-      </div>
-      <div class="button" id="topRight">
-        <div style="transform: rotate(-45deg);">-&gt;</div>
-      </div>
-      <div class="button" id="left">&lt;-</div>
-      <div></div>
-      <div class="button" id="right">-&gt;</div>
-      <div class="button" id="bottomLeft">
-        <div style="transform: rotate(135deg); position: relative;">-&gt;</div>
-      </div>
-      <div class="button" id="bottom">
-        <div style="transform: rotate(90deg);">-&gt;</div>
-      </div>
-      <div class="button" id="bottomRight">
-        <div style="transform: rotate(45deg);">-&gt;</div>
-      </div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div class="button" id="addHeight">
-        <div style="transform: rotate(-90deg); position: relative;">&lt;-&gt;</div>
-      </div>
-      <div></div>
-      <div class="button" id="addWidth">&lt;-&gt;</div>
-      <div class="button" id="reduceHeight">
-        <div style="transform: rotate(-90deg); position: relative;">&gt;-&lt;</div>
-      </div>
-      <div></div>
-      <div class="button" id="reduceWidth">&gt;-&lt;</div>
     </div>
   </div>
-  <div id="app"></div>
+  <div  data-draggable class="numpad">
+    <div class="button" id="topLeft"><div style="transform: rotate(-135deg); position: relative;">-&gt;</div></div>
+    <div class="button" id="top"><div style="transform: rotate(-90deg);">-&gt;</div></div>
+    <div class="button" id="topRight"><div style="transform: rotate(-45deg);">-&gt;</div></div>
+    <div class="button" id="left">&lt;-</div>
+    <div></div>
+    <div class="button" id="right">-&gt;</div>
+    <div class="button" id="bottomLeft"><div style="transform: rotate(135deg); position: relative;">-&gt;</div></div>
+    <div class="button" id="bottom"><div style="transform: rotate(90deg);">-&gt;</div></div>
+    <div class="button" id="bottomRight"><div style="transform: rotate(45deg);">-&gt;</div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="button" id="addHeight"><div style="transform: rotate(-90deg); position: relative;">&lt;-&gt;</div></div>
+    <div></div>
+    <div class="button" id="addWidth">&lt;-&gt;</div>
+    <div class="button" id="reduceHeight"><div style="transform: rotate(-90deg); position: relative;">&gt;-&lt;</div></div>
+    <div></div>
+    <div class="button" id="reduceWidth">&gt;-&lt;</div>
+  </div>
+</div>
+
+
+  <!-- <div id="app"></div> -->
 
 
   <input type="button" id="hider" value="Нажмите, чтобы спрятать текст" />
@@ -211,6 +228,8 @@
   </div>
   <div id="Primer2">
     <p>2. Привет, пользователь.</p>
+  </div>
+  <div id="Primer3">
   </div>
 
   <div style="background: url(images/bg1.jpg) center/cover no-repeat; height: 800px; color: white;">
