@@ -94,80 +94,79 @@ import axios from 'axios'
 
 /*8. Пользователь вводит сумму денег в кошельке и цену одной шоколадки. 
    Программа выводит сколько шоколадок может купить пользователь и сколько сдачи у него останется.*/
+{
+let sum = 160
+let price = 30
 
-// let sum = 160
-// let price = 30
+let numberOfChocolates = parseInt(sum / price)
+console.log('Количество шоколдано, которое Вы можете купить', numberOfChocolates)
 
-// let numberOfChocolates = parseInt(sum / price)
-// console.log('Количество шоколдано, которое Вы можете купить', numberOfChocolates)
-
-// let residualAmount = sum - (price * numberOfChocolates)
-// console.log('Остаток денег:', residualAmount)
-
+let residualAmount = sum - (price * numberOfChocolates)
+console.log('Остаток денег:', residualAmount)
+}
 
 // // Вариант 2.
+{
+let sum2 = 160
+let price2 = 30
 
-// let sum2 = 160
-// let price2 = 30
+let numberOfChocolates2 = parseInt(sum2 / price2)
+console.log('Количество шоколдано, которое Вы можете купить', numberOfChocolates2)
 
-// let numberOfChocolates2 = parseInt(sum2 / price2)
-// console.log('Количество шоколдано, которое Вы можете купить', numberOfChocolates2)
-
-// let residualAmount2 = parseInt(sum2 % price2)
-// console.log('Остаток денег:', residualAmount2)
-
+let residualAmount2 = parseInt(sum2 % price2)
+console.log('Остаток денег:', residualAmount2)
+}
 
 
 /*9. Запросите у пользователя трехзначное число и выведите его задом наперед. 
       Для решения задачи вам понадобится оператор % (остаток от деления).*/
+{
+let num1 = 749
 
-// let num1 = 749
+let num2 = parseInt((num1 % 10) * 100) + parseInt(((num1/10) % 10)) * 10 + parseInt(((num1/100) % 10))
 
-// let num2 = parseInt((num1 % 10) * 100) + parseInt(((num1/10) % 10)) * 10 + parseInt(((num1/100) % 10))
-
-// console.log(num2)
-
-
+console.log(num2)
+}
 
 /*10. Запросите у пользователя целое число и выведите в ответ, четное число или нет. 
         В задании используйте логические операторы. В задании не надо использовать if или switch.*/
 
-
-//   let num = 11
-//   let parity = num % 2 == 0 ? 'even' : 'odd'
-//   console.log(parity)
-
-
-//   let num = 11
-//   let parity = (num % 2 == 0) ? 'even' : 'odd'
-//   console.log(parity)
-
+{
+  let num = 11
+  let parity = num % 2 == 0 ? 'even' : 'odd'
+  console.log(parity)
+}
+{
+  let num = 11
+  let parity = (num % 2 == 0) ? 'even' : 'odd'
+  console.log(parity)
+}
 
 //   Вариант 2
+{
+let num = 12
 
-// let num = 12
-
-// if (num % 2 == 0) {
-//   console.log('Число', num, 'чётное')
-// } else console.log('Число', num, 'не чётное')
-
+if (num % 2 == 0) {
+  console.log('Число', num, 'чётное')
+} else console.log('Число', num, 'не чётное')
+}
 // Вариант 3
+{
+let num = 13
 
-// let num = 13
+switch (num % 2) {
+  case 0:
+    console.log('Число', num, 'чётное')                  
+    break;
 
-// switch (num % 2) {
-//   case 0:
-//     console.log('Число', num, 'чётное')                  
-//     break;
+  case 1:
+    console.log('Число', num, 'не чётное')                  
+    break;
 
-//   case 1:
-//     console.log('Число', num, 'не чётное')                  
-//     break;
-
-//   default:
-//     break;
-// }
-
+  default:
+    break;
+}
+}
 
 // ___________________________________________________________________________________________________________
 
@@ -499,82 +498,88 @@ import axios from 'axios'
 
 
 // 5.
-// let x = '10px'
-// let y = '3px'
-// console.log(x > y)
-// console.log(x < y)
-// console.log(+x > +y)
-// console.log(+x < +y)
-// console.log(parseInt(x) > parseInt(y))
-// console.log(parseInt(x) < parseInt(y))
-// console.log(+false)
-// console.log(+true)
-// console.log(true == 1)
-// console.log(false == 0)
-// console.log(+'')
-// // Все значения, которы станут false при преобразовании в булев тип
-// console.log(Boolean(''))
-// console.log(Boolean(0))
-// console.log(Boolean(undefined))
-// console.log(Boolean(null))
-// console.log(Boolean(NaN))
-// console.log(Boolean(false))
+{ 
+let x = '10px'
+let y = '3px'
+console.log(x > y)
+console.log(x < y)
+console.log(+x > +y)
+console.log(+x < +y)
+console.log(parseInt(x) > parseInt(y))
+console.log(parseInt(x) < parseInt(y))
+console.log(+false)
+console.log(+true)
+console.log(true == 1)
+console.log(false == 0)
+console.log(+'')
 
-// console.log(Boolean(5))
-// console.log(Boolean(-5))
+// Все значения, которы станут false при преобразовании в булев тип
+console.log(Boolean(''))
+console.log(Boolean(0))
+console.log(Boolean(undefined))
+console.log(Boolean(null))
+console.log(Boolean(NaN))
+console.log(Boolean(false))
 
-// console.log(isNaN(NaN))
-// console.log(isNaN(1))
+console.log(Boolean(5))
+console.log(Boolean(-5))
+
+console.log(isNaN(NaN))
+console.log(isNaN(1))
 
 
-// let rezult = x > y
-// console.log(rezult)
-// rezult = x < y
-// console.log(rezult)
-// rezult = 5 < 7
-// console.log(rezult)
-// rezult = 15 < 7
-// console.log(rezult)
-// console.log('Я' > 'А')
-// console.log('я' > 'Я')
-// console.log('z' > 'Z')
+let rezult = x > y
+console.log(rezult)
+rezult = x < y
+console.log(rezult)
+rezult = 5 < 7
+console.log(rezult)
+rezult = 15 < 7
+console.log(rezult)
+console.log('Я' > 'А')
+console.log('я' > 'Я')
+console.log('z' > 'Z')
 
-// console.log(null === undefined)
-// console.log(null == undefined)
-// console.log(null == null)
-// console.log(undefined == undefined)
-
+console.log(null === undefined)
+console.log(null == undefined)
+console.log(null == null)
+console.log(undefined == undefined)
+}
 
 // 6.
-// console.log(typeof '1')
-// console.log(typeof 1)
-// console.log(typeof (1))
-// console.log(typeof typeof 1)
-// console.log(typeof typeof '1')
-// console.log(typeof 1 == 'number')
-// console.log(typeof 1 == 'string')
-// console.log(typeof true)
-// console.log(typeof null)
-// console.log(typeof(1+'true'))
-// console.log(typeof('1'+2))
-// console.log(typeof('1'+false))
+{ 
+console.log(typeof '1')
+console.log(typeof 1)
+console.log(typeof (1))
+console.log(typeof typeof 1)
+console.log(typeof typeof '1')
+console.log(typeof 1 == 'number')
+console.log(typeof 1 == 'string')
+console.log(typeof true)
+console.log(typeof null)
+console.log(typeof(1+'true'))
+console.log(typeof('1'+2))
+console.log(typeof('1'+false))
 
-// let y
-// console.log(typeof y == 'undefined')
-// let x = null
-// console.log(typeof x)
-// console.log(x === null)
+let y
+console.log(typeof y == 'undefined')
+let x = null
+console.log(typeof x)
+console.log(x === null)
+
+}
 
 // 7. 
-// let x = -1
-// if(x < 0)
-//  x = -x;
-// console.log(x)
+{
+let x = -1
+if(x < 0)
+ x = -x;
+console.log(x)
 
-// let z
-// if (typeof z == 'undefined') z = 0;
-// console.log(z)
-
+let z
+if (typeof z == 'undefined') z = 0;
+console.log(z)
+}
 // 8.
 // let x = confirm('Подтвердите своё согласие на отбор Вашего печенья.')
 // let result = ''
@@ -595,44 +600,46 @@ import axios from 'axios'
 // console.log(result)
 
 // 9.
-// let x = Math.random()
-// console.log(x)
-// let z = Date()
-// console.log(z)
-
+{
+let x = Math.random()
+console.log(x)
+let z = Date()
+console.log(z)
+}
 // 10.
-// let aStr = ''
-// let bStr = 'Default'
+{ 
+let aStr = ''
+let bStr = 'Default'
 
-// aStr ||= bStr
-// console.log(aStr)
-// aStr = aStr ? aStr : bStr
-// console.log(aStr)
+aStr ||= bStr
+console.log(aStr)
+aStr = aStr ? aStr : bStr
+console.log(aStr)
 
-// aStr = 'Hello'
+aStr = 'Hello'
 
-// aStr &&= aStr + ' user'
-// aStr = aStr ? aStr + '!' : aStr
-// console.log(aStr)
+aStr &&= aStr + ' user'
+aStr = aStr ? aStr + '!' : aStr
+console.log(aStr)
 
-// console.log(true || true)   
-// console.log(false || true)  
-// console.log(true || false)  
-// console.log(false || false)
+console.log(true || true)   
+console.log(false || true)  
+console.log(true || false)  
+console.log(false || false)
 
-// console.log(true && true)
-// console.log(false && true)
-// console.log(true && false)
-// console.log(false && false)
+console.log(true && true)
+console.log(false && true)
+console.log(true && false)
+console.log(false && false)
 
-// console.log(!false)
-// console.log(!true)
-// console.log(!0)
-// console.log(!1)
-// console.log(!!0)
-// console.log(!!1)
+console.log(!false)
+console.log(!true)
+console.log(!0)
+console.log(!1)
+console.log(!!0)
+console.log(!!1)
 
-
+}
 
 
 // ___________________________________________________________________________________________________________
@@ -660,108 +667,120 @@ import axios from 'axios'
 
 /* 1. Запросить у пользователя его возраст и определить, кем он является: 
       ребенком (0–2), подростком (12–18), взрослым (18_60) или пенсионером (60– ...).*/
+{
+let userAge = 17
 
-// let userAge = 17
+if (userAge >= 0 && userAge <= 2) {
+   console.log('Пользователь - ребёнок от 0 до 2 лет')
+} else if (userAge > 2 && userAge < 12) {
+   console.log('Пользователь - ребёнок от 3 до 11 лет')
+} else if (userAge >= 12 && userAge < 18) {
+   console.log('Пользователь - подросток')
+}  else if (userAge >= 18 && userAge <= 60) {
+   console.log('Пользователь - взрослый')
+}  else if (userAge < 0) {
+   console.log('Введены некорректные данные')
+} else console.log('Пользователь - пенсионер')
 
-// if (userAge >= 0 && userAge <= 2) {
-//    console.log('Пользователь - ребёнок от 0 до 2 лет')
-// } else if (userAge > 2 && userAge < 12) {
-//    console.log('Пользователь - ребёнок от 3 до 11 лет')
-// } else if (userAge >= 12 && userAge < 18) {
-//    console.log('Пользователь - подросток')
-// }  else if (userAge >= 18 && userAge <= 60) {
-//    console.log('Пользователь - взрослый')
-// }  else if (userAge < 0) {
-//    console.log('Введены некорректные данные')
-// } else console.log('Пользователь - пенсионер')
-
-// console.log(typeof userAge)
-// console.log(typeof userAge == 'undefined')
-// console.log(typeof userAge == 'number')
-// console.log(typeof userAge == 'string')
-
+console.log(typeof userAge)
+console.log(typeof userAge == 'undefined')
+console.log(typeof userAge == 'number')
+console.log(typeof userAge == 'string')
+}
 
 
 /* 2. Запросить у пользователя число от 0 до 9 и вывести ему спецсимвол, 
       который расположен на этой клавише (1–!, 2–@, 3–# и т. д).*/
+{ 
 
-// let userResult = '1'
 
-// switch (userResult) {
+let userResult = '1'
 
-//   case '1':
-//     console.log('!')            
-//     break;
+switch (userResult) {
 
-//   case '2':
-//     console.log('@')            
-//     break;
+  case '1':
+    console.log('!')            
+    break;
 
-//   case '3':
-//     console.log('#')            
-//     break;
+  case '2':
+    console.log('@')            
+    break;
 
-//   case '4':
-//     console.log('$')            
-//     break;
+  case '3':
+    console.log('#')            
+    break;
 
-//   case '5':
-//     console.log('%')            
-//     break;
+  case '4':
+    console.log('$')            
+    break;
 
-//   case '6':
-//     console.log('^')            
-//     break;
+  case '5':
+    console.log('%')            
+    break;
 
-//   case '7':
-//     console.log('&')            
-//     break;
+  case '6':
+    console.log('^')            
+    break;
 
-//   case '8':
-//     console.log('*')            
-//     break;
+  case '7':
+    console.log('&')            
+    break;
 
-//   case '9':
-//     console.log('(')            
-//     break;
+  case '8':
+    console.log('*')            
+    break;
 
-//   case '0':
-//     console.log(')')            
-//     break;
+  case '9':
+    console.log('(')            
+    break;
 
-//   default:
-//     break;
-// }
+  case '0':
+    console.log(')')            
+    break;
+
+  default:
+    break;
+}
+
+
+}
+
 
 
 //  3. Запросить у пользователя трехзначное и число и проверить, 
 //       есть ли в нем одинаковые цифры.
 
-// let userNum = 345
-// console.log(parseInt(userNum/100%10))
-// if (parseInt(userNum/100%10) == parseInt(userNum/10%10) || 
-// parseInt(userNum/100%10) == userNum%10 ||
-// parseInt(userNum/10%10) == userNum%10)
-// console.log('есть одинаковые цифры')
+{ 
 
+let userNum = 343
+console.log(parseInt(userNum/100%10))
+if (parseInt(userNum/100%10) == parseInt(userNum/10%10) || 
+parseInt(userNum/100%10) == userNum%10 ||
+parseInt(userNum/10%10) == userNum%10)
+console.log('есть одинаковые цифры')
+else console.log('нет одинаковых цифр')
 
+}
 
 
 //    4. Запросить у пользователя год и проверить, високосный он или нет. 
 //      Високосный год либо кратен 400, либо кратен 4 и при этом не кратен 100.
 
-// let userYear = 2020
-// let days_in_year = 0
+{ 
 
-// if ((userYear % 4 == 0 && userYear % 100 == 0 && userYear % 400 == 0) || 
-//     (userYear % 4 == 0 && userYear % 100 != 0 && userYear % 400 != 0)) { 
-//       days_in_year = 366
-//       console.log('Год является високосным.')
-// } else { 
-//       days_in_year = 365
-//       console.log('Год не является високосным.')
-// }
+let userYear = 2020
+let days_in_year = 0
 
+if ((userYear % 4 == 0 && userYear % 100 == 0 && userYear % 400 == 0) || 
+    (userYear % 4 == 0 && userYear % 100 != 0 && userYear % 400 != 0)) { 
+      days_in_year = 366
+      console.log('Год является високосным.')
+} else { 
+      days_in_year = 365
+      console.log('Год не является високосным.')
+}
+
+}
 
 /*Високосный год не только должен быть кратен 4 (делиться на 4), но и:
 Если год при кратности четырём делится на 100 — он не високосный
@@ -781,69 +800,76 @@ import axios from 'axios'
 
 //  5. Запросить у пользователя пятиразрядное число и определить, является ли оно палиндромом.
 
-// let num1 = 12321
+{ 
 
-// let num2 = parseInt((num1 % 10) * 10000) + parseInt(((num1/10) % 10)) * 1000 + parseInt(((num1/100) % 10)) * 100 + parseInt(((num1/1000) % 10)) * 10 + parseInt(((num1/10000) % 10))
+let num1 = 12321
 
-// console.log(num2)
+let num2 = parseInt((num1 % 10) * 10000) + parseInt(((num1/10) % 10)) * 1000 + parseInt(((num1/100) % 10)) * 100 + parseInt(((num1/1000) % 10)) * 10 + parseInt(((num1/10000) % 10))
 
-// num1 == num2 ? console.log('Число является палиндромом') : console.log('Число НЕ является палиндромом')
+console.log(num2)
 
+num1 == num2 ? console.log('Число является палиндромом') : console.log('Число НЕ является палиндромом')
 
+}
 
 
 //  6. Написать конвертор валют. Пользователь вводит количество USD, выбирает, в какую валюту хочет перевести: EUR, 
 //  UAN или AZN, и получает в ответ соответствующую сумму.
 
-// const dollarsToEUR = 1.09
-// const dollarsToUAN = 0.14
-// const dollarsToAZN = 0.59
+{ 
 
-// let userUSD = 10
-// let userSelection = 'AZN'
-// let result = 0
+const dollarsToEUR = 1.09
+const dollarsToUAN = 0.14
+const dollarsToAZN = 0.59
 
-// switch (userSelection) {
-//    case 'EUR':
-//       result = userUSD / dollarsToEUR
-//       break;
-//    case 'UAN':
-//       result = userUSD / dollarsToUAN
-//       break;
-//    case 'AZN':
-//       result = userUSD / dollarsToAZN
-//       break;
+let userUSD = 10
+let userSelection = 'AZN'
+let result = 0
 
-//    default:
-//       break;
-// }
+switch (userSelection) {
+   case 'EUR':
+      result = userUSD / dollarsToEUR
+      break;
+   case 'UAN':
+      result = userUSD / dollarsToUAN
+      break;
+   case 'AZN':
+      result = userUSD / dollarsToAZN
+      break;
 
-// console.log(result)
+   default:
+      break;
+}
 
+console.log(result)
+
+}
 
 
 //  7. Запросить у пользователя сумму покупки и вывести сумму к оплате со скидкой: от 200 до 300 – скидка будет 3%, 
 //     от 300 до 500 – 5%, от 500 и выше – 7%. 
 
+{ 
+
 // Сумма покупки пользователя
-// let userAmountOfCost = 400
+let userAmountOfCost = 400
 
 // Сумма к оплате
-// let amountToBePaid = 0
+let amountToBePaid = 0
 
-// if (userAmountOfCost >= 200 && userAmountOfCost < 300) {
-//       amountToBePaid = userAmountOfCost - (userAmountOfCost * 0.03)
-// } else if (userAmountOfCost >= 300 && userAmountOfCost < 500) {
-//       amountToBePaid = userAmountOfCost - (userAmountOfCost * 0.05)
-// } else if (userAmountOfCost >= 500) {
-//       amountToBePaid = userAmountOfCost - (userAmountOfCost * 0.07)
-// } else {
-//       amountToBePaid = userAmountOfCost
-// }
+if (userAmountOfCost >= 200 && userAmountOfCost < 300) {
+      amountToBePaid = userAmountOfCost - (userAmountOfCost * 0.03)
+} else if (userAmountOfCost >= 300 && userAmountOfCost < 500) {
+      amountToBePaid = userAmountOfCost - (userAmountOfCost * 0.05)
+} else if (userAmountOfCost >= 500) {
+      amountToBePaid = userAmountOfCost - (userAmountOfCost * 0.07)
+} else {
+      amountToBePaid = userAmountOfCost
+}
 
-// console.log(amountToBePaid)
+console.log(amountToBePaid)
 
-
+}
 
 
 
@@ -852,21 +878,23 @@ import axios from 'axios'
 // Если диаметр окружности равен или меньше стороны квадрата, тогда поместится
 
 
-// const PI = 3.14
+const PI = 3.14
 
 // let C = +prompt('Введите длину окружности', 12)
 // let P = +prompt('Введите периметр квадрата', 12)
+let C = 20
+let P = 12
 
 // // Если пользоавтель ввёл отрицательное  число
-// if(C < 0) C *= -1
-// if(P < 0) P *= -1
+if(C < 0) C *= -1
+if(P < 0) P *= -1
 
 // //Вычисление диаметра
-// let D = C / PI
+let D = C / PI
 // //Вычисление стороны квадрата
-// let a = P / 4 as any
+let a = P / 4 as any
 
-// (D <= a) ? console.log('Окружность поместилась в квадрат') : console.log('Окружность НЕ поместилась в квадрат')
+(D <= a) ? console.log('Окружность поместилась в квадрат') : console.log('Окружность НЕ поместилась в квадрат')
 
 
 
@@ -899,105 +927,111 @@ import axios from 'axios'
 // 10. Запросить дату (день, месяц, год) и вывести следующую за ней дату. 
 //     Учтите возможность перехода на следующий месяц, год, а также високосный год. 
 
+{ 
+
 // Переменные для пользовательского ввода: день, месяц, год
 // let userDay = +prompt('Введите день')
+let userDay = 28
 
 // // Если пользователь не введёт дату, присвоится текущая дата.
-// if (userDay == null || userDay == '') {userDay = new Date().getDate()}
+if (userDay == null || userDay == '') {userDay = new Date().getDate()}
 
 // let userMonth = +prompt('Введите месяц')
-// if (userMonth == null || userMonth == '') {userMonth = new Date().getMonth() + 1}
+let userMonth = 2
+if (userMonth == null || userMonth == '') {userMonth = new Date().getMonth() + 1}
 
 // let userYear = +prompt('Введите год')
-// if (userYear == null || userYear == '') {userYear = new Date().getFullYear()}
+let userYear = 2020
+if (userYear == null || userYear == '') {userYear = new Date().getFullYear()}
 
 
-// // Условие, если пользователь введёт существующий месяц
-// if(userMonth >= 1 && userMonth <= 12) {
-      
-//       // Условие для месяцев с количеством дней: 30
-//       if(userMonth == 4 || userMonth == 6 || userMonth == 9 || userMonth == 11) {
+// Условие, если пользователь введёт существующий месяц
+if(userMonth >= 1 && userMonth <= 12) {
 
-//             if(userDay >= 1 && userDay <= 29) {  
-//                   userDay ++
-//             } else if(userDay == 30) {
-//                   userDay = 1
-//                   userMonth++
-//             } else {   // Условие, если пользователь введёт несуществующую дату
-//                   console.log("Некорректная дата")
-//                   alert("Некорректная дата")                  
-//             }
+      // Условие для месяцев с количеством дней: 30
+      if(userMonth == 4 || userMonth == 6 || userMonth == 9 || userMonth == 11) {
 
-//       // Условие для февраля
-//       } else if(userMonth == 2) {
-            
-//             // Условие для февраля, если год является високосным
-//             if((userYear % 4 == 0 && userYear % 100 == 0 && userYear % 400 == 0) || 
-//             (userYear % 4 == 0 && userYear % 100 != 0 && userYear % 400 != 0)) {
+            if(userDay >= 1 && userDay <= 29) {  
+                  userDay ++
+            } else if(userDay == 30) {
+                  userDay = 1
+                  userMonth++
+            } else {   // Условие, если пользователь введёт несуществующую дату
+                  console.log("Некорректная дата")
+                  alert("Некорректная дата")                  
+            }
 
-//                   if(userDay >= 1 && userDay <= 28) {
-//                         userDay++
-//                   } else if(userDay == 29) {
-//                         userDay = 1
-//                         userMonth++
-//                   } else { // Условие, если пользователь введёт несуществующую дату
-//                         console.log("Некорректная дата")
-//                         alert("Некорректная дата")                       
-//                   }
+      // Условие для февраля
+      } else if(userMonth == 2) {
 
-//             // Условие для февраля, если год НЕ является високосным
-//             } else {
+            // Условие для февраля, если год является високосным
+            if((userYear % 4 == 0 && userYear % 100 == 0 && userYear % 400 == 0) || 
+            (userYear % 4 == 0 && userYear % 100 != 0 && userYear % 400 != 0)) {
 
-//                   if(userDay >= 1 && userDay <= 27) {
-//                         userDay++
-//                   } else if(userDay == 28) {
-//                         userDay = 1
-//                         userMonth++
-//                   } else { // Условие, если пользователь введёт несуществующую дату
-//                         console.log("Некорректная дата")
-//                         alert("Некорректная дата")                        
-//                   }
-//             }
+                  if(userDay >= 1 && userDay <= 28) {
+                        userDay++
+                  } else if(userDay == 29) {
+                        userDay = 1
+                        userMonth++
+                  } else { // Условие, если пользователь введёт несуществующую дату
+                        console.log("Некорректная дата")
+                        alert("Некорректная дата")                       
+                  }
 
-//       // Условие для декабря, переход на следующий год
-//       } else if(userMonth == 12) {
+            // Условие для февраля, если год НЕ является високосным
+            } else {
 
-//                   if(userDay >= 1 && userDay <= 30) {  
-//                         userDay ++
-//                   } else if(userDay == 31) {
-//                         userDay = 1
-//                         userMonth = 1
-//                         userYear++
-//                   } else { // Условие, если пользователь введёт несуществующую дату
-//                         console.log("Некорректная дата")
-//                         alert("Некорректная дата")                       
-//                   }
+                  if(userDay >= 1 && userDay <= 27) {
+                        userDay++
+                  } else if(userDay == 28) {
+                        userDay = 1
+                        userMonth++
+                  } else { // Условие, если пользователь введёт несуществующую дату
+                        console.log("Некорректная дата")
+                        alert("Некорректная дата")                        
+                  }
+            }
 
-//       // Условие для месяцев с количеством дней: 31
-//       } else {
+      // Условие для декабря, переход на следующий год
+      } else if(userMonth == 12) {
 
-//                   if(userDay >= 1 && userDay <= 30) {  
-//                         userDay ++
-//                   } else if(userDay == 31) {
-//                         userDay = 1
-//                         userMonth++
-//                   } else { // Условие, если пользователь введёт несуществующую дату
-//                         console.log("Некорректная дата")
-//                         alert("Некорректная дата")
-//                   }
-//             }
-      
-// // Условие, если пользователь введёт НЕсуществующий месяц
-// } else {
-//       console.log("Некорректная дата")
-//       alert("Некорректная дата")
-// }
+                  if(userDay >= 1 && userDay <= 30) {  
+                        userDay ++
+                  } else if(userDay == 31) {
+                        userDay = 1
+                        userMonth = 1
+                        userYear++
+                  } else { // Условие, если пользователь введёт несуществующую дату
+                        console.log("Некорректная дата")
+                        alert("Некорректная дата")                       
+                  }
 
-// console.log(userDay, userMonth, userYear)
-// // Вывод результата
+      // Условие для месяцев с количеством дней: 31
+      } else {
+
+                  if(userDay >= 1 && userDay <= 30) {  
+                        userDay ++
+                  } else if(userDay == 31) {
+                        userDay = 1
+                        userMonth++
+                  } else { // Условие, если пользователь введёт несуществующую дату
+                        console.log("Некорректная дата")
+                        alert("Некорректная дата")
+                  }
+            }
+
+// Условие, если пользователь введёт НЕсуществующий месяц
+} else {
+      console.log("Некорректная дата")
+      alert("Некорректная дата")
+}
+
+console.log(userDay, userMonth, userYear)
+// Вывод результата
 // alert(`${userDay >= 10 ? userDay : '0' + userDay}.${userMonth >= 10 ? userMonth : '0' + userMonth}.${userYear}`)
+console.log(`${userDay >= 10 ? userDay : '0' + userDay}.${userMonth >= 10 ? userMonth : '0' + userMonth}.${userYear}`)
 
-
+}
 
 // ___________________________________________________________________________________________________________
 
@@ -1054,78 +1088,78 @@ import axios from 'axios'
 /*  ■ Задания, в которых необходимо использовать IF.*/
 
 /*  1. Запросить у пользователя число и определить, оно положительное, отрицательное или ноль.*/
+{ 
+let num = -85
 
-// let num = -85
-
-// if (num > 0) {
-//    console.log('Число', num, 'положительное')
-// } else if (num < 0) {
-//    console.log('Число', num, 'отрицательное')
-// } else console.log('Введённое число: ', num)
-
+if (num > 0) {
+   console.log('Число', num, 'положительное')
+} else if (num < 0) {
+   console.log('Число', num, 'отрицательное')
+} else console.log('Введённое число: ', num)
+}
 
 /*  2. Запросить у пользователя его возраст и проверить корректность введенных данных (0–120 лет).*/
+{
+let userAge = 100500
 
-// let userAge = 100500
-
-// if (userAge > 0 && userAge < 100) {
-//    console.log('Ваш возраст в годах:', userAge)
-// } else if (userAge >= 100 && userAge <= 120) {
-//    console.log('Вы - долгожитель. Ваш возраст в годах:', userAge)
-// } else if (userAge > 120) {
-//    console.log('Вы - Горец. Ваш возраст в годах:', userAge)
-// } else if (userAge == 0) {
-//    console.log('Вы младенец')
-// } else console.log('Вы ещё не родились')
-
+if (userAge > 0 && userAge < 100) {
+   console.log('Ваш возраст в годах:', userAge)
+} else if (userAge >= 100 && userAge <= 120) {
+   console.log('Вы - долгожитель. Ваш возраст в годах:', userAge)
+} else if (userAge > 120) {
+   console.log('Вы - Горец. Ваш возраст в годах:', userAge)
+} else if (userAge == 0) {
+   console.log('Вы младенец')
+} else console.log('Вы ещё не родились')
+}
 
 
 //   3. Запросить у пользователя число и вывести его модуль (|7| = 7, |-7| = 7).
+{
+let num = -5
 
-// let num = -5
-
-// if (num < 0) {
-//   num *= -1
-// } 
-// console.log(num)
-
+if (num < 0) {
+  num *= -1
+} 
+console.log(num)
+}
 
 
 // 4. Запросить у пользователя время (часы, минуты, секунды) и проверить корректность введенных данных.
+{
+let userHours = 28
+let userMinutes = -20
+let userSeconds = 330
 
-// let userHours = 28
-// let userMinutes = -20
-// let userSeconds = 330
+if (userHours > 24 || userHours < 0 
+   || userMinutes > 60 || userMinutes < 0 
+   || userSeconds > 60 || userSeconds < 0) {
+   console.log('Вы ввели некорректные данные')
+}
 
-// if (userHours > 24 || userHours < 0 
-//    || userMinutes > 60 || userMinutes < 0 
-//    || userSeconds > 60 || userSeconds < 0) {
-//    console.log('Вы ввели некорректные данные')
-// }
-
-// if (userHours > 24 || userHours < 0)
-// console.log('Количество часов должно быть в диапазоне от 0 до 24')
-// if (userMinutes > 60 || userMinutes < 0)
-// console.log('Количество минут должно быть в диапазоне от 0 до 60')
-// if (userSeconds > 60 || userSeconds < 0)
-// console.log('Количество секунд должно быть в диапазоне от 0 до 60')
-
+if (userHours > 24 || userHours < 0)
+console.log('Количество часов должно быть в диапазоне от 0 до 24')
+if (userMinutes > 60 || userMinutes < 0)
+console.log('Количество минут должно быть в диапазоне от 0 до 60')
+if (userSeconds > 60 || userSeconds < 0)
+console.log('Количество секунд должно быть в диапазоне от 0 до 60')
+}
 
 
 /*   5. Запросить координаты точки (x, y) и определить номер четверти, в которую попала эта точка. 
         Необходимо учесть случаи попадания точки на оси X или Y или в начало координат.*/
+{
+  let dotX = 8
+  let dotY = -1
 
-//   let dotX = 8
-//   let dotY = -1
-
-//   if (dotX == 0 && dotY == 0) console.log('Точка - в начале координат')
-//   if (dotX == 0 && dotY != 0) console.log('Точка - на оси Y')
-//   if (dotX != 0 && dotY == 0) console.log('Точка - на оси X')
-//   if (dotX > 0 && dotY > 0) console.log('Точка - в I четверти')
-//   if (dotX < 0 && dotY > 0) console.log('Точка - в II четверти')
-//   if (dotX < 0 && dotY < 0) console.log('Точка - в III четверти')
-//   if (dotX > 0 && dotY < 0) console.log('Точка - в IV четверти')
-
+  if (dotX == 0 && dotY == 0) console.log('Точка - в начале координат')
+  if (dotX == 0 && dotY != 0) console.log('Точка - на оси Y')
+  if (dotX != 0 && dotY == 0) console.log('Точка - на оси X')
+  if (dotX > 0 && dotY > 0) console.log('Точка - в I четверти')
+  if (dotX < 0 && dotY > 0) console.log('Точка - в II четверти')
+  if (dotX < 0 && dotY < 0) console.log('Точка - в III четверти')
+  if (dotX > 0 && dotY < 0) console.log('Точка - в IV четверти')
+}
 
 
 
@@ -1133,124 +1167,130 @@ import axios from 'axios'
 
 // 1. Запросить у пользователя номер месяца и вывести на экран его название.
 
-//  let monthNumber = '1'
+{ 
 
-//   switch (monthNumber) {
+ let monthNumber = '1'
 
-//     case '1':
-//       console.log('Январь')            
-//       break;
+  switch (monthNumber) {
 
-//     case '2':
-//       console.log('Февраль')            
-//       break;
+    case '1':
+      console.log('Январь')            
+      break;
 
-//     case '3':
-//       console.log('Март')            
-//       break;
+    case '2':
+      console.log('Февраль')            
+      break;
 
-//     case '4':
-//       console.log('Апрель')            
-//       break;
+    case '3':
+      console.log('Март')            
+      break;
 
-//     case '5':
-//       console.log('Май')            
-//       break;
+    case '4':
+      console.log('Апрель')            
+      break;
 
-//     case '6':
-//       console.log('Июнь')            
-//       break;
+    case '5':
+      console.log('Май')            
+      break;
 
-//     case '7':
-//       console.log('Июль')            
-//       break;
+    case '6':
+      console.log('Июнь')            
+      break;
 
-//     case '8':
-//       console.log('Август')            
-//       break;
+    case '7':
+      console.log('Июль')            
+      break;
 
-//     case '9':
-//       console.log('Сентябрь')            
-//       break;
+    case '8':
+      console.log('Август')            
+      break;
 
-//     case '10':
-//       console.log('Октябрь')            
-//       break;
+    case '9':
+      console.log('Сентябрь')            
+      break;
 
-//     case '11':
-//       console.log('Ноябрь')            
-//       break;
+    case '10':
+      console.log('Октябрь')            
+      break;
 
-//     case '12':
-//       console.log('Декабрь')            
-//       break;
+    case '11':
+      console.log('Ноябрь')            
+      break;
 
-//     default:
-//       break;
-//   }
+    case '12':
+      console.log('Декабрь')            
+      break;
+
+    default:
+      break;
+  }
+
+}
 
 
 // 2. Реализовать калькулятор. Пользователь вводит 2 числа и 
 // знак (+ - * /). В зависимости от введенного знака решить 
 // пример и вывести результат.
 
-// let num1 = 9
-// let num2 = 3
-// let userOperator = '-'
-// let result = 0
+{ 
 
-// switch (userOperator) {
-//    case '+':
-//       result = num1 + num2
-//       break;
+let num1 = 9
+let num2 = 3
+let userOperator = '-'
+let result = 0
 
-//    case '-':
-//       result = num1 - num2
-//       break;
+switch (userOperator) {
+   case '+':
+      result = num1 + num2
+      break;
 
-//    case '*':
-//       result = num1 * num2
-//       break;
+   case '-':
+      result = num1 - num2
+      break;
 
-//    case '/':
-//       result = num1 / num2
-//       break;
+   case '*':
+      result = num1 * num2
+      break;
 
-//    default:
-//       break;
-// }
+   case '/':
+      result = num1 / num2
+      break;
 
-// console.log(num1, userOperator, num2, '=', result)
+   default:
+      break;
+}
 
+console.log(num1, userOperator, num2, '=', result)
 
+}
 
 
 // ■ Задания, в которых необходимо использовать тернарный оператор.
 
 // 1. Запросить 2 числа и вывести большее из них.
+{
+let num1 = 19
+let num2 = 32
 
-// let num1 = 19
-// let num2 = 32
-
-// num1 > num2 ? console.log(num1) : console.log(num2)
-
+num1 > num2 ? console.log(num1) : console.log(num2)
+}
 
 
 // 2. Запросить 1 число и проверить, оно кратно 5 или нет.
+{
+let num = 150
 
-// let num = 150
-
-// num % 5 == 0 ? console.log('Число', num, 'кратно 5') : console.log('Число', num, 'не кратно 5')
-
+num % 5 == 0 ? console.log('Число', num, 'кратно 5') : console.log('Число', num, 'не кратно 5')
+}
 
 /*3. Запросить у пользователя название планеты. Если пользователь ввел «Земля» или «земля», 
 то вывести «Привет, землянин!», в остальных случаях вывести «Привет, инопланетянин!». */
 
+{
+ let userPlanet = 'Юпитер'
 
-//  let userPlanet = 'Юпитер'
-
-//  userPlanet == 'Земля' || userPlanet == 'земля' ? console.log('Привет, землянин!') : console.log('Привет, инопланетянин!')
-
+ userPlanet == 'Земля' || userPlanet == 'земля' ? console.log('Привет, землянин!') : console.log('Привет, инопланетянин!')
+}
 
 
 // ___________________________________________________________________________________________________________
@@ -1276,7 +1316,7 @@ import axios from 'axios'
 //       console.log( i )
 //       i--
 // }
-      
+
 
 
 //  1. Кредитный калькулятор. Сколько месяцев понадобится, чтобы выплатить.
@@ -1291,7 +1331,7 @@ import axios from 'axios'
 //       creditAmount += creditAmount * creditRate    
 //       creditAmount -= monthlyPayment
 //       month++
-      
+
 // }
 
 // console.log(month)
@@ -1364,7 +1404,7 @@ import axios from 'axios'
 //       if(i>4)
 //             break           
 // }
- 
+
 // for(let i = 0, j = 10; i != j; i++, j--)
 //       console.log(i, j)
 
@@ -1404,7 +1444,7 @@ import axios from 'axios'
 //       if(num1 == 4) break
 //       console.log(num1)      
 // }
-     
+
 
 // 10. Нужно сгенерировать ровно 10 случайных чисел, но без четверок.
 
@@ -1686,122 +1726,122 @@ import axios from 'axios'
 
 
 //     1. Подсчитать сумму всех чисел в заданном пользователем диапазоне. 
+{
+let num1 = 5
+let num2 = 2
+let sum = 0
+let buf = 0
+if (num1 > num2) { buf = num1; num1 = num2; num2 = buf; } 
 
-// let num1 = 5
-// let num2 = 2
-// let sum = 0
-// let buf = 0
-// if (num1 > num2) { buf = num1; num1 = num2; num2 = buf; } 
+for (let i = num1; i <= num2; i++) {
+      sum += i
+}
 
-// for (let i = num1; i <= num2; i++) {
-//       sum += i
-// }
-
-// console.log(sum)
-
+console.log(sum)
+}
 
 //     2. Запросить 2 числа и найти только наибольший общий делитель.
+{ 
+let num1 = 28
+let num2 = 35
+let buf = 0
+if (num1 > num2) { buf = num1; num1 = num2; num2 = buf; } 
+let i = num1
+let greatestCommonDivisor = 0
 
-// let num1 = 28
-// let num2 = 35
-// let buf = 0
-// if (num1 > num2) { buf = num1; num1 = num2; num2 = buf; } 
-// let i = num1
-// let greatestCommonDivisor = 0
+do {
 
-// do {
+      if (num1 % i == 0 && num2 % i == 0) {
+            greatestCommonDivisor = i
+            break
+      }
 
-//       if (num1 % i == 0 && num2 % i == 0) {
-//             greatestCommonDivisor = i
-//             break
-//       }
+      i--
 
-//       i--
+} while (i > 0);
 
-// } while (i > 0);
-
-// console.log(greatestCommonDivisor)
-
+console.log(greatestCommonDivisor)
+}
 
 // Вариант 2.
+{
+let num1 = 50
+let num2 = 35
+let buf = 0
+if (num1 > num2) { buf = num1; num1 = num2; num2 = buf; } 
+let i = 1
+let greatestCommonDivisor = 0
 
-// let num1 = 50
-// let num2 = 35
-// let buf = 0
-// if (num1 > num2) { buf = num1; num1 = num2; num2 = buf; } 
-// let i = 1
-// let greatestCommonDivisor = 0
+do {
 
-// do {
+      if (num1 % i == 0 && num2 % i == 0) {
+            greatestCommonDivisor = i
+      }
 
-//       if (num1 % i == 0 && num2 % i == 0) {
-//             greatestCommonDivisor = i
-//       }
+      i++
 
-//       i++
+} while (i <= num1);
 
-// } while (i <= num1);
-
-// console.log(greatestCommonDivisor)
-
+console.log(greatestCommonDivisor)
+}
 
 //     3. Запросить у пользователя число и вывести все делители этого числа.
+{
+let num = 50
 
-// let num = 50
+for (let i = 1; i <= num; i++) {
+      if (num % i == 0) console.log(i)
+}
+}
 
-// for (let i = 1; i <= num; i++) {
-//       if (num % i == 0) console.log(i)
-// }
+    // 4. Определить количество цифр в введенном числе.
+{ 
+let num = 3642
+let quantity = 0
 
+while (num > 0) {
+      num = parseInt(num / 10)
+      quantity++
+}
 
-//     4. Определить количество цифр в введенном числе.
-
-// let num = 3642
-// let quantity = 0
-
-// while (num > 0) {
-//       num = parseInt(num / 10)
-//       quantity++
-// }
-
-// console.log(quantity)
-
+console.log(quantity)
+}
 
 //     5. Запросить у пользователя 10 чисел и подсчитать, сколько 
 //     он ввел положительных, отрицательных и нулей. При этом 
 //     также посчитать, сколько четных и нечетных. Вывести 
 //     статистику на экран. Учтите, что достаточно одной переменной (не 10) для ввода чисел пользователем.
+{ 
+let num = 0
+let even = 0
+let odd = 0
+let negativeNumber = 0
+let positiveNumber = 0
+let zero = 0
 
-// let num = 0
-// let even = 0
-// let odd = 0
-// let negativeNumber = 0
-// let positiveNumber = 0
-// let zero = 0
+for (let i = 0; i < 10; i++) {
 
-// for (let i = 0; i < 10; i++) {
+      // num = parseInt(+prompt('Введите число'))
 
-//       num = parseInt(+prompt('Введите число'))
+      if (num >= 0 ) positiveNumber++
+      if (num < 0 ) negativeNumber++
+      if (num == 0 ) zero++
+      if (num % 2 == 0 ) even++
+      if (num % 2 != 0 ) odd++
+}
 
-//       if (num >= 0 ) positiveNumber++
-//       if (num < 0 ) negativeNumber++
-//       if (num == 0 ) zero++
-//       if (num % 2 == 0 ) even++
-//       if (num % 2 != 0 ) odd++
-// }
+console.log(`Количество положительных чисел: ${positiveNumber}`)
+console.log(`Количество отрицательных чисел: ${negativeNumber}`)
+console.log(`Количество четных чисел: ${even}`)
+console.log(`Количество нечетных чисел: ${odd}`)
+console.log(`Количество нулей: ${zero}`)
 
-// console.log(`Количество положительных чисел: ${positiveNumber}`)
-// console.log(`Количество отрицательных чисел: ${negativeNumber}`)
-// console.log(`Количество четных чисел: ${even}`)
-// console.log(`Количество нечетных чисел: ${odd}`)
-// console.log(`Количество нулей: ${zero}`)
-
-
+}
 
 //     6. Зациклить калькулятор. Запросить у пользователя 2 числа 
 //     и знак, решить пример, вывести результат и спросить, хочет ли он решить еще один пример. И так до тех пор, пока 
 //     пользователь не откажется.
-
+// { 
 // let num1 = 9
 // let num2 = 3
 // let userOperator = '-'
@@ -1817,95 +1857,100 @@ import axios from 'axios'
 //             case '+':
 //                result = num1 + num2
 //                break;
-         
+
 //             case '-':
 //                result = num1 - num2
 //                break;
-         
+
 //             case '*':
 //                result = num1 * num2
 //                break;
-         
+
 //             case '/':
 //                result = num1 / num2
 //                break;
-         
+
 //             default:
 //                break;
 //          }
-         
+
 //          console.log(num1, userOperator, num2, '=', result)
 //          alert(`${num1} ${userOperator} ${num2} = ${result}`)
 
 //          userAnswer = confirm('Хотите решить еще один пример?')
-      
+
 // } while (userAnswer != false);
 
+// }
 
 
 //     7. Запросить у пользователя число и на сколько цифр его сдвинуть. Сдвинуть цифры числа и вывести результат 
 //        (если число 123456 сдвинуть на 2 цифры, то получится 345612).
 
-// //Переменная для исходного числа
-//  let num1 = 12345678
+{ 
 
-//  // Переменная для числа на сколько сдвинуть цифры
-//  let num2 = 3
+//Переменная для исходного числа
+ let num1 = 12345678
 
-//  //Вспомогательные переменные для подсчёта разряда числа
-//  let i = num1
-//  let quantity = 0
-//  let quantity2 = 1
+ // Переменная для числа на сколько сдвинуть цифры
+ let num2 = 3
 
-// // Узнаём разрядность всего числа
-// while (i > 0) {
-//       i = parseInt(i / 10)
-//       quantity++
-// }
+ //Вспомогательные переменные для подсчёта разряда числа
+ let i = num1
+ let quantity = 0
+ let quantity2 = 1
 
-// console.log(quantity)
+// Узнаём разрядность всего числа
+while (i > 0) {
+      i = parseInt(i / 10)
+      quantity++
+}
 
-// //Узнаём разрядность второй части числа
-//  i = quantity - num2
-//  console.log(i)
+console.log(quantity)
 
-//  //Переменные для хранения первой и второй частей числа
-//  let part1 = num1
-//  let part2 = num1
+//Узнаём разрядность второй части числа
+ i = quantity - num2
+ console.log(i)
 
-
-// for(; i > 0; i--) {
-//       //Выковыриваем те цифры, на которые надо сдвинуть число
-//       part1 = parseInt(part1 / 10)
-
-//       //Подсчёт для остатка от деления для выковыривания второй части числа
-//       quantity2 *= 10
-// }
-
-// console.log(quantity2)
-
-// //Выковыриваем вторую часть числа
-// part2 = parseInt(part2 % quantity2)
-
-// console.log(part1)
-// console.log(part2)
-
-// //Возврат к исходной разраядности
-// for(; num2 > 0; num2--) {
-//       part2 *= 10
-// }
-
-// console.log(part2)
-
-//  let result = part2 + part1
-
-//  console.log(result)
+ //Переменные для хранения первой и второй частей числа
+ let part1 = num1
+ let part2 = num1
 
 
+for(; i > 0; i--) {
+      //Выковыриваем те цифры, на которые надо сдвинуть число
+      part1 = parseInt(part1 / 10)
+
+      //Подсчёт для остатка от деления для выковыривания второй части числа
+      quantity2 *= 10
+}
+
+console.log(quantity2)
+
+//Выковыриваем вторую часть числа
+part2 = parseInt(part2 % quantity2)
+
+console.log(part1)
+console.log(part2)
+
+//Возврат к исходной разраядности
+for(; num2 > 0; num2--) {
+      part2 *= 10
+}
+
+console.log(part2)
+
+ let result = part2 + part1
+
+ console.log(result)
+
+}
 
 
 //   8. Зациклить вывод дней недели таким образом: «День недели. Хотите увидеть следующий день?» 
 //      и так до тех пор, пока пользователь нажимает OK. 
+
+// { 
 
 // const day1 = 'Понедельник'
 // const day2 = 'Вторник'
@@ -1942,27 +1987,30 @@ import axios from 'axios'
 //       userAnswer = confirm(`${x}. Хотите увидеть следующий день?`)
 // }
 
+// }
 
 
 // 9. Вывести таблицу умножения для всех чисел от 2 до 9. 
 // Каждое число необходимо умножить на числа от 1 до 10.
 
-// let num1 = 2
-// let num2 = 9
-// let result = ''
+{
 
-// for(let i = num1; i <= num2; i++) {
+let num1 = 2
+let num2 = 9
+let result = ''
 
-//       for(let j = 1; j <= 10; j++) {
+for(let i = num1; i <= num2; i++) {
 
-//             result += i + ' * ' + j + ' = ' + i * j + '\n'
+      for(let j = 1; j <= 10; j++) {
 
-//       }
-// }
+            result += i + ' * ' + j + ' = ' + i * j + '\n'
 
-// console.log(result)
+      }
+}
 
+console.log(result)
 
+}
 
 // 10. Игра «Угадай число». Предложить пользователю загадать число от 0 до 100 
 // и отгадать его следующим способом: каждую итерацию цикла делите диапазон чисел пополам, 
@@ -1971,6 +2019,8 @@ import axios from 'axios'
 // Начальный диапазон от 0 до 100, поделили пополам и получили 50. 
 // Если пользователь указал, что его число > 50, то изменили диапазон на от 51 до 100. 
 // И так до тех пор, пока пользователь не выберет == N.
+
+// { 
 
 // // let userNum = 77
 // let gameStart = 0
@@ -2039,7 +2089,7 @@ import axios from 'axios'
 // console.log(result) 
 
 
-
+// }
 
 
 // ___________________________________________________________________________________________________________
@@ -2066,108 +2116,121 @@ import axios from 'axios'
 
 /* 1. Вывести # столько раз, сколько указал пользователь.*/
 
-// let num = 5
-// let i = 0
+{
 
-// while (i < num) {
-//   console.log('# ')
-//   i++
-// }
+let num = 5
+let i = 0
+
+while (i < num) {
+  console.log('# ')
+  i++
+}
+
+}
 
 // Вариант 2
 
-// let num = 8
+{ 
 
-// while (num) {
-//   console.log('# ')
-//   num--
-// }
+let num = 8
 
+while (num) {
+  console.log('# ')
+  num--
+}
 
+}
 
 
 /* 2. Пользователь ввел число, а на экран вывелись все числа от введенного до 0.*/
 
-// let num = -4
+{ 
 
-//       if (num > 0) {
-//             while (num >= 0) {
-//                   console.log(num)
-//                   num--
-//             }
-//       } else {
-//             while (num <= 0) {
-//                   console.log(num)
-//                   num++
-//             }
-//       }
+let num = -4
 
+      if (num > 0) {
+            while (num >= 0) {
+                  console.log(num)
+                  num--
+            }
+      } else {
+            while (num <= 0) {
+                  console.log(num)
+                  num++
+            }
+      }
 
+}
 
 
 /*3. Запросить число и степень. Возвести число в указанную 
 степень и вывести результат.*/
+{
+let num = 3
+let degree = 4
+let result = 1
 
-// let num = 3
-// let degree = 4
-// let result = 1
-
-// while (degree > 0) {
-//       result *= num
-//       degree--
-// }
-// console.log(result)
-
+while (degree > 0) {
+      result *= num
+      degree--
+}
+console.log(result)
+}
 
 
 // 4. Запросить 2 числа и найти все общие делители.
 
+{
 
-// let num1 = 25
-// let num2 = 10
-// let text = ''
-// let min = num1 < num2 ? num1 : num2
-// while (min) {
-//   if (num1 % min == 0 && num2 % min == 0) {
-//       text += min + '_'
-//   }
+let num1 = 25
+let num2 = 10
+let text = ''
+let min = num1 < num2 ? num1 : num2
+while (min) {
+  if (num1 % min == 0 && num2 % min == 0) {
+      text += min + '_'
+  }
 
-//   min--      
-// }
+  min--      
+}
 
-// console.log(text)
+console.log(text)
 
-
+}
 
 
 // 5. Посчитать факториал введенного пользователем числа.
 
-// { let num = 7
-//   let result = 1
+{ 
 
-//   while (num > 0) {
+{ let num = 7
+  let result = 1
 
-//     result *= num
-//     num--  
-//   }
-//   console.log(result)
-// } 
+  while (num > 0) {
 
-// {
-//   let i = 1
-//   let num = 7
-//   let result = 1
+    result *= num
+    num--  
+  }
+  console.log(result)
+} 
 
-//   while (i <= num) {
-//     result *= i
-//     i++
-//   }
-//   console.log(result)
-// }
+{
+  let i = 1
+  let num = 7
+  let result = 1
 
+  while (i <= num) {
+    result *= i
+    i++
+  }
+  console.log(result)
+}
+
+}
 
 
 // ■ Задания, в которых необходимо использовать DO WHILE.
+
 
 //       1. Предлагать пользователю решить пример 2 + 2 * 2 до тех 
 //       пор, пока он не решит его правильно.
@@ -2185,71 +2248,85 @@ import axios from 'axios'
 //       2. Делить число 1000 на 2 до тех пор, пока не получится число 
 //       меньше 50. Вывести это число и сколько делений произвели.
 
-// let num1 = 1000
-// let num2 = 2
-// let i = 0
+{ 
 
-// do {
+let num1 = 1000
+let num2 = 2
+let i = 0
 
-//       num1 /= num2
-//       i++
-      
-// } while (num1 > 50);
+do {
 
-// console.log(num1)
-// console.log(i)
+      num1 /= num2
+      i++
 
+} while (num1 > 50);
+
+console.log(num1)
+console.log(i)
+
+}
 
 // ■ Задания, в которых необходимо использовать FOR.
+
 
 //       3. Вывести все числа от 1 до 100, которые кратные указанному 
 //       пользователем числу.
 
-// let num1 = 1
-// let num2 = 100
-// let userNum = 7
+{ 
 
-// for (; num1 <= num2; num1++) {
-//       if (num1 % userNum == 0) console.log(num1)
-// }
+let num1 = 1
+let num2 = 100
+let userNum = 7
+
+for (; num1 <= num2; num1++) {
+      if (num1 % userNum == 0) console.log(num1)
+}
+
+}
 
 
 //       4. Вывести каждый 4-й элемент из указанного пользователем 
 //       диапазона. Пользователь указывает минимальное и максимальное значения диапазона. 
 
-// let num1 = 1
-// let num2 = 10
-// let userNum = 4
+{
 
-// for (; num1 <= num2; num1++) {
-//      num1 += userNum-1 
-//       console.log(num1)
-// }
+let num1 = 1
+let num2 = 10
+let userNum = 4
 
+for (; num1 <= num2; num1++) {
+     num1 += userNum-1 
+      console.log(num1)
+}
+
+}
 
 
 //       5. Запросить число и проверить, простое ли оно. Простое 
 //       число делится без остатка только на себя и на единицу.
- 
-// let num = 31
-// let result = true
 
-// for(let i = 2; i < num; i++) {
+{
 
-//       if(num % num == 0 && num % 1 == 0 && num % i == 0) {
-//             result = false
-//       } 
+let num = 31
+let result = true
 
-// }
+for(let i = 2; i < num; i++) {
 
-// console.log(result)
+      if(num % num == 0 && num % 1 == 0 && num % i == 0) {
+            result = false
+      } 
 
-// if(result == true) {
-//       console.log('Число является простым')
-// } else {
-//       console.log('Число НЕ является простым')
-// }
+}
 
+console.log(result)
+
+if(result == true) {
+      console.log('Число является простым')
+} else {
+      console.log('Число НЕ является простым')
+}
+
+}
 
 
 // ___________________________________________________________________________________________________________
@@ -2265,11 +2342,11 @@ import axios from 'axios'
 //       {i:4, name: '4asdasasd'},
 //       {i:5, name: '5asdasasd'},
 //     ]
-    
+
 //     for (let i=0; i<arr.length; i++) {
 //       document.body.insertAdjacentHTML('beforeend', `<p>${arr[i].i} <b>${arr[i].name}</b></p>`)
 //     }
-    
+
 //     let res = 1000
 //     i=0
 //     while(true) {
@@ -2278,7 +2355,7 @@ import axios from 'axios'
 //       if (res<50) break
 //     }
 //     console.log(res, `за ${i} итераций`)
-    
+
 //     res = 1000
 //     i = 0
 //     while (res>50) {
@@ -2286,7 +2363,7 @@ import axios from 'axios'
 //       i++
 //     }
 //     console.log(res, `за ${i} итераций`)
-    
+
 //     res = 1000
 //     i = 0
 //     do {
@@ -2294,251 +2371,279 @@ import axios from 'axios'
 //       i++
 //     } while (res > 50)
 //     console.log(res, `за ${i} итераций`)
-    
+
 //     res = 1000
 //     i = 0
 //     for (i = 0; res>50; i++) {
 //       res /= 2
 //     }
 //     console.log(res, `за ${i} итераций`)
-    
-    // x+=1  |  x = x + 1
-    // x-=1  |  x = x - 1
-    // x*=1  |  x = x * 1
-    // x**=1 |  x = x ** 1
-    // x/=1  |  x = x / 1
-    // x%=1  |  x = x % 1
+
+// x+=1  |  x = x + 1
+// x-=1  |  x = x - 1
+// x*=1  |  x = x * 1
+// x**=1 |  x = x ** 1
+// x/=1  |  x = x / 1
+// x%=1  |  x = x % 1
 
 
 
 //  1. Функция, которая будет увеличивать значение аргумента на 1 
 //     и выводить полученный результат на страницу.
+{
+function incPlusOne(digit: number) {
+      digit = digit + 1
+      return digit
+}
 
-// function incPlusOne(digit: number) {
-//       digit = digit + 1
-//       return digit
-// }
-
-// let num = 1
-// num = incPlusOne(num)
-// console.log(num)
+let num = 1
+num = incPlusOne(num)
+console.log(num)
+}
 
 // 2. Создать функцию, вычисляющую куб переданного аргумента.
-
-// function cubedNumber(n:number) {
-//       return n * n * n
-// }
-// let num1 = 2
-// let num2 = 3
-// num1 = cubedNumber(num1)
-// console.log(num1)
-// num2 = num1 * cubedNumber(num2)
-// console.log(num2)
-// console.log(cubedNumber(num1))
+{
+function cubedNumber(n:number) {
+      return n * n * n
+}
+let num1 = 2
+let num2 = 3
+num1 = cubedNumber(num1)
+console.log(num1)
+num2 = num1 * cubedNumber(num2)
+console.log(num2)
+console.log(cubedNumber(num1))
+}
 
 // 3. Банковское округление.
+{
+function bankerRound(x:number) {
+      if(Math.round(x) % 2 == 0)
+            return Math.round(x) 
+      else{
+            if(x < Math.round(x))
+                  return Math.round(x) - 1
+            else 
+                  return Math.round(x) + 1
+      }
+}
 
-// function bankerRound(x:number) {
-//       if(Math.round(x) % 2 == 0)
-//             return Math.round(x) 
-//       else{
-//             if(x < Math.round(x))
-//                   return Math.round(x) - 1
-//             else 
-//                   return Math.round(x) + 1
-//       }
-// }
-
-//      let num1 = 3.2
-//      console.log(bankerRound(num1))
+     let num1 = 3.2
+     console.log(bankerRound(num1))
+}
 
 // 4.  сообщение с текстом
-
-// function sayError() {
-//       alert('Some error occurred!')
-// }
-// sayError()
+{
+function sayError() {
+  console.log('Some error occurred!')
+}
+sayError()
+}
 
 // 5. Вывод текста
-// function showError(x:string) {
-//       alert('Error ' + x + ' occurred!')
-// }
-// showError('Out of memory')
+{
+function showError(x:string) {
+      console.log('Error ' + x + ' occurred!')
+}
+showError('Out of memory')
+}
 
 // 6. Проверка пароля
-
-// function checkPassword(x:string) {
-//       if(x == 'Step' || x == 'Web' || x == 'JavaScript')
-//             return true
-//       else 
-//             return false
-// }
-// console.log(checkPassword('JavaScript'))
-
+{
+function checkPassword(x:string) {
+      if(x == 'Step' || x == 'Web' || x == 'JavaScript')
+            return true
+      else 
+            return false
+}
+console.log(checkPassword('JavaScript'))
+}
 // 7. Знак
+{
+function  sign(x:number) {
+      if(x < 0) return -1
+      else if(x > 0) return 1
+      else return 0
+}
 
-// function  sign(x:number) {
-//       if(x < 0) return -1
-//       else if(x > 0) return 1
-//       else return 0
-// }
-
-// let num = 5
-// console.log(sign(num))
-
+let num = 5
+console.log(sign(num))
+}
 // 8. возвращает названия дней недели по их номеру
+{
+function getDayOfTheWeek(n:string) {
+      if(n == '0') return 'Sunday'
+      if(n == '1') return 'Monday'
+      if(n == '2') return 'Tuesday'
+      if(n == '3') return 'Wednesday'
+      if(n == '4') return 'Thursday'
+      if(n == '5') return 'Friday'
+      if(n == '6') return 'Saturday'
+}
+let userDay = '5' as string
 
-// function getDayOfTheWeek(n:string) {
-//       if(n == '0') return 'Sunday'
-//       if(n == '1') return 'Monday'
-//       if(n == '2') return 'Tuesday'
-//       if(n == '3') return 'Wednesday'
-//       if(n == '4') return 'Thursday'
-//       if(n == '5') return 'Friday'
-//       if(n == '6') return 'Saturday'
-// }
-// let userDay = '5' as string
-
-// console.log(getDayOfTheWeek(userDay))
-
+console.log(getDayOfTheWeek(userDay))
+}
 // 9. Функция принимает неопределённое количество аргументов. Длина
+{
 
-// function logArguments(x){
-//       console.log('x = ' + x)
-//       for(let i = 0; i < arguments.length; i++)
-//       console.log('argument' + (i + 1) + ' = ' + arguments[i])
-// }
-// logArguments(1, 2, 3)
-// logArguments('text')
+function logArguments(x){
+      console.log('x = ' + x)
+      for(let i = 0; i < arguments.length; i++)
+      console.log('argument' + (i + 1) + ' = ' + arguments[i])
+}
+logArguments(1, 2, 3)
+logArguments('text')
+
+}
 
 // 10. Функция, определяющая максимальное значение из неопределённого 
 //     количества переданных аргументов
 
-// function getMax() {
-//       if(arguments.length == 0) return undefined
-//       let result = arguments[0]
-//       for(let i = 1; i < arguments.length; i++) {
-//             if(result < arguments[i])
-//                   result = arguments[i]
-//       }
-//       return result
-// }
+{ 
 
-// console.log(getMax(-1, -4, -10))
+function getMax() {
+      if(arguments.length == 0) return undefined
+      let result = arguments[0]
+      for(let i = 1; i < arguments.length; i++) {
+            if(result < arguments[i])
+                  result = arguments[i]
+      }
+      return result
+}
 
+console.log(getMax(-1, -4, -10))
+
+}
 
 // 11. Функция определяет среднее арифметическое от переданных аргументов.
+{
+function getArithmeticalMean() {
+      if(arguments.length == 0) return undefined
+      let sum = 0
+      for(let i = 0; i < arguments.length; i++) {
+            sum += arguments[i]
+      }
+      return sum / arguments.length
+}
+console.log(getArithmeticalMean(1, 4, 10))
+}
 
-// function getArithmeticalMean() {
-//       if(arguments.length == 0) return undefined
-//       let sum = 0
-//       for(let i = 0; i < arguments.length; i++) {
-//             sum += arguments[i]
-//       }
-//       return sum / arguments.length
-// }
-// console.log(getArithmeticalMean(1, 4, 10))
-
-// 12. 
-
+// // 12. 
+// {
 // function showX() {
 //       console.log(x)
 // }
 // showX()
 // let x = 1
 // showX()
-
-// 13.
+// }
+// // 13.
+// {
 // let userName = 'Вася'
 // function showMessage() {
 //   let message = 'Привет, ' + userName
 //   console.log(message)
 // }
 // showMessage() // Привет, Вася
-
-// 14.
+// }
+// // 14.
+// {
 // function max(a:number, b=100) {
 //       return a > b ? a : b
 //     }    
 // console.log(max(101))
-
-// 15.
-
+// }
+// // 15.
+// {
 // function getSum(a:number | string, b:number | string) {
 //       return a + b
 // }
 // console.log(getSum(2, 5))
 // console.log(getSum('Hello, ', 'people!'))
+// }
+
 
 // 16.
 
-// function showMessage(text:string) {      
-//      return text = text || 'Goodbye'      
-// }
-// console.log(showMessage('Hello, people!'))
+{ 
+function showMessage(text:string) {      
+     return text = text || 'Goodbye'      
+}
+console.log(showMessage('Hello, people!'))
+}
 
 // 17.
 
-// function getSumRest(...rest:number[]) {
-//       let sum = 0
-//       console.log(rest)
-//       for(let i = 0; i < arguments.length; i++) {
-//             sum += arguments[i]
-//       }
-//       return sum
-// }
+{
 
-// console.log(getSumRest(12, 43, 13, 24, 50, 100, -7))
+  function getSumRest(...rest: number[]) {
+    let sum = 0
+    console.log(rest)
+    for (let i = 0; i < arguments.length; i++) {
+      sum += arguments[i]
+    }
+    return sum
+  }
 
+  console.log(getSumRest(12, 43, 13, 24, 50, 100, -7))
 
-// function getSumRest(a:number, ...rest:number[]) {
-//       let sum = 0
-//       console.log(a)
-//       console.log(rest)
-//       for(let i = 0; i < arguments.length; i++) {
-//             sum += arguments[i]
-//       }
-//       return sum
-// }
+}
 
-// console.log(getSumRest(12, 43, 13, 24, 50, 100, -7))
+{
 
-// const string = 'ABC'
-// for(let i=0; i<string.length; i++) {
-//   console.log(string[i])
-// }
+  function getSumRest(a: number, ...rest: number[]) {
+    let sum = 0
+    console.log(a)
+    console.log(rest)
+    for (let i = 0; i < arguments.length; i++) {
+      sum += arguments[i]
+    }
+    return sum
+  }
 
-// for(let char of string) {
-//       console.log(char)
-//     }
+  console.log(getSumRest(12, 43, 13, 24, 50, 100, -7))
 
-// let userDate = '15.12.2020'
-// for(let i=0; i<userDate.length; i++) {
-//       console.log(userDate[i])
-//     }
+  const string = 'ABC'
+  for (let i = 0; i < string.length; i++) {
+    console.log(string[i])
+  }
 
-// const array = [1,2,3]
-// for(let i=0; i<array.length; i++) {
-//   console.log(array[i])
-// }
-// for(let el of array) {
-//   console.log(el)
-// }
+  for (let char of string) {
+    console.log(char)
+  }
 
+  let userDate = '15.12.2020'
+  for (let i = 0; i < userDate.length; i++) {
+    console.log(userDate[i])
+  }
 
-// const obj = {
-//       a:1,
-//       b:2,
-//       c:3
-//     } as Record<string, number>
-//     for(let i=0; i<Object.keys(obj).length; i++) {
-//       const key = Object.keys(obj)[i]
-//       console.log(key, obj[key])
-//     }
-//     for(let key in obj) {
-//       console.log(key, obj[key])
-//     }
+  const array = [1, 2, 3]
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i])
+  }
+  for (let el of array) {
+    console.log(el)
+  }
 
+}
+
+{
+  const obj = {
+    a: 1,
+    b: 2,
+    c: 3
+  } as Record<string, number>
+
+  for (let i = 0; i < Object.keys(obj).length; i++) {
+    const key = Object.keys(obj)[i]
+    console.log(key, obj[key])
+  }
+
+  for (let key in obj) {
+    console.log(key, obj[key])
+  }
+}
 
 
 
@@ -2566,138 +2671,151 @@ import axios from 'axios'
 
 //  1. Написать функцию, которая принимает 2 числа и возвращает меньшее из них
 
+{
 
-// function getMin (a:number, b:number) {
+  function getMin(a: number, b: number) {
 
-//   return a < b ? a : b
+    return a < b ? a : b
 
-// }
+  }
 
-// let num1 = 48
-// let num2 = 434
+  let num1 = 48
+  let num2 = 434
 
-// console.log(getMin(num1, num2))
+  console.log(getMin(num1, num2))
 
+}
 
 // 2. Написать функцию, которая возводит переданное число в указанную степень.
 
+{
 
-//   function pow (x:number, n:number) {
+  function pow(x: number, n: number) {
 
-//         return x**n
+    return x ** n
 
-//   }
+  }
 
-//   let num1 = 2
-//   let num2 = 4
+  let num1 = 2
+  let num2 = 4
 
-// console.log(pow(num1, num2))
+  console.log(pow(num1, num2))
 
+}
 
 
 // 3. Написать функцию, которая принимает 2 числа и знак (+ - * /), считает пример и возвращает результат. 
 
+{
 
-// function calcNumbers (a:number, b:number, c:string) {
+  function calcNumbers(a: number, b: number, c: string) {
 
-//       let sum = 0
+    let sum = 0
 
-//       switch (c) {
-//         case '+':
-//           sum = a + b
-//           break;
+    switch (c) {
+      case '+':
+        sum = a + b
+        break;
 
-//         case '-':
-//           sum = a - b
-//           break;
+      case '-':
+        sum = a - b
+        break;
 
-//         case '*':
-//           sum = a * b
-//           break;
+      case '*':
+        sum = a * b
+        break;
 
-//         case '/':
-//           sum = a / b
-//           break;
+      case '/':
+        sum = a / b
+        break;
 
-//           default:
-//             break;
-//           }
+      default:
+        break;
+    }
 
-//       return sum
-// }
+    return sum
+  }
 
-// let num1 = 2
-// let num2 = 4
+  let num1 = 2
+  let num2 = 4
 
-// console.log(calcNumbers(num1, num2, '+'))
+  console.log(calcNumbers(num1, num2, '+'))
+
+}
 
 
 // 4. Написать функцию, которая проверяет, является ли переданное ей число простым.
 //    Простое число делится без остатка только на себя и на единицу.   
 
-// function checkNum(num:number) {
+{
 
-//       let result = true
-//       let message = ''
+  function checkNum(num: number) {
 
-//       for(let i = 2; i < num; i++) {
+    let result = true
+    let message = ''
 
-//             if(num % num == 0 && num % 1 == 0 && num % i == 0) {
-//                   result = false
-//             } 
-//       }
+    for (let i = 2; i < num; i++) {
 
-// if(result == true) {
-//       message = 'Число является простым'
-// } else {
-//       message = 'Число НЕ является простым'
-// }
+      if (num % num == 0 && num % 1 == 0 && num % i == 0) {
+        result = false
+      }
+    }
 
-// return message
+    if (result == true) {
+      message = 'Число является простым'
+    } else {
+      message = 'Число НЕ является простым'
+    }
 
-// }
+    return message
 
-// let userNum = 17
+  }
 
-// console.log(checkNum(userNum))
+  let userNum = 17
+
+  console.log(checkNum(userNum))
 
 
 
-//  ПРОВЕРИТЬ!!!
-// function getNum(a:number){
-//   for (let i = 2; i <= a !/ 2; i++) {
-//   if (a % i !==0)
-//   return a
-// }
-// }
+  //  ПРОВЕРИТЬ!!!
+  function getNum(a: number) {
+    for (let i = 2; i <= a! / 2; i++) {
+      if (a % i !== 0)
+        return a
+    }
+  }
 
-// let num = 10
-// console.log(getNum(num))
+  let num = 10
+  console.log(getNum(num))
 
+}
 
 
 //  5. Написать функцию, которая принимает число и выводит таблицу умножения для этого числа. 
 //     Вызовите функцию для всех чисел от 2 до 9.
 
+{
 
-// function showMultiplTable(a: number) {
-//   let result = ''
-//   for (let i = 1; i < 10; i++) {
+  function showMultiplTable(a: number) {
+    let result = ''
+    for (let i = 1; i < 10; i++) {
 
-//     result += i + ' * ' + a + ' = ' + i * a + '\n'
+      result += i + ' * ' + a + ' = ' + i * a + '\n'
 
-//   }
-//   return result
-// }
+    }
+    return result
+  }
 
-// console.log(showMultiplTable(2))
-// console.log(showMultiplTable(3))
-// console.log(showMultiplTable(4))
-// console.log(showMultiplTable(5))
-// console.log(showMultiplTable(6))
-// console.log(showMultiplTable(7))
-// console.log(showMultiplTable(8))
-// console.log(showMultiplTable(9))
+  console.log(showMultiplTable(2))
+  console.log(showMultiplTable(3))
+  console.log(showMultiplTable(4))
+  console.log(showMultiplTable(5))
+  console.log(showMultiplTable(6))
+  console.log(showMultiplTable(7))
+  console.log(showMultiplTable(8))
+  console.log(showMultiplTable(9))
+
+}
 
 
 
@@ -2705,181 +2823,196 @@ import axios from 'axios'
 //    Функция принимает 2 параметра и возвращает остаток от деления первого параметра на второй. 
 //    В функции использовать только + - * /, оператор % не использовать.
 
+{
 
-// function remainderDivision(a:number, b:number) {
-//       let i = 0
-//       let remainderOfDivision = 0
+  function remainderDivision(a: number, b: number) {
+    let i = 0
+    let remainderOfDivision = 0
 
-//       for (let j = a; j >= b; j -= b) {            
-//             i++
-//       }
- 
-//       return remainderOfDivision = a - (b * i)
-// }
+    for (let j = a; j >= b; j -= b) {
+      i++
+    }
 
-// let num1 = 157
-// let num2 = 3
+    return remainderOfDivision = a - (b * i)
+  }
 
-// console.log(remainderDivision(num1, num2))
-// console.log(157 % 3)
+  let num1 = 157
+  let num2 = 3
 
+  console.log(remainderDivision(num1, num2))
+  console.log(157 % 3)
+
+}
 
 // 7. Написать функцию, которая принимает от 1 до 5 чисел и возвращает их сумму.
 
-// function getSum() {
-//       let sum = 0
-//       for(let i = 0; i < 5; i++) {
-//             sum += arguments[i]
-//       }
-//       return sum
-// }
-// // @ts-ignore
-// console.log(getSum(1, 2, 10, 1, 1, 1))
+{
 
+  function getSum() {
+    let sum = 0
+    for (let i = 0; i < 5; i++) {
+      sum += arguments[i]
+    }
+    return sum
+  }
+  // @ts-ignore
+  console.log(getSum(1, 2, 10, 1, 1, 1))
+
+}
 
 
 // 8. Написать функцию, которая принимает от 1 до 5 чисел и возвращает большее из них.
 
-// function getMax() {
-//       if(arguments.length == 0) return undefined
-//       let result = arguments[0]
-//       for(let i = 1; i < 5; i++) {
-//             if(result < arguments[i])
-//                   result = arguments[i]
-//       }
-//       return result
-// }
-// // @ts-ignore
-// console.log(getMax(-1, -4, -10, -11, -2, 1))
+{
+
+  function getMax() {
+    if (arguments.length == 0) return undefined
+    let result = arguments[0]
+    for (let i = 1; i < 5; i++) {
+      if (result < arguments[i])
+        result = arguments[i]
+    }
+    return result
+  }
+  // @ts-ignore
+  console.log(getMax(-1, -4, -10, -11, -2, 1))
+
+}
 
 
 
 // 9. Написать функцию, которая выводит все четные или нечетные числа, в указанном пользователем диапазоне. Какие 
 // числа выводить, определяется третьим параметром типа bool (true – четные, false – нечетные).
 
-// let num1 = 15
-// let num2 = 5
-// let num3 = false
+{
 
-// function showNumbers(n1:number, n2:number, x:boolean) {
-//       let buf = 0
-//       if(n1 > n2) {buf = n1; n1 = n2; n2 = buf}
+  let num1 = 15
+  let num2 = 5
+  let num3 = false
 
-//       for( ; n1 <= n2; n1++) {
-//             if(n1 % 2 == 0 && x == true) {
-//             console.log(n1)
-//             } else if(n1 % 2 != 0 && x == false) {
-//             console.log(n1)
-//             }
-//       }
-// }
-// showNumbers(num1, num2, num3)
+  function showNumbers(n1: number, n2: number, x: boolean) {
+    let buf = 0
+    if (n1 > n2) { buf = n1; n1 = n2; n2 = buf }
+
+    for (; n1 <= n2; n1++) {
+      if (n1 % 2 == 0 && x == true) {
+        console.log(n1)
+      } else if (n1 % 2 != 0 && x == false) {
+        console.log(n1)
+      }
+    }
+  }
+  showNumbers(num1, num2, num3)
+
+}
 
 
 
 // 10. Написать функцию, которая принимает дату (день, месяц, год) и возвращает дату следующего дня в виде строки 
 // «дд.мм.гггг». Проверку на високосный год желательно написать отдельной функцией.
 
-// function checkForLeapYear(check_y:number) {
-//       if((check_y % 4 == 0 && check_y % 100 == 0 && check_y % 400 == 0) || (check_y % 4 == 0 && check_y % 100 != 0 && check_y % 400 != 0))
-//             return true
-//       else return false
-// }
+{
 
-// function getNextDay(d = new Date().getDate(), m = new Date().getMonth() + 1, y = new Date().getFullYear()) {
-//       if (d == null || d == '') {d = new Date().getDate()}
-//       if (m == null || m == '') {m = new Date().getMonth() + 1}
-//       if (y === null || y === undefined) {y = new Date().getFullYear()}
-//       let result = ''
-//       console.log(checkForLeapYear(y))
-// if(m >= 1 && m <= 12) {
-      
-//       // Условие для месяцев с количеством дней: 30
-//       if(m == 4 || m == 6 || m == 9 || m == 11) {
+  function checkForLeapYear(check_y: number) {
+    if ((check_y % 4 == 0 && check_y % 100 == 0 && check_y % 400 == 0) || (check_y % 4 == 0 && check_y % 100 != 0 && check_y % 400 != 0))
+      return true
+    else return false
+  }
 
-//             if(d >= 1 && d <= 29) {  
-//                   d ++
-//             } else if(d == 30) {
-//                   d = 1
-//                   m++
-//             } else {   // Условие, если пользователь введёт несуществующую дату
-//                   result = 'Некорректная дата'                  
-//             }
+  function getNextDay(d = new Date().getDate(), m = new Date().getMonth() + 1, y = new Date().getFullYear()) {
+    if (d == null || d == '') { d = new Date().getDate() }
+    if (m == null || m == '') { m = new Date().getMonth() + 1 }
+    if (y === null || y === undefined) { y = new Date().getFullYear() }
+    let result = ''
+    console.log(checkForLeapYear(y))
+    if (m >= 1 && m <= 12) {
 
-//       // Условие для февраля
-//       } else if(m == 2) {
-            
-//             // Условие для февраля, если год является високосным
-//             if(checkForLeapYear(y)) {
-//                   if(d >= 1 && d <= 28) {
-//                         d++
-//                   } else if(d == 29) {
-//                         d = 1
-//                         m++
-//                   } else { // Условие, если пользователь введёт несуществующую дату
-//                         result = 'Некорректная дата'                                               
-//                   }
+      // Условие для месяцев с количеством дней: 30
+      if (m == 4 || m == 6 || m == 9 || m == 11) {
 
-//             // Условие для февраля, если год НЕ является високосным
-//             } else {
-//                   if(d >= 1 && d <= 27) {
-//                         d++
-//                   } else if(d == 28) {
-//                         d = 1
-//                         m++
-//                   } else { // Условие, если пользователь введёт несуществующую дату
-//                         result = 'Некорректная дата'                                                
-//                   }
-//             }
+        if (d >= 1 && d <= 29) {
+          d++
+        } else if (d == 30) {
+          d = 1
+          m++
+        } else {   // Условие, если пользователь введёт несуществующую дату
+          result = 'Некорректная дата'
+        }
 
-//       // Условие для декабря, переход на следующий год
-//       } else if(m == 12) {
-//                   if(d >= 1 && d <= 30) {  
-//                         d ++
-//                   } else if(d == 31) {
-//                         d = 1
-//                         m = 1
-//                         y++
-//                   } else { // Условие, если пользователь введёт несуществующую дату
-//                         result = 'Некорректная дата'                                              
-//                   }
+        // Условие для февраля
+      } else if (m == 2) {
 
-//       // Условие для месяцев с количеством дней: 31
-//       } else {
-//                   if(d >= 1 && d <= 30) {  
-//                         d ++
-//                   } else if(d == 31) {
-//                         d = 1
-//                         m++
-//                   } else { // Условие, если пользователь введёт несуществующую дату
-//                         result = 'Некорректная дата'                     
-//                   }
-//             }
-      
-// // Условие, если пользователь введёт НЕсуществующий месяц
-// } else {
-//       result = 'Некорректная дата'
-// }
-// console.log(`${d >= 10 ? d : '0' + d}.${m >= 10 ? m : '0' + m}.${y}`)
-// if(result == 'Некорректная дата') 
-//       result = 'Некорректная дата'
-// else result = `${d >= 10 ? d : '0' + d}.${m >= 10 ? m : '0' + m}.${y}`
-// return result
-// }
+        // Условие для февраля, если год является високосным
+        if (checkForLeapYear(y)) {
+          if (d >= 1 && d <= 28) {
+            d++
+          } else if (d == 29) {
+            d = 1
+            m++
+          } else { // Условие, если пользователь введёт несуществующую дату
+            result = 'Некорректная дата'
+          }
 
-// let userDay = 28
-// let userMonth = 2
-// let userYear = 2023
+          // Условие для февраля, если год НЕ является високосным
+        } else {
+          if (d >= 1 && d <= 27) {
+            d++
+          } else if (d == 28) {
+            d = 1
+            m++
+          } else { // Условие, если пользователь введёт несуществующую дату
+            result = 'Некорректная дата'
+          }
+        }
 
-// // if (userDay == null || userDay == '') {userDay = new Date().getDate()}
-// // if (userMonth == null || userMonth == '') {userMonth = new Date().getMonth() + 1}
-// // if (userYear == null || userYear == '') {userYear = new Date().getFullYear()}
+        // Условие для декабря, переход на следующий год
+      } else if (m == 12) {
+        if (d >= 1 && d <= 30) {
+          d++
+        } else if (d == 31) {
+          d = 1
+          m = 1
+          y++
+        } else { // Условие, если пользователь введёт несуществующую дату
+          result = 'Некорректная дата'
+        }
 
-// console.log(`${userDay >= 10 ? userDay : '0' + userDay}.${userMonth >= 10 ? userMonth : '0' + userMonth}.${userYear}`)
+        // Условие для месяцев с количеством дней: 31
+      } else {
+        if (d >= 1 && d <= 30) {
+          d++
+        } else if (d == 31) {
+          d = 1
+          m++
+        } else { // Условие, если пользователь введёт несуществующую дату
+          result = 'Некорректная дата'
+        }
+      }
 
-// console.log(getNextDay(userDay, userMonth, userYear))
+      // Условие, если пользователь введёт НЕсуществующий месяц
+    } else {
+      result = 'Некорректная дата'
+    }
+    console.log(`${d >= 10 ? d : '0' + d}.${m >= 10 ? m : '0' + m}.${y}`)
+    if (result == 'Некорректная дата')
+      result = 'Некорректная дата'
+    else result = `${d >= 10 ? d : '0' + d}.${m >= 10 ? m : '0' + m}.${y}`
+    return result
+  }
 
+  let userDay = 28
+  let userMonth = 2
+  let userYear = 2023
 
+  // if (userDay == null || userDay == '') {userDay = new Date().getDate()}
+  // if (userMonth == null || userMonth == '') {userMonth = new Date().getMonth() + 1}
+  // if (userYear == null || userYear == '') {userYear = new Date().getFullYear()}
+
+  console.log(`${userDay >= 10 ? userDay : '0' + userDay}.${userMonth >= 10 ? userMonth : '0' + userMonth}.${userYear}`)
+
+  console.log(getNextDay(userDay, userMonth, userYear))
+
+}
 
 // ___________________________________________________________________________________________________________
 
@@ -2966,7 +3099,7 @@ import axios from 'axios'
 //       let message = ''
 //       for(let i = 0; i < arguments.length; i++)
 //             message += arguments[i] + ' '
-      
+
 //       return message
 // }
 
@@ -3012,44 +3145,46 @@ import axios from 'axios'
 // отделить, поделив «х» на 10 нацело (parseInt(х/10)).
 
 
-// {
-//       // Рекурсия. Возведение числа в степень.
 
-//       function powRecursive(x: number, n: number):number {
-//             // return n == 1 ? x : x * powRecursive(x, n - 1)
-//             if (n==1) {
-//               console.log('Условие выхода стработало')
-//               return x
-//             } else {
-//               console.log(n)
-//               let result
-//               console.log(result = x * powRecursive(x, n - 1))
-//               return result
-//             }
-//           }
-          
-//           console.log(powRecursive(2,4))
+  // Рекурсия. Возведение числа в степень.
+
+//   { 
+
+//   function powRecursive(x: number, n: number): number {
+//     // return n == 1 ? x : x * powRecursive(x, n - 1)
+//     if (n == 1) {
+//       console.log('Условие выхода стработало')
+//       return x
+//     } else {
+//       console.log(n)
+//       let result
+//       console.log(result = x * powRecursive(x, n - 1))
+//       return result
+//     }
+//   }
+
+//   console.log(powRecursive(2, 4))
 
 
-// function maxDethPowRecursive(x: number, n: number):number {
-//   console.log(n)
-//   return n == 1 ? x : x * maxDethPowRecursive(x, n - 1)
-// }
+//   function maxDethPowRecursive(x: number, n: number): number {
+//     console.log(n)
+//     return n == 1 ? x : x * maxDethPowRecursive(x, n - 1)
+//   }
 
-// maxDethPowRecursive(1,100000)
-// }
+//   maxDethPowRecursive(1, 100000)
+
 
 // function powFor(x: bigint, n: number) {
-//       let result = 1n;
-//       for (let i = 0; i < n; i++) {
-//         result *= x;
-//       }
-//       return result;
-//     }
-    
-//     console.log(powFor(2n,100))
+//   let result = 1n;
+//   for (let i = 0; i < n; i++) {
+//     result *= x;
+//   }
+//   return result;
+// }
 
+// console.log(powFor(2n, 100))
 
+//   }
 
 // ___________________________________________________________________________________________________________
 
@@ -3059,6 +3194,8 @@ import axios from 'axios'
 // *********************************************************************************************************
 
 // Рекурсия.
+
+// Домашние задания по рекурсии
 
 // DZ_Modul_1_Week_5  В работе. Выполнено: 1, 2, 3, .......... , 6
 
@@ -3071,118 +3208,130 @@ import axios from 'axios'
 
 // 1. Написать функцию возведения числа в степень.
 
-// function calcPow(n:number, d:number):any {
-//       if(d == 1) return n
-//       return n * calcPow(n, d - 1)
-// }
+{
 
-// let num = 3
-// let degree = 3
-// let result = 0
+  function calcPow(n: number, d: number): any {
+    if (d == 1) return n
+    return n * calcPow(n, d - 1)
+  }
 
-// result = calcPow(num, degree)
+  let num = 3
+  let degree = 3
+  let result = 0
 
-// console.log(result)
+  result = calcPow(num, degree)
 
+  console.log(result)
+
+}
 
 
 // 2. Написать функцию поиска наибольшего общего делителя.
 
-// {
+{
 
-// let num1 = 28
-// let num2 = 35
-// let buf = 0
-// if (num1 > num2) { buf = num1; num1 = num2; num2 = buf; } 
-// let greatestCommonDivisor = 0
+  let num1 = 28
+  let num2 = 35
+  let buf = 0
+  if (num1 > num2) { buf = num1; num1 = num2; num2 = buf; }
+  let greatestCommonDivisor = 0
 
-// function findGreatestCommonDivisor(n1:number, n2:number) {
-//      let x = num1
-//      return (x % n1 == 0 && n2 % n1 == 0)? n1 : findGreatestCommonDivisor(n1 - 1, n2)
+  function findGreatestCommonDivisor(n1: number, n2: number) {
+    let x = num1
+    return (x % n1 == 0 && n2 % n1 == 0) ? n1 : findGreatestCommonDivisor(n1 - 1, n2)
 
-// }
-// greatestCommonDivisor = findGreatestCommonDivisor(num1, num2)
-// console.log(greatestCommonDivisor)
+  }
+  greatestCommonDivisor = findGreatestCommonDivisor(num1, num2)
+  console.log(greatestCommonDivisor)
 
-// }
+}
 
 
 
 // 3. Написать функцию для поиска максимальной цифры в числе.
 
-// function findMaxNumber(n:number) {
-//       let max = n % 10
-//       if(n < 1) return
-//       else { if(max < parseInt(findMaxNumber(n/10)% 10))
-//             max = parseInt(findMaxNumber(n/10)% 10)
-//       return max
-//       }
-     
-// }
+function findMaxNumber(n: number) {
+  let max = n % 10
+  if (n < 1) return
+  else {
+    if (max < parseInt(findMaxNumber(n / 10) % 10))
+      max = parseInt(findMaxNumber(n / 10) % 10)
+    return max
+  }
 
-// console.log(findMaxNumber(19245031609182))
+}
+
+console.log(findMaxNumber(19245031609182))
 
 
 
 // 4. Написать функцию, которая определяет простое ли переданное число.
 //    Простое число делится без остатка только на себя и на единицу. 
 
+{
 
-// function checkPrimeNumber(n:number):any {    
+  function checkPrimeNumber(n: number): any {
 
-//       let result = true
+    let result = true
 
-//       for(let i = 2; i < num; i++) {
-      
-//             if(num % num == 0 && num % i == 0) {
-//                   result = false
-//             } 
-//       }
-//       console.log(result)
-      
-//       if(result == true) {
-//             return 'Число является простым'
-//       } else {
-//             return 'Число НЕ является простым'
-//       }
-      
-// }
-// let num = 15
-// console.log(checkPrimeNumber(num))
+    for (let i = 2; i < num; i++) {
 
+      if (num % num == 0 && num % i == 0) {
+        result = false
+      }
+    }
+    console.log(result)
 
+    if (result == true) {
+      return 'Число является простым'
+    } else {
+      return 'Число НЕ является простым'
+    }
+
+  }
+  let num = 15
+  console.log(checkPrimeNumber(num))
+
+}
 
 
 // 5. Написать функцию для вывода всех множителей переданного числа в возрастающем порядке. 
 //    Например: число 18 – множители 2 * 3 * 3.
 
-// function showAllFactors(n:number) {
+{ 
 
-//       let result = ''
+function showAllFactors(n: number) {
 
-//       for(let i = 2; i < n; i++)
-//             if(n % i == 0) {
-//                   result += i + ', '
-//             }
+  let result = ''
 
-//       return result
-// }
+  for (let i = 2; i < n; i++)
+    if (n % i == 0) {
+      result += i + ', '
+    }
 
-// console.log(showAllFactors(21))
+  return result
+}
 
+console.log(showAllFactors(21))
+
+}
 
 // 6. Написать функцию, которая возвращает число Фибоначчи по переданному порядковому номеру. 
 //    Числа Фибоначчи: 1, 1, 2, 3, 5, 8, 13… Ряд основывается на том,
 //    что каждое число равно сумме двух предыдущих чисел. 
 //    Например: порядковый номер 3 – число 2, порядковый номер 6 – число 8
 
-// function Fibonacci(n:number) {
+{ 
 
-//       if(n<3) return 1
-//       return Fibonacci(n-1) + Fibonacci(n-2)
-// }
+function Fibonacci(n: number) {
 
-// console.log(Fibonacci(3))
+  if (n < 3) return 1
+  return Fibonacci(n - 1) + Fibonacci(n - 2)
+}
+
+console.log(Fibonacci(3))
+
+}
 
 // ___________________________________________________________________________________________________________
 
@@ -3195,6 +3344,8 @@ import axios from 'axios'
 
 // Рекурсия
 
+// Практические задания по рекурсии
+
 // PZ_Modul_1_Week_5 Рекурсия Выполнено полностью.
 
 // *********************************************************************************************************
@@ -3202,87 +3353,99 @@ import axios from 'axios'
 
 // 1. Написать функцию, которая вычисляет факториал заданного числа.
 
-// function fact(n:number):number {
-//    if(n < 0) return 0
-//    else if (n == 1) return 1
-//    else return n*fact(n-1)
-// }
+{ 
 
-// let num = 6
-// console.log(fact(num))
+function fact(n:number):number {
+   if(n < 0) return 0
+   else if (n == 1) return 1
+   else return n*fact(n-1)
+}
 
+let num = 6
+console.log(fact(num))
+
+}
 
 // 2. Написать функцию, которая выводит все числа из заданного пользователем диапазона в прямом порядке.
 //  И еще одну функцию – для вывода в обратном порядке.
 
-// {
+{
 
-// function showNumbers(n1:number, n2:number) {
+function showNumbers(n1:number, n2:number) {
 
-//    if (n1 == n2) return n1
-//     return  showNumbers(n1, n2 - 1) + ', ' + n2
-// }
+   if (n1 == n2) return n1
+    return  showNumbers(n1, n2 - 1) + ', ' + n2
+}
 
-// console.log(showNumbers(2, 5))
+console.log(showNumbers(2, 5))
 
-// }
+}
 
-// {
-// function showNumbers2(n1:number, n2:number) {
+{
+function showNumbers2(n1:number, n2:number) {
 
-//    if (n2 == n1) return n2
-   
-//   return showNumbers2(n1 + 1, n2) + ', ' + n1
-// }
+   if (n2 == n1) return n2
 
-// console.log(showNumbers2(2, 5))
-// }
+  return showNumbers2(n1 + 1, n2) + ', ' + n1
+}
+
+console.log(showNumbers2(2, 5))
+
+}
 
 
 // 3. Написать функцию, которая выводит переданное ей число задом наперед. 
 //    Например: число 1234 вывести как 4321.
 
+{ 
+  
+function gerReverseNumber (n:number):number {
+      if(n < 10) {
+         return n
+      } else {
+         return +(n % 10 + '' + gerReverseNumber(Math.floor(n / 10)))
+      }
+}
 
-// function gerReverseNumber (n:number):number {
-//       if(n < 10) {
-//          return n
-//       } else {
-//          return +(n % 10 + '' + gerReverseNumber(Math.floor(n / 10)))
-//       }
-// }
+console.log(gerReverseNumber(1234))
 
-// console.log(gerReverseNumber(1234))
-
+}
 
 // 4. Написать функцию, которая считает сумму цифр числа.
 // Например: число 1357, сумма 1 + 3 + 5 + 7 = 16.
 
-// function getSumOfDigits(n:number):number {
-//    if(n < 10) {
-//       return n
-//    } else {
-//       return n % 10 + getSumOfDigits(Math.floor(n / 10))
-//    }
-// }
+{ 
 
-// console.log(getSumOfDigits(1357))
+function getSumOfDigits(n:number):number {
+   if(n < 10) {
+      return n
+   } else {
+      return n % 10 + getSumOfDigits(Math.floor(n / 10))
+   }
+}
 
+console.log(getSumOfDigits(1357))
+
+}
 
 
 // 5. Написать функцию, которая принимает число и выводит 
 // соответствующее количество вложенных пар круглых скобок. 
 // Например: число 4 – (((())))
 
-// function getBracketsPairsByNum(n:number) {
-//    if (!n) {
-//       return ''
-//    } else {
-//    return '(' + getBracketsPairsByNum(n-1) + ')'
-// }
-// }
+{
 
-// console.log(getBracketsPairsByNum(4))
+function getBracketsPairsByNum(n:number) {
+   if (!n) {
+      return ''
+   } else {
+   return '(' + getBracketsPairsByNum(n-1) + ')'
+}
+}
 
+console.log(getBracketsPairsByNum(4))
+
+}
 // getBracketsPairsByNum(4) = '(' + getBracketsPairsByNum(3)== '((()))' + ')'     = (((())))
 // getBracketsPairsByNum(3) = '(' + getBracketsPairsByNum(2)== '(())' + ')'       = ((()))
 // getBracketsPairsByNum(2) = '(' + getBracketsPairsByNum(1)== '()' + ')'         = (())
@@ -3420,7 +3583,7 @@ import axios from 'axios'
 
 // Домашние задания
 
-// DZ_Modul_2_Week_1
+// DZ_Modul_2_Week_1   Выполнено полностью.
 
 // *********************************************************************************************************
 
@@ -3429,48 +3592,50 @@ import axios from 'axios'
 // Создать объект, описывающий автомобиль (производитель, модель, год выпуска, средняя скорость), 
 // и следующие функции для работы с этим объектом.
 
-// type Car = {
-//    manufacturer: string,
-//    model: string,
-//    year: number,
-//    averSpeed: number,
-// }
+{ 
 
-// const automobile = {
-//    manufacturer: 'Japan',
-//    model: 'f2x',
-//    year: 1996,
-//    averSpeed: 98,
-// } as Record<string, any>
+type Car = {
+  manufacturer: string,
+  model: string,
+  year: number,
+  averSpeed: number,
+}
 
-// console.log(automobile)
+const automobile = {
+  manufacturer: 'Japan',
+  model: 'f2x',
+  year: 1996,
+  averSpeed: 98,
+} as Record<string, any>
+
+console.log(automobile)
 
 
 // 1. Функция для вывода на экран информации об автомобиле.
 
-// function showAutomobile(auto: Car) {
+function showAutomobile(auto: Car) {
 
-//       for(let key in automobile) {
+  for (let key in automobile) {
 
-//             console.log(key)
-//             console.log(automobile[key])
-//       }
-// }
+    console.log(key)
+    console.log(automobile[key])
+  }
+}
 
-// showAutomobile()
+showAutomobile()
 
 
-// function showAutomobile2(obj:object) {
-// let result = ''
-//       for(let i in obj) {
-//             console.log(i)
-//             console.log(obj[i])
-//             result += i + ': ' + obj[i] + ', \n '
-//       }
-//       return result
-// }
-// showAutomobile2(automobile)
-// console.log(showAutomobile2(automobile))
+function showAutomobile2(obj: object) {
+  let result = ''
+  for (let i in obj) {
+    console.log(i)
+    console.log(obj[i])
+    result += i + ': ' + obj[i] + ', \n '
+  }
+  return result
+}
+showAutomobile2(automobile)
+console.log(showAutomobile2(automobile))
 
 
 
@@ -3478,30 +3643,32 @@ import axios from 'axios'
 // Учтите, что через каждые 4 часа дороги водителю необходимо делать перерыв на 1 час.
 // t = S / v
 
-// let userS = 100
+let userS = 100
 
-// function toFindTime(obj:object) {
-//       let t = userS / automobile.averSpeed
-//       let t2 = t
+function toFindTime(obj: object) {
+  let t = userS / automobile.averSpeed
+  let t2 = t
 
-// while (t2 > 4) {
-//       t += 1
-//       t2 -= 4      
-// }
-//       return t
-// }
+  while (t2 > 4) {
+    t += 1
+    t2 -= 4
+  }
+  return t
+}
 
-// let travelTime = toFindTime(automobile)
-
-
-// //  время в часах
-// console.log(travelTime)
-
-// travelTime = travelTime * 60
+let travelTime = toFindTime(automobile)
 
 
-// //  время в минутах
-// console.log(travelTime)
+//  время в часах
+console.log(travelTime)
+
+travelTime = travelTime * 60
+
+
+//  время в минутах
+console.log(travelTime)
+
+}
 
 
 
@@ -3509,114 +3676,119 @@ import axios from 'axios'
 
 // Создать объект, хранящий в себе отдельно числитель и знаменатель дроби, и следующие функции для работы с этим объектом.
 
-// type Fraction = {
-//       numerator: number,
-//       denominator: number
-// }
+{ 
 
-// const fraction1: Fraction = {
-//       numerator: 1,
-//       denominator: 2
-// }
+type Fraction = {
+  numerator: number,
+  denominator: number
+}
 
-// const fraction2 = {
-//       numerator: 3,
-//       denominator: 10
-// } as Fraction
+const fraction1: Fraction = {
+  numerator: 1,
+  denominator: 2
+}
+
+const fraction2 = {
+  numerator: 3,
+  denominator: 10
+} as Fraction
 
 
 
-// function transformToCommonDenominator(fr1: Fraction, fr2: Fraction) {
-//       return {
-//             fr1: {
-//                   numerator: fr1.numerator * fr2.denominator,
-//                   denominator: fr1.denominator * fr2.denominator 
-//             },
-//             fr2: {
-//                   numerator: fr2.numerator * fr1.denominator,
-//                   denominator: fr1.denominator * fr2.denominator 
-//             }
-//       }
-// }
+function transformToCommonDenominator(fr1: Fraction, fr2: Fraction) {
+  return {
+    fr1: {
+      numerator: fr1.numerator * fr2.denominator,
+      denominator: fr1.denominator * fr2.denominator
+    },
+    fr2: {
+      numerator: fr2.numerator * fr1.denominator,
+      denominator: fr1.denominator * fr2.denominator
+    }
+  }
+}
 
 // 1. Функция сложения 2-х объектов-дробей.
 
-// function getSumOfFraction(fr1:Fraction, fr2:Fraction) {
-//       const commonFractions = transformToCommonDenominator(fr1, fr2)
-//       console.log(commonFractions)
-//       return {
-//             numerator: commonFractions.fr1.numerator + commonFractions.fr2.numerator,
-//             denominator: commonFractions.fr1.denominator
-//       }
-// }
+function getSumOfFraction(fr1: Fraction, fr2: Fraction) {
+  const commonFractions = transformToCommonDenominator(fr1, fr2)
+  console.log(commonFractions)
+  return {
+    numerator: commonFractions.fr1.numerator + commonFractions.fr2.numerator,
+    denominator: commonFractions.fr1.denominator
+  }
+}
 
-// console.log(getSumOfFraction(fraction1, fraction2))
+console.log(getSumOfFraction(fraction1, fraction2))
 
-// function getRedusedSumOfFraction(fr1:Fraction, fr2:Fraction) {
-//       const result = getSumOfFraction(fr1, fr2)
-//       return getReductedFraction(result)
-// }
+function getRedusedSumOfFraction(fr1: Fraction, fr2: Fraction) {
+  const result = getSumOfFraction(fr1, fr2)
+  return getReductedFraction(result)
+}
 
-// console.log(getRedusedSumOfFraction(fraction1, fraction2))
+console.log(getRedusedSumOfFraction(fraction1, fraction2))
 
 
 // 2. Функция вычитания 2-х объектов-дробей.
 
-// function getSubtrOfFraction(fr1:Fraction, fr2:Fraction) {
-//       const commonFractions = transformToCommonDenominator(fr1, fr2)
-//       console.log(commonFractions)
-//       const result = {
-//             numerator: commonFractions.fr1.numerator - commonFractions.fr2.numerator,
-//             denominator: commonFractions.fr1.denominator
-//       }
-//       return getReductedFraction(result)
-// }
+function getSubtrOfFraction(fr1: Fraction, fr2: Fraction) {
+  const commonFractions = transformToCommonDenominator(fr1, fr2)
+  console.log(commonFractions)
+  const result = {
+    numerator: commonFractions.fr1.numerator - commonFractions.fr2.numerator,
+    denominator: commonFractions.fr1.denominator
+  }
+  return getReductedFraction(result)
+}
 
-// console.log(getSubtrOfFraction(fraction1, fraction2))
+console.log(getSubtrOfFraction(fraction1, fraction2))
 
 
 
 // 3. Функция умножения 2-х объектов-дробей.
 
-// function getMulOfFraction(fr1:Fraction, fr2:Fraction) {
-      
-//       const result = {
-//             numerator: fr1.numerator * fr2.numerator,
-//             denominator: fr1.denominator * fr2.denominator
-//       }
-//       return getReductedFraction(result)
-// }
+function getMulOfFraction(fr1: Fraction, fr2: Fraction) {
 
-// console.log(getMulOfFraction(fraction1, fraction2))
+  const result = {
+    numerator: fr1.numerator * fr2.numerator,
+    denominator: fr1.denominator * fr2.denominator
+  }
+  return getReductedFraction(result)
+}
+
+console.log(getMulOfFraction(fraction1, fraction2))
 
 
 // 4. Функция деления 2-х объектов-дробей.
 
-// function getDivOfFraction(fr1:Fraction, fr2:Fraction) {
-      
-//       const result = {
-//             numerator: fr1.numerator * fr2.denominator,
-//             denominator: fr1.denominator * fr2.numerator
-//       }
-//       return getReductedFraction(result)
-// }
+function getDivOfFraction(fr1: Fraction, fr2: Fraction) {
 
-// console.log(getDivOfFraction(fraction1, fraction2))
+  const result = {
+    numerator: fr1.numerator * fr2.denominator,
+    denominator: fr1.denominator * fr2.numerator
+  }
+  return getReductedFraction(result)
+}
+
+console.log(getDivOfFraction(fraction1, fraction2))
 
 
 // 5. Функция сокращения объекта-дроби.
 
-// function getReductedFraction(fr: Fraction) {
-//       const min = fr.numerator < fr.denominator ? fr.numerator : fr.denominator
-//       for(let i = min; i > 1; i--) {
-//             if(fr.numerator % i == 0 && fr.denominator % i == 0) {
-//                   fr.numerator /= i
-//                   fr.denominator /= i
-//                   return  getReductedFraction(fr)
-//             }
-//       }
-//       return fr
-// }
+function getReductedFraction(fr: Fraction) {
+  const min = fr.numerator < fr.denominator ? fr.numerator : fr.denominator
+  for (let i = min; i > 1; i--) {
+    if (fr.numerator % i == 0 && fr.denominator % i == 0) {
+      fr.numerator /= i
+      fr.denominator /= i
+      return getReductedFraction(fr)
+    }
+  }
+  return fr
+}
+
+
+}
 
 
 
@@ -3624,91 +3796,93 @@ import axios from 'axios'
 
 // Создать объект, описывающий время (часы, минуты, секунды), и следующие функции для работы с этим объектом.
 
-// type Time = {
-//       hours: number,
-//       minutes: number,
-//       seconds: number,
-// }
+{ 
 
-// const hwTime = {
-//       hours: 10,
-//       minutes: 4,
-//       seconds: 3,
-// }
+type Time = {
+  hours: number,
+  minutes: number,
+  seconds: number,
+}
 
-// console.log(hwTime)
+const hwTime = {
+  hours: 10,
+  minutes: 4,
+  seconds: 3,
+}
+
+console.log(hwTime)
 
 // 1. Функция вывода времени на экран.
 
-// function showTime(obj:Time) {
-//       let result = (obj.hours >= 10 ? obj.hours : '0' + obj.hours) + ':' + 
-//       (obj.minutes >= 10 ? obj.minutes : '0' + obj.minutes) + ':' + 
-//       (obj.seconds >= 10 ? obj.seconds : '0' + obj.seconds)
-//       return result
-// }
+function showTime(obj: Time) {
+  let result = (obj.hours >= 10 ? obj.hours : '0' + obj.hours) + ':' +
+    (obj.minutes >= 10 ? obj.minutes : '0' + obj.minutes) + ':' +
+    (obj.seconds >= 10 ? obj.seconds : '0' + obj.seconds)
+  return result
+}
 
-// console.log(showTime(hwTime))
+console.log(showTime(hwTime))
 
-// console.log(100 / 60)
-// console.log(100 % 60)
+console.log(100 / 60)
+console.log(100 % 60)
 
 // 2. Функция изменения времени на переданное количество секунд.
 
-// function changingSeconds(obj:Time, sec:number) {
-//       if(sec <= 60)
-//       obj.seconds = sec 
-//       else {
-//             obj.seconds = sec % 60
-//             obj.minutes += parseInt(sec / 60)
-//             if(obj.minutes > 60) {
-//                   obj.hours += parseInt(obj.minutes / 60)
-//                   obj.minutes = obj.minutes % 60
-//             }
-//       }
-//       return showTime(obj)
-// }
+function changingSeconds(obj: Time, sec: number) {
+  if (sec <= 60)
+    obj.seconds = sec
+  else {
+    obj.seconds = sec % 60
+    obj.minutes += parseInt(sec / 60)
+    if (obj.minutes > 60) {
+      obj.hours += parseInt(obj.minutes / 60)
+      obj.minutes = obj.minutes % 60
+    }
+  }
+  return showTime(obj)
+}
 
-// let new_seconds = 3600
+let new_seconds = 3600
 
-// console.log(changingSeconds(hwTime, new_seconds))
+console.log(changingSeconds(hwTime, new_seconds))
 
-// console.log(showTime(hwTime))
+console.log(showTime(hwTime))
 
 
 
 // 3. Функция изменения времени на переданное количество минут.
 
-// function changingMinutes(obj:Time, min:number) {
-//       if(min <= 60)
-//       obj.minutes = min 
-//       else {
-//             obj.minutes = min % 60
-//             obj.hours += parseInt(min / 60)
-//       }
-//       return showTime(obj)
-// }
+function changingMinutes(obj: Time, min: number) {
+  if (min <= 60)
+    obj.minutes = min
+  else {
+    obj.minutes = min % 60
+    obj.hours += parseInt(min / 60)
+  }
+  return showTime(obj)
+}
 
-// let new_minutes = 10000
+let new_minutes = 10000
 
-// console.log(changingMinutes(hwTime, new_minutes))
+console.log(changingMinutes(hwTime, new_minutes))
 
-// console.log(showTime(hwTime))
+console.log(showTime(hwTime))
 
 
 // 4. Функция изменения времени на переданное количество часов.
 
-// function changingHours(obj:Time, hour:number) {
-      
-//       obj.hours = hour 
-      
-//       return showTime(obj)
-// }
+function changingHours(obj: Time, hour: number) {
 
-// let new_hours = 100
+  obj.hours = hour
 
-// console.log(changingHours(hwTime, new_hours))
+  return showTime(obj)
+}
 
-// console.log(showTime(hwTime))
+let new_hours = 100
+
+console.log(changingHours(hwTime, new_hours))
+
+console.log(showTime(hwTime))
 
 
 
@@ -3716,6 +3890,8 @@ import axios from 'axios'
 // части времени, может измениться и другая. Например: если ко 
 // времени «20:30:45» добавить 30 секунд, то должно получиться 
 // «20:31:15», а не «20:30:75».
+
+}
 
 
 // ___________________________________________________________________________________________________________
@@ -3840,142 +4016,142 @@ import axios from 'axios'
 
 
 interface Rectangle {
-      topLeft: { x: number, y: number };
-      bottomRight: { x: number, y: number };
-  }
-  function getRectangleInfo(rect: Rectangle): void {
-      console.log(`Верхний левый угол: (${rect.topLeft.x}, ${rect.topLeft.y})`);
-      console.log(`Нижний правый угол: (${rect.bottomRight.x}, ${rect.bottomRight.y})`);
-  }
-  function getWidth(rect: Rectangle): number {
-      return Math.abs(rect.bottomRight.x - rect.topLeft.x);
-  }
-  function getHeight(rect: Rectangle): number {
-      return Math.abs(rect.bottomRight.y - rect.topLeft.y);
-  }
-  function getArea(rect: Rectangle): number {
-      return getWidth(rect) * getHeight(rect);
-  }
-  function getPerimeter(rect: Rectangle): number {
-      return 2 * (getWidth(rect) + getHeight(rect));
-  }
-  function changeWidth(rect: Rectangle, change: number): void {
-      rect.bottomRight.x += change;
-  }
-  function changeHeight(rect: Rectangle, change: number): void {
-      rect.bottomRight.y += change;
-  }
-  function changeWidthAndHeight(rect: Rectangle, widthChange: number, heightChange: number): void {
-      changeWidth(rect, widthChange);
-      changeHeight(rect, heightChange);
-  }
-  function moveX(rect: Rectangle, shiftX: number): void {
-      rect.topLeft.x += shiftX;
-      rect.bottomRight.x += shiftX;
-  }
-  function moveY(rect: Rectangle, shiftY: number): void {
-      rect.topLeft.y += shiftY;
-      rect.bottomRight.y += shiftY;
-  }
-  function moveXY(rect: Rectangle, shiftX: number, shiftY: number): void {
-      moveX(rect, shiftX);
-      moveY(rect, shiftY);
-  }
-  function isPointInside(rect: Rectangle, point: { x: number, y: number }): boolean {
-      return point.x >= rect.topLeft.x && point.x <= rect.bottomRight.x && point.y >= rect.topLeft.y && point.y <= rect.bottomRight.y;
-  }
-  let rectangle: Rectangle = {
-      topLeft: { x: 0, y: 0 },
-      bottomRight: { x: 5, y: 5 }
-  }
-  getRectangleInfo(rectangle);
-  console.log("Ширина:", getWidth(rectangle));
-  console.log("Высота:", getHeight(rectangle));
-  console.log("Площадь:", getArea(rectangle));
-  console.log("Периметр:", getPerimeter(rectangle));
-  changeWidth(rectangle, 3);
-  console.log("Новая ширина:", getWidth(rectangle));
-  changeHeight(rectangle, 2);
-  console.log("Новая высота:", getHeight(rectangle));
-  changeWidthAndHeight(rectangle, 2, 1);
-  console.log("Новая ширина:", getWidth(rectangle));
-  console.log("Новая высота:", getHeight(rectangle));
-  moveXY(rectangle, 1, -1);
-  getRectangleInfo(rectangle);
-  console.log("Точка (3, 3) находится внутри прямоугольника?", isPointInside(rectangle, { x: 3, y: 3 }));
-  
-  const rectElement = document.getElementById('rect') as HTMLDivElement
-  function initRect(rect: Rectangle, rectEl: HTMLDivElement) {
-    rectEl.style.width = getWidth(rect)*10+'px'
-    rectEl.style.height = getHeight(rect)*10+'px'
-    rectEl.style.top = rect.topLeft.y+'px'
-    rectEl.style.left = rect.topLeft.x+'px'
-  }
+  topLeft: { x: number, y: number };
+  bottomRight: { x: number, y: number };
+}
+function getRectangleInfo(rect: Rectangle): void {
+  console.log(`Верхний левый угол: (${rect.topLeft.x}, ${rect.topLeft.y})`);
+  console.log(`Нижний правый угол: (${rect.bottomRight.x}, ${rect.bottomRight.y})`);
+}
+function getWidth(rect: Rectangle): number {
+  return Math.abs(rect.bottomRight.x - rect.topLeft.x);
+}
+function getHeight(rect: Rectangle): number {
+  return Math.abs(rect.bottomRight.y - rect.topLeft.y);
+}
+function getArea(rect: Rectangle): number {
+  return getWidth(rect) * getHeight(rect);
+}
+function getPerimeter(rect: Rectangle): number {
+  return 2 * (getWidth(rect) + getHeight(rect));
+}
+function changeWidth(rect: Rectangle, change: number): void {
+  rect.bottomRight.x += change;
+}
+function changeHeight(rect: Rectangle, change: number): void {
+  rect.bottomRight.y += change;
+}
+function changeWidthAndHeight(rect: Rectangle, widthChange: number, heightChange: number): void {
+  changeWidth(rect, widthChange);
+  changeHeight(rect, heightChange);
+}
+function moveX(rect: Rectangle, shiftX: number): void {
+  rect.topLeft.x += shiftX;
+  rect.bottomRight.x += shiftX;
+}
+function moveY(rect: Rectangle, shiftY: number): void {
+  rect.topLeft.y += shiftY;
+  rect.bottomRight.y += shiftY;
+}
+function moveXY(rect: Rectangle, shiftX: number, shiftY: number): void {
+  moveX(rect, shiftX);
+  moveY(rect, shiftY);
+}
+function isPointInside(rect: Rectangle, point: { x: number, y: number }): boolean {
+  return point.x >= rect.topLeft.x && point.x <= rect.bottomRight.x && point.y >= rect.topLeft.y && point.y <= rect.bottomRight.y;
+}
+let rectangle: Rectangle = {
+  topLeft: { x: 0, y: 0 },
+  bottomRight: { x: 5, y: 5 }
+}
+getRectangleInfo(rectangle);
+console.log("Ширина:", getWidth(rectangle));
+console.log("Высота:", getHeight(rectangle));
+console.log("Площадь:", getArea(rectangle));
+console.log("Периметр:", getPerimeter(rectangle));
+changeWidth(rectangle, 3);
+console.log("Новая ширина:", getWidth(rectangle));
+changeHeight(rectangle, 2);
+console.log("Новая высота:", getHeight(rectangle));
+changeWidthAndHeight(rectangle, 2, 1);
+console.log("Новая ширина:", getWidth(rectangle));
+console.log("Новая высота:", getHeight(rectangle));
+moveXY(rectangle, 1, -1);
+getRectangleInfo(rectangle);
+console.log("Точка (3, 3) находится внутри прямоугольника?", isPointInside(rectangle, { x: 3, y: 3 }));
+
+const rectElement = document.getElementById('rect') as HTMLDivElement
+function initRect(rect: Rectangle, rectEl: HTMLDivElement) {
+  rectEl.style.width = getWidth(rect) * 10 + 'px'
+  rectEl.style.height = getHeight(rect) * 10 + 'px'
+  rectEl.style.top = rect.topLeft.y + 'px'
+  rectEl.style.left = rect.topLeft.x + 'px'
+}
+initRect(rectangle, rectElement)
+
+const topLeftButton = document.getElementById('topLeft') as HTMLDivElement
+const topButton = document.getElementById('top') as HTMLDivElement
+const topRightButton = document.getElementById('topRight') as HTMLDivElement
+const leftButton = document.getElementById('left') as HTMLDivElement
+const rightButton = document.getElementById('right') as HTMLDivElement
+const bottomLeftButton = document.getElementById('bottomLeft') as HTMLDivElement
+const bottomButton = document.getElementById('bottom') as HTMLDivElement
+const bottomRightButton = document.getElementById('bottomRight') as HTMLDivElement
+
+const addHeightButton = document.getElementById('addHeight') as HTMLDivElement
+const addWidthButton = document.getElementById('addWidth') as HTMLDivElement
+const reduceHeightButton = document.getElementById('reduceHeight') as HTMLDivElement
+const reduceWidthButton = document.getElementById('reduceWidth') as HTMLDivElement
+
+addHeightButton.addEventListener('click', () => {
+  changeHeight(rectangle, 1)
   initRect(rectangle, rectElement)
-  
-  const topLeftButton = document.getElementById('topLeft') as HTMLDivElement
-  const topButton = document.getElementById('top') as HTMLDivElement
-  const topRightButton = document.getElementById('topRight') as HTMLDivElement
-  const leftButton = document.getElementById('left') as HTMLDivElement
-  const rightButton = document.getElementById('right') as HTMLDivElement
-  const bottomLeftButton = document.getElementById('bottomLeft') as HTMLDivElement
-  const bottomButton = document.getElementById('bottom') as HTMLDivElement
-  const bottomRightButton = document.getElementById('bottomRight') as HTMLDivElement
-  
-  const addHeightButton = document.getElementById('addHeight') as HTMLDivElement
-  const addWidthButton = document.getElementById('addWidth') as HTMLDivElement
-  const reduceHeightButton = document.getElementById('reduceHeight') as HTMLDivElement
-  const reduceWidthButton = document.getElementById('reduceWidth') as HTMLDivElement
-  
-  addHeightButton.addEventListener('click', ()=>{
-    changeHeight(rectangle, 1)
-    initRect(rectangle, rectElement)
-  })
-  reduceHeightButton.addEventListener('click', ()=>{
-    changeHeight(rectangle, -1)
-    initRect(rectangle, rectElement)
-  })
-  addWidthButton.addEventListener('click', ()=>{
-    changeWidth(rectangle, 1)
-    initRect(rectangle, rectElement)
-  })
-  reduceWidthButton.addEventListener('click', ()=>{
-    changeWidth(rectangle, -1)
-    initRect(rectangle, rectElement)
-  })
-  
-  topLeftButton.addEventListener('click', ()=>{
-    moveXY(rectangle, -10, -10)
-    initRect(rectangle, rectElement)
-  })
-  topButton.addEventListener('click', ()=>{
-    moveY(rectangle, -10)
-    initRect(rectangle, rectElement)
-  })
-  topRightButton.addEventListener('click', ()=>{
-    moveXY(rectangle, 10, -10)
-    initRect(rectangle, rectElement)
-  })
-  leftButton.addEventListener('click', ()=>{
-    moveX(rectangle, -10)
-    initRect(rectangle, rectElement)
-  })
-  rightButton.addEventListener('click', ()=>{
-    moveX(rectangle, 10)
-    initRect(rectangle, rectElement)
-  })
-  bottomLeftButton.addEventListener('click', () => {
-    moveXY(rectangle, -10, 10)
-    initRect(rectangle, rectElement)
-  })
-  bottomButton.addEventListener('click', () => {
-    moveY(rectangle, 10)
-    initRect(rectangle, rectElement)
-  })
-  bottomRightButton.addEventListener('click', () => {
-    moveXY(rectangle, 10, 10)
-    initRect(rectangle, rectElement)
-  })
+})
+reduceHeightButton.addEventListener('click', () => {
+  changeHeight(rectangle, -1)
+  initRect(rectangle, rectElement)
+})
+addWidthButton.addEventListener('click', () => {
+  changeWidth(rectangle, 1)
+  initRect(rectangle, rectElement)
+})
+reduceWidthButton.addEventListener('click', () => {
+  changeWidth(rectangle, -1)
+  initRect(rectangle, rectElement)
+})
+
+topLeftButton.addEventListener('click', () => {
+  moveXY(rectangle, -10, -10)
+  initRect(rectangle, rectElement)
+})
+topButton.addEventListener('click', () => {
+  moveY(rectangle, -10)
+  initRect(rectangle, rectElement)
+})
+topRightButton.addEventListener('click', () => {
+  moveXY(rectangle, 10, -10)
+  initRect(rectangle, rectElement)
+})
+leftButton.addEventListener('click', () => {
+  moveX(rectangle, -10)
+  initRect(rectangle, rectElement)
+})
+rightButton.addEventListener('click', () => {
+  moveX(rectangle, 10)
+  initRect(rectangle, rectElement)
+})
+bottomLeftButton.addEventListener('click', () => {
+  moveXY(rectangle, -10, 10)
+  initRect(rectangle, rectElement)
+})
+bottomButton.addEventListener('click', () => {
+  moveY(rectangle, 10)
+  initRect(rectangle, rectElement)
+})
+bottomRightButton.addEventListener('click', () => {
+  moveXY(rectangle, 10, 10)
+  initRect(rectangle, rectElement)
+})
 
 
 
@@ -3989,198 +4165,198 @@ interface Rectangle {
   interface Rectangle {
     topLeft: { x: number, y: number };
     bottomRight: { x: number, y: number };
-}
-function getRectangleInfo(rect: Rectangle): void {
+  }
+  function getRectangleInfo(rect: Rectangle): void {
     console.log(`Верхний левый угол: (${rect.topLeft.x}, ${rect.topLeft.y})`);
     console.log(`Нижний правый угол: (${rect.bottomRight.x}, ${rect.bottomRight.y})`);
-}
-function getWidth(rect: Rectangle): number {
+  }
+  function getWidth(rect: Rectangle): number {
     return Math.abs(rect.bottomRight.x - rect.topLeft.x);
-}
-function getHeight(rect: Rectangle): number {
+  }
+  function getHeight(rect: Rectangle): number {
     return Math.abs(rect.bottomRight.y - rect.topLeft.y);
-}
-function getArea(rect: Rectangle): number {
+  }
+  function getArea(rect: Rectangle): number {
     return getWidth(rect) * getHeight(rect);
-}
-function getPerimeter(rect: Rectangle): number {
+  }
+  function getPerimeter(rect: Rectangle): number {
     return 2 * (getWidth(rect) + getHeight(rect));
-}
-function changeWidth(rect: Rectangle, change: number): void {
+  }
+  function changeWidth(rect: Rectangle, change: number): void {
     rect.bottomRight.x += change;
-}
-function changeHeight(rect: Rectangle, change: number): void {
+  }
+  function changeHeight(rect: Rectangle, change: number): void {
     rect.bottomRight.y += change;
-}
-function changeWidthAndHeight(rect: Rectangle, widthChange: number, heightChange: number): void {
+  }
+  function changeWidthAndHeight(rect: Rectangle, widthChange: number, heightChange: number): void {
     changeWidth(rect, widthChange);
     changeHeight(rect, heightChange);
-}
-function moveX(rect: Rectangle, shiftX: number): void {
+  }
+  function moveX(rect: Rectangle, shiftX: number): void {
     rect.topLeft.x += shiftX;
     rect.bottomRight.x += shiftX;
-}
-function moveY(rect: Rectangle, shiftY: number): void {
+  }
+  function moveY(rect: Rectangle, shiftY: number): void {
     rect.topLeft.y += shiftY;
     rect.bottomRight.y += shiftY;
-}
-function moveXY(rect: Rectangle, shiftX: number, shiftY: number): void {
+  }
+  function moveXY(rect: Rectangle, shiftX: number, shiftY: number): void {
     moveX(rect, shiftX);
     moveY(rect, shiftY);
-}
-function isPointInside(rect: Rectangle, point: { x: number, y: number }): boolean {
+  }
+  function isPointInside(rect: Rectangle, point: { x: number, y: number }): boolean {
     return point.x >= rect.topLeft.x && point.x <= rect.bottomRight.x && point.y >= rect.topLeft.y && point.y <= rect.bottomRight.y;
-}
-let rectangle: Rectangle = {
+  }
+  let rectangle: Rectangle = {
     topLeft: { x: 0, y: 0 },
     bottomRight: { x: 5, y: 5 }
-}
-getRectangleInfo(rectangle);
-// console.log("Ширина:", getWidth(rectangle));
-// console.log("Высота:", getHeight(rectangle));
-// console.log("Площадь:", getArea(rectangle));
-// console.log("Периметр:", getPerimeter(rectangle));
-// changeWidth(rectangle, 3);
-// console.log("Новая ширина:", getWidth(rectangle));
-// changeHeight(rectangle, 2);
-// console.log("Новая высота:", getHeight(rectangle));
-// changeWidthAndHeight(rectangle, 2, 1);
-// console.log("Новая ширина:", getWidth(rectangle));
-// console.log("Новая высота:", getHeight(rectangle));
-// moveXY(rectangle, 1, -1);
-// getRectangleInfo(rectangle);
-// console.log("Точка (3, 3) находится внутри прямоугольника?", isPointInside(rectangle, { x: 3, y: 3 }));
-
-const rectElement = document.getElementById('rect') as HTMLDivElement
-function initRect(rect: Rectangle, rectEl: HTMLDivElement) {
-  rectEl.style.width = getWidth(rect)*10+'px'
-  rectEl.style.height = getHeight(rect)*10+'px'
-  rectEl.style.top = rect.topLeft.y+'px'
-  rectEl.style.left = rect.topLeft.x+'px'
-}
-initRect(rectangle, rectElement)
-
-const numdapDiv = document.querySelector('.numpad') as HTMLDivElement
-
-// const topLeftButton = document.getElementById('topLeft') as HTMLDivElement
-// const topButton = document.getElementById('top') as HTMLDivElement
-// const topRightButton = document.getElementById('topRight') as HTMLDivElement
-// const leftButton = document.getElementById('left') as HTMLDivElement
-// const rightButton = document.getElementById('right') as HTMLDivElement
-// const bottomLeftButton = document.getElementById('bottomLeft') as HTMLDivElement
-// const bottomButton = document.getElementById('bottom') as HTMLDivElement
-// const bottomRightButton = document.getElementById('bottomRight') as HTMLDivElement
-
-// const addHeightButton = document.getElementById('addHeight') as HTMLDivElement
-// const addWidthButton = document.getElementById('addWidth') as HTMLDivElement
-// const reduceHeightButton = document.getElementById('reduceHeight') as HTMLDivElement
-// const reduceWidthButton = document.getElementById('reduceWidth') as HTMLDivElement
-
-numdapDiv.addEventListener('click', (e)=>{
-  const eTarget = e.target as HTMLElement
-  const target = eTarget.closest('.button')
-  if (!target?.id) return
-  switch (target.id) {
-    case 'topLeft':
-      moveXY(rectangle, -10, -10)
-      initRect(rectangle, rectElement)
-      return
-    case 'top':
-      moveY(rectangle, -10)
-      initRect(rectangle, rectElement)
-      return
-    case 'topRight':
-      moveXY(rectangle, 10, -10)
-      initRect(rectangle, rectElement)
-      return
-    case 'left':
-      moveX(rectangle, -10)
-      initRect(rectangle, rectElement)
-      return
-    case 'right':
-      moveX(rectangle, 10)
-      initRect(rectangle, rectElement)
-      return
-    case 'bottomLeft':
-      moveXY(rectangle, -10, 10)
-      initRect(rectangle, rectElement)
-      return
-    case 'bottom':
-      moveY(rectangle, 10)
-      initRect(rectangle, rectElement)
-      return
-    case 'bottomRight':
-      moveXY(rectangle, 10, 10)
-      initRect(rectangle, rectElement)
-      return
-    case 'addHeight':
-      changeHeight(rectangle, 1)
-      initRect(rectangle, rectElement)
-      return
-    case 'addWidth':
-      changeWidth(rectangle, 1)
-      initRect(rectangle, rectElement)
-      return
-    case 'reduceHeight':
-      changeHeight(rectangle, -1)
-      initRect(rectangle, rectElement)
-      return
-    case 'reduceWidth':
-      changeWidth(rectangle, -1)
-      initRect(rectangle, rectElement)
-      return
   }
-})
+  getRectangleInfo(rectangle);
+  // console.log("Ширина:", getWidth(rectangle));
+  // console.log("Высота:", getHeight(rectangle));
+  // console.log("Площадь:", getArea(rectangle));
+  // console.log("Периметр:", getPerimeter(rectangle));
+  // changeWidth(rectangle, 3);
+  // console.log("Новая ширина:", getWidth(rectangle));
+  // changeHeight(rectangle, 2);
+  // console.log("Новая высота:", getHeight(rectangle));
+  // changeWidthAndHeight(rectangle, 2, 1);
+  // console.log("Новая ширина:", getWidth(rectangle));
+  // console.log("Новая высота:", getHeight(rectangle));
+  // moveXY(rectangle, 1, -1);
+  // getRectangleInfo(rectangle);
+  // console.log("Точка (3, 3) находится внутри прямоугольника?", isPointInside(rectangle, { x: 3, y: 3 }));
 
-// addHeightButton.addEventListener('click', ()=>{
-//   changeHeight(rectangle, 1)
-//   initRect(rectangle, rectElement)
-// })
-// reduceHeightButton.addEventListener('click', ()=>{
-//   changeHeight(rectangle, -1)
-//   initRect(rectangle, rectElement)
-// })
-// addWidthButton.addEventListener('click', ()=>{
-//   changeWidth(rectangle, 1)
-//   initRect(rectangle, rectElement)
-// })
-// reduceWidthButton.addEventListener('click', ()=>{
-//   changeWidth(rectangle, -1)
-//   initRect(rectangle, rectElement)
-// })
+  const rectElement = document.getElementById('rect') as HTMLDivElement
+  function initRect(rect: Rectangle, rectEl: HTMLDivElement) {
+    rectEl.style.width = getWidth(rect) * 10 + 'px'
+    rectEl.style.height = getHeight(rect) * 10 + 'px'
+    rectEl.style.top = rect.topLeft.y + 'px'
+    rectEl.style.left = rect.topLeft.x + 'px'
+  }
+  initRect(rectangle, rectElement)
 
-// topLeftButton.addEventListener('click', ()=>{
-//   moveXY(rectangle, -10, -10)
-//   initRect(rectangle, rectElement)
-// })
-// topButton.addEventListener('click', ()=>{
-//   moveY(rectangle, -10)
-//   initRect(rectangle, rectElement)
-// })
-// topRightButton.addEventListener('click', ()=>{
-//   moveXY(rectangle, 10, -10)
-//   initRect(rectangle, rectElement)
-// })
-// leftButton.addEventListener('click', ()=>{
-//   moveX(rectangle, -10)
-//   initRect(rectangle, rectElement)
-// })
-// rightButton.addEventListener('click', ()=>{
-//   moveX(rectangle, 10)
-//   initRect(rectangle, rectElement)
-// })
-// bottomLeftButton.addEventListener('click', () => {
-//   moveXY(rectangle, -10, 10)
-//   initRect(rectangle, rectElement)
-// })
-// bottomButton.addEventListener('click', () => {
-//   moveY(rectangle, 10)
-//   initRect(rectangle, rectElement)
-// })
-// bottomRightButton.addEventListener('click', () => {
-//   moveXY(rectangle, 10, 10)
-//   initRect(rectangle, rectElement)
-// })
+  const numdapDiv = document.querySelector('.numpad') as HTMLDivElement
+
+  // const topLeftButton = document.getElementById('topLeft') as HTMLDivElement
+  // const topButton = document.getElementById('top') as HTMLDivElement
+  // const topRightButton = document.getElementById('topRight') as HTMLDivElement
+  // const leftButton = document.getElementById('left') as HTMLDivElement
+  // const rightButton = document.getElementById('right') as HTMLDivElement
+  // const bottomLeftButton = document.getElementById('bottomLeft') as HTMLDivElement
+  // const bottomButton = document.getElementById('bottom') as HTMLDivElement
+  // const bottomRightButton = document.getElementById('bottomRight') as HTMLDivElement
+
+  // const addHeightButton = document.getElementById('addHeight') as HTMLDivElement
+  // const addWidthButton = document.getElementById('addWidth') as HTMLDivElement
+  // const reduceHeightButton = document.getElementById('reduceHeight') as HTMLDivElement
+  // const reduceWidthButton = document.getElementById('reduceWidth') as HTMLDivElement
+
+  numdapDiv.addEventListener('click', (e) => {
+    const eTarget = e.target as HTMLElement
+    const target = eTarget.closest('.button')
+    if (!target?.id) return
+    switch (target.id) {
+      case 'topLeft':
+        moveXY(rectangle, -10, -10)
+        initRect(rectangle, rectElement)
+        return
+      case 'top':
+        moveY(rectangle, -10)
+        initRect(rectangle, rectElement)
+        return
+      case 'topRight':
+        moveXY(rectangle, 10, -10)
+        initRect(rectangle, rectElement)
+        return
+      case 'left':
+        moveX(rectangle, -10)
+        initRect(rectangle, rectElement)
+        return
+      case 'right':
+        moveX(rectangle, 10)
+        initRect(rectangle, rectElement)
+        return
+      case 'bottomLeft':
+        moveXY(rectangle, -10, 10)
+        initRect(rectangle, rectElement)
+        return
+      case 'bottom':
+        moveY(rectangle, 10)
+        initRect(rectangle, rectElement)
+        return
+      case 'bottomRight':
+        moveXY(rectangle, 10, 10)
+        initRect(rectangle, rectElement)
+        return
+      case 'addHeight':
+        changeHeight(rectangle, 1)
+        initRect(rectangle, rectElement)
+        return
+      case 'addWidth':
+        changeWidth(rectangle, 1)
+        initRect(rectangle, rectElement)
+        return
+      case 'reduceHeight':
+        changeHeight(rectangle, -1)
+        initRect(rectangle, rectElement)
+        return
+      case 'reduceWidth':
+        changeWidth(rectangle, -1)
+        initRect(rectangle, rectElement)
+        return
+    }
+  })
+
+  // addHeightButton.addEventListener('click', ()=>{
+  //   changeHeight(rectangle, 1)
+  //   initRect(rectangle, rectElement)
+  // })
+  // reduceHeightButton.addEventListener('click', ()=>{
+  //   changeHeight(rectangle, -1)
+  //   initRect(rectangle, rectElement)
+  // })
+  // addWidthButton.addEventListener('click', ()=>{
+  //   changeWidth(rectangle, 1)
+  //   initRect(rectangle, rectElement)
+  // })
+  // reduceWidthButton.addEventListener('click', ()=>{
+  //   changeWidth(rectangle, -1)
+  //   initRect(rectangle, rectElement)
+  // })
+
+  // topLeftButton.addEventListener('click', ()=>{
+  //   moveXY(rectangle, -10, -10)
+  //   initRect(rectangle, rectElement)
+  // })
+  // topButton.addEventListener('click', ()=>{
+  //   moveY(rectangle, -10)
+  //   initRect(rectangle, rectElement)
+  // })
+  // topRightButton.addEventListener('click', ()=>{
+  //   moveXY(rectangle, 10, -10)
+  //   initRect(rectangle, rectElement)
+  // })
+  // leftButton.addEventListener('click', ()=>{
+  //   moveX(rectangle, -10)
+  //   initRect(rectangle, rectElement)
+  // })
+  // rightButton.addEventListener('click', ()=>{
+  //   moveX(rectangle, 10)
+  //   initRect(rectangle, rectElement)
+  // })
+  // bottomLeftButton.addEventListener('click', () => {
+  //   moveXY(rectangle, -10, 10)
+  //   initRect(rectangle, rectElement)
+  // })
+  // bottomButton.addEventListener('click', () => {
+  //   moveY(rectangle, 10)
+  //   initRect(rectangle, rectElement)
+  // })
+  // bottomRightButton.addEventListener('click', () => {
+  //   moveXY(rectangle, 10, 10)
+  //   initRect(rectangle, rectElement)
+  // })
 
 
 
@@ -4199,23 +4375,35 @@ numdapDiv.addEventListener('click', (e)=>{
 
 // Задачи из учебника по теме Объекты
 
-const user = {
+// Напишите код, выполнив задание из каждого пункта отдельной строкой:
 
-} as Record<string, any> 
+// Создайте пустой объект user.
+// Добавьте свойство name со значением John.
+// Добавьте свойство surname со значением Smith.
+// Измените значение свойства name на Pete.
+// Удалите свойство name из объекта.
 
-user.name = 'John'
-user['surname'] = 'Smith'
-console.log(user)
-user['name'] = 'Pete'
-console.log(user)
-delete user.name
-console.log(user)
+// const user = {
+
+// } as Record<string, any> 
+
+// user.name = 'John'
+// user['surname'] = 'Smith'
+// console.log(user)
+// user['name'] = 'Pete'
+// console.log(user)
+// delete user.name
+// console.log(user)
+
+
+// Проверка на пустоту
+// Напишите функцию isEmpty(obj), которая возвращает true, если у объекта нет свойств, иначе false.
 
 // let schedule = {};
 
 // function isEmpty(obj:object) {
 //       for(let key in obj) {           
-//             return false
+//             return false // если тело цикла начнет выполняться - значит в объекте есть свойства
 //       }
 //       return true
 // }
@@ -4227,11 +4415,15 @@ console.log(user)
 // console.log(isEmpty(schedule))
 
 
+
+// // У нас есть объект, в котором хранятся зарплаты нашей команды:
 // let salaries = {
 //       John: 100,
 //       Ann: 160,
 //       Pete: 130
-//     }
+//     } as any
+
+// // Напишите код для суммирования всех зарплат и сохраните результат в переменной sum. Должно получиться 390.
 
 //     let sum = 0
 
@@ -4242,30 +4434,53 @@ console.log(user)
 //     console.log(sum)
 
 
-//     let menu = {
-//       width: 200,
-//       height: 300,
-//       title: "My menu"
+
+// Умножаем все числовые свойства на 2
+// Создайте функцию multiplyNumeric(obj), которая умножает все числовые свойства объекта obj на 2.
+
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   title: "My menu"
+// } as Record<string, any>
+
+// console.log(menu)
+
+// function multiplyNumeric(obj: object) {
+//   for (let key in obj) {
+//     if (typeof obj[key] == 'number') {
+//       obj[key] *= 2
 //     }
+//   }
+// }
 
-//     console.log(menu)
+// multiplyNumeric(menu)
 
-//     function multiplyNumeric(obj:object) {
-//       for(let key in obj) {
-//             if(typeof(obj[key]) == 'number')
-//                   obj[key] *= 2
-//       }
-//     }
+// console.log(menu)
 
-//     multiplyNumeric(menu)
 
-//     console.log(menu)
+
+
+
+
+
+// const userDiv4 = document.getElementById('div4') as HTMLDivElement
+
+// userDiv4.addEventListener('click', () => {
+//   document.getElementById.style.transform = "rotate(50deg)"
+// })
+
+
+
 
 
 // *********************************************************************************************************
 
 
 // Массивы
+
+
+// Домашние задания. Массивы
 
 // DZ_Modul_2_Week_2   В работе.
 
@@ -4458,7 +4673,7 @@ console.log(user)
 
 
 // 1.3*. Написать функцию возвращающюю массив случайных целых чисел. 
-      // Функция принимает 1 параметр, количество элементов в будущем массиве
+// Функция принимает 1 параметр, количество элементов в будущем массиве
 
 // Функция возвращает массив случайных целых чисел от 0 до 10, размер массива задан пользователем
 
@@ -4516,36 +4731,36 @@ console.log(user)
 //       { name: 'Крылов Богдан Максимович', department: 'disign', salary: 2100 },
 //       { name: 'Мухина Айша Константиновна', department: 'disign', salary: 2100 },
 //     ]
-    
-    
-    
-    
-    // Все функции вызывать несколько раз с разными параметрами
-    // 3.1. Создать функцию, принимающую массив работников, и возвращающую массив уникальных отделов (department)
-    // deps.includes
-    // [ads, prog, disign]
-    // 3.2. Написать функцию, принимающую массив работников и ключ объекта, по которому сделать сортировку массива
-    // Учесть, что строковые параметры сортируются при помощи метода localeCompare, а числовые,- вычитанием
-    // function sortEmpl(arr, key: 'name' | 'department' |'salary') {
-    // }
-    // 3.3. Написать функцию, аналогичную описанной в задании 3.2., но сортирующую в обратном порядке
-    // 3.4. Написать функцию, принимающую массив работников и имя, и возвращающую объект сотрудника или undefined
-    // 3.5. Написать функцию, принимающую массив работников и название отдела, и возвращающую новый массив, содержащий только сотрудников переданного отдела
-    // 3.6. Написать функцию, принимающую массив работников и возвращающую сумму зарплат. Вызвать функцию по каждому отделу и по общему массиву
-    
-    // 3.7. В HTML создать div для кнопок, задать ему id и получить объект div'a в js, аналогично заданию 2.2.
-    // 3.8. Так же как в 3.7 создать ul (as HTMLUListElement) для вывода списка и div для вывода суммы зарплат
-    
-    // 3.9. Используя массив, полученный в 3.1. Вывести кнопки с названиями отделов + кнопку "Все отделы"
-    //      использовать data-атрибут (data-dep), в который поместить название отдела. Для кнопки "Все отделы" data-dep="all"
-    // 3.10. Используя div, полученный в задании 3.7
-    // div37.addEventListener('click', function (e) {
-    //   const target = e.target as HTMLElement
-    //   if (target.tagName == 'BUTTON' && target.dataset.dep) {
-    //      в зависимости от значения dep выводить в список (ul 3.8) тех сотрудников, которые работают в данном отделе, либо всех, если target.dataset.dep=='all'. Используем логическое ветвление и уже написанные функции
-    //      в div (3.8) выводить сумму зарплат
-    //   }
-    // })
+
+
+
+
+// Все функции вызывать несколько раз с разными параметрами
+// 3.1. Создать функцию, принимающую массив работников, и возвращающую массив уникальных отделов (department)
+// deps.includes
+// [ads, prog, disign]
+// 3.2. Написать функцию, принимающую массив работников и ключ объекта, по которому сделать сортировку массива
+// Учесть, что строковые параметры сортируются при помощи метода localeCompare, а числовые,- вычитанием
+// function sortEmpl(arr, key: 'name' | 'department' |'salary') {
+// }
+// 3.3. Написать функцию, аналогичную описанной в задании 3.2., но сортирующую в обратном порядке
+// 3.4. Написать функцию, принимающую массив работников и имя, и возвращающую объект сотрудника или undefined
+// 3.5. Написать функцию, принимающую массив работников и название отдела, и возвращающую новый массив, содержащий только сотрудников переданного отдела
+// 3.6. Написать функцию, принимающую массив работников и возвращающую сумму зарплат. Вызвать функцию по каждому отделу и по общему массиву
+
+// 3.7. В HTML создать div для кнопок, задать ему id и получить объект div'a в js, аналогично заданию 2.2.
+// 3.8. Так же как в 3.7 создать ul (as HTMLUListElement) для вывода списка и div для вывода суммы зарплат
+
+// 3.9. Используя массив, полученный в 3.1. Вывести кнопки с названиями отделов + кнопку "Все отделы"
+//      использовать data-атрибут (data-dep), в который поместить название отдела. Для кнопки "Все отделы" data-dep="all"
+// 3.10. Используя div, полученный в задании 3.7
+// div37.addEventListener('click', function (e) {
+//   const target = e.target as HTMLElement
+//   if (target.tagName == 'BUTTON' && target.dataset.dep) {
+//      в зависимости от значения dep выводить в список (ul 3.8) тех сотрудников, которые работают в данном отделе, либо всех, если target.dataset.dep=='all'. Используем логическое ветвление и уже написанные функции
+//      в div (3.8) выводить сумму зарплат
+//   }
+// })
 
 
 
@@ -4625,39 +4840,39 @@ console.log(user)
 // Напишите функцию showNotification(options), которая создаёт уведомление: <div class="notification"> с заданным содержимым. Уведомление должно автоматически исчезнуть через 1,5 секунды.
 
 type options = {
-top? :number,
-right?: number,
-html? : string,
-className? : string,
+  top?: number,
+  right?: number,
+  html?: string,
+  className?: string,
 }
 
-function showNotification({top = 0, right = 0, className = '', html = ''}) {
+function showNotification({ top = 0, right = 0, className = '', html = '' }) {
 
-      let notification = document.createElement('div')
-      notification.className = "notification"
-      notification.classList.add('notification')
-      if (className) {
-        notification.classList.add(className)
-      }
+  let notification = document.createElement('div')
+  notification.className = "notification"
+  notification.classList.add('notification')
+  if (className) {
+    notification.classList.add(className)
+  }
 
-      notification.style.top = top + 'px'
-      notification.style.right = right + 'px'
+  notification.style.top = top + 'px'
+  notification.style.right = right + 'px'
 
-      notification.innerHTML = html
-      document.body.append(notification)
+  notification.innerHTML = html
+  document.body.append(notification)
 
-      setTimeout(() => notification.remove(), 5000)
-    }
+  setTimeout(() => notification.remove(), 5000)
+}
 
-    let i = 1;
-    setInterval(() => {
-      showNotification({
-        top: 10,
-        right: 10,
-        html: 'Hello ' + i++,
-        className: "welcome"
-      });
-    }, 5000);
+let i = 1;
+setInterval(() => {
+  showNotification({
+    top: 10,
+    right: 10,
+    html: 'Hello ' + i++,
+    className: "welcome"
+  });
+}, 5000);
 
 
 
