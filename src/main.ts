@@ -95,41 +95,41 @@ import axios from 'axios'
 /*8. Пользователь вводит сумму денег в кошельке и цену одной шоколадки. 
    Программа выводит сколько шоколадок может купить пользователь и сколько сдачи у него останется.*/
 {
-let sum = 160
-let price = 30
+  let sum = 160
+  let price = 30
 
-// @ts-ignore
-let numberOfChocolates = parseInt(sum / price)
-console.log('Количество шоколдано, которое Вы можете купить', numberOfChocolates)
+  // @ts-ignore
+  let numberOfChocolates = parseInt(sum / price)
+  console.log('Количество шоколдано, которое Вы можете купить', numberOfChocolates)
 
-let residualAmount = sum - (price * numberOfChocolates)
-console.log('Остаток денег:', residualAmount)
+  let residualAmount = sum - (price * numberOfChocolates)
+  console.log('Остаток денег:', residualAmount)
 }
 
 // // Вариант 2.
 {
-let sum2 = 160
-let price2 = 30
+  let sum2 = 160
+  let price2 = 30
 
-// @ts-expect-error
-let numberOfChocolates2 = parseInt(sum2 / price2)
-console.log('Количество шоколдано, которое Вы можете купить', numberOfChocolates2)
+  // @ts-expect-error
+  let numberOfChocolates2 = parseInt(sum2 / price2)
+  console.log('Количество шоколдано, которое Вы можете купить', numberOfChocolates2)
 
-// @ts-expect-error
-let residualAmount2 = parseInt(sum2 % price2)
-console.log('Остаток денег:', residualAmount2)
+  // @ts-expect-error
+  let residualAmount2 = parseInt(sum2 % price2)
+  console.log('Остаток денег:', residualAmount2)
 }
 
 
 /*9. Запросите у пользователя трехзначное число и выведите его задом наперед. 
       Для решения задачи вам понадобится оператор % (остаток от деления).*/
 {
-let num1 = 749
+  let num1 = 749
 
-// @ts-expect-error
-let num2 = parseInt((num1 % 10) * 100) + parseInt(((num1/10) % 10)) * 10 + parseInt(((num1/100) % 10))
+  // @ts-expect-error
+  let num2 = parseInt((num1 % 10) * 100) + parseInt(((num1 / 10) % 10)) * 10 + parseInt(((num1 / 100) % 10))
 
-console.log(num2)
+  console.log(num2)
 }
 
 /*10. Запросите у пользователя целое число и выведите в ответ, четное число или нет. 
@@ -148,28 +148,28 @@ console.log(num2)
 
 //   Вариант 2
 {
-let num = 12
+  let num = 12
 
-if (num % 2 == 0) {
-  console.log('Число', num, 'чётное')
-} else console.log('Число', num, 'не чётное')
+  if (num % 2 == 0) {
+    console.log('Число', num, 'чётное')
+  } else console.log('Число', num, 'не чётное')
 }
 // Вариант 3
 {
-let num = 13
+  let num = 13
 
-switch (num % 2) {
-  case 0:
-    console.log('Число', num, 'чётное')                  
-    break;
+  switch (num % 2) {
+    case 0:
+      console.log('Число', num, 'чётное')
+      break;
 
-  case 1:
-    console.log('Число', num, 'не чётное')                  
-    break;
+    case 1:
+      console.log('Число', num, 'не чётное')
+      break;
 
-  default:
-    break;
-}
+    default:
+      break;
+  }
 }
 
 // ___________________________________________________________________________________________________________
@@ -502,89 +502,89 @@ switch (num % 2) {
 
 
 // 5.
-{ 
-let x = '10px'
-let y = '3px'
-console.log(x > y)
-console.log(x < y)
-console.log(+x > +y)
-console.log(+x < +y)
-console.log(parseInt(x) > parseInt(y))
-console.log(parseInt(x) < parseInt(y))
-console.log(+false)
-console.log(+true)
-// @ts-expect-error
-console.log(true == 1)
-// @ts-expect-error
-console.log(false == 0)
-console.log(+'')
+{
+  let x = '10px'
+  let y = '3px'
+  console.log(x > y)
+  console.log(x < y)
+  console.log(+x > +y)
+  console.log(+x < +y)
+  console.log(parseInt(x) > parseInt(y))
+  console.log(parseInt(x) < parseInt(y))
+  console.log(+false)
+  console.log(+true)
+  // @ts-expect-error
+  console.log(true == 1)
+  // @ts-expect-error
+  console.log(false == 0)
+  console.log(+'')
 
-// Все значения, которы станут false при преобразовании в булев тип
-console.log(Boolean(''))
-console.log(Boolean(0))
-console.log(Boolean(undefined))
-console.log(Boolean(null))
-console.log(Boolean(NaN))
-console.log(Boolean(false))
+  // Все значения, которы станут false при преобразовании в булев тип
+  console.log(Boolean(''))
+  console.log(Boolean(0))
+  console.log(Boolean(undefined))
+  console.log(Boolean(null))
+  console.log(Boolean(NaN))
+  console.log(Boolean(false))
 
-console.log(Boolean(5))
-console.log(Boolean(-5))
+  console.log(Boolean(5))
+  console.log(Boolean(-5))
 
-console.log(isNaN(NaN))
-console.log(isNaN(1))
+  console.log(isNaN(NaN))
+  console.log(isNaN(1))
 
 
-let rezult = x > y
-console.log(rezult)
-rezult = x < y
-console.log(rezult)
-rezult = 5 < 7
-console.log(rezult)
-rezult = 15 < 7
-console.log(rezult)
-console.log('Я' > 'А')
-console.log('я' > 'Я')
-console.log('z' > 'Z')
+  let rezult = x > y
+  console.log(rezult)
+  rezult = x < y
+  console.log(rezult)
+  rezult = 5 < 7
+  console.log(rezult)
+  rezult = 15 < 7
+  console.log(rezult)
+  console.log('Я' > 'А')
+  console.log('я' > 'Я')
+  console.log('z' > 'Z')
 
-console.log(null === undefined)
-console.log(null == undefined)
-console.log(null == null)
-console.log(undefined == undefined)
+  console.log(null === undefined)
+  console.log(null == undefined)
+  console.log(null == null)
+  console.log(undefined == undefined)
 }
 
 // 6.
-{ 
-console.log(typeof '1')
-console.log(typeof 1)
-console.log(typeof (1))
-console.log(typeof typeof 1)
-console.log(typeof typeof '1')
-console.log(typeof 1 == 'number')
-console.log(typeof 1 == 'string')
-console.log(typeof true)
-console.log(typeof null)
-console.log(typeof(1+'true'))
-console.log(typeof('1'+2))
-console.log(typeof('1'+false))
+{
+  console.log(typeof '1')
+  console.log(typeof 1)
+  console.log(typeof (1))
+  console.log(typeof typeof 1)
+  console.log(typeof typeof '1')
+  console.log(typeof 1 == 'number')
+  console.log(typeof 1 == 'string')
+  console.log(typeof true)
+  console.log(typeof null)
+  console.log(typeof (1 + 'true'))
+  console.log(typeof ('1' + 2))
+  console.log(typeof ('1' + false))
 
-let y
-console.log(typeof y == 'undefined')
-let x = null
-console.log(typeof x)
-console.log(x === null)
+  let y
+  console.log(typeof y == 'undefined')
+  let x = null
+  console.log(typeof x)
+  console.log(x === null)
 
 }
 
 // 7. 
 {
-let x = -1
-if(x < 0)
- x = -x;
-console.log(x)
+  let x = -1
+  if (x < 0)
+    x = -x;
+  console.log(x)
 
-let z
-if (typeof z == 'undefined') z = 0;
-console.log(z)
+  let z
+  if (typeof z == 'undefined') z = 0;
+  console.log(z)
 }
 // 8.
 // let x = confirm('Подтвердите своё согласие на отбор Вашего печенья.')
@@ -607,43 +607,43 @@ console.log(z)
 
 // 9.
 {
-let x = Math.random()
-console.log(x)
-let z = Date()
-console.log(z)
+  let x = Math.random()
+  console.log(x)
+  let z = Date()
+  console.log(z)
 }
 // 10.
-{ 
-let aStr = ''
-let bStr = 'Default'
+{
+  let aStr = ''
+  let bStr = 'Default'
 
-aStr ||= bStr
-console.log(aStr)
-aStr = aStr ? aStr : bStr
-console.log(aStr)
+  aStr ||= bStr
+  console.log(aStr)
+  aStr = aStr ? aStr : bStr
+  console.log(aStr)
 
-aStr = 'Hello'
+  aStr = 'Hello'
 
-aStr &&= aStr + ' user'
-aStr = aStr ? aStr + '!' : aStr
-console.log(aStr)
+  aStr &&= aStr + ' user'
+  aStr = aStr ? aStr + '!' : aStr
+  console.log(aStr)
 
-console.log(true || true)   
-console.log(false || true)  
-console.log(true || false)  
-console.log(false || false)
+  console.log(true || true)
+  console.log(false || true)
+  console.log(true || false)
+  console.log(false || false)
 
-console.log(true && true)
-console.log(false && true)
-console.log(true && false)
-console.log(false && false)
+  console.log(true && true)
+  console.log(false && true)
+  console.log(true && false)
+  console.log(false && false)
 
-console.log(!false)
-console.log(!true)
-console.log(!0)
-console.log(!1)
-console.log(!!0)
-console.log(!!1)
+  console.log(!false)
+  console.log(!true)
+  console.log(!0)
+  console.log(!1)
+  console.log(!!0)
+  console.log(!!1)
 
 }
 
@@ -674,79 +674,79 @@ console.log(!!1)
 /* 1. Запросить у пользователя его возраст и определить, кем он является: 
       ребенком (0–2), подростком (12–18), взрослым (18_60) или пенсионером (60– ...).*/
 {
-let userAge = 17
+  let userAge = 17
 
-if (userAge >= 0 && userAge <= 2) {
-   console.log('Пользователь - ребёнок от 0 до 2 лет')
-} else if (userAge > 2 && userAge < 12) {
-   console.log('Пользователь - ребёнок от 3 до 11 лет')
-} else if (userAge >= 12 && userAge < 18) {
-   console.log('Пользователь - подросток')
-}  else if (userAge >= 18 && userAge <= 60) {
-   console.log('Пользователь - взрослый')
-}  else if (userAge < 0) {
-   console.log('Введены некорректные данные')
-} else console.log('Пользователь - пенсионер')
+  if (userAge >= 0 && userAge <= 2) {
+    console.log('Пользователь - ребёнок от 0 до 2 лет')
+  } else if (userAge > 2 && userAge < 12) {
+    console.log('Пользователь - ребёнок от 3 до 11 лет')
+  } else if (userAge >= 12 && userAge < 18) {
+    console.log('Пользователь - подросток')
+  } else if (userAge >= 18 && userAge <= 60) {
+    console.log('Пользователь - взрослый')
+  } else if (userAge < 0) {
+    console.log('Введены некорректные данные')
+  } else console.log('Пользователь - пенсионер')
 
-console.log(typeof userAge)
-console.log(typeof userAge == 'undefined')
-console.log(typeof userAge == 'number')
-console.log(typeof userAge == 'string')
+  console.log(typeof userAge)
+  console.log(typeof userAge == 'undefined')
+  console.log(typeof userAge == 'number')
+  console.log(typeof userAge == 'string')
 }
 
 
 /* 2. Запросить у пользователя число от 0 до 9 и вывести ему спецсимвол, 
       который расположен на этой клавише (1–!, 2–@, 3–# и т. д).*/
-{ 
+{
 
 
-let userResult = '1'
+  let userResult = '1'
 
-switch (userResult) {
+  switch (userResult) {
 
-  case '1':
-    console.log('!')            
-    break;
+    case '1':
+      console.log('!')
+      break;
 
-  case '2':
-    console.log('@')            
-    break;
+    case '2':
+      console.log('@')
+      break;
 
-  case '3':
-    console.log('#')            
-    break;
+    case '3':
+      console.log('#')
+      break;
 
-  case '4':
-    console.log('$')            
-    break;
+    case '4':
+      console.log('$')
+      break;
 
-  case '5':
-    console.log('%')            
-    break;
+    case '5':
+      console.log('%')
+      break;
 
-  case '6':
-    console.log('^')            
-    break;
+    case '6':
+      console.log('^')
+      break;
 
-  case '7':
-    console.log('&')            
-    break;
+    case '7':
+      console.log('&')
+      break;
 
-  case '8':
-    console.log('*')            
-    break;
+    case '8':
+      console.log('*')
+      break;
 
-  case '9':
-    console.log('(')            
-    break;
+    case '9':
+      console.log('(')
+      break;
 
-  case '0':
-    console.log(')')            
-    break;
+    case '0':
+      console.log(')')
+      break;
 
-  default:
-    break;
-}
+    default:
+      break;
+  }
 
 
 }
@@ -756,19 +756,19 @@ switch (userResult) {
 //  3. Запросить у пользователя трехзначное и число и проверить, 
 //       есть ли в нем одинаковые цифры.
 
-{ 
+{
 
-let userNum = 343
-// @ts-expect-error
-console.log(parseInt(userNum/100%10))
-// @ts-expect-error
-if (parseInt(userNum/100%10) == parseInt(userNum/10%10) || 
-// @ts-expect-error
-parseInt(userNum/100%10) == userNum%10 ||
-// @ts-expect-error
-parseInt(userNum/10%10) == userNum%10)
-console.log('есть одинаковые цифры')
-else console.log('нет одинаковых цифр')
+  let userNum = 343
+  // @ts-expect-error
+  console.log(parseInt(userNum / 100 % 10))
+  // @ts-expect-error
+  if (parseInt(userNum / 100 % 10) == parseInt(userNum / 10 % 10) ||
+    // @ts-expect-error
+    parseInt(userNum / 100 % 10) == userNum % 10 ||
+    // @ts-expect-error
+    parseInt(userNum / 10 % 10) == userNum % 10)
+    console.log('есть одинаковые цифры')
+  else console.log('нет одинаковых цифр')
 
 }
 
@@ -776,21 +776,21 @@ else console.log('нет одинаковых цифр')
 //    4. Запросить у пользователя год и проверить, високосный он или нет. 
 //      Високосный год либо кратен 400, либо кратен 4 и при этом не кратен 100.
 
-{ 
+{
 
-let userYear = 2020
-let days_in_year = 0
+  let userYear = 2020
+  let days_in_year = 0
 
-if ((userYear % 4 == 0 && userYear % 100 == 0 && userYear % 400 == 0) || 
-    (userYear % 4 == 0 && userYear % 100 != 0 && userYear % 400 != 0)) { 
-      days_in_year = 366
-      console.log('Год является високосным.')
-} else { 
-      days_in_year = 365
-      console.log('Год не является високосным.')
-}
+  if ((userYear % 4 == 0 && userYear % 100 == 0 && userYear % 400 == 0) ||
+    (userYear % 4 == 0 && userYear % 100 != 0 && userYear % 400 != 0)) {
+    days_in_year = 366
+    console.log('Год является високосным.')
+  } else {
+    days_in_year = 365
+    console.log('Год не является високосным.')
+  }
 
-console.log(days_in_year)
+  console.log(days_in_year)
 }
 
 
@@ -812,15 +812,15 @@ console.log(days_in_year)
 
 //  5. Запросить у пользователя пятиразрядное число и определить, является ли оно палиндромом.
 
-{ 
+{
 
-let num1 = 12321
-// @ts-expect-error
-let num2 = parseInt((num1 % 10) * 10000) + parseInt(((num1/10) % 10)) * 1000 + parseInt(((num1/100) % 10)) * 100 + parseInt(((num1/1000) % 10)) * 10 + parseInt(((num1/10000) % 10))
+  let num1 = 12321
+  // @ts-expect-error
+  let num2 = parseInt((num1 % 10) * 10000) + parseInt(((num1 / 10) % 10)) * 1000 + parseInt(((num1 / 100) % 10)) * 100 + parseInt(((num1 / 1000) % 10)) * 10 + parseInt(((num1 / 10000) % 10))
 
-console.log(num2)
+  console.log(num2)
 
-num1 == num2 ? console.log('Число является палиндромом') : console.log('Число НЕ является палиндромом')
+  num1 == num2 ? console.log('Число является палиндромом') : console.log('Число НЕ является палиндромом')
 
 }
 
@@ -828,32 +828,32 @@ num1 == num2 ? console.log('Число является палиндромом')
 //  6. Написать конвертор валют. Пользователь вводит количество USD, выбирает, в какую валюту хочет перевести: EUR, 
 //  UAN или AZN, и получает в ответ соответствующую сумму.
 
-{ 
+{
 
-const dollarsToEUR = 1.09
-const dollarsToUAN = 0.14
-const dollarsToAZN = 0.59
+  const dollarsToEUR = 1.09
+  const dollarsToUAN = 0.14
+  const dollarsToAZN = 0.59
 
-let userUSD = 10
-let userSelection = 'AZN'
-let result = 0
+  let userUSD = 10
+  let userSelection = 'AZN'
+  let result = 0
 
-switch (userSelection) {
-   case 'EUR':
+  switch (userSelection) {
+    case 'EUR':
       result = userUSD / dollarsToEUR
       break;
-   case 'UAN':
+    case 'UAN':
       result = userUSD / dollarsToUAN
       break;
-   case 'AZN':
+    case 'AZN':
       result = userUSD / dollarsToAZN
       break;
 
-   default:
+    default:
       break;
-}
+  }
 
-console.log(result)
+  console.log(result)
 
 }
 
@@ -861,25 +861,25 @@ console.log(result)
 //  7. Запросить у пользователя сумму покупки и вывести сумму к оплате со скидкой: от 200 до 300 – скидка будет 3%, 
 //     от 300 до 500 – 5%, от 500 и выше – 7%. 
 
-{ 
+{
 
-// Сумма покупки пользователя
-let userAmountOfCost = 400
+  // Сумма покупки пользователя
+  let userAmountOfCost = 400
 
-// Сумма к оплате
-let amountToBePaid = 0
+  // Сумма к оплате
+  let amountToBePaid = 0
 
-if (userAmountOfCost >= 200 && userAmountOfCost < 300) {
-      amountToBePaid = userAmountOfCost - (userAmountOfCost * 0.03)
-} else if (userAmountOfCost >= 300 && userAmountOfCost < 500) {
-      amountToBePaid = userAmountOfCost - (userAmountOfCost * 0.05)
-} else if (userAmountOfCost >= 500) {
-      amountToBePaid = userAmountOfCost - (userAmountOfCost * 0.07)
-} else {
-      amountToBePaid = userAmountOfCost
-}
+  if (userAmountOfCost >= 200 && userAmountOfCost < 300) {
+    amountToBePaid = userAmountOfCost - (userAmountOfCost * 0.03)
+  } else if (userAmountOfCost >= 300 && userAmountOfCost < 500) {
+    amountToBePaid = userAmountOfCost - (userAmountOfCost * 0.05)
+  } else if (userAmountOfCost >= 500) {
+    amountToBePaid = userAmountOfCost - (userAmountOfCost * 0.07)
+  } else {
+    amountToBePaid = userAmountOfCost
+  }
 
-console.log(amountToBePaid)
+  console.log(amountToBePaid)
 
 }
 
@@ -898,8 +898,8 @@ let C = 20
 let P = 12
 
 // // Если пользоавтель ввёл отрицательное  число
-if(C < 0) C *= -1
-if(P < 0) P *= -1
+if (C < 0) C *= -1
+if (P < 0) P *= -1
 
 // //Вычисление диаметра
 let D = C / PI
@@ -939,112 +939,112 @@ let a = P / 4 as any
 // 10. Запросить дату (день, месяц, год) и вывести следующую за ней дату. 
 //     Учтите возможность перехода на следующий месяц, год, а также високосный год. 
 
-{ 
+{
 
-// Переменные для пользовательского ввода: день, месяц, год
-// let userDay = +prompt('Введите день')
-let userDay = 28
+  // Переменные для пользовательского ввода: день, месяц, год
+  // let userDay = +prompt('Введите день')
+  let userDay = 28
 
-// // Если пользователь не введёт дату, присвоится текущая дата.
-// @ts-expect-error
-if (userDay == null || userDay == '') {userDay = new Date().getDate()}
+  // // Если пользователь не введёт дату, присвоится текущая дата.
+  // @ts-expect-error
+  if (userDay == null || userDay == '') { userDay = new Date().getDate() }
 
-// let userMonth = +prompt('Введите месяц')
-let userMonth = 2
-// @ts-expect-error
-if (userMonth == null || userMonth == '') {userMonth = new Date().getMonth() + 1}
+  // let userMonth = +prompt('Введите месяц')
+  let userMonth = 2
+  // @ts-expect-error
+  if (userMonth == null || userMonth == '') { userMonth = new Date().getMonth() + 1 }
 
-// let userYear = +prompt('Введите год')
-let userYear = 2020
-// @ts-expect-error
-if (userYear == null || userYear == '') {userYear = new Date().getFullYear()}
+  // let userYear = +prompt('Введите год')
+  let userYear = 2020
+  // @ts-expect-error
+  if (userYear == null || userYear == '') { userYear = new Date().getFullYear() }
 
 
-// Условие, если пользователь введёт существующий месяц
-if(userMonth >= 1 && userMonth <= 12) {
+  // Условие, если пользователь введёт существующий месяц
+  if (userMonth >= 1 && userMonth <= 12) {
 
-      // Условие для месяцев с количеством дней: 30
-      if(userMonth == 4 || userMonth == 6 || userMonth == 9 || userMonth == 11) {
+    // Условие для месяцев с количеством дней: 30
+    if (userMonth == 4 || userMonth == 6 || userMonth == 9 || userMonth == 11) {
 
-            if(userDay >= 1 && userDay <= 29) {  
-                  userDay ++
-            } else if(userDay == 30) {
-                  userDay = 1
-                  userMonth++
-            } else {   // Условие, если пользователь введёт несуществующую дату
-                  console.log("Некорректная дата")
-                  alert("Некорректная дата")                  
-            }
+      if (userDay >= 1 && userDay <= 29) {
+        userDay++
+      } else if (userDay == 30) {
+        userDay = 1
+        userMonth++
+      } else {   // Условие, если пользователь введёт несуществующую дату
+        console.log("Некорректная дата")
+        alert("Некорректная дата")
+      }
 
       // Условие для февраля
-      } else if(userMonth == 2) {
+    } else if (userMonth == 2) {
 
-            // Условие для февраля, если год является високосным
-            if((userYear % 4 == 0 && userYear % 100 == 0 && userYear % 400 == 0) || 
-            (userYear % 4 == 0 && userYear % 100 != 0 && userYear % 400 != 0)) {
+      // Условие для февраля, если год является високосным
+      if ((userYear % 4 == 0 && userYear % 100 == 0 && userYear % 400 == 0) ||
+        (userYear % 4 == 0 && userYear % 100 != 0 && userYear % 400 != 0)) {
 
-                  if(userDay >= 1 && userDay <= 28) {
-                        userDay++
-                  } else if(userDay == 29) {
-                        userDay = 1
-                        userMonth++
-                  } else { // Условие, если пользователь введёт несуществующую дату
-                        console.log("Некорректная дата")
-                        alert("Некорректная дата")                       
-                  }
+        if (userDay >= 1 && userDay <= 28) {
+          userDay++
+        } else if (userDay == 29) {
+          userDay = 1
+          userMonth++
+        } else { // Условие, если пользователь введёт несуществующую дату
+          console.log("Некорректная дата")
+          alert("Некорректная дата")
+        }
 
-            // Условие для февраля, если год НЕ является високосным
-            } else {
-
-                  if(userDay >= 1 && userDay <= 27) {
-                        userDay++
-                  } else if(userDay == 28) {
-                        userDay = 1
-                        userMonth++
-                  } else { // Условие, если пользователь введёт несуществующую дату
-                        console.log("Некорректная дата")
-                        alert("Некорректная дата")                        
-                  }
-            }
-
-      // Условие для декабря, переход на следующий год
-      } else if(userMonth == 12) {
-
-                  if(userDay >= 1 && userDay <= 30) {  
-                        userDay ++
-                  } else if(userDay == 31) {
-                        userDay = 1
-                        userMonth = 1
-                        userYear++
-                  } else { // Условие, если пользователь введёт несуществующую дату
-                        console.log("Некорректная дата")
-                        alert("Некорректная дата")                       
-                  }
-
-      // Условие для месяцев с количеством дней: 31
+        // Условие для февраля, если год НЕ является високосным
       } else {
 
-                  if(userDay >= 1 && userDay <= 30) {  
-                        userDay ++
-                  } else if(userDay == 31) {
-                        userDay = 1
-                        userMonth++
-                  } else { // Условие, если пользователь введёт несуществующую дату
-                        console.log("Некорректная дата")
-                        alert("Некорректная дата")
-                  }
-            }
+        if (userDay >= 1 && userDay <= 27) {
+          userDay++
+        } else if (userDay == 28) {
+          userDay = 1
+          userMonth++
+        } else { // Условие, если пользователь введёт несуществующую дату
+          console.log("Некорректная дата")
+          alert("Некорректная дата")
+        }
+      }
 
-// Условие, если пользователь введёт НЕсуществующий месяц
-} else {
-      console.log("Некорректная дата")
-      alert("Некорректная дата")
-}
+      // Условие для декабря, переход на следующий год
+    } else if (userMonth == 12) {
 
-console.log(userDay, userMonth, userYear)
-// Вывод результата
-// alert(`${userDay >= 10 ? userDay : '0' + userDay}.${userMonth >= 10 ? userMonth : '0' + userMonth}.${userYear}`)
-console.log(`${userDay >= 10 ? userDay : '0' + userDay}.${userMonth >= 10 ? userMonth : '0' + userMonth}.${userYear}`)
+      if (userDay >= 1 && userDay <= 30) {
+        userDay++
+      } else if (userDay == 31) {
+        userDay = 1
+        userMonth = 1
+        userYear++
+      } else { // Условие, если пользователь введёт несуществующую дату
+        console.log("Некорректная дата")
+        alert("Некорректная дата")
+      }
+
+      // Условие для месяцев с количеством дней: 31
+    } else {
+
+      if (userDay >= 1 && userDay <= 30) {
+        userDay++
+      } else if (userDay == 31) {
+        userDay = 1
+        userMonth++
+      } else { // Условие, если пользователь введёт несуществующую дату
+        console.log("Некорректная дата")
+        alert("Некорректная дата")
+      }
+    }
+
+    // Условие, если пользователь введёт НЕсуществующий месяц
+  } else {
+    console.log("Некорректная дата")
+    alert("Некорректная дата")
+  }
+
+  console.log(userDay, userMonth, userYear)
+  // Вывод результата
+  // alert(`${userDay >= 10 ? userDay : '0' + userDay}.${userMonth >= 10 ? userMonth : '0' + userMonth}.${userYear}`)
+  console.log(`${userDay >= 10 ? userDay : '0' + userDay}.${userMonth >= 10 ? userMonth : '0' + userMonth}.${userYear}`)
 
 }
 
@@ -1103,61 +1103,61 @@ console.log(`${userDay >= 10 ? userDay : '0' + userDay}.${userMonth >= 10 ? user
 /*  ■ Задания, в которых необходимо использовать IF.*/
 
 /*  1. Запросить у пользователя число и определить, оно положительное, отрицательное или ноль.*/
-{ 
-let num = -85
+{
+  let num = -85
 
-if (num > 0) {
-   console.log('Число', num, 'положительное')
-} else if (num < 0) {
-   console.log('Число', num, 'отрицательное')
-} else console.log('Введённое число: ', num)
+  if (num > 0) {
+    console.log('Число', num, 'положительное')
+  } else if (num < 0) {
+    console.log('Число', num, 'отрицательное')
+  } else console.log('Введённое число: ', num)
 }
 
 /*  2. Запросить у пользователя его возраст и проверить корректность введенных данных (0–120 лет).*/
 {
-let userAge = 100500
+  let userAge = 100500
 
-if (userAge > 0 && userAge < 100) {
-   console.log('Ваш возраст в годах:', userAge)
-} else if (userAge >= 100 && userAge <= 120) {
-   console.log('Вы - долгожитель. Ваш возраст в годах:', userAge)
-} else if (userAge > 120) {
-   console.log('Вы - Горец. Ваш возраст в годах:', userAge)
-} else if (userAge == 0) {
-   console.log('Вы младенец')
-} else console.log('Вы ещё не родились')
+  if (userAge > 0 && userAge < 100) {
+    console.log('Ваш возраст в годах:', userAge)
+  } else if (userAge >= 100 && userAge <= 120) {
+    console.log('Вы - долгожитель. Ваш возраст в годах:', userAge)
+  } else if (userAge > 120) {
+    console.log('Вы - Горец. Ваш возраст в годах:', userAge)
+  } else if (userAge == 0) {
+    console.log('Вы младенец')
+  } else console.log('Вы ещё не родились')
 }
 
 
 //   3. Запросить у пользователя число и вывести его модуль (|7| = 7, |-7| = 7).
 {
-let num = -5
+  let num = -5
 
-if (num < 0) {
-  num *= -1
-} 
-console.log(num)
+  if (num < 0) {
+    num *= -1
+  }
+  console.log(num)
 }
 
 
 // 4. Запросить у пользователя время (часы, минуты, секунды) и проверить корректность введенных данных.
 {
-let userHours = 28
-let userMinutes = -20
-let userSeconds = 330
+  let userHours = 28
+  let userMinutes = -20
+  let userSeconds = 330
 
-if (userHours > 24 || userHours < 0 
-   || userMinutes > 60 || userMinutes < 0 
-   || userSeconds > 60 || userSeconds < 0) {
-   console.log('Вы ввели некорректные данные')
-}
+  if (userHours > 24 || userHours < 0
+    || userMinutes > 60 || userMinutes < 0
+    || userSeconds > 60 || userSeconds < 0) {
+    console.log('Вы ввели некорректные данные')
+  }
 
-if (userHours > 24 || userHours < 0)
-console.log('Количество часов должно быть в диапазоне от 0 до 24')
-if (userMinutes > 60 || userMinutes < 0)
-console.log('Количество минут должно быть в диапазоне от 0 до 60')
-if (userSeconds > 60 || userSeconds < 0)
-console.log('Количество секунд должно быть в диапазоне от 0 до 60')
+  if (userHours > 24 || userHours < 0)
+    console.log('Количество часов должно быть в диапазоне от 0 до 24')
+  if (userMinutes > 60 || userMinutes < 0)
+    console.log('Количество минут должно быть в диапазоне от 0 до 60')
+  if (userSeconds > 60 || userSeconds < 0)
+    console.log('Количество секунд должно быть в диапазоне от 0 до 60')
 }
 
 
@@ -1182,58 +1182,58 @@ console.log('Количество секунд должно быть в диап
 
 // 1. Запросить у пользователя номер месяца и вывести на экран его название.
 
-{ 
+{
 
- let monthNumber = '1'
+  let monthNumber = '1'
 
   switch (monthNumber) {
 
     case '1':
-      console.log('Январь')            
+      console.log('Январь')
       break;
 
     case '2':
-      console.log('Февраль')            
+      console.log('Февраль')
       break;
 
     case '3':
-      console.log('Март')            
+      console.log('Март')
       break;
 
     case '4':
-      console.log('Апрель')            
+      console.log('Апрель')
       break;
 
     case '5':
-      console.log('Май')            
+      console.log('Май')
       break;
 
     case '6':
-      console.log('Июнь')            
+      console.log('Июнь')
       break;
 
     case '7':
-      console.log('Июль')            
+      console.log('Июль')
       break;
 
     case '8':
-      console.log('Август')            
+      console.log('Август')
       break;
 
     case '9':
-      console.log('Сентябрь')            
+      console.log('Сентябрь')
       break;
 
     case '10':
-      console.log('Октябрь')            
+      console.log('Октябрь')
       break;
 
     case '11':
-      console.log('Ноябрь')            
+      console.log('Ноябрь')
       break;
 
     case '12':
-      console.log('Декабрь')            
+      console.log('Декабрь')
       break;
 
     default:
@@ -1247,35 +1247,35 @@ console.log('Количество секунд должно быть в диап
 // знак (+ - * /). В зависимости от введенного знака решить 
 // пример и вывести результат.
 
-{ 
+{
 
-let num1 = 9
-let num2 = 3
-let userOperator = '-'
-let result = 0
+  let num1 = 9
+  let num2 = 3
+  let userOperator = '-'
+  let result = 0
 
-switch (userOperator) {
-   case '+':
+  switch (userOperator) {
+    case '+':
       result = num1 + num2
       break;
 
-   case '-':
+    case '-':
       result = num1 - num2
       break;
 
-   case '*':
+    case '*':
       result = num1 * num2
       break;
 
-   case '/':
+    case '/':
       result = num1 / num2
       break;
 
-   default:
+    default:
       break;
-}
+  }
 
-console.log(num1, userOperator, num2, '=', result)
+  console.log(num1, userOperator, num2, '=', result)
 
 }
 
@@ -1284,27 +1284,27 @@ console.log(num1, userOperator, num2, '=', result)
 
 // 1. Запросить 2 числа и вывести большее из них.
 {
-let num1 = 19
-let num2 = 32
+  let num1 = 19
+  let num2 = 32
 
-num1 > num2 ? console.log(num1) : console.log(num2)
+  num1 > num2 ? console.log(num1) : console.log(num2)
 }
 
 
 // 2. Запросить 1 число и проверить, оно кратно 5 или нет.
 {
-let num = 150
+  let num = 150
 
-num % 5 == 0 ? console.log('Число', num, 'кратно 5') : console.log('Число', num, 'не кратно 5')
+  num % 5 == 0 ? console.log('Число', num, 'кратно 5') : console.log('Число', num, 'не кратно 5')
 }
 
 /*3. Запросить у пользователя название планеты. Если пользователь ввел «Земля» или «земля», 
 то вывести «Привет, землянин!», в остальных случаях вывести «Привет, инопланетянин!». */
 
 {
- let userPlanet = 'Юпитер'
+  let userPlanet = 'Юпитер'
 
- userPlanet == 'Земля' || userPlanet == 'земля' ? console.log('Привет, землянин!') : console.log('Привет, инопланетянин!')
+  userPlanet == 'Земля' || userPlanet == 'земля' ? console.log('Привет, землянин!') : console.log('Привет, инопланетянин!')
 }
 
 
@@ -1338,20 +1338,20 @@ num % 5 == 0 ? console.log('Число', num, 'кратно 5') : console.log('�
 
 {
 
-let monthlyPayment = 5000
-let creditAmount = 15000
-let creditRate = .02
-let month = 0;
+  let monthlyPayment = 5000
+  let creditAmount = 15000
+  let creditRate = .02
+  let month = 0;
 
-while(creditAmount > 0){
+  while (creditAmount > 0) {
 
-      creditAmount += creditAmount * creditRate    
-      creditAmount -= monthlyPayment
-      month++
+    creditAmount += creditAmount * creditRate
+    creditAmount -= monthlyPayment
+    month++
 
-}
+  }
 
-console.log(month)
+  console.log(month)
 }
 
 
@@ -1359,16 +1359,16 @@ console.log(month)
 
 {
 
-let fund = 1e5
-let rate = .10
-let years = 0
+  let fund = 1e5
+  let rate = .10
+  let years = 0
 
-while (fund <= 1e6) {
+  while (fund <= 1e6) {
 
-      fund += fund * rate
-      years++
-}
-console.log(years)
+    fund += fund * rate
+    years++
+  }
+  console.log(years)
 
 }
 
@@ -1750,115 +1750,115 @@ console.log(years)
 
 //     1. Подсчитать сумму всех чисел в заданном пользователем диапазоне. 
 {
-let num1 = 5
-let num2 = 2
-let sum = 0
-let buf = 0
-if (num1 > num2) { buf = num1; num1 = num2; num2 = buf; } 
+  let num1 = 5
+  let num2 = 2
+  let sum = 0
+  let buf = 0
+  if (num1 > num2) { buf = num1; num1 = num2; num2 = buf; }
 
-for (let i = num1; i <= num2; i++) {
-      sum += i
-}
+  for (let i = num1; i <= num2; i++) {
+    sum += i
+  }
 
-console.log(sum)
+  console.log(sum)
 }
 
 //     2. Запросить 2 числа и найти только наибольший общий делитель.
-{ 
-let num1 = 28
-let num2 = 35
-let buf = 0
-if (num1 > num2) { buf = num1; num1 = num2; num2 = buf; } 
-let i = num1
-let greatestCommonDivisor = 0
+{
+  let num1 = 28
+  let num2 = 35
+  let buf = 0
+  if (num1 > num2) { buf = num1; num1 = num2; num2 = buf; }
+  let i = num1
+  let greatestCommonDivisor = 0
 
-do {
+  do {
 
-      if (num1 % i == 0 && num2 % i == 0) {
-            greatestCommonDivisor = i
-            break
-      }
+    if (num1 % i == 0 && num2 % i == 0) {
+      greatestCommonDivisor = i
+      break
+    }
 
-      i--
+    i--
 
-} while (i > 0);
+  } while (i > 0);
 
-console.log(greatestCommonDivisor)
+  console.log(greatestCommonDivisor)
 }
 
 // Вариант 2.
 {
-let num1 = 50
-let num2 = 35
-let buf = 0
-if (num1 > num2) { buf = num1; num1 = num2; num2 = buf; } 
-let i = 1
-let greatestCommonDivisor = 0
+  let num1 = 50
+  let num2 = 35
+  let buf = 0
+  if (num1 > num2) { buf = num1; num1 = num2; num2 = buf; }
+  let i = 1
+  let greatestCommonDivisor = 0
 
-do {
+  do {
 
-      if (num1 % i == 0 && num2 % i == 0) {
-            greatestCommonDivisor = i
-      }
+    if (num1 % i == 0 && num2 % i == 0) {
+      greatestCommonDivisor = i
+    }
 
-      i++
+    i++
 
-} while (i <= num1);
+  } while (i <= num1);
 
-console.log(greatestCommonDivisor)
+  console.log(greatestCommonDivisor)
 }
 
 //     3. Запросить у пользователя число и вывести все делители этого числа.
 {
-let num = 50
+  let num = 50
 
-for (let i = 1; i <= num; i++) {
-      if (num % i == 0) console.log(i)
-}
-}
-
-    // 4. Определить количество цифр в введенном числе.
-{ 
-let num = 3642
-let quantity = 0
-
-while (num > 0) {
-// @ts-expect-error
-      num = parseInt(num / 10)
-      quantity++
+  for (let i = 1; i <= num; i++) {
+    if (num % i == 0) console.log(i)
+  }
 }
 
-console.log(quantity)
+// 4. Определить количество цифр в введенном числе.
+{
+  let num = 3642
+  let quantity = 0
+
+  while (num > 0) {
+    // @ts-expect-error
+    num = parseInt(num / 10)
+    quantity++
+  }
+
+  console.log(quantity)
 }
 
 //     5. Запросить у пользователя 10 чисел и подсчитать, сколько 
 //     он ввел положительных, отрицательных и нулей. При этом 
 //     также посчитать, сколько четных и нечетных. Вывести 
 //     статистику на экран. Учтите, что достаточно одной переменной (не 10) для ввода чисел пользователем.
-{ 
-let num = 0
-let even = 0
-let odd = 0
-let negativeNumber = 0
-let positiveNumber = 0
-let zero = 0
+{
+  let num = 0
+  let even = 0
+  let odd = 0
+  let negativeNumber = 0
+  let positiveNumber = 0
+  let zero = 0
 
-for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 10; i++) {
 
-      // num = parseInt(+prompt('Введите число'))
+    // num = parseInt(+prompt('Введите число'))
 
-      if (num >= 0 ) positiveNumber++
-      if (num < 0 ) negativeNumber++
-      if (num == 0 ) zero++
-      if (num % 2 == 0 ) even++
-      if (num % 2 != 0 ) odd++
-}
+    if (num >= 0) positiveNumber++
+    if (num < 0) negativeNumber++
+    if (num == 0) zero++
+    if (num % 2 == 0) even++
+    if (num % 2 != 0) odd++
+  }
 
-console.log(`Количество положительных чисел: ${positiveNumber}`)
-console.log(`Количество отрицательных чисел: ${negativeNumber}`)
-console.log(`Количество четных чисел: ${even}`)
-console.log(`Количество нечетных чисел: ${odd}`)
-console.log(`Количество нулей: ${zero}`)
+  console.log(`Количество положительных чисел: ${positiveNumber}`)
+  console.log(`Количество отрицательных чисел: ${negativeNumber}`)
+  console.log(`Количество четных чисел: ${even}`)
+  console.log(`Количество нечетных чисел: ${odd}`)
+  console.log(`Количество нулей: ${zero}`)
 
 }
 
@@ -1911,65 +1911,65 @@ console.log(`Количество нулей: ${zero}`)
 //     7. Запросить у пользователя число и на сколько цифр его сдвинуть. Сдвинуть цифры числа и вывести результат 
 //        (если число 123456 сдвинуть на 2 цифры, то получится 345612).
 
-{ 
+{
 
-//Переменная для исходного числа
- let num1 = 12345678
+  //Переменная для исходного числа
+  let num1 = 12345678
 
- // Переменная для числа на сколько сдвинуть цифры
- let num2 = 3
+  // Переменная для числа на сколько сдвинуть цифры
+  let num2 = 3
 
- //Вспомогательные переменные для подсчёта разряда числа
- let i = num1
- let quantity = 0
- let quantity2 = 1
+  //Вспомогательные переменные для подсчёта разряда числа
+  let i = num1
+  let quantity = 0
+  let quantity2 = 1
 
-// Узнаём разрядность всего числа
-while (i > 0) {
-// @ts-expect-error
-      i = parseInt(i / 10)
-      quantity++
-}
+  // Узнаём разрядность всего числа
+  while (i > 0) {
+    // @ts-expect-error
+    i = parseInt(i / 10)
+    quantity++
+  }
 
-console.log(quantity)
+  console.log(quantity)
 
-//Узнаём разрядность второй части числа
- i = quantity - num2
- console.log(i)
+  //Узнаём разрядность второй части числа
+  i = quantity - num2
+  console.log(i)
 
- //Переменные для хранения первой и второй частей числа
- let part1 = num1
- let part2 = num1
+  //Переменные для хранения первой и второй частей числа
+  let part1 = num1
+  let part2 = num1
 
 
-for(; i > 0; i--) {
-      //Выковыриваем те цифры, на которые надо сдвинуть число
-// @ts-expect-error
-      part1 = parseInt(part1 / 10)
+  for (; i > 0; i--) {
+    //Выковыриваем те цифры, на которые надо сдвинуть число
+    // @ts-expect-error
+    part1 = parseInt(part1 / 10)
 
-      //Подсчёт для остатка от деления для выковыривания второй части числа
-      quantity2 *= 10
-}
+    //Подсчёт для остатка от деления для выковыривания второй части числа
+    quantity2 *= 10
+  }
 
-console.log(quantity2)
+  console.log(quantity2)
 
-//Выковыриваем вторую часть числа
-// @ts-expect-error
-part2 = parseInt(part2 % quantity2)
+  //Выковыриваем вторую часть числа
+  // @ts-expect-error
+  part2 = parseInt(part2 % quantity2)
 
-console.log(part1)
-console.log(part2)
+  console.log(part1)
+  console.log(part2)
 
-//Возврат к исходной разраядности
-for(; num2 > 0; num2--) {
-      part2 *= 10
-}
+  //Возврат к исходной разраядности
+  for (; num2 > 0; num2--) {
+    part2 *= 10
+  }
 
-console.log(part2)
+  console.log(part2)
 
- let result = part2 + part1
+  let result = part2 + part1
 
- console.log(result)
+  console.log(result)
 
 }
 
@@ -2022,20 +2022,20 @@ console.log(part2)
 
 {
 
-let num1 = 2
-let num2 = 9
-let result = ''
+  let num1 = 2
+  let num2 = 9
+  let result = ''
 
-for(let i = num1; i <= num2; i++) {
+  for (let i = num1; i <= num2; i++) {
 
-      for(let j = 1; j <= 10; j++) {
+    for (let j = 1; j <= 10; j++) {
 
-            result += i + ' * ' + j + ' = ' + i * j + '\n'
+      result += i + ' * ' + j + ' = ' + i * j + '\n'
 
-      }
-}
+    }
+  }
 
-console.log(result)
+  console.log(result)
 
 }
 
@@ -2145,47 +2145,47 @@ console.log(result)
 
 {
 
-let num = 5
-let i = 0
+  let num = 5
+  let i = 0
 
-while (i < num) {
-  console.log('# ')
-  i++
-}
+  while (i < num) {
+    console.log('# ')
+    i++
+  }
 
 }
 
 // Вариант 2
 
-{ 
+{
 
-let num = 8
+  let num = 8
 
-while (num) {
-  console.log('# ')
-  num--
-}
+  while (num) {
+    console.log('# ')
+    num--
+  }
 
 }
 
 
 /* 2. Пользователь ввел число, а на экран вывелись все числа от введенного до 0.*/
 
-{ 
+{
 
-let num = -4
+  let num = -4
 
-      if (num > 0) {
-            while (num >= 0) {
-                  console.log(num)
-                  num--
-            }
-      } else {
-            while (num <= 0) {
-                  console.log(num)
-                  num++
-            }
-      }
+  if (num > 0) {
+    while (num >= 0) {
+      console.log(num)
+      num--
+    }
+  } else {
+    while (num <= 0) {
+      console.log(num)
+      num++
+    }
+  }
 
 }
 
@@ -2193,15 +2193,15 @@ let num = -4
 /*3. Запросить число и степень. Возвести число в указанную 
 степень и вывести результат.*/
 {
-let num = 3
-let degree = 4
-let result = 1
+  let num = 3
+  let degree = 4
+  let result = 1
 
-while (degree > 0) {
-      result *= num
-      degree--
-}
-console.log(result)
+  while (degree > 0) {
+    result *= num
+    degree--
+  }
+  console.log(result)
 }
 
 
@@ -2209,49 +2209,50 @@ console.log(result)
 
 {
 
-let num1 = 25
-let num2 = 10
-let text = ''
-let min = num1 < num2 ? num1 : num2
-while (min) {
-  if (num1 % min == 0 && num2 % min == 0) {
+  let num1 = 25
+  let num2 = 10
+  let text = ''
+  let min = num1 < num2 ? num1 : num2
+  while (min) {
+    if (num1 % min == 0 && num2 % min == 0) {
       text += min + '_'
+    }
+
+    min--
   }
 
-  min--      
-}
-
-console.log(text)
+  console.log(text)
 
 }
 
 
 // 5. Посчитать факториал введенного пользователем числа.
 
-{ 
-
-{ let num = 7
-  let result = 1
-
-  while (num > 0) {
-
-    result *= num
-    num--  
-  }
-  console.log(result)
-} 
-
 {
-  let i = 1
-  let num = 7
-  let result = 1
 
-  while (i <= num) {
-    result *= i
-    i++
+  {
+    let num = 7
+    let result = 1
+
+    while (num > 0) {
+
+      result *= num
+      num--
+    }
+    console.log(result)
   }
-  console.log(result)
-}
+
+  {
+    let i = 1
+    let num = 7
+    let result = 1
+
+    while (i <= num) {
+      result *= i
+      i++
+    }
+    console.log(result)
+  }
 
 }
 
@@ -2275,21 +2276,21 @@ console.log(text)
 //       2. Делить число 1000 на 2 до тех пор, пока не получится число 
 //       меньше 50. Вывести это число и сколько делений произвели.
 
-{ 
+{
 
-let num1 = 1000
-let num2 = 2
-let i = 0
+  let num1 = 1000
+  let num2 = 2
+  let i = 0
 
-do {
+  do {
 
-      num1 /= num2
-      i++
+    num1 /= num2
+    i++
 
-} while (num1 > 50);
+  } while (num1 > 50);
 
-console.log(num1)
-console.log(i)
+  console.log(num1)
+  console.log(i)
 
 }
 
@@ -2299,15 +2300,15 @@ console.log(i)
 //       3. Вывести все числа от 1 до 100, которые кратные указанному 
 //       пользователем числу.
 
-{ 
+{
 
-let num1 = 1
-let num2 = 100
-let userNum = 7
+  let num1 = 1
+  let num2 = 100
+  let userNum = 7
 
-for (; num1 <= num2; num1++) {
-      if (num1 % userNum == 0) console.log(num1)
-}
+  for (; num1 <= num2; num1++) {
+    if (num1 % userNum == 0) console.log(num1)
+  }
 
 }
 
@@ -2317,14 +2318,14 @@ for (; num1 <= num2; num1++) {
 
 {
 
-let num1 = 1
-let num2 = 10
-let userNum = 4
+  let num1 = 1
+  let num2 = 10
+  let userNum = 4
 
-for (; num1 <= num2; num1++) {
-     num1 += userNum-1 
-      console.log(num1)
-}
+  for (; num1 <= num2; num1++) {
+    num1 += userNum - 1
+    console.log(num1)
+  }
 
 }
 
@@ -2334,24 +2335,24 @@ for (; num1 <= num2; num1++) {
 
 {
 
-let num = 31
-let result = true
+  let num = 31
+  let result = true
 
-for(let i = 2; i < num; i++) {
+  for (let i = 2; i < num; i++) {
 
-      if(num % num == 0 && num % 1 == 0 && num % i == 0) {
-            result = false
-      } 
+    if (num % num == 0 && num % 1 == 0 && num % i == 0) {
+      result = false
+    }
 
-}
+  }
 
-console.log(result)
+  console.log(result)
 
-if(result == true) {
-      console.log('Число является простым')
-} else {
-      console.log('Число НЕ является простым')
-}
+  if (result == true) {
+    console.log('Число является простым')
+  } else {
+    console.log('Число НЕ является простым')
+  }
 
 }
 
@@ -2418,144 +2419,144 @@ if(result == true) {
 //  1. Функция, которая будет увеличивать значение аргумента на 1 
 //     и выводить полученный результат на страницу.
 {
-function incPlusOne(digit: number) {
-      digit = digit + 1
-      return digit
-}
+  function incPlusOne(digit: number) {
+    digit = digit + 1
+    return digit
+  }
 
-let num = 1
-num = incPlusOne(num)
-console.log(num)
+  let num = 1
+  num = incPlusOne(num)
+  console.log(num)
 }
 
 // 2. Создать функцию, вычисляющую куб переданного аргумента.
 {
-function cubedNumber(n:number) {
-      return n * n * n
-}
-let num1 = 2
-let num2 = 3
-num1 = cubedNumber(num1)
-console.log(num1)
-num2 = num1 * cubedNumber(num2)
-console.log(num2)
-console.log(cubedNumber(num1))
+  function cubedNumber(n: number) {
+    return n * n * n
+  }
+  let num1 = 2
+  let num2 = 3
+  num1 = cubedNumber(num1)
+  console.log(num1)
+  num2 = num1 * cubedNumber(num2)
+  console.log(num2)
+  console.log(cubedNumber(num1))
 }
 
 // 3. Банковское округление.
 {
-function bankerRound(x:number) {
-      if(Math.round(x) % 2 == 0)
-            return Math.round(x) 
-      else{
-            if(x < Math.round(x))
-                  return Math.round(x) - 1
-            else 
-                  return Math.round(x) + 1
-      }
-}
+  function bankerRound(x: number) {
+    if (Math.round(x) % 2 == 0)
+      return Math.round(x)
+    else {
+      if (x < Math.round(x))
+        return Math.round(x) - 1
+      else
+        return Math.round(x) + 1
+    }
+  }
 
-     let num1 = 3.2
-     console.log(bankerRound(num1))
+  let num1 = 3.2
+  console.log(bankerRound(num1))
 }
 
 // 4.  сообщение с текстом
 {
-function sayError() {
-  console.log('Some error occurred!')
-}
-sayError()
+  function sayError() {
+    console.log('Some error occurred!')
+  }
+  sayError()
 }
 
 // 5. Вывод текста
 {
-function showError(x:string) {
-      console.log('Error ' + x + ' occurred!')
-}
-showError('Out of memory')
+  function showError(x: string) {
+    console.log('Error ' + x + ' occurred!')
+  }
+  showError('Out of memory')
 }
 
 // 6. Проверка пароля
 {
-function checkPassword(x:string) {
-      if(x == 'Step' || x == 'Web' || x == 'JavaScript')
-            return true
-      else 
-            return false
-}
-console.log(checkPassword('JavaScript'))
+  function checkPassword(x: string) {
+    if (x == 'Step' || x == 'Web' || x == 'JavaScript')
+      return true
+    else
+      return false
+  }
+  console.log(checkPassword('JavaScript'))
 }
 // 7. Знак
 {
-function  sign(x:number) {
-      if(x < 0) return -1
-      else if(x > 0) return 1
-      else return 0
-}
+  function sign(x: number) {
+    if (x < 0) return -1
+    else if (x > 0) return 1
+    else return 0
+  }
 
-let num = 5
-console.log(sign(num))
+  let num = 5
+  console.log(sign(num))
 }
 // 8. возвращает названия дней недели по их номеру
 {
-function getDayOfTheWeek(n:string) {
-      if(n == '0') return 'Sunday'
-      if(n == '1') return 'Monday'
-      if(n == '2') return 'Tuesday'
-      if(n == '3') return 'Wednesday'
-      if(n == '4') return 'Thursday'
-      if(n == '5') return 'Friday'
-      if(n == '6') return 'Saturday'
-}
-let userDay = '5' as string
+  function getDayOfTheWeek(n: string) {
+    if (n == '0') return 'Sunday'
+    if (n == '1') return 'Monday'
+    if (n == '2') return 'Tuesday'
+    if (n == '3') return 'Wednesday'
+    if (n == '4') return 'Thursday'
+    if (n == '5') return 'Friday'
+    if (n == '6') return 'Saturday'
+  }
+  let userDay = '5' as string
 
-console.log(getDayOfTheWeek(userDay))
+  console.log(getDayOfTheWeek(userDay))
 }
 // 9. Функция принимает неопределённое количество аргументов. Длина
 {
-// @ts-expect-error
-function logArguments(x){
-      console.log('x = ' + x)
-      for(let i = 0; i < arguments.length; i++)
+  // @ts-expect-error
+  function logArguments(x) {
+    console.log('x = ' + x)
+    for (let i = 0; i < arguments.length; i++)
       console.log('argument' + (i + 1) + ' = ' + arguments[i])
-}
-// @ts-expect-error
-logArguments(1, 2, 3)
-logArguments('text')
+  }
+  // @ts-expect-error
+  logArguments(1, 2, 3)
+  logArguments('text')
 
 }
 
 // 10. Функция, определяющая максимальное значение из неопределённого 
 //     количества переданных аргументов
 
-{ 
+{
 
-function getMax() {
-      if(arguments.length == 0) return undefined
-      let result = arguments[0]
-      for(let i = 1; i < arguments.length; i++) {
-            if(result < arguments[i])
-                  result = arguments[i]
-      }
-      return result
-}
-// @ts-expect-error
-console.log(getMax(-1, -4, -10))
+  function getMax() {
+    if (arguments.length == 0) return undefined
+    let result = arguments[0]
+    for (let i = 1; i < arguments.length; i++) {
+      if (result < arguments[i])
+        result = arguments[i]
+    }
+    return result
+  }
+  // @ts-expect-error
+  console.log(getMax(-1, -4, -10))
 
 }
 
 // 11. Функция определяет среднее арифметическое от переданных аргументов.
 {
-function getArithmeticalMean() {
-      if(arguments.length == 0) return undefined
-      let sum = 0
-      for(let i = 0; i < arguments.length; i++) {
-            sum += arguments[i]
-      }
-      return sum / arguments.length
-}
-// @ts-expect-error
-console.log(getArithmeticalMean(1, 4, 10))
+  function getArithmeticalMean() {
+    if (arguments.length == 0) return undefined
+    let sum = 0
+    for (let i = 0; i < arguments.length; i++) {
+      sum += arguments[i]
+    }
+    return sum / arguments.length
+  }
+  // @ts-expect-error
+  console.log(getArithmeticalMean(1, 4, 10))
 }
 
 // // 12. 
@@ -2595,11 +2596,11 @@ console.log(getArithmeticalMean(1, 4, 10))
 
 // 16.
 
-{ 
-function showMessage(text:string) {      
-     return text = text || 'Goodbye'      
-}
-console.log(showMessage('Hello, people!'))
+{
+  function showMessage(text: string) {
+    return text = text || 'Goodbye'
+  }
+  console.log(showMessage('Hello, people!'))
 }
 
 // 17.
@@ -2950,9 +2951,9 @@ console.log(showMessage('Hello, people!'))
   }
 
   function getNextDay(d = new Date().getDate(), m = new Date().getMonth() + 1, y = new Date().getFullYear()) {
-// @ts-expect-error
+    // @ts-expect-error
     if (d == null || d == '') { d = new Date().getDate() }
-// @ts-expect-error
+    // @ts-expect-error
     if (m == null || m == '') { m = new Date().getMonth() + 1 }
     if (y === null || y === undefined) { y = new Date().getFullYear() }
     let result = ''
@@ -3178,7 +3179,7 @@ console.log(showMessage('Hello, people!'))
 
 
 
-  // Рекурсия. Возведение числа в степень.
+// Рекурсия. Возведение числа в степень.
 
 //   { 
 
@@ -3268,7 +3269,7 @@ console.log(showMessage('Hello, people!'))
   if (num1 > num2) { buf = num1; num1 = num2; num2 = buf; }
   let greatestCommonDivisor = 0
 
-  function findGreatestCommonDivisor(n1: number, n2: number):any {
+  function findGreatestCommonDivisor(n1: number, n2: number): any {
     let x = num1
     return (x % n1 == 0 && n2 % n1 == 0) ? n1 : findGreatestCommonDivisor(n1 - 1, n2)
 
@@ -3286,9 +3287,9 @@ function findMaxNumber(n: number) {
   let max = n % 10
   if (n < 1) return
   else {
-// @ts-expect-error
+    // @ts-expect-error
     if (max < parseInt(findMaxNumber(n / 10) % 10))
-// @ts-expect-error
+      // @ts-expect-error
       max = parseInt(findMaxNumber(n / 10) % 10)
     return max
   }
@@ -3332,21 +3333,21 @@ console.log(findMaxNumber(19245031609182))
 // 5. Написать функцию для вывода всех множителей переданного числа в возрастающем порядке. 
 //    Например: число 18 – множители 2 * 3 * 3.
 
-{ 
+{
 
-function showAllFactors(n: number) {
+  function showAllFactors(n: number) {
 
-  let result = ''
+    let result = ''
 
-  for (let i = 2; i < n; i++)
-    if (n % i == 0) {
-      result += i + ', '
-    }
+    for (let i = 2; i < n; i++)
+      if (n % i == 0) {
+        result += i + ', '
+      }
 
-  return result
-}
+    return result
+  }
 
-console.log(showAllFactors(21))
+  console.log(showAllFactors(21))
 
 }
 
@@ -3355,15 +3356,15 @@ console.log(showAllFactors(21))
 //    что каждое число равно сумме двух предыдущих чисел. 
 //    Например: порядковый номер 3 – число 2, порядковый номер 6 – число 8
 
-{ 
+{
 
-function Fibonacci(n: number):any {
+  function Fibonacci(n: number): any {
 
-  if (n < 3) return 1
-  return Fibonacci(n - 1) + Fibonacci(n - 2)
-}
+    if (n < 3) return 1
+    return Fibonacci(n - 1) + Fibonacci(n - 2)
+  }
 
-console.log(Fibonacci(3))
+  console.log(Fibonacci(3))
 
 }
 
@@ -3388,16 +3389,16 @@ console.log(Fibonacci(3))
 
 // 1. Написать функцию, которая вычисляет факториал заданного числа.
 
-{ 
+{
 
-function fact(n:number):number {
-   if(n < 0) return 0
-   else if (n == 1) return 1
-   else return n*fact(n-1)
-}
+  function fact(n: number): number {
+    if (n < 0) return 0
+    else if (n == 1) return 1
+    else return n * fact(n - 1)
+  }
 
-let num = 6
-console.log(fact(num))
+  let num = 6
+  console.log(fact(num))
 
 }
 
@@ -3406,25 +3407,25 @@ console.log(fact(num))
 
 {
 
-function showNumbers(n1:number, n2:number):any {
+  function showNumbers(n1: number, n2: number): any {
 
-   if (n1 == n2) return n1
-    return  showNumbers(n1, n2 - 1) + ', ' + n2
-}
+    if (n1 == n2) return n1
+    return showNumbers(n1, n2 - 1) + ', ' + n2
+  }
 
-console.log(showNumbers(2, 5))
+  console.log(showNumbers(2, 5))
 
 }
 
 {
-function showNumbers2(n1:number, n2:number):any {
+  function showNumbers2(n1: number, n2: number): any {
 
-   if (n2 == n1) return n2
+    if (n2 == n1) return n2
 
-  return showNumbers2(n1 + 1, n2) + ', ' + n1
-}
+    return showNumbers2(n1 + 1, n2) + ', ' + n1
+  }
 
-console.log(showNumbers2(2, 5))
+  console.log(showNumbers2(2, 5))
 
 }
 
@@ -3432,34 +3433,34 @@ console.log(showNumbers2(2, 5))
 // 3. Написать функцию, которая выводит переданное ей число задом наперед. 
 //    Например: число 1234 вывести как 4321.
 
-{ 
-  
-function gerReverseNumber (n:number):number {
-      if(n < 10) {
-         return n
-      } else {
-         return +(n % 10 + '' + gerReverseNumber(Math.floor(n / 10)))
-      }
-}
+{
 
-console.log(gerReverseNumber(1234))
+  function gerReverseNumber(n: number): number {
+    if (n < 10) {
+      return n
+    } else {
+      return +(n % 10 + '' + gerReverseNumber(Math.floor(n / 10)))
+    }
+  }
+
+  console.log(gerReverseNumber(1234))
 
 }
 
 // 4. Написать функцию, которая считает сумму цифр числа.
 // Например: число 1357, сумма 1 + 3 + 5 + 7 = 16.
 
-{ 
+{
 
-function getSumOfDigits(n:number):number {
-   if(n < 10) {
+  function getSumOfDigits(n: number): number {
+    if (n < 10) {
       return n
-   } else {
+    } else {
       return n % 10 + getSumOfDigits(Math.floor(n / 10))
-   }
-}
+    }
+  }
 
-console.log(getSumOfDigits(1357))
+  console.log(getSumOfDigits(1357))
 
 }
 
@@ -3470,15 +3471,15 @@ console.log(getSumOfDigits(1357))
 
 {
 
-function getBracketsPairsByNum(n:number):any {
-   if (!n) {
+  function getBracketsPairsByNum(n: number): any {
+    if (!n) {
       return ''
-   } else {
-   return '(' + getBracketsPairsByNum(n-1) + ')'
-}
-}
+    } else {
+      return '(' + getBracketsPairsByNum(n - 1) + ')'
+    }
+  }
 
-console.log(getBracketsPairsByNum(4))
+  console.log(getBracketsPairsByNum(4))
 
 }
 // getBracketsPairsByNum(4) = '(' + getBracketsPairsByNum(3)== '((()))' + ')'     = (((())))
@@ -3627,81 +3628,81 @@ console.log(getBracketsPairsByNum(4))
 // Создать объект, описывающий автомобиль (производитель, модель, год выпуска, средняя скорость), 
 // и следующие функции для работы с этим объектом.
 
-{ 
+{
 
-type Car = {
-  manufacturer: string,
-  model: string,
-  year: number,
-  averSpeed: number,
-}
-
-const automobile = {
-  manufacturer: 'Japan',
-  model: 'f2x',
-  year: 1996,
-  averSpeed: 98,
-} as Record<string, any>
-
-console.log(automobile)
-
-
-// 1. Функция для вывода на экран информации об автомобиле.
-
-function showAutomobile(auto: Car) {
-
-  for (let key in automobile) {
-
-    console.log(key)
-    console.log(automobile[key])
+  type Car = {
+    manufacturer: string,
+    model: string,
+    year: number,
+    averSpeed: number,
   }
-}
-// @ts-expect-error
-showAutomobile()
+
+  const automobile = {
+    manufacturer: 'Japan',
+    model: 'f2x',
+    year: 1996,
+    averSpeed: 98,
+  } as Record<string, any>
+
+  console.log(automobile)
 
 
-function showAutomobile2(obj: object) {
-  let result = ''
-  for (let key in obj) {
-    console.log(key)
-    console.log(obj[key])
-    result += key + ': ' + obj[key] + ', \n '
+  // 1. Функция для вывода на экран информации об автомобиле.
+
+  function showAutomobile(auto: Car) {
+
+    for (let key in automobile) {
+
+      console.log(key)
+      console.log(automobile[key])
+    }
   }
-  return result
-}
-showAutomobile2(automobile)
-console.log(showAutomobile2(automobile))
+  // @ts-expect-error
+  showAutomobile()
 
 
-
-// 2. Функция для подсчета необходимого времени для преодоления переданного расстояния со средней скоростью. 
-// Учтите, что через каждые 4 часа дороги водителю необходимо делать перерыв на 1 час.
-// t = S / v
-
-let userS = 100
-
-function toFindTime(obj: object) {
-  let t = userS / automobile.averSpeed
-  let t2 = t
-
-  while (t2 > 4) {
-    t += 1
-    t2 -= 4
+  function showAutomobile2(obj: object) {
+    let result = ''
+    for (let key in obj) {
+      console.log(key)
+      console.log(obj[key])
+      result += key + ': ' + obj[key] + ', \n '
+    }
+    return result
   }
-  return t
-}
-
-let travelTime = toFindTime(automobile)
+  showAutomobile2(automobile)
+  console.log(showAutomobile2(automobile))
 
 
-//  время в часах
-console.log(travelTime)
 
-travelTime = travelTime * 60
+  // 2. Функция для подсчета необходимого времени для преодоления переданного расстояния со средней скоростью. 
+  // Учтите, что через каждые 4 часа дороги водителю необходимо делать перерыв на 1 час.
+  // t = S / v
+
+  let userS = 100
+
+  function toFindTime(obj: object) {
+    let t = userS / automobile.averSpeed
+    let t2 = t
+
+    while (t2 > 4) {
+      t += 1
+      t2 -= 4
+    }
+    return t
+  }
+
+  let travelTime = toFindTime(automobile)
 
 
-//  время в минутах
-console.log(travelTime)
+  //  время в часах
+  console.log(travelTime)
+
+  travelTime = travelTime * 60
+
+
+  //  время в минутах
+  console.log(travelTime)
 
 }
 
@@ -3711,116 +3712,116 @@ console.log(travelTime)
 
 // Создать объект, хранящий в себе отдельно числитель и знаменатель дроби, и следующие функции для работы с этим объектом.
 
-{ 
+{
 
-type Fraction = {
-  numerator: number,
-  denominator: number
-}
+  type Fraction = {
+    numerator: number,
+    denominator: number
+  }
 
-const fraction1: Fraction = {
-  numerator: 1,
-  denominator: 2
-}
+  const fraction1: Fraction = {
+    numerator: 1,
+    denominator: 2
+  }
 
-const fraction2 = {
-  numerator: 3,
-  denominator: 10
-} as Fraction
+  const fraction2 = {
+    numerator: 3,
+    denominator: 10
+  } as Fraction
 
 
 
-function transformToCommonDenominator(fr1: Fraction, fr2: Fraction) {
-  return {
-    fr1: {
+  function transformToCommonDenominator(fr1: Fraction, fr2: Fraction) {
+    return {
+      fr1: {
+        numerator: fr1.numerator * fr2.denominator,
+        denominator: fr1.denominator * fr2.denominator
+      },
+      fr2: {
+        numerator: fr2.numerator * fr1.denominator,
+        denominator: fr1.denominator * fr2.denominator
+      }
+    }
+  }
+
+  // 1. Функция сложения 2-х объектов-дробей.
+
+  function getSumOfFraction(fr1: Fraction, fr2: Fraction) {
+    const commonFractions = transformToCommonDenominator(fr1, fr2)
+    console.log(commonFractions)
+    return {
+      numerator: commonFractions.fr1.numerator + commonFractions.fr2.numerator,
+      denominator: commonFractions.fr1.denominator
+    }
+  }
+
+  console.log(getSumOfFraction(fraction1, fraction2))
+
+  function getRedusedSumOfFraction(fr1: Fraction, fr2: Fraction) {
+    const result = getSumOfFraction(fr1, fr2)
+    return getReductedFraction(result)
+  }
+
+  console.log(getRedusedSumOfFraction(fraction1, fraction2))
+
+
+  // 2. Функция вычитания 2-х объектов-дробей.
+
+  function getSubtrOfFraction(fr1: Fraction, fr2: Fraction) {
+    const commonFractions = transformToCommonDenominator(fr1, fr2)
+    console.log(commonFractions)
+    const result = {
+      numerator: commonFractions.fr1.numerator - commonFractions.fr2.numerator,
+      denominator: commonFractions.fr1.denominator
+    }
+    return getReductedFraction(result)
+  }
+
+  console.log(getSubtrOfFraction(fraction1, fraction2))
+
+
+
+  // 3. Функция умножения 2-х объектов-дробей.
+
+  function getMulOfFraction(fr1: Fraction, fr2: Fraction) {
+
+    const result = {
+      numerator: fr1.numerator * fr2.numerator,
+      denominator: fr1.denominator * fr2.denominator
+    }
+    return getReductedFraction(result)
+  }
+
+  console.log(getMulOfFraction(fraction1, fraction2))
+
+
+  // 4. Функция деления 2-х объектов-дробей.
+
+  function getDivOfFraction(fr1: Fraction, fr2: Fraction) {
+
+    const result = {
       numerator: fr1.numerator * fr2.denominator,
-      denominator: fr1.denominator * fr2.denominator
-    },
-    fr2: {
-      numerator: fr2.numerator * fr1.denominator,
-      denominator: fr1.denominator * fr2.denominator
+      denominator: fr1.denominator * fr2.numerator
     }
+    return getReductedFraction(result)
   }
-}
 
-// 1. Функция сложения 2-х объектов-дробей.
-
-function getSumOfFraction(fr1: Fraction, fr2: Fraction) {
-  const commonFractions = transformToCommonDenominator(fr1, fr2)
-  console.log(commonFractions)
-  return {
-    numerator: commonFractions.fr1.numerator + commonFractions.fr2.numerator,
-    denominator: commonFractions.fr1.denominator
-  }
-}
-
-console.log(getSumOfFraction(fraction1, fraction2))
-
-function getRedusedSumOfFraction(fr1: Fraction, fr2: Fraction) {
-  const result = getSumOfFraction(fr1, fr2)
-  return getReductedFraction(result)
-}
-
-console.log(getRedusedSumOfFraction(fraction1, fraction2))
+  console.log(getDivOfFraction(fraction1, fraction2))
 
 
-// 2. Функция вычитания 2-х объектов-дробей.
+  // 5. Функция сокращения объекта-дроби.
 
-function getSubtrOfFraction(fr1: Fraction, fr2: Fraction) {
-  const commonFractions = transformToCommonDenominator(fr1, fr2)
-  console.log(commonFractions)
-  const result = {
-    numerator: commonFractions.fr1.numerator - commonFractions.fr2.numerator,
-    denominator: commonFractions.fr1.denominator
-  }
-  return getReductedFraction(result)
-}
-
-console.log(getSubtrOfFraction(fraction1, fraction2))
-
-
-
-// 3. Функция умножения 2-х объектов-дробей.
-
-function getMulOfFraction(fr1: Fraction, fr2: Fraction) {
-
-  const result = {
-    numerator: fr1.numerator * fr2.numerator,
-    denominator: fr1.denominator * fr2.denominator
-  }
-  return getReductedFraction(result)
-}
-
-console.log(getMulOfFraction(fraction1, fraction2))
-
-
-// 4. Функция деления 2-х объектов-дробей.
-
-function getDivOfFraction(fr1: Fraction, fr2: Fraction) {
-
-  const result = {
-    numerator: fr1.numerator * fr2.denominator,
-    denominator: fr1.denominator * fr2.numerator
-  }
-  return getReductedFraction(result)
-}
-
-console.log(getDivOfFraction(fraction1, fraction2))
-
-
-// 5. Функция сокращения объекта-дроби.
-
-function getReductedFraction(fr: Fraction) {
-  const min = fr.numerator < fr.denominator ? fr.numerator : fr.denominator
-  for (let i = min; i > 1; i--) {
-    if (fr.numerator % i == 0 && fr.denominator % i == 0) {
-      fr.numerator /= i
-      fr.denominator /= i
-      return getReductedFraction(fr)
+  function getReductedFraction(fr: Fraction) {
+    const min = fr.numerator < fr.denominator ? fr.numerator : fr.denominator
+    for (let i = min; i > 1; i--) {
+      if (fr.numerator % i == 0 && fr.denominator % i == 0) {
+        fr.numerator /= i
+        fr.denominator /= i
+        return getReductedFraction(fr)
+      }
     }
+    return fr
   }
-  return fr
-}
 
 
 }
@@ -3831,103 +3832,103 @@ function getReductedFraction(fr: Fraction) {
 
 // Создать объект, описывающий время (часы, минуты, секунды), и следующие функции для работы с этим объектом.
 
-{ 
+{
 
-type Time = {
-  hours: number,
-  minutes: number,
-  seconds: number,
-}
+  type Time = {
+    hours: number,
+    minutes: number,
+    seconds: number,
+  }
 
-const hwTime = {
-  hours: 10,
-  minutes: 4,
-  seconds: 3,
-}
+  const hwTime = {
+    hours: 10,
+    minutes: 4,
+    seconds: 3,
+  }
 
-console.log(hwTime)
+  console.log(hwTime)
 
-// 1. Функция вывода времени на экран.
+  // 1. Функция вывода времени на экран.
 
-function showTime(obj: Time) {
-  let result = (obj.hours >= 10 ? obj.hours : '0' + obj.hours) + ':' +
-    (obj.minutes >= 10 ? obj.minutes : '0' + obj.minutes) + ':' +
-    (obj.seconds >= 10 ? obj.seconds : '0' + obj.seconds)
-  return result
-}
+  function showTime(obj: Time) {
+    let result = (obj.hours >= 10 ? obj.hours : '0' + obj.hours) + ':' +
+      (obj.minutes >= 10 ? obj.minutes : '0' + obj.minutes) + ':' +
+      (obj.seconds >= 10 ? obj.seconds : '0' + obj.seconds)
+    return result
+  }
 
-console.log(showTime(hwTime))
+  console.log(showTime(hwTime))
 
-console.log(100 / 60)
-console.log(100 % 60)
+  console.log(100 / 60)
+  console.log(100 % 60)
 
-// 2. Функция изменения времени на переданное количество секунд.
+  // 2. Функция изменения времени на переданное количество секунд.
 
-function changingSeconds(obj: Time, sec: number) {
-  if (sec <= 60)
-    obj.seconds = sec
-  else {
-    obj.seconds = sec % 60
-// @ts-expect-error
-    obj.minutes += parseInt(sec / 60)
-    if (obj.minutes > 60) {
-// @ts-expect-error
-      obj.hours += parseInt(obj.minutes / 60)
-      obj.minutes = obj.minutes % 60
+  function changingSeconds(obj: Time, sec: number) {
+    if (sec <= 60)
+      obj.seconds = sec
+    else {
+      obj.seconds = sec % 60
+      // @ts-expect-error
+      obj.minutes += parseInt(sec / 60)
+      if (obj.minutes > 60) {
+        // @ts-expect-error
+        obj.hours += parseInt(obj.minutes / 60)
+        obj.minutes = obj.minutes % 60
+      }
     }
+    return showTime(obj)
   }
-  return showTime(obj)
-}
 
-let new_seconds = 3600
+  let new_seconds = 3600
 
-console.log(changingSeconds(hwTime, new_seconds))
+  console.log(changingSeconds(hwTime, new_seconds))
 
-console.log(showTime(hwTime))
+  console.log(showTime(hwTime))
 
 
 
-// 3. Функция изменения времени на переданное количество минут.
+  // 3. Функция изменения времени на переданное количество минут.
 
-function changingMinutes(obj: Time, min: number) {
-  if (min <= 60)
-    obj.minutes = min
-  else {
-    obj.minutes = min % 60
-// @ts-expect-error
-    obj.hours += parseInt(min / 60)
+  function changingMinutes(obj: Time, min: number) {
+    if (min <= 60)
+      obj.minutes = min
+    else {
+      obj.minutes = min % 60
+      // @ts-expect-error
+      obj.hours += parseInt(min / 60)
+    }
+    return showTime(obj)
   }
-  return showTime(obj)
-}
 
-let new_minutes = 10000
+  let new_minutes = 10000
 
-console.log(changingMinutes(hwTime, new_minutes))
+  console.log(changingMinutes(hwTime, new_minutes))
 
-console.log(showTime(hwTime))
+  console.log(showTime(hwTime))
 
 
-// 4. Функция изменения времени на переданное количество часов.
+  // 4. Функция изменения времени на переданное количество часов.
 
-function changingHours(obj: Time, hour: number) {
+  function changingHours(obj: Time, hour: number) {
 
-  obj.hours = hour
+    obj.hours = hour
 
-  return showTime(obj)
-}
+    return showTime(obj)
+  }
 
-let new_hours = 100
+  let new_hours = 100
 
-console.log(changingHours(hwTime, new_hours))
+  console.log(changingHours(hwTime, new_hours))
 
-console.log(showTime(hwTime))
+  console.log(showTime(hwTime))
 
 
 
-// Учтите, что в последних 3-х функциях, при изменении одной 
-// части времени, может измениться и другая. Например: если ко 
-// времени «20:30:45» добавить 30 секунд, то должно получиться 
-// «20:31:15», а не «20:30:75».
+  // Учтите, что в последних 3-х функциях, при изменении одной 
+  // части времени, может измениться и другая. Например: если ко 
+  // времени «20:30:45» добавить 30 секунд, то должно получиться 
+  // «20:31:15», а не «20:30:75».
 
 }
 
@@ -4505,21 +4506,126 @@ bottomRightButton.addEventListener('click', () => {
 
 
 
+// ___________________________________________________________________________________________________________
 
-// const userDiv4 = document.getElementById('div4') as HTMLDivElement
+// Домашняя практика. Массивы.
 
-// userDiv4.addEventListener('click', () => {
-//   document.getElementById.style.transform = "rotate(50deg)"
-// })
+{
+  let arr = new Array()
 
-let z = document.createElement('h2')
+  console.log(arr)
 
-function show5Blocks3(n:any) {
-  for (let i = 1; i <= n; i++) {
-    document.write('<h2> Header ' + i + '</h2>')
-  }
+  arr[0] = 4
+  arr[1] = 16
+  arr[2] = 23
+
+  console.log(arr)
 }
-show5Blocks3(5)
+
+{
+  let arr = new Array(3)
+
+  console.log(arr)
+
+  arr[0] = 233
+  arr[1] = 163
+  arr[2] = 232
+
+  console.log(arr)
+
+  arr[3] = 56
+  arr[4] = 3
+  arr[5] = 98
+
+  console.log(arr)
+}
+
+{
+  let arr = new Array('books', 'magazines', 'newspapers')
+
+  console.log(arr)
+
+  arr[3] = 'maps'
+
+  console.log(arr)
+  console.log(arr[0])
+
+  arr.length = 3
+  console.log(arr)
+}
+
+{
+  let arr = []
+  arr[0] = 3
+  console.log(arr)
+}
+
+{
+  let arr = ['books', 'magazines', 'newspapers']
+  console.log(arr)
+  console.log(arr.length)
+  arr[3] = 'maps'
+  console.log(arr)
+  console.log(arr.length)
+
+  let arr2 = [43, -10, 5]
+  console.log(arr2)
+  console.log(arr2.length)
+}
+
+{
+  let arr = [32, 17, 58, 100]
+  let sum = 0
+  // считаем в цикле сумму элементов массива
+  for (let i = 0; i < arr.length; i++)
+    sum += arr[i]
+
+  console.log(sum)
+}
+
+{
+  let arr = [1, 'Mercury', 2, 'Venus', 3, 'Earth']
+  // Отображение содержимого массива с элементами разного типа.
+  console.log(arr)
+
+  for (let i = 0; i < arr.length; i++)
+    console.log(arr[i])
+}
+
+{
+  // Двумерный массив
+  let arr = [
+    [87, 12, 52],
+    [97, 65, -43]
+  ]
+
+  console.log(arr)
+  console.log(arr[0])
+  console.log(arr[0][0])
+  console.log(arr[1][2])
+}
+
+{
+  let arr = [32, 17, 58, 100]
+  console.log(arr)
+
+  // функция записывает новое значение по указанному индексу
+  function setValue(array: any, index: number, newValue: number) {
+    array[index] = newValue
+  }
+
+  console.log(arr)
+
+  setValue(arr, 1, 71)
+
+  console.log(arr)
+}
+
+
+
+// ___________________________________________________________________________________________________________
+
+
 
 
 // *********************************************************************************************************
@@ -4546,16 +4652,39 @@ show5Blocks3(5)
 // который содержит название продукта, необходимое количество и куплен или нет. 
 // Написать несколько функций для работы с таким массивом.
 
+{
+  let shoppingList = [
+    {name: 'bread', unitOfMeas: 'pcs', quantity: 1, bought: false},
+    {name: 'cheese', unitOfMeas: 'gr', quantity: 300, bought: true},
+    {name: 'milk', unitOfMeas: 'ml', quantity: 1000, bought: false},
+    {name: 'apples', unitOfMeas: 'gr', quantity: 300, bought: false},
+    {name: 'flour', unitOfMeas: 'gr', quantity: 1000, bought: true},
+    {name: 'potato', unitOfMeas: 'gr', quantity: 1000, bought: true},
+    {name: 'candies', unitOfMeas: 'gr', quantity: 200, bought: false},
+  ]
+
+  console.log(shoppingList)
 
 
-// 1. Вывод всего списка на экран таким образом, чтобы сначала 
-// шли некупленные продукты, а потом – купленные.
-// 2. Добавление покупки в список. Учтите, что при добавлении 
-// покупки с уже существующим в списке продуктом, необходимо увеличивать количество в существующей покупке, 
-// а не добавлять новую. 
-// 3. Покупка продукта. Функция принимает название продукта 
-// и отмечает его как купленный.
 
+
+// 1. Вывод всего списка на экран таким образом, чтобы сначала шли некупленные продукты, а потом – купленные.
+
+
+
+
+// 2. Добавление покупки в список. Учтите, что при добавлении покупки с уже существующим в списке продуктом, 
+// необходимо увеличивать количество в существующей покупке, а не добавлять новую. 
+
+
+
+
+// 3. Покупка продукта. Функция принимает название продукта и отмечает его как купленный.
+
+
+
+
+}
 
 
 
@@ -4941,6 +5070,33 @@ setInterval(() => {
 
 
 
+
+// ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+// let z_H2 = document.createElement('h2')
+
+// function show5Blocks3(n:any) {
+//   for (let i = 1; i <= n; i++) {
+//     document.write('<h2> Header ' + i + '</h2>')
+//   }
+// }
+// show5Blocks3(5)
+
+
+
+
+
+// const userDiv4 = document.getElementById('div4') as HTMLDivElement
+
+// userDiv4.addEventListener('click', () => {
+//   document.getElementById.style.transform = "rotate(50deg)"
+// })
+
+
+
 // 13.06.2024
 // Добавьте JavaScript к кнопке button, чтобы при нажатии элемент <div id="text"> исчезал.
 
@@ -4954,5 +5110,8 @@ setInterval(() => {
 
 
 // Сделайте так, чтобы при клике на ссылки внутри элемента id="contents" пользователю выводился вопрос о том, действительно ли он хочет покинуть страницу, и если он не хочет, то прерывать переход по ссылке.
+
+
+
 
 
