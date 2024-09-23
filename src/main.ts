@@ -4728,10 +4728,32 @@ bottomRightButton.addEventListener('click', () => {
     }
   }
 
-  // setValue(arr, 1, 71)
-
+console.log('-----------------------------------------')
 
   // 3. Покупка продукта. Функция принимает название продукта и отмечает его как купленный.
+
+
+  function PurchasingProduct(array: any, n:string) {
+    for (let i = 0; i < array.length; i++) {
+      if (array[i].name == n) {
+        array[i].bought = true
+        return
+      }
+  }
+  }
+  PurchasingProduct(shoppingList, 'bread')
+  
+
+  for (let i = 0; i < shoppingList.length; i++) {
+    if (shoppingList[i].bought == false) {
+      console.log(shoppingList[i].name + ' ' + shoppingList[i].quantity + ' ' + shoppingList[i].unitOfMeas + ' ' + (shoppingList[i].bought == false ? 'не куплено' : 'куплено'))
+    }
+  }
+  for (let i = 0; i < shoppingList.length; i++) {
+    if (shoppingList[i].bought == true) {
+      console.log(shoppingList[i].name + ' ' + shoppingList[i].quantity + ' ' + shoppingList[i].unitOfMeas + ' ' + (shoppingList[i].bought == false ? 'не куплено' : 'куплено'))
+    }
+  }
 
 
 
