@@ -4621,7 +4621,101 @@ bottomRightButton.addEventListener('click', () => {
   console.log(arr)
 }
 
+{
 
+  let arr = [32, 17, 58, 100]
+
+  // ищем значение 58
+  let i = arr.indexOf(58)
+
+  // значение 58 - под индексом 2
+  console.log(i)
+
+  // ищем значение 58, начиная с индекса 3 слева направо
+  i = arr.indexOf(58, 3)
+
+  // -1 т.к. значения 58, начиная с индекса 3 нет в массиве
+  console.log(i)
+
+  // ищем значение, которого нет в массиве
+  let j = arr.indexOf(126)
+
+  // -1 т.к. значения 126 нет в массиве
+  console.log(j)
+
+}
+
+{
+  
+  let arr = [8, 456, 8, 878, -8, 8, 13, 52, 8, 1]
+
+  let index = arr.indexOf(8)
+  let count = 0
+
+  while (index != -1) {
+    count++
+    index = arr.indexOf(8, index + 1)
+  }
+
+  console.log(count)
+
+}
+
+{
+
+  let arr = [32, 17, 58, 100]
+
+  // ищем значение 58
+  let i = arr.lastIndexOf(58)
+
+  // значение 58 - под индексом 2
+  console.log(i)
+
+  // ищем значение 58, начиная с индекса 1 справа налево
+  i = arr.lastIndexOf(58, 1)
+
+  // -1 т.к. значения 58, начиная с индекса 1 и налево нет в массиве
+  console.log(i)
+
+  // ищем значение, которого нет в массиве
+  let j = arr.lastIndexOf(126)
+
+  // -1 т.к. значения 126 нет в массиве
+  console.log(j)
+
+}
+
+{
+  
+  let arr = [8, 456, 8, 878, -8, 8, 13, 52, 8, 1]
+
+  let index = arr.lastIndexOf(8)
+  let count = 0
+
+  while (index != -1) {
+    count++
+
+    if(index == 0) break
+    
+    index = arr.lastIndexOf(8, index - 1)
+  }
+
+  console.log(count)
+
+}
+
+{
+  
+  let arr = [10, 8, 456, 2, 8, -8, 13, 52, 1]
+
+  console.log(arr)
+
+  arr.sort()
+
+  console.log(arr)
+
+  
+}
 
 // ___________________________________________________________________________________________________________
 
@@ -4722,18 +4816,18 @@ bottomRightButton.addEventListener('click', () => {
   DisplayingList(shoppingList)
 
 
-console.log('-----------------------------------------')
+  console.log('-----------------------------------------')
 
   // 3. Покупка продукта. Функция принимает название продукта и отмечает его как купленный.
 
 
-  function PurchasingProduct(array: any, n:string) {
+  function PurchasingProduct(array: any, n: string) {
     for (let i = 0; i < array.length; i++) {
       if (array[i].name == n) {
         array[i].bought = true
         return
       }
-  }
+    }
   }
 
   PurchasingProduct(shoppingList, 'bread')
