@@ -4654,13 +4654,13 @@ bottomRightButton.addEventListener('click', () => {
 
 {
   let shoppingList = [
-    {name: 'bread', unitOfMeas: 'pcs', quantity: 1, bought: false},
-    {name: 'cheese', unitOfMeas: 'gr', quantity: 300, bought: true},
-    {name: 'milk', unitOfMeas: 'ml', quantity: 1000, bought: false},
-    {name: 'apples', unitOfMeas: 'gr', quantity: 300, bought: false},
-    {name: 'flour', unitOfMeas: 'gr', quantity: 1000, bought: true},
-    {name: 'potato', unitOfMeas: 'gr', quantity: 1000, bought: true},
-    {name: 'candies', unitOfMeas: 'gr', quantity: 200, bought: false},
+    { name: 'bread', unitOfMeas: 'pcs', quantity: 1, bought: false },
+    { name: 'cheese', unitOfMeas: 'gr', quantity: 300, bought: true },
+    { name: 'milk', unitOfMeas: 'ml', quantity: 1000, bought: false },
+    { name: 'apples', unitOfMeas: 'gr', quantity: 300, bought: false },
+    { name: 'flour', unitOfMeas: 'gr', quantity: 1000, bought: true },
+    { name: 'potato', unitOfMeas: 'gr', quantity: 1000, bought: true },
+    { name: 'candies', unitOfMeas: 'gr', quantity: 200, bought: false },
   ]
 
   console.log(shoppingList)
@@ -4668,18 +4668,70 @@ bottomRightButton.addEventListener('click', () => {
 
 
 
-// 1. Вывод всего списка на экран таким образом, чтобы сначала шли некупленные продукты, а потом – купленные.
+  // 1. Вывод всего списка на экран таким образом, чтобы сначала шли некупленные продукты, а потом – купленные.
+
+
+  for (let i = 0; i < shoppingList.length; i++) {
+    if (shoppingList[i].bought == false) {
+      console.log(shoppingList[i].name + ' ' + shoppingList[i].quantity + ' ' + shoppingList[i].unitOfMeas + ' ' + (shoppingList[i].bought == false ? 'не куплено' : 'куплено'))
+    }
+  }
+  for (let i = 0; i < shoppingList.length; i++) {
+    if (shoppingList[i].bought == true) {
+      console.log(shoppingList[i].name + ' ' + shoppingList[i].quantity + ' ' + shoppingList[i].unitOfMeas + ' ' + (shoppingList[i].bought == false ? 'не куплено' : 'куплено'))
+    }
+  }
 
 
 
 
-// 2. Добавление покупки в список. Учтите, что при добавлении покупки с уже существующим в списке продуктом, 
-// необходимо увеличивать количество в существующей покупке, а не добавлять новую. 
+
+  // 2. Добавление покупки в список. Учтите, что при добавлении покупки с уже существующим в списке продуктом, 
+  // необходимо увеличивать количество в существующей покупке, а не добавлять новую. 
 
 
+  function addPurchases(array: any, n: string, un: string, q: number, b: boolean) {
+    let j = false
+    for (let i = 0; i < array.length; i++) {
+      if (array[i].name == n) {
+        array[i].quantity += q
+        return
+      }
+      else {
+        j = true
+      }
+    }
+
+    if (j == true) {
+      array[array.length] = { name: n, unitOfMeas: un, quantity: q, bought: b, }
+    }
+
+  }
+
+  addPurchases(shoppingList, 'bread', 'pcs', 1, false)
+  console.log(shoppingList.length)
 
 
-// 3. Покупка продукта. Функция принимает название продукта и отмечает его как купленный.
+  addPurchases(shoppingList, 'soap', 'pcs', 1, false)
+
+  console.log(shoppingList)
+  console.log(shoppingList.length)
+
+  for (let i = 0; i < shoppingList.length; i++) {
+    if (shoppingList[i].bought == false) {
+      console.log(shoppingList[i].name + ' ' + shoppingList[i].quantity + ' ' + shoppingList[i].unitOfMeas + ' ' + (shoppingList[i].bought == false ? 'не куплено' : 'куплено'))
+    }
+  }
+  for (let i = 0; i < shoppingList.length; i++) {
+    if (shoppingList[i].bought == true) {
+      console.log(shoppingList[i].name + ' ' + shoppingList[i].quantity + ' ' + shoppingList[i].unitOfMeas + ' ' + (shoppingList[i].bought == false ? 'не куплено' : 'куплено'))
+    }
+  }
+
+  // setValue(arr, 1, 71)
+
+
+  // 3. Покупка продукта. Функция принимает название продукта и отмечает его как купленный.
 
 
 
