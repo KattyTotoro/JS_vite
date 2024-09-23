@@ -4663,27 +4663,30 @@ bottomRightButton.addEventListener('click', () => {
     { name: 'candies', unitOfMeas: 'gr', quantity: 200, bought: false },
   ]
 
-  console.log(shoppingList)
+  // console.log(shoppingList)
 
+  console.log('-----------------------------------------')
 
 
 
   // 1. Вывод всего списка на экран таким образом, чтобы сначала шли некупленные продукты, а потом – купленные.
 
 
-  for (let i = 0; i < shoppingList.length; i++) {
-    if (shoppingList[i].bought == false) {
-      console.log(shoppingList[i].name + ' ' + shoppingList[i].quantity + ' ' + shoppingList[i].unitOfMeas + ' ' + (shoppingList[i].bought == false ? 'не куплено' : 'куплено'))
+  function DisplayingList(array: any) {
+    for (let i = 0; i < array.length; i++) {
+      if (array[i].bought == false) {
+        console.log(array[i].name + ' ' + array[i].quantity + ' ' + array[i].unitOfMeas + ' ' + (array[i].bought == false ? 'не куплено' : 'куплено'))
+      }
+    }
+    for (let i = 0; i < array.length; i++) {
+      if (array[i].bought == true) {
+        console.log(array[i].name + ' ' + array[i].quantity + ' ' + array[i].unitOfMeas + ' ' + (array[i].bought == false ? 'не куплено' : 'куплено'))
+      }
     }
   }
-  for (let i = 0; i < shoppingList.length; i++) {
-    if (shoppingList[i].bought == true) {
-      console.log(shoppingList[i].name + ' ' + shoppingList[i].quantity + ' ' + shoppingList[i].unitOfMeas + ' ' + (shoppingList[i].bought == false ? 'не куплено' : 'куплено'))
-    }
-  }
 
 
-
+  DisplayingList(shoppingList)
 
 
   // 2. Добавление покупки в список. Учтите, что при добавлении покупки с уже существующим в списке продуктом, 
@@ -4714,19 +4717,10 @@ bottomRightButton.addEventListener('click', () => {
 
   addPurchases(shoppingList, 'soap', 'pcs', 1, false)
 
-  console.log(shoppingList)
   console.log(shoppingList.length)
 
-  for (let i = 0; i < shoppingList.length; i++) {
-    if (shoppingList[i].bought == false) {
-      console.log(shoppingList[i].name + ' ' + shoppingList[i].quantity + ' ' + shoppingList[i].unitOfMeas + ' ' + (shoppingList[i].bought == false ? 'не куплено' : 'куплено'))
-    }
-  }
-  for (let i = 0; i < shoppingList.length; i++) {
-    if (shoppingList[i].bought == true) {
-      console.log(shoppingList[i].name + ' ' + shoppingList[i].quantity + ' ' + shoppingList[i].unitOfMeas + ' ' + (shoppingList[i].bought == false ? 'не куплено' : 'куплено'))
-    }
-  }
+  DisplayingList(shoppingList)
+
 
 console.log('-----------------------------------------')
 
@@ -4741,20 +4735,10 @@ console.log('-----------------------------------------')
       }
   }
   }
+
   PurchasingProduct(shoppingList, 'bread')
-  
 
-  for (let i = 0; i < shoppingList.length; i++) {
-    if (shoppingList[i].bought == false) {
-      console.log(shoppingList[i].name + ' ' + shoppingList[i].quantity + ' ' + shoppingList[i].unitOfMeas + ' ' + (shoppingList[i].bought == false ? 'не куплено' : 'куплено'))
-    }
-  }
-  for (let i = 0; i < shoppingList.length; i++) {
-    if (shoppingList[i].bought == true) {
-      console.log(shoppingList[i].name + ' ' + shoppingList[i].quantity + ' ' + shoppingList[i].unitOfMeas + ' ' + (shoppingList[i].bought == false ? 'не куплено' : 'куплено'))
-    }
-  }
-
+  DisplayingList(shoppingList)
 
 
 
