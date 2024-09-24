@@ -4646,7 +4646,7 @@ bottomRightButton.addEventListener('click', () => {
 }
 
 {
-
+  // Сколько раз повторяется цифора 8 в массиве
   let arr = [8, 456, 8, 878, -8, 8, 13, 52, 8, 1]
 
   let index = arr.indexOf(8)
@@ -4937,21 +4937,97 @@ bottomRightButton.addEventListener('click', () => {
 
 }
 
+console.log('-----------------------------------------')
+
+
+{
+
+  // Задание 2
+
+  // Создать массив, описывающий чек в магазине. Каждый элемент массива состоит из названия товара, 
+  // количества и цены за единицу товара. Написать следующие функции.
+
+  const storeReceipt = [
+    { name: 'bread', quantity: 1, price: 30 },
+    { name: 'cheese', quantity: 4, price: 200 },
+    { name: 'milk', quantity: 2, price: 80 },
+    { name: 'apples', quantity: 5, price: 120 },
+    { name: 'potato', quantity: 20, price: 32 }
+  ]
+
+  // 1. Распечатка чека на экран. 30 + 800 + 160 + 600 + 640
+
+  function showList(array: any) {
+    for (let i in array)
+      console.log(array[i].name + ' ' + array[i].quantity + ' ' + array[i].price)
+  }
+
+  showList(storeReceipt)
+
+  console.log('-----------------------------------------')
+
+  // 2. Подсчет общей суммы покупки. 2230
+
+  function getAmount(array: any) {
+    let sum = 0
+    for (let i = 0; i < array.length; i++)
+      sum += array[i].quantity * array[i].price
+
+    return sum
+  }
+
+  console.log('Общая сумма чека: ' + getAmount(storeReceipt))
+
+
+  // 3. Получение самой дорогой покупки в чеке. 800
+
+  function getMax(array: any) {
+    let sub = array[0].quantity * array[0].price
+    let max = sub
+    let j = ''
+    let result = ''
+
+    for (let i = 0; i < array.length; i++) {
+      let sumQ = 0
+      
+      sub = array[i].quantity * array[i].price
+      if (max < sub) { max = sub; j = array[i].name }
+    }
+    return result = j + ' ' + max
+  }
+
+  console.log('Самая дорогая покупка в чеке: ' + getMax(storeReceipt))
+
+
+  // 4. Подсчет средней стоимости одного товара в чеке. 
+
+  function getAverageCost(array:any) {
+    return getAmount(array) / array.length
+  }
+
+  console.log('Средняя стоимость одного товара в чеке: ' + getAverageCost(storeReceipt))
+
+
+  function getAverageCost2(array:any) {
+    let sumQ = 0
+
+    for (let i = 0; i < array.length; i++)
+      sumQ += array[i].quantity
+
+    return getAmount(array) / sumQ
+  }
+
+  console.log('Средняя ст-ть одной штуки товара в чеке: ' + getAverageCost2(storeReceipt))
 
 
 
-// Задание 2
-// Создать массив, описывающий чек в магазине. Каждый элемент массива состоит из названия товара, количества и цены за 
-// единицу товара. Написать следующие функции.
-// 1. Распечатка чека на экран.
-// 2. Подсчет общей суммы покупки.
 
-// 3. Получение самой дорогой покупки в чеке.
-// 4. Подсчет средней стоимости одного товара в чеке. 
+}
 
-
+console.log('-----------------------------------------')
 
 // Задание 3
+
 // Создать массив css-стилей (цвет, размер шрифта, выравнивание, подчеркивание и т. д.). Каждый элемент массива – это объект, состоящий из двух свойств: название стиля и значение стиля. 
 // Написать функцию, которая принимает массив стилей и 
 // текст, и выводит этот текст с помощью document.write() в тегах 
@@ -4967,6 +5043,8 @@ bottomRightButton.addEventListener('click', () => {
 // количества студентов и названия факультета. 
 // 4. Функция сортировки аудиторий по количеству мест.
 // 5. Функция сортировки аудиторий по названию (по алфавиту).
+
+
 
 
 
