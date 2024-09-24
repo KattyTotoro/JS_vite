@@ -4987,9 +4987,7 @@ console.log('-----------------------------------------')
     let j = ''
     let result = ''
 
-    for (let i = 0; i < array.length; i++) {
-      let sumQ = 0
-      
+    for (let i = 0; i < array.length; i++) {      
       sub = array[i].quantity * array[i].price
       if (max < sub) { max = sub; j = array[i].name }
     }
@@ -5017,7 +5015,7 @@ console.log('-----------------------------------------')
     return getAmount(array) / sumQ
   }
 
-  console.log('Средняя ст-ть одной штуки товара в чеке: ' + getAverageCost2(storeReceipt))
+  console.log('Средняя ст-ть одной штуки товара в чеке: ' + Math.floor(getAverageCost2(storeReceipt)))
 
 
 
@@ -5026,22 +5024,33 @@ console.log('-----------------------------------------')
 
 console.log('-----------------------------------------')
 
+
 // Задание 3
 
-// Создать массив css-стилей (цвет, размер шрифта, выравнивание, подчеркивание и т. д.). Каждый элемент массива – это объект, состоящий из двух свойств: название стиля и значение стиля. 
+// Создать массив css-стилей (цвет, размер шрифта, выравнивание, подчеркивание и т. д.). 
+// Каждый элемент массива – это объект, состоящий из двух свойств: название стиля и значение стиля. 
 // Написать функцию, которая принимает массив стилей и 
 // текст, и выводит этот текст с помощью document.write() в тегах 
 // <p></p>, добавив в открывающий тег атрибут style со всеми стилями, перечисленными в массиве. 
+
+
+
 // Задание 4
+
 // Создать массив аудиторий академии. Объект-аудитория состоит из названия, количества посадочных мест (от 10 до 20) и 
 // названия факультета, для которого она предназначена. 
 // Написать несколько функций для работы с ним.
+
 // 1. Вывод на экран всех аудиторий. 
+
 // 2. Вывод на экран аудиторий для указанного факультета.
+
 // 3. Вывод на экран только тех аудиторий, которые подходят для 
 // переданной группы. Объект-группа состоит из названия, 
 // количества студентов и названия факультета. 
+
 // 4. Функция сортировки аудиторий по количеству мест.
+
 // 5. Функция сортировки аудиторий по названию (по алфавиту).
 
 
@@ -5080,36 +5089,47 @@ console.log('-----------------------------------------')
 
 // Создать массив из 10 случайных чисел и написать несколько 
 // функций для работы с ним.
+
 // 1. Функция принимает массив и выводит его на экран.
+
 // 2. Функция принимает массив и выводит только четные 
 // элементы.
+
 // 3. Функция принимает массив и возвращает сумму всех 
 // элементов массива.
+
 // 4. Функция принимает массив и возвращает его максимальный элемент.
+
 // 5. Функция добавления нового элемента в массив по указанному индексу.
+
 // 6. Функция удаления элемента из массива по указанному 
 // индексу.
 
 
+
 // Задание 2
-// Создать еще один массив из 5 случайных чисел и написать 
-// следующие функции.
+
+// Создать еще один массив из 5 случайных чисел и написать следующие функции.
+
 // 1. Функция принимает 2 массива и возвращает новый массив, в котором собраны все элементы из двух массивов 
 // без повторений.
 
 // 2. Функция принимает 2 массива и возвращает новый массив, 
 // в котором собраны общие элементы (то есть элементы, 
-// которые встречаются и в первом и во втором массивах) 
-// без повторений.
+// которые встречаются и в первом и во втором массивах) без повторений.
+
 // 3. Функция принимает 2 массива и возвращает новый массив, в котором собраны все элементы из первого массива, 
 // которых нет во втором массиве. 
 
 
 // Задание 3
+
 // Создать массив фруктов и отсортировать его по алфавиту. 
 // Написать следующие функции.
+
 // 1. Вывод на экран с помощью document.write() в виде списка 
 // (с помощью тегов ul и li). 
+
 // 2. Поиск фрукта в массиве. Функция принимает название 
 // фрукта и возвращает индекс найденного элемента или -1, 
 // если не найден. Поиск должен быть нерегистрозависимым. 
@@ -5132,66 +5152,71 @@ console.log('-----------------------------------------')
 
 // Функция возвращает массив от одного числа до второго, заданных пользователем
 
-// function getArrayOfIintegers(num1: number, num2: number) {
-//       let arr = []
+{
+function getArrayOfIintegers(num1: number, num2: number) {
+      let arr = []
 
-//       for (let i = 0; num1 <= num2; i++) {
-//             arr[i] = num1
-//             num1++
-//       }
+      for (let i = 0; num1 <= num2; i++) {
+            arr[i] = num1
+            num1++
+      }
 
-//       return arr
-// }
+      return arr
+}
 
-// console.log(getArrayOfIintegers(0, 10))
-
+console.log(getArrayOfIintegers(0, 10))
+}
 
 // Функция возвращает массив случайных целых чисел от 0 до 10, размер массива задан пользователем
 
-// function getArrayOfIintegers2(num:number) {
-//       let arr = []
+{
+function getArrayOfIintegers2(num:number) {
+      let arr = []
 
-//       for (let i = 0; i < num; i++) {
-//              arr[i] = parseInt(Math.random() * 11)
-//       }
+      for (let i = 0; i < num; i++) {
+        // @ts-ignore
+             arr[i] = parseInt(Math.random() * 11)
+      }
 
-//       return arr
-// }
+      return arr
+}
 
-// console.log(getArrayOfIintegers2(7))
-
+console.log(getArrayOfIintegers2(7))
+}
 
 // 1.2.  Добавить в функцию опциональные параметры начального и конечного значения массива
 //     (если конечный элемент массива не передан, то он больше начального на 10) . Вызвать функцию несколько раз
-
+{
 // Заполняет числами от start до end 
-// function getArrayOfIintegers3(start=0, end=start+10) {
-//       let arr = []
+function getArrayOfIintegers3(start=0, end=start+10) {
+      let arr = []
 
-//       for (let i = 0; start <= end; i++) {
-//             arr[i] = start
-//             start++
-//       }
+      for (let i = 0; start <= end; i++) {
+            arr[i] = start
+            start++
+      }
 
-//       return arr
-// }
+      return arr
+}
 
-// console.log(getArrayOfIintegers3(2))
-
+console.log(getArrayOfIintegers3(2))
+}
 
 // Заполняет случайными числами
-// function getArrayOfIintegers4(start=0, end=start+10) {
-//       let arr = []
+{
+function getArrayOfIintegers4(start=0, end=start+10) {
+      let arr = []
 
-//       for (let i = 0; i < end; i++) {
-//             arr[i] = parseInt(Math.random() * 11)
-//       }
+      for (let i = 0; i < end; i++) {
+        // @ts-ignore
+            arr[i] = parseInt(Math.random() * 11)
+      }
 
-//       return arr
-// }
+      return arr
+}
 
-// console.log(getArrayOfIintegers4(2))
-
+console.log(getArrayOfIintegers4(2))
+}
 
 
 
@@ -5200,48 +5225,56 @@ console.log('-----------------------------------------')
 
 // Функция возвращает массив случайных целых чисел от 0 до 10, размер массива задан пользователем
 
-// function getArrayOfIintegers2(num:number) {
-//       let arr = []
+{
+function getArrayOfIintegers2(num:number) {
+      let arr = []
 
-//       for (let i = 0; i < num; i++) {
-//             //  arr[i] = parseInt(Math.random() * 11)
-//             arr.push(Math.floor(Math.random() * 11))
-//       }
+      for (let i = 0; i < num; i++) {
+            //  arr[i] = parseInt(Math.random() * 11)
+            arr.push(Math.floor(Math.random() * 11))
+      }
 
-//       return arr
-// }
+      return arr
+}
 
-// console.log(getArrayOfIintegers2(5))
+console.log(getArrayOfIintegers2(5))
+}
 
+{
+function funcName (start=0, end=start+10) {
+      return console.log(start, end)
+}
 
+funcName()
+}
 
-// function funcName (start=0, end=start+10) {
-//       return console.log(start, end)
-// }
+{
+function generateArray(start=0, end=start+10) {
+      return [0,1,2,3,4,5,6,7,8,9]
+    }
+    console.log(generateArray())
+    console.log(generateArray(20))
+    console.log(generateArray(20))
+    console.log(generateArray(20,50))
+}
 
-// funcName()
-
-
-// function generateArray(start=0, end=start+10) {
-//       return [0,1,2,3,4,5,6,7,8,9]
-//     }
-//     console.log(generateArray())
-//     console.log(generateArray(20))
-//     console.log(generateArray(20))
-//     console.log(generateArray(20,50))
 
 
 
 // 2.1. В файле html создать пустой div с произвольным id
 // 2.2. Получить объект div'а в js при помощи метода document.getElementById(ваш id) as HTMLDivElement
 
-// document.getElementById('Primer')
+let pr = document.getElementById('Primer') as HTMLDivElement
 
-// document.getElementById('Primer3')
+let pr2 = document.getElementById('Primer2') as HTMLDivElement
+
+let pr3 = document.getElementById('Primer3') as HTMLDivElement
 
 
 // 2.3. Вывесли в полученный div текст, "Привет, пользователь"
-// 2.4. Написать функцию, которая возвращает текст "Привет, пользователь" или "Привет, <имяПользователя>" в зависимости от переданных параметров и использовать её в задании 2.3.
+
+// 2.4. Написать функцию, которая возвращает текст "Привет, пользователь" или 
+// "Привет, <имяПользователя>" в зависимости от переданных параметров и использовать её в задании 2.3.
 
 // Есть массив объектов
 // const employees = [
