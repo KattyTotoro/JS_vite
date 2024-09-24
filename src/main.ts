@@ -4646,7 +4646,7 @@ bottomRightButton.addEventListener('click', () => {
 }
 
 {
-  
+
   let arr = [8, 456, 8, 878, -8, 8, 13, 52, 8, 1]
 
   let index = arr.indexOf(8)
@@ -4686,7 +4686,7 @@ bottomRightButton.addEventListener('click', () => {
 }
 
 {
-  
+
   let arr = [8, 456, 8, 878, -8, 8, 13, 52, 8, 1]
 
   let index = arr.lastIndexOf(8)
@@ -4695,8 +4695,8 @@ bottomRightButton.addEventListener('click', () => {
   while (index != -1) {
     count++
 
-    if(index == 0) break
-    
+    if (index == 0) break
+
     index = arr.lastIndexOf(8, index - 1)
   }
 
@@ -4705,7 +4705,7 @@ bottomRightButton.addEventListener('click', () => {
 }
 
 {
-  
+
   let arr = [10, 8, 456, 2, 8, -8, 13, 52, 1]
 
   console.log(arr)
@@ -4714,8 +4714,76 @@ bottomRightButton.addEventListener('click', () => {
 
   console.log(arr)
 
-  
+
 }
+
+{
+
+  let arr = [10, 8, 456, 2, 8, -8, 13, 52, 1]
+
+  // сортировки данных по возрастанию
+  function sortFunction(a: number, b: number) {
+    if (a > b) return 1
+    else if (b > a) return -1
+    else return 0
+  }
+
+  arr.sort()
+  console.log(arr)
+  arr.sort(sortFunction)
+  console.log(arr)
+
+
+
+  //  сортировка по убыванию
+  function sortFunction2(a: number, b: number) {
+    if (a > b) return -1
+    else if (b > a) return 1
+    else return 0
+  }
+
+  let arr2 = [10, 8, 456, 2, 8, -8, 13, 52, 1]
+
+  console.log(arr2)
+
+  arr2.sort()
+  console.log(arr2)
+  arr2.sort(sortFunction2)
+  console.log(arr2)
+
+}
+
+{
+
+  let str = 'apple,onion,strawberry'
+
+  // разбиваем строку на основании , (запятой)  
+  let arr = str.split(',')
+
+  // в массиве будет три элемента apple onion strawberry
+  console.log(arr)
+  console.log(arr[0])
+  console.log(str)
+
+
+  let arr2 = ['bmw', 'audi', 'opel']
+
+  // создаем строку
+  // в качестве разделительного символа между элементами  массива указываем *
+  let str2 = arr2.join("*")
+
+  console.log(str2)
+
+  // если не указать разделитель, то будет использована запятая
+  let str3 = arr2.join()
+
+  console.log(str3)
+
+  console.log(arr2)
+
+}
+
+
 
 // ___________________________________________________________________________________________________________
 
@@ -4815,6 +4883,37 @@ bottomRightButton.addEventListener('click', () => {
 
   DisplayingList(shoppingList)
 
+
+  console.log('-----------------------------------------')
+
+
+  function addPurchases2(array: any, n: string, un: string, q: number, b: boolean) {
+    let j = false
+    for (let i = 0; i < array.length; i++) {
+      if (array[i].name == n) {
+        array[i].quantity += q
+        return
+      }
+      else {
+        j = true
+      }
+    }
+
+    if (j == true) {
+      array.push({ name: n, unitOfMeas: un, quantity: q, bought: b, })
+    }
+
+  }
+
+  addPurchases2(shoppingList, 'bread', 'pcs', 1, false)
+  console.log(shoppingList.length)
+
+
+  addPurchases2(shoppingList, 'bike', 'pcs', 1, false)
+
+  console.log(shoppingList.length)
+
+  DisplayingList(shoppingList)
 
   console.log('-----------------------------------------')
 
