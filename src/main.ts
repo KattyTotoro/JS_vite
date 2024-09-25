@@ -4868,6 +4868,51 @@ console.log(shiftArr)
 arr.unshift('books')
 console.log(arr)
 
+// Удаление нескольких элементов splice() 
+arr.splice(1, 2)
+console.log(arr)
+
+// Создание копии массива 
+const arrCopy = arr.slice()
+console.log(arrCopy)
+
+arr.push('magazines', 'newspapers', 'guidebooks')
+console.log(arr)
+
+// Удаление элемента с определённым индексом
+// Удаляет 1 элемент по индексу 2
+arr.splice(2, 1)
+console.log(arr)
+
+// Удаляет все элементы после индекса 2 (включительно)
+arr.splice(2)
+console.log(arr)
+
+arr.push('magazines', 'newspapers', 'guidebooks')
+console.log(arr)
+
+// Удаление нескольких элементов, начиная с определённого индекса
+arr.splice(1, 2)
+console.log(arr)
+
+// Удаляет 0 элементов по индексу 1 и вставляет 'maps'
+arr.splice(1, 0, 'maps')
+console.log(arr)
+
+// Удаляет 1 элемент по индексу -2 (отсчёт с конца)
+arr.splice(-2, 1)
+console.log(arr)
+
+// Соединение массивов и/или значений в новый массив 
+const array1 = ['a', 'b', 'c']
+const array2 = ['d', 'e', 'f']
+const array3 = array1.concat(array2)
+console.log(array3)
+
+// Соединение трёх массивов и двух значений
+const arr4 = arr.concat(array1, array2, ['magazines', 'newspapers'])
+console.log(arr4)
+
 }
 
 // ___________________________________________________________________________________________________________
