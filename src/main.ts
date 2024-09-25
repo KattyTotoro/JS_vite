@@ -3497,114 +3497,165 @@ console.log(findMaxNumber(19245031609182))
 
 // Домашняя практика. Объект.
 
+{
+  // Два варианта создания объекта. Создаём пустой объект.
 
-// Два варианта создания объекта. Создаём пустой объект.
+  let obj1 = new Object()
+  console.log(obj1)
 
-// let obj1 = new Object()
+  let obj2 = {}
+  console.log(obj2)
 
-// let obj2 = {}
+  // 1.
+  let student = new Object() as any
+  student['Name'] = 'Иннокентий'
+  student['Age'] = 20
+  console.log(student)
+  console.log(student['Name'])
+  console.log(student['Age'])
+}
+{
+  // 2.
+  let firm = {} as any
+  firm.Name = 'Star Inc'
+  firm.Adress = 'Grape street 8'
+  console.log(firm)
+  console.log(firm.Name)
+  console.log(firm.Adress)
+}
+{
+  // 3.
+  let dog = {} as any
+  dog['Name of dog'] = 'Belyash'
+  console.log(dog)
+  console.log(dog['Name of dog'])
+  dog.Age_of_dog = 5
+  console.log(dog)
+  console.log(dog['Age_of_dog'])
+}
+{
+  // 4.
 
-// 1.
-// let student = new Object()
-// student['Name'] = 'Иннокентий'
-// student['Age'] = 20
-// console.log(student)
-// console.log(student['Name'])
-// console.log(student['Age'])
+  let cat = {} as any
+  cat.Name = 'Konus'
+  cat.Age = 2
+  cat['Color'] = 'red'
+  console.log(cat)
+
+  // Удаление свойства
+
+  delete cat.Name
+  console.log(cat)
+  delete cat['Age']
+  console.log(cat)
+  console.log(cat['Name'])
+  console.log(cat.Age)
+
+  // // Проверка существования свойства внутри объекта:
+
+  if ('Name' in cat)
+    console.log('Имя: ' + cat.Name)
+  else
+    console.log('Имя: Неивестно')
+
+  cat.Name = 'Vasiliy'
+
+  if ('Name' in cat)
+    console.log('Имя: ' + cat.Name)
+  else
+    console.log('Имя: Неивестно')
+}
+{
+  // 5. 
+
+  // const student = {
+  //       firstName: 'Eva',
+  //       lastName: 'Robotova',
+  //       age: 20,
+  //       address: {
+  //             strreet: 'Apricot 2',
+  //             city: 'Sochi',
+  //             country: 'Russia',
+  //       }
+  // } as Record<string, any>
+  // console.log(student)
+  // console.log(student.lastName)
+  // console.log(student.address.city)
+  // console.log(student.address)
+
+  // for(let i in student) {
+  //       // отображаем название свойства
+  //       console.log(i)
+  //       // значение свойства
+  //       console.log(student[i])
+  // }
+
+  // for(let key in student) {
+  //       // отображаем название свойства (ключа)
+  //       console.log(key)
+  //       // значение свойства
+  //       console.log(student[key])
+  // }
 
 
-// 2.
-// let firm = {}
-// firm.Name = 'Star Inc'
-// firm.Adress = 'Grape street 8'
-// console.log(firm)
-// console.log(firm.Name)
-// console.log(firm.Adress)
+  // let studentInfo = prompt('Что Вы хотите увидеть?', 'firstName') as string
+  // alert(student[studentInfo])
+  // console.log(student[studentInfo])
 
-// 3.
-// let dog = {}
-// dog['Name of dog'] = 'Belyash'
-// console.log(dog)
-// console.log(dog['Name of dog'])
-// dog.Age_of_dog = 5
-// console.log(dog)
-// console.log(dog['Age_of_dog'])
+  // function getInfo() {
 
-// 4.
+  // }
 
-// let cat = {}
-// cat.Name = 'Konus'
-// cat.Age = 2
-// cat['Color'] = 'red'
-// console.log(cat)
+  // const jsonObj = JSON.stringify(object)
+  // console.log(jsonObj)
+  // console.log(JSON.parse(jsonObj))
+}
+{
+  let a = 3
+  let b = 'year'
+  let c = 38
+  let d = 'sum'
 
-// Удаление свойства
+  // Поместили глобальные переменные (в коллекцию) в объект
+  type MyObj = {
+    a: number,
+    b: string,
+    c: number,
+    d: string,
+    // необязательный параметр
+    e?: string,
+  }
 
-// delete cat.Name
-// console.log(cat)
-// delete cat['Age']
-// console.log(cat)
-// console.log(cat['Name'])
-// console.log(cat.Age)
+  const obj: MyObj = {
+    a,
+    b,
+    c,
+    d,
+  }
+  console.log(obj)
+  obj.d = '12'
+  obj.e = '62'
+  console.log(obj)
 
-// // Проверка существования свойства внутри объекта:
+  const obj2: MyObj = {
+    'a': 4,
+    b: 'ru',
+    c: 42,
+    d: 'pic',
+  }
+  console.log(obj2)
 
-// if('Name' in cat)
-//       console.log('Имя: ' + cat.Name)
-// else 
-//       console.log('Имя: Неивестно')
+  console.log(a)
+  console.log(obj2.a)
 
-// cat.Name = 'Vasiliy'
+  function getSum(obj: MyObj) {
+    return obj.e ? obj.a + obj.e : obj.a
+  }
 
-// if('Name' in cat)
-//       console.log('Имя: ' + cat.Name)
-// else 
-//       console.log('Имя: Неивестно')
+  console.log(getSum(obj))
+  console.log(getSum(obj2))
 
-
-// 5. 
-
-// const student = {
-//       firstName: 'Eva',
-//       lastName: 'Robotova',
-//       age: 20,
-//       address: {
-//             strreet: 'Apricot 2',
-//             city: 'Sochi',
-//             country: 'Russia',
-//       }
-// } as Record<string, any>
-// console.log(student)
-// console.log(student.lastName)
-// console.log(student.address.city)
-// console.log(student.address)
-
-// for(let i in student) {
-//       // отображаем название свойства
-//       console.log(i)
-//       // значение свойства
-//       console.log(student[i])
-// }
-
-// for(let key in student) {
-//       // отображаем название свойства (ключа)
-//       console.log(key)
-//       // значение свойства
-//       console.log(student[key])
-// }
-
-
-// let studentInfo = prompt('Что Вы хотите увидеть?', 'firstName') as string
-// alert(student[studentInfo])
-// console.log(student[studentInfo])
-
-// function getInfo() {
-
-// }
-
-// const jsonObj = JSON.stringify(object)
-// console.log(jsonObj)
-// console.log(JSON.parse(jsonObj))
+}
 
 
 // ___________________________________________________________________________________________________________
@@ -4783,7 +4834,41 @@ bottomRightButton.addEventListener('click', () => {
 
 }
 
+{
+  let arr = ['books', 'magazines', 'newspapers']
+  console.log(arr)
+  console.log(arr.length)
+  // Добавление элемента в конец массива
+  arr.push('maps')
+  console.log(arr)
+  console.log(arr.length)
 
+  let pushInArr = arr.push('guidebooks')
+  console.log(arr)
+  console.log(pushInArr)
+  console.log(arr.length)
+
+  arr.push('')
+  console.log(arr)
+
+  // Удаление последнего элемента массива
+  arr.pop()
+  console.log(arr)
+
+  let popArr = arr.pop()
+  console.log(arr)
+  console.log(popArr)
+
+  // Удаление первого элемента массива
+let shiftArr = arr.shift()
+console.log(arr)
+console.log(shiftArr)
+
+// Добавление элемента в начало массива
+arr.unshift('books')
+console.log(arr)
+
+}
 
 // ___________________________________________________________________________________________________________
 
@@ -4815,7 +4900,7 @@ bottomRightButton.addEventListener('click', () => {
 // Написать несколько функций для работы с таким массивом.
 
 {
-  let shoppingList = [
+  const shoppingList = [
     { name: 'bread', unitOfMeas: 'pcs', quantity: 1, bought: false },
     { name: 'cheese', unitOfMeas: 'gr', quantity: 300, bought: true },
     { name: 'milk', unitOfMeas: 'ml', quantity: 1000, bought: false },
@@ -4952,12 +5037,13 @@ console.log('-----------------------------------------')
     { name: 'cheese', quantity: 4, price: 200 },
     { name: 'milk', quantity: 2, price: 80 },
     { name: 'apples', quantity: 5, price: 120 },
-    { name: 'potato', quantity: 20, price: 32 }
+    { name: 'potato', quantity: 20, price: 32 },
   ]
 
   // 1. Распечатка чека на экран. 30 + 800 + 160 + 600 + 640
 
   function showList(array: any) {
+    console.log('Чек: ')
     for (let i in array)
       console.log(array[i].name + ' ' + array[i].quantity + ' ' + array[i].price)
   }
@@ -4987,7 +5073,7 @@ console.log('-----------------------------------------')
     let j = ''
     let result = ''
 
-    for (let i = 0; i < array.length; i++) {      
+    for (let i = 0; i < array.length; i++) {
       sub = array[i].quantity * array[i].price
       if (max < sub) { max = sub; j = array[i].name }
     }
@@ -4999,14 +5085,14 @@ console.log('-----------------------------------------')
 
   // 4. Подсчет средней стоимости одного товара в чеке. 
 
-  function getAverageCost(array:any) {
+  function getAverageCost(array: any) {
     return getAmount(array) / array.length
   }
 
   console.log('Средняя стоимость одного товара в чеке: ' + getAverageCost(storeReceipt))
 
 
-  function getAverageCost2(array:any) {
+  function getAverageCost2(array: any) {
     let sumQ = 0
 
     for (let i = 0; i < array.length; i++)
@@ -5153,69 +5239,69 @@ console.log('-----------------------------------------')
 // Функция возвращает массив от одного числа до второго, заданных пользователем
 
 {
-function getArrayOfIintegers(num1: number, num2: number) {
-      let arr = []
+  function getArrayOfIintegers(num1: number, num2: number) {
+    let arr = []
 
-      for (let i = 0; num1 <= num2; i++) {
-            arr[i] = num1
-            num1++
-      }
+    for (let i = 0; num1 <= num2; i++) {
+      arr[i] = num1
+      num1++
+    }
 
-      return arr
-}
+    return arr
+  }
 
-console.log(getArrayOfIintegers(0, 10))
+  console.log(getArrayOfIintegers(0, 10))
 }
 
 // Функция возвращает массив случайных целых чисел от 0 до 10, размер массива задан пользователем
 
 {
-function getArrayOfIintegers2(num:number) {
-      let arr = []
+  function getArrayOfIintegers2(num: number) {
+    let arr = []
 
-      for (let i = 0; i < num; i++) {
-        // @ts-ignore
-             arr[i] = parseInt(Math.random() * 11)
-      }
+    for (let i = 0; i < num; i++) {
+      // @ts-ignore
+      arr[i] = parseInt(Math.random() * 11)
+    }
 
-      return arr
-}
+    return arr
+  }
 
-console.log(getArrayOfIintegers2(7))
+  console.log(getArrayOfIintegers2(7))
 }
 
 // 1.2.  Добавить в функцию опциональные параметры начального и конечного значения массива
 //     (если конечный элемент массива не передан, то он больше начального на 10) . Вызвать функцию несколько раз
 {
-// Заполняет числами от start до end 
-function getArrayOfIintegers3(start=0, end=start+10) {
-      let arr = []
+  // Заполняет числами от start до end 
+  function getArrayOfIintegers3(start = 0, end = start + 10) {
+    let arr = []
 
-      for (let i = 0; start <= end; i++) {
-            arr[i] = start
-            start++
-      }
+    for (let i = 0; start <= end; i++) {
+      arr[i] = start
+      start++
+    }
 
-      return arr
-}
+    return arr
+  }
 
-console.log(getArrayOfIintegers3(2))
+  console.log(getArrayOfIintegers3(2))
 }
 
 // Заполняет случайными числами
 {
-function getArrayOfIintegers4(start=0, end=start+10) {
-      let arr = []
+  function getArrayOfIintegers4(start = 0, end = start + 10) {
+    let arr = []
 
-      for (let i = 0; i < end; i++) {
-        // @ts-ignore
-            arr[i] = parseInt(Math.random() * 11)
-      }
+    for (let i = 0; i < end; i++) {
+      // @ts-ignore
+      arr[i] = parseInt(Math.random() * 11)
+    }
 
-      return arr
-}
+    return arr
+  }
 
-console.log(getArrayOfIintegers4(2))
+  console.log(getArrayOfIintegers4(2))
 }
 
 
@@ -5226,36 +5312,36 @@ console.log(getArrayOfIintegers4(2))
 // Функция возвращает массив случайных целых чисел от 0 до 10, размер массива задан пользователем
 
 {
-function getArrayOfIintegers2(num:number) {
-      let arr = []
+  function getArrayOfIintegers2(num: number) {
+    let arr = []
 
-      for (let i = 0; i < num; i++) {
-            //  arr[i] = parseInt(Math.random() * 11)
-            arr.push(Math.floor(Math.random() * 11))
-      }
-
-      return arr
-}
-
-console.log(getArrayOfIintegers2(5))
-}
-
-{
-function funcName (start=0, end=start+10) {
-      return console.log(start, end)
-}
-
-funcName()
-}
-
-{
-function generateArray(start=0, end=start+10) {
-      return [0,1,2,3,4,5,6,7,8,9]
+    for (let i = 0; i < num; i++) {
+      //  arr[i] = parseInt(Math.random() * 11)
+      arr.push(Math.floor(Math.random() * 11))
     }
-    console.log(generateArray())
-    console.log(generateArray(20))
-    console.log(generateArray(20))
-    console.log(generateArray(20,50))
+
+    return arr
+  }
+
+  console.log(getArrayOfIintegers2(5))
+}
+
+{
+  function funcName(start = 0, end = start + 10) {
+    return console.log(start, end)
+  }
+
+  funcName()
+}
+
+{
+  function generateArray(start = 0, end = start + 10) {
+    return [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  }
+  console.log(generateArray())
+  console.log(generateArray(20))
+  console.log(generateArray(20))
+  console.log(generateArray(20, 50))
 }
 
 
