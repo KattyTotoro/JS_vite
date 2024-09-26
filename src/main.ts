@@ -4913,6 +4913,33 @@ console.log(array3)
 const arr4 = arr.concat(array1, array2, ['magazines', 'newspapers'])
 console.log(arr4)
 
+// Перебор: forEach
+arr.forEach(function(item) {
+  console.log(item)
+})
+
+arr.forEach((item) => {
+  console.log(item)
+})
+
+array1.forEach(function(item) {
+  console.log(item)
+})
+
+arr.forEach(function(item, index, array) {
+  console.log(index + ' ' + item + ' ' + array)
+  console.log(index)
+  console.log(array)
+})
+
+// Поиск в массиве
+console.log(arr.includes('books'))
+console.log(arr.includes('newspapers'))
+console.log(arr.indexOf('books'))
+console.log(arr.indexOf('newspapers'))
+console.log(arr.lastIndexOf('books'))
+console.log(arr.lastIndexOf('newspapers'))
+
 }
 
 // ___________________________________________________________________________________________________________
@@ -4979,6 +5006,22 @@ console.log(arr4)
 
 
   DisplayingList(shoppingList)
+
+
+  console.log('-----------------------------------------')
+  console.log('ФИЛЬТР')
+
+let someList = shoppingList.filter(item => item.bought == false)
+console.log(someList.length)
+
+console.log('ФИЛЬТР')
+
+let result = shoppingList.filter(function(item) {
+  item.bought == false ? console.log(item.name + ' ' + item.bought) : ''
+  item.bought == false ? '' : console.log(item.name + ' ' + item.bought)
+})
+
+  console.log('-----------------------------------------')
 
 
   // 2. Добавление покупки в список. Учтите, что при добавлении покупки с уже существующим в списке продуктом, 
