@@ -4940,6 +4940,11 @@ console.log(arr.indexOf('newspapers'))
 console.log(arr.lastIndexOf('books'))
 console.log(arr.lastIndexOf('newspapers'))
 
+console.log(arr)
+arr.reverse()
+console.log(arr)
+
+
 }
 
 // ___________________________________________________________________________________________________________
@@ -5016,10 +5021,15 @@ console.log(someList.length)
 
 console.log('ФИЛЬТР')
 
-let result = shoppingList.filter(function(item) {
+function DisplayingList2(array:any) {
+let result1 = shoppingList.filter(function(item) {
   item.bought == false ? console.log(item.name + ' ' + item.bought) : ''
+})
+let result2 = shoppingList.filter(function(item) {
   item.bought == false ? '' : console.log(item.name + ' ' + item.bought)
 })
+}
+DisplayingList2(shoppingList)
 
   console.log('-----------------------------------------')
 
