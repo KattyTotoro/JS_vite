@@ -4940,9 +4940,86 @@ console.log(arr.indexOf('newspapers'))
 console.log(arr.lastIndexOf('books'))
 console.log(arr.lastIndexOf('newspapers'))
 
+// Метод arr.reverse меняет порядок элементов в arr на обратный.
 console.log(arr)
 arr.reverse()
 console.log(arr)
+
+// преобразуем каждый элемент в его длину
+let lengths = arr.map(item => item.length)
+console.log(arr)
+console.log(lengths)
+
+// Функция преобразует строки вида «my-short-string» в «myShortString».
+function change(str:string) {
+  return str
+  .split('-')
+  .map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1))
+  .join('')
+}
+
+console.log(change('background-color'))
+
+
+let arr2 = [10, 8, 456, 2, 8, -8, 13, 52, 1]
+
+console.log(arr2)
+
+arr2.splice(3, 0, 5, 6)
+
+console.log(arr2)
+
+// Фильтрация по диапазону
+function filter(array:any, a:any, b:any) {
+  return array.filter(item => (a <= item && item <=b))
+}
+
+let filtered = filter(arr2, -10, 5)
+
+console.log(filtered)
+console.log(arr2)
+
+// Фильтрация по диапазону "на месте"
+function filterRangeInPlace(arr:any, a:any, b:any) {
+
+  for (let i = 0; i < arr.length; i++) {
+    let val = arr[i]
+
+    // удалить, если за пределами интервала
+    if (val < a || val > b) {
+      arr.splice(i, 1)
+      i--
+    }
+  }
+
+}
+
+// удалены числа вне диапазона 
+filterRangeInPlace(arr2, -10, 5)
+
+console.log(arr2)
+
+
+let arr3 = ["HTML", "JavaScript", "CSS"]
+
+// Скопировать и отсортировать массив
+function copySorted(array:any) {
+  return array.slice().sort()
+}
+
+let sorted = copySorted(arr3)
+console.log(sorted)
+
+// Трансформировать в массив имён
+let vasya = { name: "Вася", age: 25 }
+let petya = { name: "Петя", age: 30 }
+let masha = { name: "Маша", age: 28 }
+
+let users = [ vasya, petya, masha ]
+
+let names = users.map(item => item.name)
+
+console.log(names)
 
 
 }
@@ -5022,10 +5099,10 @@ console.log(someList.length)
 console.log('ФИЛЬТР')
 
 function DisplayingList2(array:any) {
-let result1 = shoppingList.filter(function(item) {
+array.filter(function(item:any) {
   item.bought == false ? console.log(item.name + ' ' + item.bought) : ''
 })
-let result2 = shoppingList.filter(function(item) {
+array.filter(function(item:any) {
   item.bought == false ? '' : console.log(item.name + ' ' + item.bought)
 })
 }
