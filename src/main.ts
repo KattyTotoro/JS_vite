@@ -5024,6 +5024,21 @@ console.log(names)
 
 }
 
+{
+  // стрелочная функция
+  let userSum = (x1:any, x2:any) => x1 + x2
+  console.log(userSum(2, 5))
+  console.log(userSum('Good ', 'day'))
+
+  // @ts-ignore
+  let sq = n => n * n
+  console.log(sq(2))
+  console.log(sq(3))
+
+  let show = () => console.log('Good day!')
+  show()
+}
+
 // ___________________________________________________________________________________________________________
 
 
