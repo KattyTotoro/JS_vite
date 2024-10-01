@@ -5083,7 +5083,7 @@ if(arr.length)
 
 // Домашние задания. Массивы
 
-// DZ_Modul_2_Week_2   В работе.
+// DZ_Modul_2_Week_2   В работе.  Выполнено: 1, 2, ......
 
 
 // *********************************************************************************************************
@@ -5331,37 +5331,103 @@ console.log('-----------------------------------------')
 
 console.log('-----------------------------------------')
 
-
+{
 // Задание 3
 
 // Создать массив css-стилей (цвет, размер шрифта, выравнивание, подчеркивание и т. д.). 
 // Каждый элемент массива – это объект, состоящий из двух свойств: название стиля и значение стиля. 
-// Написать функцию, которая принимает массив стилей и 
-// текст, и выводит этот текст с помощью document.write() в тегах 
-// <p></p>, добавив в открывающий тег атрибут style со всеми стилями, перечисленными в массиве. 
+
+const myStyles = [
+  {stName: 'max-width', stVal: '1280px'},
+  {stName: 'font-size', stVal: '3.2rem'},
+  {stName: 'color', stVal: '#888'},
+  {stName: 'text-align', stVal: 'center'},
+  {stName: 'text-decoration', stVal: 'underline'},
+  {stName: 'font-weight', stVal: '600'},
+]
+
+console.log(myStyles)
 
 
+// Написать функцию, которая принимает массив стилей и текст, 
+// и выводит этот текст с помощью document.write() в тегах <p></p>, 
+// добавив в открывающий тег атрибут style со всеми стилями, перечисленными в массиве. 
 
+
+}
+
+console.log('-----------------------------------------')
+
+
+{
 // Задание 4
 
-// Создать массив аудиторий академии. Объект-аудитория состоит из названия, количества посадочных мест (от 10 до 20) и 
+// Создать массив аудиторий академии. 
+// Объект-аудитория состоит из названия, количества посадочных мест (от 10 до 20) и 
 // названия факультета, для которого она предназначена. 
+
+const classrooms = [
+  {audName: 'VKontakte', numOfSeats: 18, facName: 'programming'},
+  {audName: 'YouTube', numOfSeats: 10, facName: 'design'},
+  {audName: 'instagram', numOfSeats: 20, facName: 'design'},
+  {audName: 'Yandex', numOfSeats: 15, facName: 'programming'},
+  {audName: 'Google', numOfSeats: 20, facName: 'programming'},
+]
+
+console.log(classrooms)
+
+
 // Написать несколько функций для работы с ним.
+
+console.log('-----------------------------------------')
 
 // 1. Вывод на экран всех аудиторий. 
 
+function showClassrooms(array:any) {
+  for(let i = 0; i < array.length; i++)
+    console.log(array[i].audName)
+}
+
+showClassrooms(classrooms)
+
+console.log('-----------------------------------------')
+
 // 2. Вывод на экран аудиторий для указанного факультета.
 
-// 3. Вывод на экран только тех аудиторий, которые подходят для 
-// переданной группы. Объект-группа состоит из названия, 
-// количества студентов и названия факультета. 
+function showClasForFac(array:any, name:string) {
+  for(let i = 0; i < array.length; i++)
+   if(array[i].facName == name) console.log(array[i].audName)
+}
+
+showClasForFac(classrooms, 'programming')
+
+console.log('-----------------------------------------')
+
+// 3. Вывод на экран только тех аудиторий, которые подходят для переданной группы. 
+// Объект-группа состоит из названия, количества студентов и названия факультета. 
+
+let Web36 = {
+  grName: 'Web36',
+  numOfStudents: 18,
+  facName: 'programming',
+}
+
+
+function showClasForGroup(array:any, obj:any) {
+  for(let i = 0; i < array.length; i++) {
+  if(obj.facName == array[i].facName && (obj.numOfStudents <= array[i].numOfSeats))
+    console.log(array[i].audName)
+}
+}
+
+showClasForGroup(classrooms, Web36)
 
 // 4. Функция сортировки аудиторий по количеству мест.
 
 // 5. Функция сортировки аудиторий по названию (по алфавиту).
 
 
-
+}
 
 
 // ___________________________________________________________________________________________________________
