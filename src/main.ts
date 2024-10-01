@@ -5022,6 +5022,31 @@ let names = users.map(item => item.name)
 console.log(names)
 
 
+console.log(arr2)
+console.log(arr2.slice(1, 2))
+console.log(arr2)
+console.log(arr2.splice(1, 2))
+console.log(arr2)
+
+for(let el of arr)
+  console.log(el)
+
+for(let key in arr)
+  console.log(key)
+
+for(let key in arr)
+  console.log(arr[key])
+
+console.log(String(arr))
+console.log(String(arr2))
+
+if(arr)
+  console.log('Массив существует')
+
+if(arr.length)
+  console.log('В массиве есть данные в количестве ' + arr.length)
+
+
 }
 
 {
@@ -5037,6 +5062,12 @@ console.log(names)
 
   let show = () => console.log('Good day!')
   show()
+}
+
+{
+  const arr = [() => console.log('Привет!'), () => console.log('Здравствуйте!'), () => console.log('Добрый день!')]
+
+  arr[0]()
 }
 
 // ___________________________________________________________________________________________________________
