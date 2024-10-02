@@ -5083,7 +5083,7 @@ if(arr.length)
 
 // Домашние задания. Массивы
 
-// DZ_Modul_2_Week_2   В работе.  Выполнено: 1, 2, ......
+// DZ_Modul_2_Week_2   В работе.  Выполнено: 1, 2, ...... , 4
 
 
 // *********************************************************************************************************
@@ -5324,9 +5324,6 @@ console.log('-----------------------------------------')
 
   console.log('Средняя ст-ть одной штуки товара в чеке: ' + Math.floor(getAverageCost2(storeReceipt)))
 
-
-
-
 }
 
 console.log('-----------------------------------------')
@@ -5422,9 +5419,24 @@ function showClasForGroup(array:any, obj:any) {
 
 showClasForGroup(classrooms, Web36)
 
+
 // 4. Функция сортировки аудиторий по количеству мест.
 
+console.log(classrooms)
+
+classrooms.sort((a, b) => a.numOfSeats - b.numOfSeats)
+
+console.log(classrooms)
+
+
+
 // 5. Функция сортировки аудиторий по названию (по алфавиту).
+
+console.log(classrooms)
+
+classrooms.sort( (a, b) => a.audName.localeCompare(b.audName) )
+
+console.log(classrooms)
 
 
 }
@@ -5708,8 +5720,38 @@ let pr3 = document.getElementById('Primer3') as HTMLDivElement
 
 
 
+// ___________________________________________________________________________________________________________
 
 
+// Домашняя практика. Строки.
+
+{
+
+let someStr = 'Good morning'
+console.log(someStr)
+
+someStr = 'Sun\t is going \\down\\'
+console.log(someStr)
+
+someStr = '"Yes"'
+console.log(someStr)
+
+someStr = '\"No\"'
+console.log(someStr)
+
+someStr = 'good morning'
+console.log(someStr[0])
+console.log(someStr[4])
+
+// someStr[0].toUpperCase()
+console.log(someStr[0].toUpperCase() + someStr.slice(1))
+
+console.log(someStr)
+
+
+
+
+}
 // ___________________________________________________________________________________________________________
 
 
