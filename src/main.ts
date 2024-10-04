@@ -4860,198 +4860,198 @@ bottomRightButton.addEventListener('click', () => {
   console.log(popArr)
 
   // Удаление первого элемента массива
-let shiftArr = arr.shift()
-console.log(arr)
-console.log(shiftArr)
+  let shiftArr = arr.shift()
+  console.log(arr)
+  console.log(shiftArr)
 
-// Добавление элемента в начало массива
-arr.unshift('books')
-console.log(arr)
+  // Добавление элемента в начало массива
+  arr.unshift('books')
+  console.log(arr)
 
-// Удаление нескольких элементов splice() 
-arr.splice(1, 2)
-console.log(arr)
+  // Удаление нескольких элементов splice() 
+  arr.splice(1, 2)
+  console.log(arr)
 
-// Создание копии массива 
-const arrCopy = arr.slice()
-console.log(arrCopy)
+  // Создание копии массива 
+  const arrCopy = arr.slice()
+  console.log(arrCopy)
 
-arr.push('magazines', 'newspapers', 'guidebooks')
-console.log(arr)
+  arr.push('magazines', 'newspapers', 'guidebooks')
+  console.log(arr)
 
-// Удаление элемента с определённым индексом
-// Удаляет 1 элемент по индексу 2
-arr.splice(2, 1)
-console.log(arr)
+  // Удаление элемента с определённым индексом
+  // Удаляет 1 элемент по индексу 2
+  arr.splice(2, 1)
+  console.log(arr)
 
-// Удаляет все элементы после индекса 2 (включительно)
-arr.splice(2)
-console.log(arr)
+  // Удаляет все элементы после индекса 2 (включительно)
+  arr.splice(2)
+  console.log(arr)
 
-arr.push('magazines', 'newspapers', 'guidebooks')
-console.log(arr)
+  arr.push('magazines', 'newspapers', 'guidebooks')
+  console.log(arr)
 
-// Удаление нескольких элементов, начиная с определённого индекса
-arr.splice(1, 2)
-console.log(arr)
+  // Удаление нескольких элементов, начиная с определённого индекса
+  arr.splice(1, 2)
+  console.log(arr)
 
-// Удаляет 0 элементов по индексу 1 и вставляет 'maps'
-arr.splice(1, 0, 'maps')
-console.log(arr)
+  // Удаляет 0 элементов по индексу 1 и вставляет 'maps'
+  arr.splice(1, 0, 'maps')
+  console.log(arr)
 
-// Удаляет 1 элемент по индексу -2 (отсчёт с конца)
-arr.splice(-2, 1)
-console.log(arr)
+  // Удаляет 1 элемент по индексу -2 (отсчёт с конца)
+  arr.splice(-2, 1)
+  console.log(arr)
 
-// Соединение массивов и/или значений в новый массив 
-const array1 = ['a', 'b', 'c']
-const array2 = ['d', 'e', 'f']
-const array3 = array1.concat(array2)
-console.log(array3)
+  // Соединение массивов и/или значений в новый массив 
+  const array1 = ['a', 'b', 'c']
+  const array2 = ['d', 'e', 'f']
+  const array3 = array1.concat(array2)
+  console.log(array3)
 
-// Соединение трёх массивов и двух значений
-const arr4 = arr.concat(array1, array2, ['magazines', 'newspapers'])
-console.log(arr4)
+  // Соединение трёх массивов и двух значений
+  const arr4 = arr.concat(array1, array2, ['magazines', 'newspapers'])
+  console.log(arr4)
 
-// Перебор: forEach
-arr.forEach(function(item) {
-  console.log(item)
-})
+  // Перебор: forEach
+  arr.forEach(function (item) {
+    console.log(item)
+  })
 
-arr.forEach((item) => {
-  console.log(item)
-})
+  arr.forEach((item) => {
+    console.log(item)
+  })
 
-array1.forEach(function(item) {
-  console.log(item)
-})
+  array1.forEach(function (item) {
+    console.log(item)
+  })
 
-arr.forEach(function(item, index, array) {
-  console.log(index + ' ' + item + ' ' + array)
-  console.log(index)
-  console.log(array)
-})
+  arr.forEach(function (item, index, array) {
+    console.log(index + ' ' + item + ' ' + array)
+    console.log(index)
+    console.log(array)
+  })
 
-// Поиск в массиве
-console.log(arr.includes('books'))
-console.log(arr.includes('newspapers'))
-console.log(arr.indexOf('books'))
-console.log(arr.indexOf('newspapers'))
-console.log(arr.lastIndexOf('books'))
-console.log(arr.lastIndexOf('newspapers'))
+  // Поиск в массиве
+  console.log(arr.includes('books'))
+  console.log(arr.includes('newspapers'))
+  console.log(arr.indexOf('books'))
+  console.log(arr.indexOf('newspapers'))
+  console.log(arr.lastIndexOf('books'))
+  console.log(arr.lastIndexOf('newspapers'))
 
-// Метод arr.reverse меняет порядок элементов в arr на обратный.
-console.log(arr)
-arr.reverse()
-console.log(arr)
+  // Метод arr.reverse меняет порядок элементов в arr на обратный.
+  console.log(arr)
+  arr.reverse()
+  console.log(arr)
 
-// преобразуем каждый элемент в его длину
-let lengths = arr.map(item => item.length)
-console.log(arr)
-console.log(lengths)
+  // преобразуем каждый элемент в его длину
+  let lengths = arr.map(item => item.length)
+  console.log(arr)
+  console.log(lengths)
 
-// Функция преобразует строки вида «my-short-string» в «myShortString».
-function change(str:string) {
-  return str
-  .split('-')
-  .map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1))
-  .join('')
-}
-
-console.log(change('background-color'))
-
-
-let arr2 = [10, 8, 456, 2, 8, -8, 13, 52, 1]
-
-console.log(arr2)
-
-arr2.splice(3, 0, 5, 6)
-
-console.log(arr2)
-
-// Фильтрация по диапазону
-function filter(array:any, a:any, b:any) {
-  return array.filter(item => (a <= item && item <=b))
-}
-
-let filtered = filter(arr2, -10, 5)
-
-console.log(filtered)
-console.log(arr2)
-
-// Фильтрация по диапазону "на месте"
-function filterRangeInPlace(arr:any, a:any, b:any) {
-
-  for (let i = 0; i < arr.length; i++) {
-    let val = arr[i]
-
-    // удалить, если за пределами интервала
-    if (val < a || val > b) {
-      arr.splice(i, 1)
-      i--
-    }
+  // Функция преобразует строки вида «my-short-string» в «myShortString».
+  function change(str: string) {
+    return str
+      .split('-')
+      .map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1))
+      .join('')
   }
 
-}
-
-// удалены числа вне диапазона 
-filterRangeInPlace(arr2, -10, 5)
-
-console.log(arr2)
+  console.log(change('background-color'))
 
 
-let arr3 = ["HTML", "JavaScript", "CSS"]
+  let arr2 = [10, 8, 456, 2, 8, -8, 13, 52, 1]
 
-// Скопировать и отсортировать массив
-function copySorted(array:any) {
-  return array.slice().sort()
-}
+  console.log(arr2)
 
-let sorted = copySorted(arr3)
-console.log(sorted)
+  arr2.splice(3, 0, 5, 6)
 
-// Трансформировать в массив имён
-let vasya = { name: "Вася", age: 25 }
-let petya = { name: "Петя", age: 30 }
-let masha = { name: "Маша", age: 28 }
+  console.log(arr2)
 
-let users = [ vasya, petya, masha ]
+  // Фильтрация по диапазону
+  function filter(array: any, a: any, b: any) {
+    return array.filter(item => (a <= item && item <= b))
+  }
 
-let names = users.map(item => item.name)
+  let filtered = filter(arr2, -10, 5)
 
-console.log(names)
+  console.log(filtered)
+  console.log(arr2)
+
+  // Фильтрация по диапазону "на месте"
+  function filterRangeInPlace(arr: any, a: any, b: any) {
+
+    for (let i = 0; i < arr.length; i++) {
+      let val = arr[i]
+
+      // удалить, если за пределами интервала
+      if (val < a || val > b) {
+        arr.splice(i, 1)
+        i--
+      }
+    }
+
+  }
+
+  // удалены числа вне диапазона 
+  filterRangeInPlace(arr2, -10, 5)
+
+  console.log(arr2)
 
 
-console.log(arr2)
-console.log(arr2.slice(1, 2))
-console.log(arr2)
-console.log(arr2.splice(1, 2))
-console.log(arr2)
+  let arr3 = ["HTML", "JavaScript", "CSS"]
 
-for(let el of arr)
-  console.log(el)
+  // Скопировать и отсортировать массив
+  function copySorted(array: any) {
+    return array.slice().sort()
+  }
 
-for(let key in arr)
-  console.log(key)
+  let sorted = copySorted(arr3)
+  console.log(sorted)
 
-for(let key in arr)
-  console.log(arr[key])
+  // Трансформировать в массив имён
+  let vasya = { name: "Вася", age: 25 }
+  let petya = { name: "Петя", age: 30 }
+  let masha = { name: "Маша", age: 28 }
 
-console.log(String(arr))
-console.log(String(arr2))
+  let users = [vasya, petya, masha]
 
-if(arr)
-  console.log('Массив существует')
+  let names = users.map(item => item.name)
 
-if(arr.length)
-  console.log('В массиве есть данные в количестве ' + arr.length)
+  console.log(names)
+
+
+  console.log(arr2)
+  console.log(arr2.slice(1, 2))
+  console.log(arr2)
+  console.log(arr2.splice(1, 2))
+  console.log(arr2)
+
+  for (let el of arr)
+    console.log(el)
+
+  for (let key in arr)
+    console.log(key)
+
+  for (let key in arr)
+    console.log(arr[key])
+
+  console.log(String(arr))
+  console.log(String(arr2))
+
+  if (arr)
+    console.log('Массив существует')
+
+  if (arr.length)
+    console.log('В массиве есть данные в количестве ' + arr.length)
 
 
 }
 
 {
   // стрелочная функция
-  let userSum = (x1:any, x2:any) => x1 + x2
+  let userSum = (x1: any, x2: any) => x1 + x2
   console.log(userSum(2, 5))
   console.log(userSum('Good ', 'day'))
 
@@ -5139,20 +5139,20 @@ if(arr.length)
   console.log('-----------------------------------------')
   console.log('ФИЛЬТР')
 
-let someList = shoppingList.filter(item => item.bought == false)
-console.log(someList.length)
+  let someList = shoppingList.filter(item => item.bought == false)
+  console.log(someList.length)
 
-console.log('ФИЛЬТР')
+  console.log('ФИЛЬТР')
 
-function DisplayingList2(array:any) {
-array.filter(function(item:any) {
-  item.bought == false ? console.log(item.name + ' ' + item.bought) : ''
-})
-array.filter(function(item:any) {
-  item.bought == false ? '' : console.log(item.name + ' ' + item.bought)
-})
-}
-DisplayingList2(shoppingList)
+  function DisplayingList2(array: any) {
+    array.filter(function (item: any) {
+      item.bought == false ? console.log(item.name + ' ' + item.bought) : ''
+    })
+    array.filter(function (item: any) {
+      item.bought == false ? '' : console.log(item.name + ' ' + item.bought)
+    })
+  }
+  DisplayingList2(shoppingList)
 
   console.log('-----------------------------------------')
 
@@ -5329,26 +5329,26 @@ console.log('-----------------------------------------')
 console.log('-----------------------------------------')
 
 {
-// Задание 3
+  // Задание 3
 
-// Создать массив css-стилей (цвет, размер шрифта, выравнивание, подчеркивание и т. д.). 
-// Каждый элемент массива – это объект, состоящий из двух свойств: название стиля и значение стиля. 
+  // Создать массив css-стилей (цвет, размер шрифта, выравнивание, подчеркивание и т. д.). 
+  // Каждый элемент массива – это объект, состоящий из двух свойств: название стиля и значение стиля. 
 
-const myStyles = [
-  {stName: 'max-width', stVal: '1280px'},
-  {stName: 'font-size', stVal: '3.2rem'},
-  {stName: 'color', stVal: '#888'},
-  {stName: 'text-align', stVal: 'center'},
-  {stName: 'text-decoration', stVal: 'underline'},
-  {stName: 'font-weight', stVal: '600'},
-]
+  const myStyles = [
+    { stName: 'max-width', stVal: '1280px' },
+    { stName: 'font-size', stVal: '3.2rem' },
+    { stName: 'color', stVal: '#888' },
+    { stName: 'text-align', stVal: 'center' },
+    { stName: 'text-decoration', stVal: 'underline' },
+    { stName: 'font-weight', stVal: '600' },
+  ]
 
-console.log(myStyles)
+  console.log(myStyles)
 
 
-// Написать функцию, которая принимает массив стилей и текст, 
-// и выводит этот текст с помощью document.write() в тегах <p></p>, 
-// добавив в открывающий тег атрибут style со всеми стилями, перечисленными в массиве. 
+  // Написать функцию, которая принимает массив стилей и текст, 
+  // и выводит этот текст с помощью document.write() в тегах <p></p>, 
+  // добавив в открывающий тег атрибут style со всеми стилями, перечисленными в массиве. 
 
 
 }
@@ -5357,86 +5357,86 @@ console.log('-----------------------------------------')
 
 
 {
-// Задание 4
+  // Задание 4
 
-// Создать массив аудиторий академии. 
-// Объект-аудитория состоит из названия, количества посадочных мест (от 10 до 20) и 
-// названия факультета, для которого она предназначена. 
+  // Создать массив аудиторий академии. 
+  // Объект-аудитория состоит из названия, количества посадочных мест (от 10 до 20) и 
+  // названия факультета, для которого она предназначена. 
 
-const classrooms = [
-  {audName: 'VKontakte', numOfSeats: 18, facName: 'programming'},
-  {audName: 'YouTube', numOfSeats: 10, facName: 'design'},
-  {audName: 'instagram', numOfSeats: 20, facName: 'design'},
-  {audName: 'Yandex', numOfSeats: 15, facName: 'programming'},
-  {audName: 'Google', numOfSeats: 20, facName: 'programming'},
-]
+  const classrooms = [
+    { audName: 'VKontakte', numOfSeats: 18, facName: 'programming' },
+    { audName: 'YouTube', numOfSeats: 10, facName: 'design' },
+    { audName: 'instagram', numOfSeats: 20, facName: 'design' },
+    { audName: 'Yandex', numOfSeats: 15, facName: 'programming' },
+    { audName: 'Google', numOfSeats: 20, facName: 'programming' },
+  ]
 
-console.log(classrooms)
-
-
-// Написать несколько функций для работы с ним.
-
-console.log('-----------------------------------------')
-
-// 1. Вывод на экран всех аудиторий. 
-
-function showClassrooms(array:any) {
-  for(let i = 0; i < array.length; i++)
-    console.log(array[i].audName)
-}
-
-showClassrooms(classrooms)
-
-console.log('-----------------------------------------')
-
-// 2. Вывод на экран аудиторий для указанного факультета.
-
-function showClasForFac(array:any, name:string) {
-  for(let i = 0; i < array.length; i++)
-   if(array[i].facName == name) console.log(array[i].audName)
-}
-
-showClasForFac(classrooms, 'programming')
-
-console.log('-----------------------------------------')
-
-// 3. Вывод на экран только тех аудиторий, которые подходят для переданной группы. 
-// Объект-группа состоит из названия, количества студентов и названия факультета. 
-
-let Web36 = {
-  grName: 'Web36',
-  numOfStudents: 18,
-  facName: 'programming',
-}
+  console.log(classrooms)
 
 
-function showClasForGroup(array:any, obj:any) {
-  for(let i = 0; i < array.length; i++) {
-  if(obj.facName == array[i].facName && (obj.numOfStudents <= array[i].numOfSeats))
-    console.log(array[i].audName)
-}
-}
+  // Написать несколько функций для работы с ним.
 
-showClasForGroup(classrooms, Web36)
+  console.log('-----------------------------------------')
+
+  // 1. Вывод на экран всех аудиторий. 
+
+  function showClassrooms(array: any) {
+    for (let i = 0; i < array.length; i++)
+      console.log(array[i].audName)
+  }
+
+  showClassrooms(classrooms)
+
+  console.log('-----------------------------------------')
+
+  // 2. Вывод на экран аудиторий для указанного факультета.
+
+  function showClasForFac(array: any, name: string) {
+    for (let i = 0; i < array.length; i++)
+      if (array[i].facName == name) console.log(array[i].audName)
+  }
+
+  showClasForFac(classrooms, 'programming')
+
+  console.log('-----------------------------------------')
+
+  // 3. Вывод на экран только тех аудиторий, которые подходят для переданной группы. 
+  // Объект-группа состоит из названия, количества студентов и названия факультета. 
+
+  let Web36 = {
+    grName: 'Web36',
+    numOfStudents: 18,
+    facName: 'programming',
+  }
 
 
-// 4. Функция сортировки аудиторий по количеству мест.
+  function showClasForGroup(array: any, obj: any) {
+    for (let i = 0; i < array.length; i++) {
+      if (obj.facName == array[i].facName && (obj.numOfStudents <= array[i].numOfSeats))
+        console.log(array[i].audName)
+    }
+  }
 
-console.log(classrooms)
-
-classrooms.sort((a, b) => a.numOfSeats - b.numOfSeats)
-
-console.log(classrooms)
+  showClasForGroup(classrooms, Web36)
 
 
+  // 4. Функция сортировки аудиторий по количеству мест.
 
-// 5. Функция сортировки аудиторий по названию (по алфавиту).
+  console.log(classrooms)
 
-console.log(classrooms)
+  classrooms.sort((a, b) => a.numOfSeats - b.numOfSeats)
 
-classrooms.sort( (a, b) => a.audName.localeCompare(b.audName) )
+  console.log(classrooms)
 
-console.log(classrooms)
+
+
+  // 5. Функция сортировки аудиторий по названию (по алфавиту).
+
+  console.log(classrooms)
+
+  classrooms.sort((a, b) => a.audName.localeCompare(b.audName))
+
+  console.log(classrooms)
 
 
 }
@@ -5472,39 +5472,147 @@ console.log(classrooms)
 
 // Задание 1
 
-// Создать массив из 10 случайных чисел и написать несколько 
-// функций для работы с ним.
+// Создать массив из 10 случайных чисел и написать несколько функций для работы с ним.
 
-// 1. Функция принимает массив и выводит его на экран.
+{
 
-// 2. Функция принимает массив и выводит только четные 
-// элементы.
+  const arr1 = [] as any
 
-// 3. Функция принимает массив и возвращает сумму всех 
-// элементов массива.
+  console.log(arr1)
 
-// 4. Функция принимает массив и возвращает его максимальный элемент.
+  function getArray(array: any, num: number) {
+    for (let i = 0; i < num; i++)
+      array[i] = Math.floor(Math.random() * 20)
+  }
 
-// 5. Функция добавления нового элемента в массив по указанному индексу.
+  getArray(arr1, 10)
 
-// 6. Функция удаления элемента из массива по указанному 
-// индексу.
-
+  console.log(arr1)
 
 
-// Задание 2
+  // 1. Функция принимает массив и выводит его на экран.
 
-// Создать еще один массив из 5 случайных чисел и написать следующие функции.
+  function showArray(array: any) {
+    for (let key of array)
+      console.log(key)
+  }
 
-// 1. Функция принимает 2 массива и возвращает новый массив, в котором собраны все элементы из двух массивов 
-// без повторений.
+  showArray(arr1)
 
-// 2. Функция принимает 2 массива и возвращает новый массив, 
-// в котором собраны общие элементы (то есть элементы, 
-// которые встречаются и в первом и во втором массивах) без повторений.
 
-// 3. Функция принимает 2 массива и возвращает новый массив, в котором собраны все элементы из первого массива, 
-// которых нет во втором массиве. 
+  // 2. Функция принимает массив и выводит только четные элементы.
+
+  function showArrEvenEl(array: any) {
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] % 2 == 0) console.log(array[i])
+    }
+  }
+
+  showArrEvenEl(arr1)
+
+
+  // 3. Функция принимает массив и возвращает сумму всех элементов массива.
+
+  function getSumOfEl(array: any) {
+    let sum = 0
+    for (let i = 0; i < array.length; i++)
+      sum += array[i]
+
+    return sum
+  }
+
+  console.log(getSumOfEl(arr1))
+
+  // 4. Функция принимает массив и возвращает его максимальный элемент.
+
+  function getMaxElOfArray(array: any) {
+    let max = array[0]
+    for (let i = 0; i < array.length; i++)
+      if (max < array[i]) max = array[i]
+
+    return max
+  }
+
+  console.log(arr1)
+
+  console.log(getMaxElOfArray(arr1))
+
+
+  // 5. Функция добавления нового элемента в массив по указанному индексу.
+
+  function addElInArray(array: any, index: number, newEl: any) {
+    return array.splice(index, 0, newEl)
+  }
+
+  console.log(arr1)
+
+  console.log(addElInArray(arr1, 1, 45))
+
+  console.log(arr1)
+
+
+
+  // 6. Функция удаления элемента из массива по указанному индексу.
+
+  function delElInArray(array: any, index: number) {
+    return array.splice(index, 1)
+  }
+
+  console.log(arr1)
+
+  console.log(delElInArray(arr1, 1))
+
+  console.log(arr1)
+
+
+  // Задание 2
+
+  // Создать еще один массив из 5 случайных чисел и написать следующие функции.
+
+  const arr2 = [] as any
+
+  console.log(arr2)
+
+  getArray(arr2, 5)
+
+  console.log(arr2)
+
+  // 1. Функция принимает 2 массива и возвращает новый массив, в котором собраны все элементы из двух массивов 
+  // без повторений.
+
+
+  let arr3 = [] as any
+
+  function getNewArray(array1: any, array2: any) {
+    let array3 = [] as any
+
+    for (let i = 0; i < array1.length; i++) {
+      if (array3.includes(array1[i]))
+        continue
+      else array3.push(array1[i])
+    }
+    for (let i = 0; i < array2.length; i++) {
+      if (array3.includes(array2[i]))
+        continue
+      else array3.push(array2[i])
+    }
+    return array3
+  }
+
+  arr3 = getNewArray(arr1, arr2)
+  console.log(arr1)
+  console.log(arr2)
+  console.log(arr3)
+
+
+  // 2. Функция принимает 2 массива и возвращает новый массив, 
+  // в котором собраны общие элементы (то есть элементы, 
+  // которые встречаются и в первом и во втором массивах) без повторений.
+
+  // 3. Функция принимает 2 массива и возвращает новый массив, в котором собраны все элементы из первого массива, 
+  // которых нет во втором массиве. 
+
+}
 
 
 // Задание 3
@@ -5512,14 +5620,26 @@ console.log(classrooms)
 // Создать массив фруктов и отсортировать его по алфавиту. 
 // Написать следующие функции.
 
-// 1. Вывод на экран с помощью document.write() в виде списка 
-// (с помощью тегов ul и li). 
+{
 
-// 2. Поиск фрукта в массиве. Функция принимает название 
-// фрукта и возвращает индекс найденного элемента или -1, 
-// если не найден. Поиск должен быть нерегистрозависимым. 
+  const fruits = ['Apple', 'Mango', 'Orange', 'Pear', 'Pineapple', 'Banana', 'Lemon', 'Plum', 'Mandarin', 'Pomegranate', 'Persimmon', 'Apricot']
+
+  console.log(fruits)
+
+  fruits.sort((a, b) => a.localeCompare(b))
+
+  console.log(fruits)
 
 
+
+  // 1. Вывод на экран с помощью document.write() в виде списка 
+  // (с помощью тегов ul и li). 
+
+  // 2. Поиск фрукта в массиве. Функция принимает название 
+  // фрукта и возвращает индекс найденного элемента или -1, 
+  // если не найден. Поиск должен быть нерегистрозависимым. 
+
+}
 
 
 // ___________________________________________________________________________________________________________
@@ -5716,7 +5836,7 @@ let pr3 = document.getElementById('Primer3') as HTMLDivElement
 
 // let str = 'федот'
 
-// console.log('федот'[0].toUpperCase())
+console.log('федот'[0].toUpperCase())
 
 
 
@@ -5727,26 +5847,26 @@ let pr3 = document.getElementById('Primer3') as HTMLDivElement
 
 {
 
-let someStr = 'Good morning'
-console.log(someStr)
+  let someStr = 'Good morning'
+  console.log(someStr)
 
-someStr = 'Sun\t is going \\down\\'
-console.log(someStr)
+  someStr = 'Sun\t is going \\down\\'
+  console.log(someStr)
 
-someStr = '"Yes"'
-console.log(someStr)
+  someStr = '"Yes"'
+  console.log(someStr)
 
-someStr = '\"No\"'
-console.log(someStr)
+  someStr = '\"No\"'
+  console.log(someStr)
 
-someStr = 'good morning'
-console.log(someStr[0])
-console.log(someStr[4])
+  someStr = 'good morning'
+  console.log(someStr[0])
+  console.log(someStr[4])
 
-// someStr[0].toUpperCase()
-console.log(someStr[0].toUpperCase() + someStr.slice(1))
+  // someStr[0].toUpperCase()
+  console.log(someStr[0].toUpperCase() + someStr.slice(1))
 
-console.log(someStr)
+  console.log(someStr)
 
 
 
