@@ -5868,6 +5868,81 @@ console.log('федот'[0].toUpperCase())
 
   console.log(someStr)
 
+  console.log(someStr.length)
+
+  console.log(someStr)
+
+  console.log(someStr.charAt(0))
+
+  console.log(someStr.charAt(20))
+
+  console.log(someStr[20])
+
+  console.log(someStr)
+
+  let someStr2 = someStr.toUpperCase()
+
+  console.log(someStr2)
+
+  console.log(someStr)
+
+  let index = someStr.indexOf('morning')
+
+  console.log(index)
+
+  index = someStr.indexOf('zzz')
+
+  console.log(index)
+
+
+  let someStr3 = 'test it is test sun test no'
+
+  let counter = 0
+
+  let wordToFind = 'test'
+
+  index = someStr3.indexOf(wordToFind)
+
+  console.log(index)
+
+  while(index != -1){
+    counter++;
+    index = someStr3.indexOf(wordToFind,index+1);
+   }
+
+   console.log(counter)
+
+  console.log(someStr)
+
+  let someStr4 = someStr.substring(2)
+
+  console.log(someStr4)
+
+  someStr4 = someStr.substring(2, 4)
+
+  console.log(someStr4)
+
+
+  console.log(someStr)
+
+  let someStr5 = someStr.substr(2)
+
+  console.log(someStr5)
+
+  someStr5 = someStr.substr(2, 5)
+
+  console.log(someStr5)
+
+  let someStr6 = someStr[0].toUpperCase() + someStr.slice(1)
+
+  console.log(someStr)
+  console.log(someStr6)
+
+  console.log(someStr == someStr6)
+  console.log(someStr < someStr6)
+  console.log(someStr > someStr6)
+  console.log('G' < 'g')
+  console.log('G' > 'g')
 
 
 
