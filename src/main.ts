@@ -5944,6 +5944,34 @@ console.log('федот'[0].toUpperCase())
   console.log('G' < 'g')
   console.log('G' > 'g')
 
+}
+
+{
+
+function hello() {
+  console.log('Hello')
+}
+setTimeout(hello, 5000)
+
+function sum(x1:number, x2:number) {
+  console.log(x1 + x2)
+}
+setTimeout(sum, 7000, 1, 2)
+
+// setTimeout(console.log('Hi'), 2000)
+
+setTimeout(function(){console.log('Hi')}, 3000)
+
+setTimeout(function(x1:number, x2:number) {
+  console.log(x1 * x2)
+}, 2000, 3, 7)
+
+let idTime = setTimeout(function(){console.log('Hi')}, 300)
+console.log(idTime)
+
+clearTimeout(idTime)
+console.log(idTime)
+
 
 
 }
