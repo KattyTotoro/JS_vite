@@ -5974,7 +5974,111 @@ console.log(idTime)
 
 
 
+setInterval(function(){console.log('Hi')}, 8000)
+
+
+let idSet = setInterval(intervalFunc, 2000)
+let conter = 0
+
+function intervalFunc() {
+  if(conter == 3) {
+    clearInterval(idSet)
+    return
+  }
+  conter++
+  console.log('Hi')
 }
+
+
+let id = setTimeout(TimeOutFunc, 2000)
+let counter = 0
+
+function TimeOutFunc() { 
+  // если таймер сработал уже трижды 
+  // останавливаем процесс 
+  if (counter == 3) { 
+    clearTimeout(id)
+    return
+  } 
+  counter++
+  console.log('Hi')
+  // ставим занова таймер на две секунды 
+  id = setTimeout(TimeOutFunc, 2000)
+}
+
+}
+
+{
+
+let id = setTimeout(TimeOutFunc, 2000)
+let counter = 1
+function TimeOutFunc() {
+  console.log('Hi')
+      switch(counter){
+          case 1:
+          id = setTimeout(TimeOutFunc, 5000)
+          break
+          case 2:
+          id = setTimeout(TimeOutFunc, 10000)
+          break
+          case 3:
+          clearTimeout(id)
+          return
+      }
+    counter++
+}
+
+}
+
+{
+
+  console.log(Math.PI)
+  console.log(Math.E)
+
+  let num1 = 8.3
+  let num2 = 8.5
+
+  console.log(Math.ceil(num1))
+  console.log(Math.ceil(num2))
+
+  console.log(Math.floor(num1))
+  console.log(Math.floor(num2))
+
+  console.log(Math.round(num1))
+  console.log(Math.round(num2))
+
+  console.log(Math.pow(3, 2))
+
+  console.log(Math.sqrt(25))
+
+  console.log(Math.min(25, -1, 102, 3, 12, 65, -10, 23, 34))
+
+  console.log(Math.max(25, -1, 102, 3, 12, 65, -10, 23, 34))
+
+  console.log(Math.abs(-14))
+  
+  console.log(Math.random())
+
+  // случайное значение от 0 до 9 включительно
+  console.log(Math.floor(Math.random() * 10))
+
+  // случайное значение от 1 до 10
+  console.log(Math.floor(Math.random() * 10 + 1))
+
+  // случайное значение от 0 до 10 включительно
+  console.log(Math.floor(Math.random() * 11))
+
+
+
+for(let i = 0; i < 30; i++) {
+  console.log(Math.floor(Math.random() * 10 + 1))
+}
+
+
+
+}
+
+
 // ___________________________________________________________________________________________________________
 
 
