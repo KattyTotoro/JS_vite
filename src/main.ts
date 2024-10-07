@@ -5075,6 +5075,10 @@ bottomRightButton.addEventListener('click', () => {
 
 
 
+
+
+
+
 // *********************************************************************************************************
 
 
@@ -5192,6 +5196,7 @@ bottomRightButton.addEventListener('click', () => {
 
   console.log('-----------------------------------------')
 
+  // Второй способ добаления с помощью push
 
   function addPurchases2(array: any, n: string, un: string, q: number, b: boolean) {
     let j = false
@@ -5350,6 +5355,32 @@ console.log('-----------------------------------------')
   // и выводит этот текст с помощью document.write() в тегах <p></p>, 
   // добавив в открывающий тег атрибут style со всеми стилями, перечисленными в массиве. 
 
+  function showStylesArray() {
+    
+  }
+
+
+  // let z_H2 = document.createElement('h2')
+
+// function show5Blocks3(n:any) {
+//   for (let i = 1; i <= n; i++) {
+//     document.write('<h2> Header ' + i + '</h2>')
+//   }
+// }
+// show5Blocks3(5)
+
+// function show5Blocks(n) {
+//   for (let i = 1; i <= n; i++) {
+//     document.write('<h2> Header ' + i + '</h2>')
+//   }
+// }
+// show5Blocks(5)
+// function show5Blocks2(n) {
+//   for (let i = 1; i <= n; i++) {
+//     document.write('<h' + i + '>' + 'Header ' + i + '</h2>')
+//   }
+// }
+// show5Blocks2(6)
 
 }
 
@@ -5605,9 +5636,8 @@ console.log('-----------------------------------------')
   console.log(arr3)
 
 
-  // 2. Функция принимает 2 массива и возвращает новый массив, 
-  // в котором собраны общие элементы (то есть элементы, 
-  // которые встречаются и в первом и во втором массивах) без повторений.
+  // 2. Функция принимает 2 массива и возвращает новый массив, в котором собраны общие элементы 
+  // (то есть элементы, которые встречаются и в первом и во втором массивах) без повторений.
 
   // 3. Функция принимает 2 массива и возвращает новый массив, в котором собраны все элементы из первого массива, 
   // которых нет во втором массиве. 
@@ -5948,6 +5978,8 @@ console.log('федот'[0].toUpperCase())
 
 {
 
+// Домашняя практика. Задержки и интервалы.
+
 function hello() {
   console.log('Hello')
 }
@@ -6031,6 +6063,8 @@ function TimeOutFunc() {
 }
 
 {
+// Домашняя практика. Объект Math. Случайные числа
+
 
   console.log(Math.PI)
   console.log(Math.E)
@@ -6074,10 +6108,17 @@ for(let i = 0; i < 30; i++) {
   console.log(Math.floor(Math.random() * 10 + 1))
 }
 
-
-
 }
 
+{
+// Домашняя практика. Объект Date. Обработка даты и времени
+  
+
+const userDate = new Date()
+
+console.log(userDate)
+
+}
 
 // ___________________________________________________________________________________________________________
 
@@ -6189,7 +6230,12 @@ setInterval(() => {
 // }
 // show5Blocks3(5)
 
-
+// function show5Blocks(n) {
+//   for (let i = 1; i <= n; i++) {
+//     document.write('<h2> Header ' + i + '</h2>')
+//   }
+// }
+// show5Blocks(5)
 
 
 
