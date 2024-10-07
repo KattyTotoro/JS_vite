@@ -5355,10 +5355,15 @@ console.log('-----------------------------------------')
   // и выводит этот текст с помощью document.write() в тегах <p></p>, 
   // добавив в открывающий тег атрибут style со всеми стилями, перечисленными в массиве. 
 
-  function showStylesArray() {
+  function showStylesArray(array: any) {
+  let p_myStyles = document.createElement('p')
+
+    for (let i = 0; i < array.length; i++)
+      document.write('<p style = "' + array[i].stName + ':' + array[i].stVal + '; " >' + i + '</p>')
     
   }
 
+  showStylesArray(myStyles)
 
   // let z_H2 = document.createElement('h2')
 
@@ -5488,7 +5493,7 @@ console.log('-----------------------------------------')
 // Практические задания. Массивы
 
 
-// PZ_Modul_2_Week_2   В работе.
+// PZ_Modul_2_Week_2   В работе.  Выполнено: 1, ....
 
 
 
