@@ -5104,7 +5104,14 @@ bottomRightButton.addEventListener('click', () => {
 // Написать несколько функций для работы с таким массивом.
 
 {
-  const shoppingList = [
+  type product = {
+    name: string,
+    unitOfMeas: string,
+    quantity: number,
+    bought: boolean,
+  }
+
+  const shoppingList:product[] = [
     { name: 'bread', unitOfMeas: 'pcs', quantity: 1, bought: false },
     { name: 'cheese', unitOfMeas: 'gr', quantity: 300, bought: true },
     { name: 'milk', unitOfMeas: 'ml', quantity: 1000, bought: false },
