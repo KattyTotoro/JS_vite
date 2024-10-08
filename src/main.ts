@@ -5165,6 +5165,25 @@ bottomRightButton.addEventListener('click', () => {
   }
   DisplayingList2(shoppingList)
 
+
+  console.log('-----------------------------------------')
+  console.log('Как в практике')
+
+  function renderBuyList(arr:product[]) {
+    let html = ''
+
+    for(let el of arr) {
+      if(!el.bought) {
+        html += `<li>${el.name} ${el.quantity} ${el.unitOfMeas}</li>`
+      }
+    }
+    for(let el of arr) {
+      if(el.bought) {
+        html += `<li>${el.name} ${el.quantity} ${el.unitOfMeas}</li>`
+      }
+    }
+  }
+
   console.log('-----------------------------------------')
 
 
