@@ -5112,13 +5112,13 @@ bottomRightButton.addEventListener('click', () => {
   }
 
   const shoppingList:product[] = [
-    { name: 'bread', unitOfMeas: 'pcs', quantity: 1, bought: false },
-    { name: 'cheese', unitOfMeas: 'gr', quantity: 300, bought: true },
-    { name: 'milk', unitOfMeas: 'ml', quantity: 1000, bought: false },
-    { name: 'apples', unitOfMeas: 'gr', quantity: 300, bought: false },
-    { name: 'flour', unitOfMeas: 'gr', quantity: 1000, bought: true },
-    { name: 'potato', unitOfMeas: 'gr', quantity: 1000, bought: true },
-    { name: 'candies', unitOfMeas: 'gr', quantity: 200, bought: false },
+    { name: 'Хлеб', unitOfMeas: 'pcs', quantity: 1, bought: false },
+    { name: 'Сыр', unitOfMeas: 'gr', quantity: 300, bought: true },
+    { name: 'Молоко', unitOfMeas: 'ml', quantity: 1000, bought: false },
+    { name: 'Яблоки', unitOfMeas: 'gr', quantity: 300, bought: false },
+    { name: 'Мука', unitOfMeas: 'gr', quantity: 1000, bought: true },
+    { name: 'Картошка', unitOfMeas: 'gr', quantity: 1000, bought: true },
+    { name: 'Конфеты', unitOfMeas: 'gr', quantity: 200, bought: false },
   ]
 
   // console.log(shoppingList)
@@ -5169,6 +5169,9 @@ bottomRightButton.addEventListener('click', () => {
   console.log('-----------------------------------------')
   console.log('Как в практике')
 
+  // В переменную toBuyListOL попадает список с id toBuyList
+  const toBuyListOL = document.getElementById('toBuyList') as HTMLOListElement
+
   function renderBuyList(arr:product[]) {
     let html = ''
 
@@ -5182,7 +5185,11 @@ bottomRightButton.addEventListener('click', () => {
         html += `<li>${el.name} ${el.quantity} ${el.unitOfMeas}</li>`
       }
     }
+
+    toBuyListOL.innerHTML = html
   }
+
+  renderBuyList(shoppingList)
 
   console.log('-----------------------------------------')
 
@@ -5218,6 +5225,14 @@ bottomRightButton.addEventListener('click', () => {
   console.log(shoppingList.length)
 
   DisplayingList(shoppingList)
+
+
+  console.log('-----------------------------------------')
+
+
+  console.log('Как в практике')
+
+  
 
 
   console.log('-----------------------------------------')
