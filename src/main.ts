@@ -5167,6 +5167,7 @@ bottomRightButton.addEventListener('click', () => {
 
 
   console.log('-----------------------------------------')
+
   console.log('Как в практике')
 
   // В переменную toBuyListOL попадает список с id toBuyList
@@ -5227,13 +5228,6 @@ bottomRightButton.addEventListener('click', () => {
   DisplayingList(shoppingList)
 
 
-  console.log('-----------------------------------------')
-
-
-  console.log('Как в практике')
-
-  
-
 
   console.log('-----------------------------------------')
 
@@ -5267,8 +5261,31 @@ bottomRightButton.addEventListener('click', () => {
 
   DisplayingList(shoppingList)
 
+
+
   console.log('-----------------------------------------')
 
+
+  
+  console.log('Как в практике')
+
+  function addToBuyList(array:product[], name:string, unitOfMeas:string, quantity:number) {
+    let inList = false
+
+    for(let el of array) {
+      if(el.name == name) {
+        el.quantity += quantity
+        inList = true
+      }
+    }
+
+    if(!inList) {
+      array.push({ name, unitOfMeas, quantity, bought:false })
+    }
+  }
+
+  
+  console.log('-----------------------------------------')
   // 3. Покупка продукта. Функция принимает название продукта и отмечает его как купленный.
 
 
