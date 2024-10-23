@@ -5112,13 +5112,13 @@ bottomRightButton.addEventListener('click', () => {
   }
 
   const shoppingList:product[] = [
-    { name: 'Хлеб', unitOfMeas: 'pcs', quantity: 1, bought: false },
-    { name: 'Сыр', unitOfMeas: 'gr', quantity: 300, bought: true },
-    { name: 'Молоко', unitOfMeas: 'ml', quantity: 1000, bought: false },
-    { name: 'Яблоки', unitOfMeas: 'gr', quantity: 300, bought: false },
-    { name: 'Мука', unitOfMeas: 'gr', quantity: 1000, bought: true },
-    { name: 'Картошка', unitOfMeas: 'gr', quantity: 1000, bought: true },
-    { name: 'Конфеты', unitOfMeas: 'gr', quantity: 200, bought: false },
+    { name: 'Хлеб', unitOfMeas: 'шт', quantity: 1, bought: false },
+    { name: 'Сыр', unitOfMeas: 'гр', quantity: 300, bought: true },
+    { name: 'Молоко', unitOfMeas: 'мл', quantity: 1000, bought: false },
+    { name: 'Яблоки', unitOfMeas: 'гр', quantity: 300, bought: false },
+    { name: 'Мука', unitOfMeas: 'гр', quantity: 1000, bought: true },
+    { name: 'Картошка', unitOfMeas: 'гр', quantity: 1000, bought: true },
+    { name: 'Конфеты', unitOfMeas: 'гр', quantity: 200, bought: false },
   ]
 
   // console.log(shoppingList)
@@ -5178,12 +5178,12 @@ bottomRightButton.addEventListener('click', () => {
 
     for(let el of arr) {
       if(!el.bought) {
-        html += `<li>${el.name} ${el.quantity} ${el.unitOfMeas}</li>`
+        html += `<li style = "color: red;">${el.name} ${el.quantity} ${el.unitOfMeas}</li>`
       }
     }
     for(let el of arr) {
       if(el.bought) {
-        html += `<li>${el.name} ${el.quantity} ${el.unitOfMeas}</li>`
+        html += `<li style = "color: green;">${el.name} ${el.quantity} ${el.unitOfMeas}</li>`
       }
     }
 
@@ -5217,11 +5217,11 @@ bottomRightButton.addEventListener('click', () => {
 
   }
 
-  addPurchases(shoppingList, 'bread', 'pcs', 1, false)
+  addPurchases(shoppingList, 'Хлеб', 'шт', 1, false)
   console.log(shoppingList.length)
 
 
-  addPurchases(shoppingList, 'soap', 'pcs', 1, false)
+  addPurchases(shoppingList, 'Мыло', 'шт', 1, false)
 
   console.log(shoppingList.length)
 
@@ -5251,11 +5251,11 @@ bottomRightButton.addEventListener('click', () => {
 
   }
 
-  addPurchases2(shoppingList, 'bread', 'pcs', 1, false)
+  addPurchases2(shoppingList, 'Хлеб', 'шт', 1, false)
   console.log(shoppingList.length)
 
 
-  addPurchases2(shoppingList, 'bike', 'pcs', 1, false)
+  addPurchases2(shoppingList, 'Велосипед', 'шт', 1, false)
 
   console.log(shoppingList.length)
 
@@ -5269,11 +5269,16 @@ bottomRightButton.addEventListener('click', () => {
   
   console.log('Как в практике')
 
-  function addToBuyList(array:product[], name:string, unitOfMeas:string, quantity:number) {
+  const productNameInput = document.getElementById('productName') as HTMLInputElement
+  const productUnitInput = document.getElementById('productUnit') as HTMLInputElement
+  const productCountInput = document.getElementById('productCount') as HTMLInputElement
+  const addProductButton = document.getElementById('addProduct') as HTMLButtonElement
+
+  function addToBuyList(array: product[], name: string, unitOfMeas: string, quantity: number) {
     let inList = false
 
     for(let el of array) {
-      if(el.name == name) {
+      if(el.name == name && !el.bought) {
         el.quantity += quantity
         inList = true
       }
@@ -5282,10 +5287,22 @@ bottomRightButton.addEventListener('click', () => {
     if(!inList) {
       array.push({ name, unitOfMeas, quantity, bought:false })
     }
+    renderBuyList(array)
   }
 
-  
+  addProductButton.addEventListener('click', function() {
+    addToBuyList(shoppingList, productNameInput.value, productUnitInput.value, +productCountInput.value)
+    productNameInput.value = ''
+    productUnitInput.value = ''
+    productCountInput.value = ''
+  }) 
+  // addProductButton.onclick = function() {
+  //   addToBuyList(shoppingList, productNameInput.value, productUnitInput.value, +productCountInput.value)
+  // }
+
+
   console.log('-----------------------------------------')
+
   // 3. Покупка продукта. Функция принимает название продукта и отмечает его как купленный.
 
 
@@ -5304,9 +5321,37 @@ bottomRightButton.addEventListener('click', () => {
 
 
 
+
+
+console.log('-----------------------------------------')
+
+console.log('Как в практике')
+
+const setBoughtButton = document.getElementById('setBought') as HTMLButtonElement
+
+function markTheProduct(array: product[], name: string) {
+  for(let el of array) {
+    if(el.name == name) {
+      el.bought = true
+    }
+  }
+  renderBuyList(array)
+}
+
+setBoughtButton.addEventListener('click', function() {
+  markTheProduct(shoppingList, productNameInput.value)
+  productNameInput.value = ''
+})
+
+
+
+
 }
 
 console.log('-----------------------------------------')
+
+
+  
 
 
 {
