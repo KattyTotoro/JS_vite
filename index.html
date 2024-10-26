@@ -123,6 +123,49 @@
       transform-origin: 50% 50%;
       margin-left: 1000px;
     } */
+
+    #toBuyList {
+      background-color: rgba(137, 215, 235, 0.766);
+      border-radius: 10px;
+      padding: 20px;
+      margin-left: 20px;
+    }
+
+    #toBuyList li {
+      /* display: flex; */
+      /* justify-content: space-between; */
+      /* align-items: center; */
+      background-color: rgba(103, 207, 234, 0.766);
+      list-style-position: inside;
+      border-radius: 10px;
+      padding: 5px;
+      margin: 5px;
+      font-size: 18px;
+      font-weight: 600;
+      transition: 0.5s;
+    }
+
+    #toBuyList li button {
+      background-color: rgb(211, 241, 248);
+      margin-left: 20px;
+      padding: 3px;
+      font-size: 14px;
+      text-align: end;
+    }
+
+    #toBuyList li:hover {
+      background-color: rgb(102, 207, 234);
+    }
+
+    .inputProduct input {
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    .inputProduct button {
+      margin: 10px;
+    }
   </style>
 </head>
 
@@ -134,11 +177,11 @@
   <div style="background: url(images/bg2.png) top/cover no-repeat; height: 800px; color: rgb(22, 67, 39);">
     <h3 style="margin-left: 20px;">Массивы. Д/З 1. Список покупок</h3>
 
-    <div style="display: flex;">
+    <div style="display: flex; border-radius: 10px; background-color: rgba(137, 215, 235, 0.766); max-width: fit-content;">
       
       <ol id="toBuyList"></ol>
 
-      <div style="margin: 20px;">
+      <div class="inputProduct" style="margin: 20px;">
         <input type="text" id="productName" placeholder="Название продукта">
         <br>
         <input type="text" id="productUnit" placeholder="Единица измерения">
