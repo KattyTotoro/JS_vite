@@ -5178,7 +5178,7 @@ bottomRightButton.addEventListener('click', () => {
 
     for(let el of arr) {
       if(!el.bought) {
-        html += `<li style = "color: red;">${el.name} ${el.quantity} ${el.unitOfMeas}</li>`
+        html += `<li style = "color: red;">${el.name} ${el.quantity} ${el.unitOfMeas} <button data-name = "${el.name}">Отметить купленным</button></li>`
       }
     }
     for(let el of arr) {
@@ -5341,6 +5341,13 @@ function markTheProduct(array: product[], name: string) {
 setBoughtButton.addEventListener('click', function() {
   markTheProduct(shoppingList, productNameInput.value)
   productNameInput.value = ''
+})
+
+toBuyListOL.addEventListener('click', function(e) {
+  const target = e.target as HTMLElement
+  if(target.tagName == 'BUTTON' && target.dataset.name) {
+    markTheProduct(shoppingList, target.dataset.name)
+  }
 })
 
 
