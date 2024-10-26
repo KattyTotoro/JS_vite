@@ -5371,12 +5371,18 @@ console.log('-----------------------------------------')
   // Создать массив, описывающий чек в магазине. Каждый элемент массива состоит из названия товара, 
   // количества и цены за единицу товара. Написать следующие функции.
 
-  const storeReceipt = [
-    { name: 'bread', quantity: 1, price: 30 },
-    { name: 'cheese', quantity: 4, price: 200 },
-    { name: 'milk', quantity: 2, price: 80 },
-    { name: 'apples', quantity: 5, price: 120 },
-    { name: 'potato', quantity: 20, price: 32 },
+  type product = {
+    name: string,
+    quantity: number,
+    price: number,
+  }
+
+  const storeReceipt:product[] = [
+    { name: 'Хлеб', quantity: 1, price: 30 },
+    { name: 'Сыр', quantity: 4, price: 200 },
+    { name: 'Молоко', quantity: 2, price: 80 },
+    { name: 'Яблоки', quantity: 5, price: 120 },
+    { name: 'Картошка', quantity: 20, price: 32 },
   ]
 
   // 1. Распечатка чека на экран. 30 + 800 + 160 + 600 + 640
@@ -5388,6 +5394,26 @@ console.log('-----------------------------------------')
   }
 
   showList(storeReceipt)
+
+  console.log('-----------------------------------------')
+  
+const checkListOl = document.getElementById('checkList') as HTMLDataListElement
+
+function renderCheckList(arr:product[]) {
+  let html = ''
+
+  for(let el of arr) {
+    html += `<li> ${el.name} ${el.quantity} ${el.price} руб. </li>`
+  }
+
+  html += 'Общая сумма чека: ' + getAmount(storeReceipt)
+  checkListOl.innerHTML = html
+}
+
+renderCheckList(storeReceipt)
+
+
+
 
   console.log('-----------------------------------------')
 
