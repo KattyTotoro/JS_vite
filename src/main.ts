@@ -5111,7 +5111,7 @@ bottomRightButton.addEventListener('click', () => {
     bought: boolean,
   }
 
-  const shoppingList:product[] = [
+  const shoppingList: product[] = [
     { name: 'Хлеб', unitOfMeas: 'шт', quantity: 1, bought: false },
     { name: 'Сыр', unitOfMeas: 'гр', quantity: 300, bought: true },
     { name: 'Молоко', unitOfMeas: 'мл', quantity: 1000, bought: false },
@@ -5175,16 +5175,16 @@ bottomRightButton.addEventListener('click', () => {
   // В переменную toBuyListOL попадает список с id toBuyList
   const toBuyListOL = document.getElementById('toBuyList') as HTMLOListElement
 
-  function renderBuyList(arr:product[]) {
+  function renderBuyList(arr: product[]) {
     let html = ''
 
-    for(let el of arr) {
-      if(!el.bought) {
+    for (let el of arr) {
+      if (!el.bought) {
         html += `<li style = "color: red;"> ${el.name} ${el.quantity} ${el.unitOfMeas} <button data-name = "${el.name}">Отметить купленным</button></li>`
       }
     }
-    for(let el of arr) {
-      if(el.bought) {
+    for (let el of arr) {
+      if (el.bought) {
         html += `<li style = "color: green;"><s>${el.name} ${el.quantity} ${el.unitOfMeas}</s></li>`
       }
     }
@@ -5268,7 +5268,7 @@ bottomRightButton.addEventListener('click', () => {
   console.log('-----------------------------------------')
 
 
-  
+
   console.log('Как в практике')
 
   const productNameInput = document.getElementById('productName') as HTMLInputElement
@@ -5279,25 +5279,25 @@ bottomRightButton.addEventListener('click', () => {
   function addToBuyList(array: product[], name: string, unitOfMeas: string, quantity: number) {
     let inList = false
 
-    for(let el of array) {
-      if(el.name == name && !el.bought) {
+    for (let el of array) {
+      if (el.name == name && !el.bought) {
         el.quantity += quantity
         inList = true
       }
     }
 
-    if(!inList) {
-      array.push({ name, unitOfMeas, quantity, bought:false })
+    if (!inList) {
+      array.push({ name, unitOfMeas, quantity, bought: false })
     }
     renderBuyList(array)
   }
 
-  addProductButton.addEventListener('click', function() {
+  addProductButton.addEventListener('click', function () {
     addToBuyList(shoppingList, productNameInput.value, productUnitInput.value, +productCountInput.value)
     productNameInput.value = ''
     productUnitInput.value = ''
     productCountInput.value = ''
-  }) 
+  })
   // addProductButton.onclick = function() {
   //   addToBuyList(shoppingList, productNameInput.value, productUnitInput.value, +productCountInput.value)
   // }
@@ -5325,33 +5325,33 @@ bottomRightButton.addEventListener('click', () => {
 
 
 
-console.log('-----------------------------------------')
+  console.log('-----------------------------------------')
 
-console.log('Как в практике')
+  console.log('Как в практике')
 
-// Отметить купленным
-const setBoughtButton = document.getElementById('setBought') as HTMLButtonElement
+  // Отметить купленным
+  const setBoughtButton = document.getElementById('setBought') as HTMLButtonElement
 
-function markTheProduct(array: product[], name: string) {
-  for(let el of array) {
-    if(el.name == name) {
-      el.bought = true
+  function markTheProduct(array: product[], name: string) {
+    for (let el of array) {
+      if (el.name == name) {
+        el.bought = true
+      }
     }
+    renderBuyList(array)
   }
-  renderBuyList(array)
-}
 
-setBoughtButton.addEventListener('click', function() {
-  markTheProduct(shoppingList, productNameInput.value)
-  productNameInput.value = ''
-})
+  setBoughtButton.addEventListener('click', function () {
+    markTheProduct(shoppingList, productNameInput.value)
+    productNameInput.value = ''
+  })
 
-toBuyListOL.addEventListener('click', function(e) {
-  const target = e.target as HTMLElement
-  if(target.tagName == 'BUTTON' && target.dataset.name) {
-    markTheProduct(shoppingList, target.dataset.name)
-  }
-})
+  toBuyListOL.addEventListener('click', function (e) {
+    const target = e.target as HTMLElement
+    if (target.tagName == 'BUTTON' && target.dataset.name) {
+      markTheProduct(shoppingList, target.dataset.name)
+    }
+  })
 
 
 
@@ -5361,7 +5361,7 @@ toBuyListOL.addEventListener('click', function(e) {
 console.log('-----------------------------------------')
 
 
-  
+
 
 
 {
@@ -5377,7 +5377,7 @@ console.log('-----------------------------------------')
     price: number,
   }
 
-  const storeReceipt:product[] = [
+  const storeReceipt: product[] = [
     { name: 'Хлеб', quantity: 1, price: 30 },
     { name: 'Сыр', quantity: 4, price: 200 },
     { name: 'Молоко', quantity: 2, price: 80 },
@@ -5395,22 +5395,23 @@ console.log('-----------------------------------------')
 
   showList(storeReceipt)
 
+
   console.log('-----------------------------------------')
-  
-const checkListOl = document.getElementById('checkList') as HTMLDataListElement
 
-function renderCheckList(arr:product[]) {
-  let html = ''
+  const checkListOl = document.getElementById('checkList') as HTMLOListElement
 
-  for(let el of arr) {
-    html += `<li> ${el.name} ${el.quantity} ${el.price} руб. </li>`
+  function renderCheckList(arr: product[]) {
+    let html = ''
+
+    for (let el of arr) {
+      html += `<li> ${el.name} ${el.quantity} ${el.price} руб. </li>`
+    }
+
+    html += 'Общая сумма чека: ' + getAmount(storeReceipt)
+    checkListOl.innerHTML = html
   }
 
-  html += 'Общая сумма чека: ' + getAmount(storeReceipt)
-  checkListOl.innerHTML = html
-}
-
-renderCheckList(storeReceipt)
+  renderCheckList(storeReceipt)
 
 
 
@@ -5472,13 +5473,20 @@ renderCheckList(storeReceipt)
 
 console.log('-----------------------------------------')
 
+
+
 {
   // Задание 3
 
   // Создать массив css-стилей (цвет, размер шрифта, выравнивание, подчеркивание и т. д.). 
   // Каждый элемент массива – это объект, состоящий из двух свойств: название стиля и значение стиля. 
 
-  const myStyles = [
+  type styles = {
+    stName: string,
+    stVal: string
+  }
+
+  const myStyles: styles[] = [
     { stName: 'max-width', stVal: '1280px' },
     { stName: 'font-size', stVal: '3.2rem' },
     { stName: 'color', stVal: '#888' },
@@ -5494,37 +5502,41 @@ console.log('-----------------------------------------')
   // и выводит этот текст с помощью document.write() в тегах <p></p>, 
   // добавив в открывающий тег атрибут style со всеми стилями, перечисленными в массиве. 
 
-  function showStylesArray(array: any) {
-  let p_myStyles = document.createElement('p')
+  const pMyStylesText = document.getElementById('pMyStyles') as HTMLParagraphElement
+
+  function showStylesArray(array: styles[], myText: string) {
+
+    let html = ''
 
     for (let i = 0; i < array.length; i++)
-      document.write('<p style = "' + array[i].stName + ':' + array[i].stVal + '; " >' + i + '</p>')
-    
+      html += `<p style = " ${array[i].stName} : ${array[i].stVal}; " >${myText}</p>`
+
+    pMyStylesText.innerHTML = html
   }
 
-  showStylesArray(myStyles)
+  showStylesArray(myStyles, 'Здесь есть текст')
 
   // let z_H2 = document.createElement('h2')
 
-// function show5Blocks3(n:any) {
-//   for (let i = 1; i <= n; i++) {
-//     document.write('<h2> Header ' + i + '</h2>')
-//   }
-// }
-// show5Blocks3(5)
+  // function show5Blocks3(n:any) {
+  //   for (let i = 1; i <= n; i++) {
+  //     document.write('<h2> Header ' + i + '</h2>')
+  //   }
+  // }
+  // show5Blocks3(5)
 
-// function show5Blocks(n) {
-//   for (let i = 1; i <= n; i++) {
-//     document.write('<h2> Header ' + i + '</h2>')
-//   }
-// }
-// show5Blocks(5)
-// function show5Blocks2(n) {
-//   for (let i = 1; i <= n; i++) {
-//     document.write('<h' + i + '>' + 'Header ' + i + '</h2>')
-//   }
-// }
-// show5Blocks2(6)
+  // function show5Blocks(n) {
+  //   for (let i = 1; i <= n; i++) {
+  //     document.write('<h2> Header ' + i + '</h2>')
+  //   }
+  // }
+  // show5Blocks(5)
+  // function show5Blocks2(n) {
+  //   for (let i = 1; i <= n; i++) {
+  //     document.write('<h' + i + '>' + 'Header ' + i + '</h2>')
+  //   }
+  // }
+  // show5Blocks2(6)
 
 }
 
@@ -6079,12 +6091,12 @@ console.log('федот'[0].toUpperCase())
 
   console.log(index)
 
-  while(index != -1){
+  while (index != -1) {
     counter++;
-    index = someStr3.indexOf(wordToFind,index+1);
-   }
+    index = someStr3.indexOf(wordToFind, index + 1);
+  }
 
-   console.log(counter)
+  console.log(counter)
 
   console.log(someStr)
 
@@ -6122,92 +6134,92 @@ console.log('федот'[0].toUpperCase())
 
 {
 
-// Домашняя практика. Задержки и интервалы.
+  // Домашняя практика. Задержки и интервалы.
 
-function hello() {
-  console.log('Hello')
-}
-setTimeout(hello, 5000)
-
-function sum(x1:number, x2:number) {
-  console.log(x1 + x2)
-}
-setTimeout(sum, 7000, 1, 2)
-
-// setTimeout(console.log('Hi'), 2000)
-
-setTimeout(function(){console.log('Hi')}, 3000)
-
-setTimeout(function(x1:number, x2:number) {
-  console.log(x1 * x2)
-}, 2000, 3, 7)
-
-let idTime = setTimeout(function(){console.log('Hi')}, 300)
-console.log(idTime)
-
-clearTimeout(idTime)
-console.log(idTime)
-
-
-
-setInterval(function(){console.log('Hi')}, 8000)
-
-
-let idSet = setInterval(intervalFunc, 2000)
-let conter = 0
-
-function intervalFunc() {
-  if(conter == 3) {
-    clearInterval(idSet)
-    return
+  function hello() {
+    console.log('Hello')
   }
-  conter++
-  console.log('Hi')
-}
+  setTimeout(hello, 5000)
+
+  function sum(x1: number, x2: number) {
+    console.log(x1 + x2)
+  }
+  setTimeout(sum, 7000, 1, 2)
+
+  // setTimeout(console.log('Hi'), 2000)
+
+  setTimeout(function () { console.log('Hi') }, 3000)
+
+  setTimeout(function (x1: number, x2: number) {
+    console.log(x1 * x2)
+  }, 2000, 3, 7)
+
+  let idTime = setTimeout(function () { console.log('Hi') }, 300)
+  console.log(idTime)
+
+  clearTimeout(idTime)
+  console.log(idTime)
 
 
-let id = setTimeout(TimeOutFunc, 2000)
-let counter = 0
 
-function TimeOutFunc() { 
-  // если таймер сработал уже трижды 
-  // останавливаем процесс 
-  if (counter == 3) { 
-    clearTimeout(id)
-    return
-  } 
-  counter++
-  console.log('Hi')
-  // ставим занова таймер на две секунды 
-  id = setTimeout(TimeOutFunc, 2000)
-}
+  setInterval(function () { console.log('Hi') }, 8000)
 
-}
 
-{
+  let idSet = setInterval(intervalFunc, 2000)
+  let conter = 0
 
-let id = setTimeout(TimeOutFunc, 2000)
-let counter = 1
-function TimeOutFunc() {
-  console.log('Hi')
-      switch(counter){
-          case 1:
-          id = setTimeout(TimeOutFunc, 5000)
-          break
-          case 2:
-          id = setTimeout(TimeOutFunc, 10000)
-          break
-          case 3:
-          clearTimeout(id)
-          return
-      }
+  function intervalFunc() {
+    if (conter == 3) {
+      clearInterval(idSet)
+      return
+    }
+    conter++
+    console.log('Hi')
+  }
+
+
+  let id = setTimeout(TimeOutFunc, 2000)
+  let counter = 0
+
+  function TimeOutFunc() {
+    // если таймер сработал уже трижды 
+    // останавливаем процесс 
+    if (counter == 3) {
+      clearTimeout(id)
+      return
+    }
     counter++
-}
+    console.log('Hi')
+    // ставим занова таймер на две секунды 
+    id = setTimeout(TimeOutFunc, 2000)
+  }
 
 }
 
 {
-// Домашняя практика. Объект Math. Случайные числа
+
+  let id = setTimeout(TimeOutFunc, 2000)
+  let counter = 1
+  function TimeOutFunc() {
+    console.log('Hi')
+    switch (counter) {
+      case 1:
+        id = setTimeout(TimeOutFunc, 5000)
+        break
+      case 2:
+        id = setTimeout(TimeOutFunc, 10000)
+        break
+      case 3:
+        clearTimeout(id)
+        return
+    }
+    counter++
+  }
+
+}
+
+{
+  // Домашняя практика. Объект Math. Случайные числа
 
 
   console.log(Math.PI)
@@ -6234,7 +6246,7 @@ function TimeOutFunc() {
   console.log(Math.max(25, -1, 102, 3, 12, 65, -10, 23, 34))
 
   console.log(Math.abs(-14))
-  
+
   console.log(Math.random())
 
   // случайное значение от 0 до 9 включительно
@@ -6248,19 +6260,19 @@ function TimeOutFunc() {
 
 
 
-for(let i = 0; i < 30; i++) {
-  console.log(Math.floor(Math.random() * 10 + 1))
-}
+  for (let i = 0; i < 30; i++) {
+    console.log(Math.floor(Math.random() * 10 + 1))
+  }
 
 }
 
 {
-// Домашняя практика. Объект Date. Обработка даты и времени
-  
+  // Домашняя практика. Объект Date. Обработка даты и времени
 
-const userDate = new Date()
 
-console.log(userDate)
+  const userDate = new Date()
+
+  console.log(userDate)
 
 }
 
