@@ -5488,7 +5488,7 @@ console.log('-----------------------------------------')
 
   const myStyles: styles[] = [
     { stName: 'max-width', stVal: '1280px' },
-    { stName: 'font-size', stVal: '3.2rem' },
+    { stName: 'font-size', stVal: '5.2rem' },
     { stName: 'color', stVal: '#888' },
     { stName: 'text-align', stVal: 'center' },
     { stName: 'text-decoration', stVal: 'underline' },
@@ -5506,12 +5506,14 @@ console.log('-----------------------------------------')
 
   function showStylesArray(array: styles[], myText: string) {
 
-    let html = ''
+    let styleText = ''
 
-    for (let i = 0; i < array.length; i++)
-      html += `<p style = " ${array[i].stName} : ${array[i].stVal}; " >${myText}</p>`
+    for (let i = 0; i < array.length; i++) {
+      styleText += `${array[i].stName}: ${array[i].stVal}; `
+    }
 
-    pMyStylesText.innerHTML = html
+    const tagString = `<p style = "${styleText}">${myText}</p>`
+    pMyStylesText.innerHTML += tagString
   }
 
   showStylesArray(myStyles, 'Здесь есть текст')
