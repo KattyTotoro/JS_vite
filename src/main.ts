@@ -5772,6 +5772,10 @@ console.log('-----------------------------------------')
 
   console.log(getMaxElOfArray(arr1))
 
+  console.log(Math.max.apply(null, arr1))
+
+  console.log(Math.max(...arr1))
+
 
   // 5. Функция добавления нового элемента в массив по указанному индексу.
 
@@ -5881,8 +5885,27 @@ console.log('-----------------------------------------')
   console.log(arr3)
 
 
-  // 3. Функция принимает 2 массива и возвращает новый массив, в котором собраны все элементы из первого массива, 
-  // которых нет во втором массиве. 
+  // 3. Функция принимает 2 массива и возвращает новый массив, в котором собраны 
+  // все элементы из первого массива, которых нет во втором массиве. 
+
+  function getNewNotCommonArray(array1: number[], array2: number[]) {
+    const array3: number[] = []
+
+    for (let el of array1) {
+      if (!array2.includes(el)) {
+        if (!array3.includes(el))
+          array3.push(el)
+      }
+    }
+   
+    return array3
+  }
+
+  arr3 = getNewNotCommonArray(arr1, arr2)
+  console.log(arr1)
+  console.log(arr2)
+  console.log(arr3)
+
 
 }
 
