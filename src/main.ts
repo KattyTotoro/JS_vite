@@ -5862,6 +5862,25 @@ console.log('-----------------------------------------')
   // 2. Функция принимает 2 массива и возвращает новый массив, в котором собраны общие элементы 
   // (то есть элементы, которые встречаются и в первом и во втором массивах) без повторений.
 
+  function getNewCommonArray(array1: number[], array2: number[]) {
+    const array3: number[] = []
+
+    for (let el of array1) {
+      if (array1.includes(el) && array2.includes(el)) {
+        if (!array3.includes(el))
+          array3.push(el)
+      }
+    }
+   
+    return array3
+  }
+
+  arr3 = getNewCommonArray(arr1, arr2)
+  console.log(arr1)
+  console.log(arr2)
+  console.log(arr3)
+
+
   // 3. Функция принимает 2 массива и возвращает новый массив, в котором собраны все элементы из первого массива, 
   // которых нет во втором массиве. 
 
