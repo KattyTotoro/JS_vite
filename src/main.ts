@@ -5087,7 +5087,7 @@ bottomRightButton.addEventListener('click', () => {
 
 // Домашние задания. Массивы
 
-// DZ_Modul_2_Week_2   В работе.  Выполнено: 1, 2, ...... , 4
+// DZ_Modul_2_Week_2   В работе.  Выполнено: 1, 2, 3, 4
 
 
 // *********************************************************************************************************
@@ -5418,6 +5418,52 @@ console.log('-----------------------------------------')
 
   console.log('-----------------------------------------')
 
+  // Как у Кати
+
+  // 1 Распечатка чека на экран.
+
+const chequeShopDiv = document.getElementById('cheque_shop') as HTMLDivElement
+
+function showChequeShop(arr: product[]) {
+    let html = '<h3>check №2342342</h3>'
+    html += '<p>IP Razumtceva</p>'
+    html += `<table><tr>
+    <th>  
+    name
+    </th>
+    <th>  
+    count
+    </th>
+    <th>  
+price
+    </th>
+    </tr>`
+    for (let el of arr) {
+        html += `<tr>
+            <td>  
+            ${el.name}
+            </td>
+            <td>  
+            ${el.quantity} 
+            </td>
+            <td>  
+            ${el.price}
+            </td>
+        </tr>`
+    }
+    html += '</table>'
+    html += `<h3>TO PAY:   ${getAmount(arr)}$</h3>`
+
+    chequeShopDiv.innerHTML = html
+}
+
+
+showChequeShop(storeReceipt)
+
+
+
+  console.log('-----------------------------------------')
+
   // 2. Подсчет общей суммы покупки. 2230
 
   function getAmount(array: any) {
@@ -5665,11 +5711,11 @@ console.log('-----------------------------------------')
 
 {
 
-  const arr1 = [] as any
+  const arr1: number[] = []
 
   console.log(arr1)
 
-  function getArray(array: any, num: number) {
+  function getArray(array: number[], num: number) {
     for (let i = 0; i < num; i++)
       array[i] = Math.floor(Math.random() * 20)
   }
@@ -5758,7 +5804,7 @@ console.log('-----------------------------------------')
 
   // Создать еще один массив из 5 случайных чисел и написать следующие функции.
 
-  const arr2 = [] as any
+  const arr2: number[] = []
 
   console.log(arr2)
 
@@ -5766,14 +5812,13 @@ console.log('-----------------------------------------')
 
   console.log(arr2)
 
-  // 1. Функция принимает 2 массива и возвращает новый массив, в котором собраны все элементы из двух массивов 
-  // без повторений.
+  // 1. Функция принимает 2 массива и возвращает новый массив, в котором собраны все элементы 
+  // из двух массивов без повторений.
 
+  let arr3: number[] = []
 
-  let arr3 = [] as any
-
-  function getNewArray(array1: any, array2: any) {
-    let array3 = [] as any
+  function getNewArray(array1: number[], array2: number[]) {
+    let array3: number[] = []
 
     for (let i = 0; i < array1.length; i++) {
       if (array3.includes(array1[i]))
@@ -5789,6 +5834,26 @@ console.log('-----------------------------------------')
   }
 
   arr3 = getNewArray(arr1, arr2)
+  console.log(arr1)
+  console.log(arr2)
+  console.log(arr3)
+
+
+  function getNewArray2(array1: number[], array2: number[]) {
+    let array3: number[] = []
+
+    for (let el of array1) {
+      if (!array3.includes(el))
+          array3.push(el)
+    }
+    for (let el of array2) {
+      if (!array3.includes(el))
+          array3.push(el)
+    }
+    return array3
+  }
+
+  arr3 = getNewArray2(arr1, arr2)
   console.log(arr1)
   console.log(arr2)
   console.log(arr3)
