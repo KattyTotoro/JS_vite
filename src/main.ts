@@ -5087,7 +5087,7 @@ bottomRightButton.addEventListener('click', () => {
 
 // Домашние задания. Массивы
 
-// DZ_Modul_2_Week_2   В работе.  Выполнено: 1, 2, 3, 4
+// DZ_Modul_2_Week_2  Выполнено полностью.
 
 
 // *********************************************************************************************************
@@ -5381,16 +5381,16 @@ console.log('-----------------------------------------')
     { name: 'Хлеб', quantity: 1, price: 30 },
     { name: 'Сыр', quantity: 4, price: 200 },
     { name: 'Молоко', quantity: 2, price: 80 },
-    { name: 'Яблоки', quantity: 5, price: 120 },
-    { name: 'Картошка', quantity: 20, price: 32 },
+    { name: 'Яблоки', quantity: 5, price: 12 },
+    { name: 'Картошка', quantity: 20, price: 2 },
   ]
 
-  // 1. Распечатка чека на экран. 30 + 800 + 160 + 600 + 640
+  // 1. Распечатка чека на экран.
 
   function showList(array: any) {
     console.log('Чек: ')
     for (let i in array)
-      console.log(array[i].name + ' ' + array[i].quantity + ' ' + array[i].price)
+      console.log(array[i].name + ' ' + array[i].quantity + ' ' + array[i].price + ' Подитог: ' + array[i].quantity * array[i].price)
   }
 
   showList(storeReceipt)
@@ -5464,7 +5464,7 @@ showChequeShop(storeReceipt)
 
   console.log('-----------------------------------------')
 
-  // 2. Подсчет общей суммы покупки. 2230
+  // 2. Подсчет общей суммы покупки. 
 
   function getAmount(array: any) {
     let sum = 0
@@ -5477,7 +5477,7 @@ showChequeShop(storeReceipt)
   console.log('Общая сумма чека: ' + getAmount(storeReceipt))
 
 
-  // 3. Получение самой дорогой покупки в чеке. 800
+  // 3. Получение самой дорогой покупки в чеке. 
 
   function getMax(array: any) {
     let sub = array[0].quantity * array[0].price
@@ -5498,7 +5498,13 @@ showChequeShop(storeReceipt)
   // 4. Подсчет средней стоимости одного товара в чеке. 
 
   function getAverageCost(array: any) {
-    return getAmount(array) / array.length
+    let num1 = 0
+    let num2 = 0
+    for(let i = 0; i < array.length; i++) {
+      num1 += array[i].price
+      num2 += array[i].quantity
+    }
+    return num1 / num2
   }
 
   console.log('Средняя стоимость одного товара в чеке: ' + getAverageCost(storeReceipt))
@@ -5692,7 +5698,7 @@ console.log('-----------------------------------------')
 // Практические задания. Массивы
 
 
-// PZ_Modul_2_Week_2   В работе.  Выполнено: 1, ....
+// PZ_Modul_2_Week_2   В работе.  Выполнено: 1, 2, ....
 
 
 
@@ -5802,6 +5808,8 @@ console.log('-----------------------------------------')
   console.log(delElInArray(arr1, 1))
 
   console.log(arr1)
+
+
 
 
   // Задание 2
