@@ -5426,7 +5426,7 @@ const chequeShopDiv = document.getElementById('cheque_shop') as HTMLDivElement
 
 function showChequeShop(arr: product[]) {
     let html = '<h3>check №2342342</h3>'
-    html += '<p>IP Razumtceva</p>'
+    html += '<p>IP ........</p>'
     html += `<table><tr>
     <th>  
     name
@@ -5435,7 +5435,10 @@ function showChequeShop(arr: product[]) {
     count
     </th>
     <th>  
-price
+    price
+    </th>
+    <th>  
+    summary
     </th>
     </tr>`
     for (let el of arr) {
@@ -5448,6 +5451,9 @@ price
             </td>
             <td>  
             ${el.price}
+            </td>
+            <td>  
+            ${el.price * el.quantity}
             </td>
         </tr>`
     }
