@@ -5638,7 +5638,24 @@ function renderText(styles:any[], text:string) {
 
 renderText(styles, 'test1')
 renderText(styles2, 'test2')
+
+
+
+const PZ22z2Div = document.getElementById('PZ22z2') as HTMLDivElement
+PZ22z2Div.innerHTML = `
+<p>hdgkjdgjdf</p>
+<p>hdgkjdgjdf</p>
+`
+
+
+// Получение объекта элемента по id
+const PZ22z3Div = document.getElementById('PZ22z3') as HTMLDivElement
+PZ22z3Div.innerHTML = `
+<p>3333hdgkjdgjdf</p>
+<p>444hdgkjdgjdf</p>
+`
 }
+
 
 console.log('-----------------------------------------')
 
