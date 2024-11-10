@@ -5293,7 +5293,8 @@ bottomRightButton.addEventListener('click', () => {
   }
 
   addProductButton.addEventListener('click', function () {
-    addToBuyList(shoppingList, productNameInput.value, productUnitInput.value, +productCountInput.value)
+    const count = parseFloat(productCountInput.value.replace(',', '.'))
+    addToBuyList(shoppingList, productNameInput.value, productUnitInput.value, count)
     productNameInput.value = ''
     productUnitInput.value = ''
     productCountInput.value = ''
@@ -5598,6 +5599,45 @@ console.log('-----------------------------------------')
   // }
   // show5Blocks2(6)
 
+}
+
+{
+
+  // Создать массив css - стилей(цвет, размер шрифта, выравнива -
+// ние, подчеркивание и т.д.).Каждый элемент массива – это объ -
+// ект, состоящий из двух свойств: название стиля и значение стиля.
+// Написать функцию, которая принимает массив стилей и
+// текст, и выводит этот текст с помощью document.write() в тегах
+// < p > </>, добавив в открывающий тег атрибут style со всеми сти-
+// лями, перечисленными в массиве.
+
+const styles = [
+  {color:'red'},
+  {'font-size':'20px'},
+  {'text-align':'center'},
+]
+const styles2 = [
+  {color:'green'},
+  {'font-size':'16px'},
+  {'text-align':'center'},
+]
+
+const renderTextDiv = document.getElementById('renderText') as HTMLDivElement
+
+function renderText(styles:any[], text:string) {
+  let styleText = ''
+  for (let el of styles) {
+    for (let key in el) {
+      styleText += `${key}:${el[key]};`
+    }
+  }
+  const tagString = `<p style="${styleText}">${text}</p>`
+  // renderTextDiv.insertAdjacentHTML('beforeend', tagString)
+  renderTextDiv.innerHTML+=tagString
+}
+
+renderText(styles, 'test1')
+renderText(styles2, 'test2')
 }
 
 console.log('-----------------------------------------')
