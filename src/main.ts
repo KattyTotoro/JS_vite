@@ -5688,12 +5688,14 @@ console.log('-----------------------------------------')
 
   console.log('-----------------------------------------')
 
+  // Вывод на экран всех аудиторий.
+
   const acadClassroomsOl = document.getElementById('AcadClassrooms') as HTMLOListElement
 
   function renderlassrooms(arr: any) {
     let html = ''
     for (let el of arr) {
-      html += `<li>${el.audName}</li>`
+      html += `<li>${el.audName},  ${el.numOfSeats} мест, факультет: ${el.facName}</li>`
     }
     acadClassroomsOl.innerHTML = html
   }
@@ -5999,6 +6001,30 @@ console.log('-----------------------------------------')
 
   // 1. Вывод на экран с помощью document.write() в виде списка 
   // (с помощью тегов ul и li). 
+
+const fruitOl = document.getElementById('fruit') as HTMLOListElement
+
+function renderFruit(arr:any) {
+  let html = ''
+  for(let el of arr) {
+    html += `<li>${el}</li>`
+  }
+  fruitOl.innerHTML = html
+}
+
+renderFruit(fruits)
+
+  // const acadClassroomsOl = document.getElementById('AcadClassrooms') as HTMLOListElement
+
+  // function renderlassrooms(arr: any) {
+  //   let html = ''
+  //   for (let el of arr) {
+  //     html += `<li>${el.audName},  ${el.numOfSeats} мест, факультет: ${el.facName}</li>`
+  //   }
+  //   acadClassroomsOl.innerHTML = html
+  // }
+
+  // renderlassrooms(classrooms)
 
   // 2. Поиск фрукта в массиве. Функция принимает название 
   // фрукта и возвращает индекс найденного элемента или -1, 
