@@ -6014,21 +6014,21 @@ function renderFruit(arr:any) {
 
 renderFruit(fruits)
 
-  // const acadClassroomsOl = document.getElementById('AcadClassrooms') as HTMLOListElement
-
-  // function renderlassrooms(arr: any) {
-  //   let html = ''
-  //   for (let el of arr) {
-  //     html += `<li>${el.audName},  ${el.numOfSeats} мест, факультет: ${el.facName}</li>`
-  //   }
-  //   acadClassroomsOl.innerHTML = html
-  // }
-
-  // renderlassrooms(classrooms)
+  
 
   // 2. Поиск фрукта в массиве. Функция принимает название 
   // фрукта и возвращает индекс найденного элемента или -1, 
   // если не найден. Поиск должен быть нерегистрозависимым. 
+
+  function findFruit(arr:any, fruit:string) {
+    
+    const pos = arr.indexOf(fruit[0].toUpperCase() + fruit.slice(1))
+    return pos
+  }
+
+  console.log(findFruit(fruits, 'Mango'))
+  console.log(findFruit(fruits, 'banana'))
+  console.log(findFruit(fruits, 'tomato'))
 
 }
 
